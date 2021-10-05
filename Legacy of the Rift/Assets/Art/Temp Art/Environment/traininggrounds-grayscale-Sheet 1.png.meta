@@ -1,0 +1,869 @@
+fileFormatVersion: 2
+guid: c6f649122f9409948984fe86bd111fc5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3830115453839954122
+    second: traininggrounds-grayscale-Sheet 1_0
+  - first:
+      213: -1940547536251287463
+    second: traininggrounds-grayscale-Sheet 1_1
+  - first:
+      213: -5022489432267620542
+    second: traininggrounds-grayscale-Sheet 1_2
+  - first:
+      213: -21465893887233735
+    second: traininggrounds-grayscale-Sheet 1_3
+  - first:
+      213: -3793780642195885525
+    second: traininggrounds-grayscale-Sheet 1_4
+  - first:
+      213: 4774625366663565224
+    second: traininggrounds-grayscale-Sheet 1_5
+  - first:
+      213: -1946775795925124530
+    second: traininggrounds-grayscale-Sheet 1_6
+  - first:
+      213: -4694396869950159212
+    second: traininggrounds-grayscale-Sheet 1_7
+  - first:
+      213: 4260034645444121980
+    second: traininggrounds-grayscale-Sheet 1_8
+  - first:
+      213: 4955421953419396216
+    second: traininggrounds-grayscale-Sheet 1_9
+  - first:
+      213: -8436539607702833825
+    second: traininggrounds-grayscale-Sheet 1_10
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: traininggrounds-grayscale-Sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 1660
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac05dd266bd472530800000000000000
+      internalID: 3830115453839954122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traininggrounds-grayscale-Sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6480
+        width: 1660
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 9588bf71c4ac115e0800000000000000
+      internalID: -1940547536251287463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traininggrounds-grayscale-Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5760
+        width: 1660
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ff88db8788c4ab0800000000000000
+      internalID: -5022489432267620542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traininggrounds-grayscale-Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5040
+        width: 1660
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931b01c12ecb3bff0800000000000000
+      internalID: -21465893887233735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traininggrounds-grayscale-Sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 1660
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2239223b98c95bc0800000000000000
+      internalID: -3793780642195885525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traininggrounds-grayscale-Sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 1660
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af0d835970e24240800000000000000
+      internalID: 4774625366663565224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traininggrounds-grayscale-Sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2880
+        width: 1660
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4afd826ab9abf4e0800000000000000
+      internalID: -1946775795925124530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traininggrounds-grayscale-Sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1660
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4964ae33be62adeb0800000000000000
+      internalID: -4694396869950159212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traininggrounds-grayscale-Sheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1600
+        width: 144
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75dd8c70feae1b30800000000000000
+      internalID: 4260034645444121980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traininggrounds-grayscale-Sheet 1_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 721
+        width: 1660
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8744cbdf20235c440800000000000000
+      internalID: 4955421953419396216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traininggrounds-grayscale-Sheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 80
+        width: 1659
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 746.5, y: -63}
+        - {x: 748.5, y: -63}
+        - {x: 749.5, y: -62}
+        - {x: 750.5, y: -63}
+        - {x: 753.5, y: -62}
+        - {x: 754.5, y: -63}
+        - {x: 757.5, y: -62}
+        - {x: 758.5, y: -63}
+        - {x: 760.5, y: -63}
+        - {x: 761.5, y: -62}
+        - {x: 762.5, y: -63}
+        - {x: 765.5, y: -62}
+        - {x: 766.5, y: -58}
+        - {x: 774.5, y: -62}
+        - {x: 776.5, y: -59}
+        - {x: 782.5, y: -63}
+        - {x: 789.5, y: -63}
+        - {x: 791.5, y: -61}
+        - {x: 791.5, y: -60}
+        - {x: 792.5, y: -59}
+        - {x: 794.5, y: -59}
+        - {x: 796.5, y: -61}
+        - {x: 801.5, y: -61}
+        - {x: 802.5, y: -60}
+        - {x: 805.5, y: -61}
+        - {x: 806.5, y: -60}
+        - {x: 809.5, y: -61}
+        - {x: 812.5, y: -58}
+        - {x: 814.5, y: -60}
+        - {x: 815.5, y: -60}
+        - {x: 816.5, y: -59}
+        - {x: 819.5, y: -60}
+        - {x: 820.5, y: -59}
+        - {x: 822.5, y: -59}
+        - {x: 823.5, y: -60}
+        - {x: 827.5, y: -61}
+        - {x: 829.5, y: -58}
+        - {x: 829.5, y: 58}
+        - {x: 802.5, y: 58}
+        - {x: 801.5, y: 57}
+        - {x: 798.5, y: 57}
+        - {x: 797.5, y: 56}
+        - {x: 785.5, y: 56}
+        - {x: 784.5, y: 57}
+        - {x: 782.5, y: 57}
+        - {x: 780.5, y: 55}
+        - {x: 780.5, y: 54}
+        - {x: 778.5, y: 52}
+        - {x: 777.5, y: 52}
+        - {x: 775.5, y: 54}
+        - {x: 774.5, y: 54}
+        - {x: 772.5, y: 53}
+        - {x: 771.5, y: 55}
+        - {x: 764.5, y: 57}
+        - {x: 761.5, y: 54}
+        - {x: 760.5, y: 55}
+        - {x: 757.5, y: 55}
+        - {x: 755.5, y: 53}
+        - {x: 755.5, y: 50}
+        - {x: 752.5, y: 52}
+        - {x: 747.5, y: 53}
+        - {x: 743.5, y: 51}
+        - {x: 730.5, y: 51}
+        - {x: 728.5, y: 52}
+        - {x: 726.5, y: 50}
+        - {x: 725.5, y: 50}
+        - {x: 723.5, y: 51}
+        - {x: 720.5, y: 49}
+        - {x: 716.5, y: 51}
+        - {x: 715.5, y: 50}
+        - {x: 713.5, y: 51}
+        - {x: 710.5, y: 47}
+        - {x: 708.5, y: 47}
+        - {x: 707.5, y: 46}
+        - {x: 706.5, y: 47}
+        - {x: 703.5, y: 47}
+        - {x: 701.5, y: 45}
+        - {x: 696.5, y: 44}
+        - {x: 694.5, y: 45}
+        - {x: 692.5, y: 43}
+        - {x: 688.5, y: 45}
+        - {x: 686.5, y: 43}
+        - {x: 681.5, y: 43}
+        - {x: 679.5, y: 44}
+        - {x: 673.5, y: 39}
+        - {x: 672.5, y: 40}
+        - {x: 668.5, y: 39}
+        - {x: 667.5, y: 40}
+        - {x: 664.5, y: 38}
+        - {x: 665.5, y: 36}
+        - {x: 662.5, y: 36}
+        - {x: 660.5, y: 34}
+        - {x: 660.5, y: 33}
+        - {x: 657.5, y: 31}
+        - {x: 657.5, y: 29}
+        - {x: 656.5, y: 28}
+        - {x: 652.5, y: 29}
+        - {x: 651.5, y: 28}
+        - {x: 647.5, y: 29}
+        - {x: 643.5, y: 27}
+        - {x: 642.5, y: 28}
+        - {x: 640.5, y: 27}
+        - {x: 639.5, y: 28}
+        - {x: 637.5, y: 28}
+        - {x: 636.5, y: 27}
+        - {x: 634.5, y: 28}
+        - {x: 633.5, y: 27}
+        - {x: 629.5, y: 27}
+        - {x: 628.5, y: 26}
+        - {x: 619.5, y: 26}
+        - {x: 617.5, y: 24}
+        - {x: 617.5, y: 22}
+        - {x: 616.5, y: 23}
+        - {x: 613.5, y: 22}
+        - {x: 613.5, y: 20}
+        - {x: 611.5, y: 19}
+        - {x: 606.5, y: 19}
+        - {x: 605.5, y: 20}
+        - {x: 598.5, y: 20}
+        - {x: 597.5, y: 19}
+        - {x: 592.5, y: 19}
+        - {x: 587.5, y: 17}
+        - {x: 587.5, y: 13}
+        - {x: 579.5, y: 12}
+        - {x: 576.5, y: 10}
+        - {x: 571.5, y: 10}
+        - {x: 569.5, y: 8}
+        - {x: 563.5, y: 7}
+        - {x: 555.5, y: 0}
+        - {x: 555.5, y: -1}
+        - {x: 553.5, y: -2}
+        - {x: 552.5, y: -1}
+        - {x: 550.5, y: -1}
+        - {x: 549.5, y: -2}
+        - {x: 547.5, y: 0}
+        - {x: 546.5, y: 0}
+        - {x: 544.5, y: -3}
+        - {x: 542.5, y: -2}
+        - {x: 540.5, y: -4}
+        - {x: 539.5, y: -3}
+        - {x: 536.5, y: -4}
+        - {x: 536.5, y: -6}
+        - {x: 532.5, y: -11}
+        - {x: 530.5, y: -8}
+        - {x: 528.5, y: -9}
+        - {x: 526.5, y: -7}
+        - {x: 522.5, y: -6}
+        - {x: 520.5, y: -8}
+        - {x: 520.5, y: -11}
+        - {x: 519.5, y: -11}
+        - {x: 517.5, y: -12}
+        - {x: 516.5, y: -16}
+        - {x: 520.5, y: -20}
+        - {x: 524.5, y: -21}
+        - {x: 530.5, y: -18}
+        - {x: 532.5, y: -21}
+        - {x: 533.5, y: -23}
+        - {x: 537.5, y: -26}
+        - {x: 534.5, y: -29}
+        - {x: 534.5, y: -30}
+        - {x: 536.5, y: -32}
+        - {x: 541.5, y: -33}
+        - {x: 542.5, y: -32}
+        - {x: 544.5, y: -35}
+        - {x: 546.5, y: -34}
+        - {x: 547.5, y: -35}
+        - {x: 550.5, y: -33}
+        - {x: 549.5, y: -29}
+        - {x: 550.5, y: -28}
+        - {x: 550.5, y: -26}
+        - {x: 551.5, y: -25}
+        - {x: 552.5, y: -25}
+        - {x: 551.5, y: -26}
+        - {x: 551.5, y: -28}
+        - {x: 553.5, y: -30}
+        - {x: 554.5, y: -30}
+        - {x: 557.5, y: -34}
+        - {x: 559.5, y: -34}
+        - {x: 561.5, y: -36}
+        - {x: 562.5, y: -36}
+        - {x: 564.5, y: -35}
+        - {x: 566.5, y: -37}
+        - {x: 567.5, y: -37}
+        - {x: 569.5, y: -35}
+        - {x: 572.5, y: -35}
+        - {x: 574.5, y: -33}
+        - {x: 573.5, y: -30}
+        - {x: 569.5, y: -29}
+        - {x: 568.5, y: -30}
+        - {x: 565.5, y: -30}
+        - {x: 563.5, y: -28}
+        - {x: 562.5, y: -28}
+        - {x: 561.5, y: -29}
+        - {x: 558.5, y: -29}
+        - {x: 556.5, y: -28}
+        - {x: 556.5, y: -26}
+        - {x: 554.5, y: -24}
+        - {x: 555.5, y: -24}
+        - {x: 561.5, y: -27}
+        - {x: 564.5, y: -25}
+        - {x: 566.5, y: -29}
+        - {x: 568.5, y: -28}
+        - {x: 576.5, y: -27}
+        - {x: 577.5, y: -28}
+        - {x: 575.5, y: -32}
+        - {x: 577.5, y: -34}
+        - {x: 580.5, y: -33}
+        - {x: 580.5, y: -31}
+        - {x: 582.5, y: -35}
+        - {x: 584.5, y: -34}
+        - {x: 586.5, y: -36}
+        - {x: 587.5, y: -36}
+        - {x: 590.5, y: -33}
+        - {x: 592.5, y: -34}
+        - {x: 596.5, y: -31}
+        - {x: 597.5, y: -31}
+        - {x: 596.5, y: -33}
+        - {x: 598.5, y: -35}
+        - {x: 601.5, y: -35}
+        - {x: 603.5, y: -34}
+        - {x: 604.5, y: -32}
+        - {x: 606.5, y: -32}
+        - {x: 607.5, y: -33}
+        - {x: 609.5, y: -32}
+        - {x: 612.5, y: -32}
+        - {x: 613.5, y: -33}
+        - {x: 616.5, y: -32}
+        - {x: 616.5, y: -30}
+        - {x: 617.5, y: -31}
+        - {x: 621.5, y: -31}
+        - {x: 622.5, y: -32}
+        - {x: 626.5, y: -32}
+        - {x: 628.5, y: -33}
+        - {x: 630.5, y: -30}
+        - {x: 631.5, y: -30}
+        - {x: 634.5, y: -33}
+        - {x: 635.5, y: -33}
+        - {x: 636.5, y: -32}
+        - {x: 639.5, y: -33}
+        - {x: 641.5, y: -31}
+        - {x: 642.5, y: -31}
+        - {x: 645.5, y: -34}
+        - {x: 649.5, y: -35}
+        - {x: 652.5, y: -31}
+        - {x: 653.5, y: -31}
+        - {x: 659.5, y: -38}
+        - {x: 660.5, y: -38}
+        - {x: 665.5, y: -34}
+        - {x: 665.5, y: -33}
+        - {x: 666.5, y: -32}
+        - {x: 668.5, y: -32}
+        - {x: 670.5, y: -35}
+        - {x: 671.5, y: -35}
+        - {x: 673.5, y: -33}
+        - {x: 675.5, y: -34}
+        - {x: 677.5, y: -32}
+        - {x: 679.5, y: -34}
+        - {x: 680.5, y: -34}
+        - {x: 686.5, y: -31}
+        - {x: 690.5, y: -33}
+        - {x: 693.5, y: -29}
+        - {x: 695.5, y: -29}
+        - {x: 693.5, y: -31}
+        - {x: 693.5, y: -32}
+        - {x: 695.5, y: -34}
+        - {x: 699.5, y: -33}
+        - {x: 700.5, y: -34}
+        - {x: 703.5, y: -33}
+        - {x: 705.5, y: -34}
+        - {x: 708.5, y: -32}
+        - {x: 709.5, y: -33}
+        - {x: 711.5, y: -32}
+        - {x: 712.5, y: -33}
+        - {x: 715.5, y: -32}
+        - {x: 716.5, y: -33}
+        - {x: 718.5, y: -32}
+        - {x: 722.5, y: -35}
+        - {x: 719.5, y: -37}
+        - {x: 718.5, y: -41}
+        - {x: 720.5, y: -43}
+        - {x: 720.5, y: -44}
+        - {x: 719.5, y: -46}
+        - {x: 722.5, y: -53}
+        - {x: 724.5, y: -53}
+        - {x: 726.5, y: -50}
+        - {x: 727.5, y: -51}
+        - {x: 727.5, y: -52}
+        - {x: 729.5, y: -54}
+        - {x: 730.5, y: -54}
+        - {x: 731.5, y: -56}
+        - {x: 728.5, y: -58}
+        - {x: 728.5, y: -59}
+        - {x: 732.5, y: -62}
+        - {x: 732.5, y: -63}
+        - {x: 739.5, y: -63}
+        - {x: 740.5, y: -62}
+        - {x: 741.5, y: -63}
+        - {x: 745.5, y: -62}
+      - - {x: -746.5, y: -57}
+        - {x: -745.5, y: -57}
+        - {x: -742.5, y: -52}
+        - {x: -740.5, y: -54}
+        - {x: -739.5, y: -54}
+        - {x: -735.5, y: -52}
+        - {x: -734.5, y: -53}
+        - {x: -731.5, y: -53}
+        - {x: -729.5, y: -51}
+        - {x: -728.5, y: -52}
+        - {x: -725.5, y: -52}
+        - {x: -723.5, y: -50}
+        - {x: -721.5, y: -52}
+        - {x: -720.5, y: -52}
+        - {x: -719.5, y: -51}
+        - {x: -717.5, y: -51}
+        - {x: -713.5, y: -48}
+        - {x: -712.5, y: -49}
+        - {x: -708.5, y: -48}
+        - {x: -707.5, y: -49}
+        - {x: -705.5, y: -49}
+        - {x: -703.5, y: -47}
+        - {x: -701.5, y: -49}
+        - {x: -700.5, y: -49}
+        - {x: -698.5, y: -47}
+        - {x: -696.5, y: -47}
+        - {x: -695.5, y: -48}
+        - {x: -693.5, y: -48}
+        - {x: -692.5, y: -47}
+        - {x: -691.5, y: -48}
+        - {x: -687.5, y: -49}
+        - {x: -684.5, y: -47}
+        - {x: -682.5, y: -46}
+        - {x: -681.5, y: -47}
+        - {x: -679.5, y: -46}
+        - {x: -677.5, y: -48}
+        - {x: -676.5, y: -48}
+        - {x: -674.5, y: -46}
+        - {x: -665.5, y: -45}
+        - {x: -662.5, y: -48}
+        - {x: -660.5, y: -48}
+        - {x: -658.5, y: -46}
+        - {x: -654.5, y: -46}
+        - {x: -653.5, y: -47}
+        - {x: -651.5, y: -46}
+        - {x: -649.5, y: -49}
+        - {x: -647.5, y: -48}
+        - {x: -625.5, y: -48}
+        - {x: -621.5, y: -46}
+        - {x: -606.5, y: -46}
+        - {x: -603.5, y: -43}
+        - {x: -597.5, y: -43}
+        - {x: -596.5, y: -42}
+        - {x: -594.5, y: -42}
+        - {x: -593.5, y: -43}
+        - {x: -589.5, y: -43}
+        - {x: -586.5, y: -46}
+        - {x: -585.5, y: -46}
+        - {x: -581.5, y: -43}
+        - {x: -577.5, y: -45}
+        - {x: -576.5, y: -44}
+        - {x: -572.5, y: -43}
+        - {x: -570.5, y: -45}
+        - {x: -569.5, y: -45}
+        - {x: -568.5, y: -44}
+        - {x: -566.5, y: -45}
+        - {x: -564.5, y: -43}
+        - {x: -564.5, y: -39}
+        - {x: -563.5, y: -37}
+        - {x: -568.5, y: -33}
+        - {x: -570.5, y: -33}
+        - {x: -572.5, y: -35}
+        - {x: -576.5, y: -30}
+        - {x: -580.5, y: -28}
+        - {x: -580.5, y: -27}
+        - {x: -582.5, y: -22}
+        - {x: -587.5, y: -20}
+        - {x: -592.5, y: -19}
+        - {x: -595.5, y: -17}
+        - {x: -597.5, y: -17}
+        - {x: -607.5, y: -11}
+        - {x: -612.5, y: -11}
+        - {x: -627.5, y: 4}
+        - {x: -628.5, y: 6}
+        - {x: -637.5, y: 6}
+        - {x: -638.5, y: 7}
+        - {x: -644.5, y: 12}
+        - {x: -648.5, y: 12}
+        - {x: -654.5, y: 15}
+        - {x: -657.5, y: 15}
+        - {x: -660.5, y: 17}
+        - {x: -660.5, y: 21}
+        - {x: -662.5, y: 23}
+        - {x: -664.5, y: 22}
+        - {x: -665.5, y: 24}
+        - {x: -665.5, y: 26}
+        - {x: -667.5, y: 31}
+        - {x: -669.5, y: 31}
+        - {x: -671.5, y: 33}
+        - {x: -671.5, y: 37}
+        - {x: -673.5, y: 39}
+        - {x: -674.5, y: 39}
+        - {x: -675.5, y: 42}
+        - {x: -680.5, y: 43}
+        - {x: -684.5, y: 47}
+        - {x: -691.5, y: 47}
+        - {x: -699.5, y: 52}
+        - {x: -702.5, y: 52}
+        - {x: -705.5, y: 55}
+        - {x: -717.5, y: 55}
+        - {x: -720.5, y: 58}
+        - {x: -731.5, y: 58}
+        - {x: -732.5, y: 59}
+        - {x: -735.5, y: 59}
+        - {x: -737.5, y: 61}
+        - {x: -741.5, y: 61}
+        - {x: -742.5, y: 60}
+        - {x: -744.5, y: 60}
+        - {x: -746.5, y: 62}
+        - {x: -747.5, y: 62}
+        - {x: -750.5, y: 59}
+        - {x: -751.5, y: 59}
+        - {x: -757.5, y: 62}
+        - {x: -759.5, y: 58}
+        - {x: -762.5, y: 61}
+        - {x: -763.5, y: 61}
+        - {x: -764.5, y: 60}
+        - {x: -766.5, y: 60}
+        - {x: -768.5, y: 58}
+        - {x: -771.5, y: 58}
+        - {x: -773.5, y: 60}
+        - {x: -775.5, y: 60}
+        - {x: -776.5, y: 59}
+        - {x: -778.5, y: 59}
+        - {x: -782.5, y: 61}
+        - {x: -792.5, y: 61}
+        - {x: -794.5, y: 63}
+        - {x: -829.5, y: 63}
+        - {x: -829.5, y: -51}
+        - {x: -828.5, y: -52}
+        - {x: -825.5, y: -52}
+        - {x: -822.5, y: -55}
+        - {x: -821.5, y: -55}
+        - {x: -819.5, y: -52}
+        - {x: -817.5, y: -54}
+        - {x: -814.5, y: -54}
+        - {x: -813.5, y: -53}
+        - {x: -810.5, y: -53}
+        - {x: -808.5, y: -54}
+        - {x: -807.5, y: -53}
+        - {x: -806.5, y: -54}
+        - {x: -806.5, y: -55}
+        - {x: -803.5, y: -56}
+        - {x: -801.5, y: -54}
+        - {x: -799.5, y: -55}
+        - {x: -796.5, y: -54}
+        - {x: -794.5, y: -55}
+        - {x: -790.5, y: -51}
+        - {x: -788.5, y: -54}
+        - {x: -787.5, y: -56}
+        - {x: -785.5, y: -56}
+        - {x: -782.5, y: -53}
+        - {x: -777.5, y: -52}
+        - {x: -778.5, y: -54}
+        - {x: -776.5, y: -56}
+        - {x: -773.5, y: -54}
+        - {x: -774.5, y: -52}
+        - {x: -773.5, y: -51}
+        - {x: -773.5, y: -53}
+        - {x: -769.5, y: -56}
+        - {x: -765.5, y: -56}
+        - {x: -763.5, y: -55}
+        - {x: -762.5, y: -53}
+        - {x: -760.5, y: -53}
+        - {x: -759.5, y: -54}
+        - {x: -755.5, y: -57}
+        - {x: -752.5, y: -56}
+        - {x: -752.5, y: -54}
+        - {x: -751.5, y: -53}
+        - {x: -750.5, y: -53}
+      - - {x: 582.5, y: -26}
+        - {x: 580.5, y: -27}
+        - {x: 581.5, y: -27}
+        - {x: 583.5, y: -29}
+        - {x: 584.5, y: -29}
+        - {x: 585.5, y: -28}
+        - {x: 584.5, y: -29}
+        - {x: 585.5, y: -31}
+        - {x: 586.5, y: -31}
+      - - {x: 541.5, y: -23}
+        - {x: 538.5, y: -20}
+        - {x: 539.5, y: -21}
+        - {x: 540.5, y: -20}
+        - {x: 539.5, y: -21}
+        - {x: 542.5, y: -24}
+        - {x: 542.5, y: -23}
+        - {x: 541.5, y: -23}
+        - {x: 540.5, y: -24}
+        - {x: 541.5, y: -24}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: f55fb5dece36bea80800000000000000
+      internalID: -8436539607702833825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
