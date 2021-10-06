@@ -7,6 +7,7 @@ public class PlayerSwitching : MonoBehaviour
     public GameObject Lokir;
     public GameObject Halvar;
     public GameObject Ursa;
+    public GameObject Player;
 
     public bool isLokir;
     public bool isHalvar;
@@ -14,6 +15,7 @@ public class PlayerSwitching : MonoBehaviour
 
     private void Start()
     {
+        Player.transform.position = Lokir.transform.position;
         Lokir.SetActive(true);
         Halvar.SetActive(false);
         Ursa.SetActive(false);
@@ -77,6 +79,19 @@ public class PlayerSwitching : MonoBehaviour
             isLokir = false;
             isHalvar = false;
             isUrsa = true;
+        }
+
+        if (isLokir)
+        {
+            Player.transform.position = Lokir.transform.position;
+        }
+        if (isHalvar)
+        {
+            Player.transform.position = Halvar.transform.position;
+        }
+        if (isUrsa)
+        {
+            Player.transform.position = Ursa.transform.position;
         }
     }
 }
