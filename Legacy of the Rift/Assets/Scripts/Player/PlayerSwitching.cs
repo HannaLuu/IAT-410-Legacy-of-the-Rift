@@ -9,19 +9,16 @@ public class PlayerSwitching : MonoBehaviour
     public GameObject Ursa;
     public GameObject Player;
 
-    public bool isLokir;
-    public bool isHalvar;
-    public bool isUrsa;
+    public enum Hero {Lokir, Halvar, Ursa};
+    public Hero currHero;
 
     private void Start()
     {
+        currHero = Hero.Lokir;
         Player.transform.position = Lokir.transform.position;
         Lokir.SetActive(true);
         Halvar.SetActive(false);
         Ursa.SetActive(false);
-        isLokir = true;
-        isHalvar = false;
-        isUrsa = false;
     }
 
     // Update is called once per frame
@@ -29,69 +26,69 @@ public class PlayerSwitching : MonoBehaviour
     {
         if (Input.GetButtonDown("Lokir"))
         {
-            if (isHalvar)
+            if(currHero == Hero.Halvar)
             {
                 Lokir.transform.position = Halvar.transform.position;
             }
-            if (isUrsa)
+
+            if (currHero == Hero.Ursa)
             {
                 Lokir.transform.position = Ursa.transform.position;
             }
-            Lokir.SetActive(true);
-            Halvar.SetActive(false);
-            Ursa.SetActive(false);
-            isLokir = true;
-            isHalvar = false;
-            isUrsa = false;
+
+            currHero = Hero.Lokir;
         }
 
         if (Input.GetButtonDown("Halvar"))
         {
-            if (isLokir)
+            if (currHero == Hero.Lokir)
             {
                 Halvar.transform.position = Lokir.transform.position;
             }
-            if (isUrsa)
+
+            if (currHero == Hero.Ursa)
             {
                 Halvar.transform.position = Ursa.transform.position;
             }
-            Lokir.SetActive(false);
-            Halvar.SetActive(true);
-            Ursa.SetActive(false);
-            isLokir = false;
-            isHalvar = true;
-            isUrsa = false;
+
+            currHero = Hero.Halvar;
         }
 
         if (Input.GetButtonDown("Ursa"))
         {
-            if (isLokir)
+            if (currHero == Hero.Lokir)
             {
                 Ursa.transform.position = Lokir.transform.position;
             }
-            if (isHalvar)
+
+            if (currHero == Hero.Halvar)
             {
                 Ursa.transform.position = Halvar.transform.position;
             }
-            Lokir.SetActive(false);
-            Halvar.SetActive(false);
-            Ursa.SetActive(true);
-            isLokir = false;
-            isHalvar = false;
-            isUrsa = true;
+
+            currHero = Hero.Ursa;
         }
 
-        if (isLokir)
+        switch (currHero)
         {
-            Player.transform.position = Lokir.transform.position;
-        }
-        if (isHalvar)
-        {
-            Player.transform.position = Halvar.transform.position;
-        }
-        if (isUrsa)
-        {
-            Player.transform.position = Ursa.transform.position;
+            case Hero.Lokir:
+                Lokir.SetActive(true);
+                Halvar.SetActive(false);
+                Ursa.SetActive(false);
+                Player.transform.position = Lokir.transform.position;
+                break;
+            case Hero.Halvar:
+                Lokir.SetActive(false);
+                Halvar.SetActive(true);
+                Ursa.SetActive(false);
+                Player.transform.position = Halvar.transform.position;
+                break;
+            case Hero.Ursa:
+                Lokir.SetActive(false);
+                Halvar.SetActive(false);
+                Ursa.SetActive(true);
+                Player.transform.position = Ursa.transform.position;
+                break;
         }
     }
 }

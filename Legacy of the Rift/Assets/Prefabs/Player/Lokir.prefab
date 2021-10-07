@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 5807222352677156471}
   - component: {fileID: 5807222352677156470}
   - component: {fileID: 5807222352677156467}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lokir
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,7 +217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5807222353560896886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

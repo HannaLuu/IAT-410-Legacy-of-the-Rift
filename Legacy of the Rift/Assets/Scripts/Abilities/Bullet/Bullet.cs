@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public int maxHealth = 3;
+    private int currentHealth;
     public float speed = 20f;
     public int damage = 100;
+
+    public float slowAmount = 4f;
+    float slowTime = 0f;
 
     public Rigidbody2D rb;
 
@@ -14,7 +19,16 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentHealth = maxHealth;
         rb.velocity = transform.right * speed;
+    }
+
+    private void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
@@ -28,10 +42,10 @@ public class Bullet : MonoBehaviour
         Enemy enemy = hitInfo.GetComponent<Enemy>();
         if (enemy != null)
         {
+            currentHealth -= 1;
             enemy.TakeDamage(damage);
         }
 
-        Destroy(gameObject);
         //Instantiate(impactEffect, transform.position, transform.rotation);
 
 

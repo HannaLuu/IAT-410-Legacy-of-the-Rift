@@ -1,0 +1,58 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class PlayerHealth : MonoBehaviour
+{
+    public int maxHealth = 100;
+    public float currentHealth;
+
+    public HealthBar healthBar;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Debug.Log(currentHealth);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
+        //FindObjectOfType<AudioManager>().Play("BjornHit");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Heal(float healAmount)
+    {
+        currentHealth += healAmount;
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        healthBar.SetHealth(currentHealth);
+        //FindObjectOfType<AudioManager>().Play("BjornHit");
+    }
+
+    void Die()
+    {
+        //well shit... bjorn dead...
+        //EnemyCounter.enemiesKilled = 0;
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+}
