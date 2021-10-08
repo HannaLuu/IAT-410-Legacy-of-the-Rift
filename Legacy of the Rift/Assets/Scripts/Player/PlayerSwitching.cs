@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,69 +27,62 @@ public class PlayerSwitching : MonoBehaviour
     {
         if (Input.GetButtonDown("Lokir"))
         {
-            if(currHero == Hero.Halvar)
-            {
-                Lokir.transform.position = Halvar.transform.position;
-            }
-
-            if (currHero == Hero.Ursa)
-            {
-                Lokir.transform.position = Ursa.transform.position;
-            }
-
-            currHero = Hero.Lokir;
+            SwitchCharacter(Hero.Lokir);
         }
 
         if (Input.GetButtonDown("Halvar"))
         {
-            if (currHero == Hero.Lokir)
-            {
-                Halvar.transform.position = Lokir.transform.position;
-            }
-
-            if (currHero == Hero.Ursa)
-            {
-                Halvar.transform.position = Ursa.transform.position;
-            }
-
-            currHero = Hero.Halvar;
+            SwitchCharacter(Hero.Halvar);
         }
 
         if (Input.GetButtonDown("Ursa"))
         {
-            if (currHero == Hero.Lokir)
-            {
-                Ursa.transform.position = Lokir.transform.position;
-            }
-
-            if (currHero == Hero.Halvar)
-            {
-                Ursa.transform.position = Halvar.transform.position;
-            }
-
-            currHero = Hero.Ursa;
+            SwitchCharacter(Hero.Ursa);
         }
+        
+        Player.transform.position = GetCurrentHeroObj().transform.position;
+    }
 
-        switch (currHero)
+    private void SwitchCharacter(Hero newHero)
+    {        
+        Vector3 currHeroPosition = GetCurrentHeroObj().transform.position;
+        Halvar.SetActive(false);
+        Ursa.SetActive(false);
+        Lokir.SetActive(false);
+        
+        switch (newHero)
         {
+            case Hero.Halvar:
+                Halvar.SetActive(true);
+                Halvar.transform.position = currHeroPosition;
+                break;
+            
+            case Hero.Ursa:
+                Ursa.SetActive(true);
+                Ursa.transform.position = currHeroPosition;
+                break;
+            
             case Hero.Lokir:
                 Lokir.SetActive(true);
-                Halvar.SetActive(false);
-                Ursa.SetActive(false);
-                Player.transform.position = Lokir.transform.position;
-                break;
-            case Hero.Halvar:
-                Lokir.SetActive(false);
-                Halvar.SetActive(true);
-                Ursa.SetActive(false);
-                Player.transform.position = Halvar.transform.position;
-                break;
-            case Hero.Ursa:
-                Lokir.SetActive(false);
-                Halvar.SetActive(false);
-                Ursa.SetActive(true);
-                Player.transform.position = Ursa.transform.position;
+                Lokir.transform.position = currHeroPosition;
                 break;
         }
+        currHero = newHero;
+    }
+
+    private GameObject GetCurrentHeroObj()
+    {
+        switch (currHero)
+        {
+            case Hero.Halvar:
+                return Halvar;
+            case Hero.Ursa:
+                return Ursa;
+            case Hero.Lokir:
+                return Lokir;
+        }
+
+        Debug.LogError("currHero is invalid");
+        return null;
     }
 }
