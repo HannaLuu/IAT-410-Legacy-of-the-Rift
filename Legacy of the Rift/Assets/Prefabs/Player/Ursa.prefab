@@ -286,13 +286,14 @@ MonoBehaviour:
   attackRate: 2
   abilityRate: 4
   ultRate: 6
-  firePoint: {fileID: 6510522073740800959}
-  wolfPoint: {fileID: 4234727998695468967}
-  bearPoint: {fileID: 0}
-  bulletPrefab: {fileID: 6750669263218135290, guid: 4f16afe1ed3b2ad45a696ec1ea2cbcfe, type: 3}
-  wolfPrefab: {fileID: 3170107516403426130, guid: e34da3432c62b1947942a783972695f6, type: 3}
-  bearPrefab: {fileID: 0}
+  zealCost: 0
   animator: {fileID: 6510522073437167068}
+  attackPoint: {fileID: 6510522073740800959}
+  abilityPoint: {fileID: 4234727998695468967}
+  ultPoint: {fileID: 4234727998695468967}
+  attackPrefab: {fileID: 6750669263218135290, guid: 4f16afe1ed3b2ad45a696ec1ea2cbcfe, type: 3}
+  abilityPrefab: {fileID: 3170107516403426130, guid: e34da3432c62b1947942a783972695f6, type: 3}
+  ultPrefab: {fileID: 3170107516403426130, guid: e34da3432c62b1947942a783972695f6, type: 3}
 --- !u!1 &6510522073740800956
 GameObject:
   m_ObjectHideFlags: 0

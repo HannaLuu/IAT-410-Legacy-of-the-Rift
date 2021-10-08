@@ -223,14 +223,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRate: 2
+  nextAttackTime: 0
   abilityRate: 4
+  nextAbilityTime: 0
   ultRate: 6
+  nextUltTime: 0
+  zealCost: 0
   animator: {fileID: 4092356082363815208}
   attackPoint: {fileID: 6390096398400635192}
+  abilityPoint: {fileID: 0}
+  ultPoint: {fileID: 0}
+  attackPrefab: {fileID: 0}
+  abilityPrefab: {fileID: 0}
+  ultPrefab: {fileID: 0}
   attackRange: 3
   attackDamage: 100
-  wallPoint: {fileID: 0}
-  wallPrefab: {fileID: 0}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64

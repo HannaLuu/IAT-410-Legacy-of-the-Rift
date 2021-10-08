@@ -2,51 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UrsaAttacks : MonoBehaviour
+
+// THIS CLASS INHERITS FROM THE ABSTRACT CLASS AttackBaseClass
+public class UrsaAttacks : AttackBaseClass
 {
-    public float attackRate = 2f;
-    float nextAttackTime = 0f;
-
-    public float abilityRate = 4f;
-    float nextAbilityTime = 0f;
-
-    public float ultRate = 6f;
-    float nextUltTime = 0f;
-
-    //public float manaCost = 20;
-
-    public Transform firePoint;
-    public Transform wolfPoint;
-    public Transform bearPoint;
-
-    public GameObject bulletPrefab;
-    public GameObject wolfPrefab;
-    public GameObject bearPrefab;
-
-    //public Teleport teleportScript;
-    public Animator animator;
-    //public ManaBar manaBar;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        attackRate = 2f;
+        nextAttackTime = 0f;
+
+        abilityRate = 4f;
+        nextAbilityTime = 0f;
+
+        ultRate = 6f;
+        nextUltTime = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetButtonDown("Fire1") && manaBar.CanSpendMana(manaBar.manaAttackCost) == false)
+        //if (Input.GetButtonDown("Fire1") && manaBar.CanSpendZeal(zealBar.zealAttackCost) == false)
         //{
-        //    FindObjectOfType<AudioManager>().Play("OutOfMana");
+        //    FindObjectOfType<AudioManager>().Play("OutOfZeal");
         //}
 
         if (Time.time >= nextAttackTime)
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                Shoot();
-                //manaBar.SpendMana1(manaCost);
+                Attack();
+                //zealBar.SpendZea1(manaCost);
                 animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                 nextAttackTime = Time.time + 1f / attackRate;
@@ -57,8 +43,8 @@ public class UrsaAttacks : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire2"))
             {
-                Ability();
-                //manaBar.SpendMana1(manaCost);
+                ActivateAbility();
+                //zealBar.SpendZeal1(zealCost);
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                 nextAttackTime = Time.time + 1f / attackRate;
@@ -66,21 +52,24 @@ public class UrsaAttacks : MonoBehaviour
         }
     }
 
-    //shooting logic
-    void Shoot()
+    // Munir's Arrow
+    public override void Attack()
     {
-        //manaBar.SpendMana1(manaCost);
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        //manaBar.SpendZeal1(zealCost);
+        Instantiate(attackPrefab, attackPoint.position, attackPoint.rotation);
     }
 
-    void Ability()
+    // Harbinger of Life
+    public override void ActivateAbility()
     {
-        //manaBar.SpendMana1(manaCost);
-        Instantiate(wolfPrefab, wolfPoint.position, wolfPoint.rotation);
+        //manaBar.SpendZeal1(zealCost);
+        Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
-    void Ult()
+
+    // Herald of Ruin
+    public override void ActivateUlt()
     {
-        //manaBar.SpendMana1(manaCost);
-        Instantiate(wolfPrefab, wolfPoint.position, wolfPoint.rotation);
+        //manaBar.SpendZeal1(zealCost);
+        Instantiate(ultPoint, ultPoint.position, ultPoint.rotation);
     }
 }
