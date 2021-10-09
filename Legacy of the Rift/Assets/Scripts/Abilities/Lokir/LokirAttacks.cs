@@ -5,8 +5,13 @@ using UnityEngine;
 public class LokirAttacks : AttackBaseClass
 {
     // Start is called before the first frame update
+    private Rigidbody2D rb;
+
     public float attackRange = 1f;
     public int attackDamage = 100;
+
+    GameObject spectralWarlock;
+    Vector3 teleportPos;
 
     public LayerMask enemyLayers;
 
@@ -16,10 +21,10 @@ public class LokirAttacks : AttackBaseClass
         attackRate = 2f;
         nextAttackTime = 0f;
 
-        abilityRate = 4f;
+        abilityRate = 20f;
         nextAbilityTime = 0f;
 
-        ultRate = 6f;
+        ultRate = 25f;
         nextUltTime = 0f;
     }
 
@@ -32,6 +37,26 @@ public class LokirAttacks : AttackBaseClass
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
+            }
+        }
+
+        if (Time.time >= nextAbilityTime)
+        {
+            if (Input.GetButtonDown("Fire2"))
+            {
+                ActivateAbility();
+                //zealBar.SpendZeal1(zealCost);
+                //animator.SetTrigger("Attack");
+                //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                nextAbilityTime = Time.time + 1f / abilityRate;
+            }
+        }
+        if (spectralWarlock != null)
+        {
+            teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
+            if (Input.GetKeyDown(KeyCode.LeftShift)) 
+            {
+                Teleport();
             }
         }
     }
@@ -48,6 +73,7 @@ public class LokirAttacks : AttackBaseClass
         //Damage them
         foreach (Collider2D enemy in hitEnemies)
         {
+            Debug.Log("HIT");
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
     }
@@ -55,12 +81,26 @@ public class LokirAttacks : AttackBaseClass
     // Spectral Warlock
     public override void ActivateAbility()
     {
-        Debug.Log("No Spectral Warlock ability Yet!");
+        spectralWarlock = Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation) as GameObject;
     }
 
     // Spectral Barrage
     public override void ActivateUlt()
     {
         Debug.Log("No Spectral Barrage ability Yet!");
+    }
+    void Teleport()
+    {
+        transform.position = teleportPos;
+        Destroy(spectralWarlock);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

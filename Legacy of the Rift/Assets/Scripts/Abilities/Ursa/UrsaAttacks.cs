@@ -47,7 +47,7 @@ public class UrsaAttacks : AttackBaseClass
                 //zealBar.SpendZeal1(zealCost);
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                nextAttackTime = Time.time + 1f / attackRate;
+                nextAbilityTime = Time.time + 1f / abilityRate;
             }
         }
     }

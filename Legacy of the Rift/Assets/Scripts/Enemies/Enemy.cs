@@ -9,8 +9,10 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     //public GameObject deathEffect;
     public Transform player;
+    public float attackRange = 2f;
 
     public bool isFlipped = false;
+
 
     public void TakeDamage(int damage)
     {

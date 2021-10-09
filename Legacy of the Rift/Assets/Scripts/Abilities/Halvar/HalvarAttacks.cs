@@ -15,10 +15,10 @@ public class HalvarAttacks : AttackBaseClass
         attackRate = 2f;
         nextAttackTime = 0f;
 
-        abilityRate = 4f;
+        abilityRate = 6f;
         nextAbilityTime = 0f;
 
-        ultRate = 6f;
+        ultRate = 12f;
         nextUltTime = 0f;
     }
 
@@ -31,6 +31,18 @@ public class HalvarAttacks : AttackBaseClass
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
+            }
+        }
+
+        if (Time.time >= nextAbilityTime)
+        {
+            if (Input.GetButtonDown("Fire2"))
+            {
+                ActivateAbility();
+                //zealBar.SpendZeal1(zealCost);
+                //animator.SetTrigger("Attack");
+                //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                nextAbilityTime = Time.time + 1f / abilityRate;
             }
         }
     }
@@ -54,7 +66,8 @@ public class HalvarAttacks : AttackBaseClass
     // Defense of the Ancients
     public override void ActivateAbility()
     {
-        Debug.Log("No Defense of the Ancients ability Yet!");
+        //manaBar.SpendZeal1(zealCost);
+        Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 
     // Guardian of the Rock

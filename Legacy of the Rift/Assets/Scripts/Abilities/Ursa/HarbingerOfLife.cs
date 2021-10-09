@@ -9,8 +9,8 @@ public class HarbingerOfLife : MonoBehaviour
     public float healAmount = 10;
     public LayerMask playerLayer;
 
-    public int maxLifeSpan = 1000;
-    public int currentLifeSpan;
+    public float maxLifeSpan = 8f;
+    public float currentLifeSpan;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class HarbingerOfLife : MonoBehaviour
     void Update()
     {
         Heal();
-        currentLifeSpan -= 1;
+        currentLifeSpan -= Time.deltaTime;
         if(currentLifeSpan <= 0)
         {
             Destroy(gameObject);
