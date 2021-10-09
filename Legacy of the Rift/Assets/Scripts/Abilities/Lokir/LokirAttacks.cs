@@ -5,7 +5,7 @@ using UnityEngine;
 public class LokirAttacks : AttackBaseClass
 {
     // Start is called before the first frame update
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     public float attackRange = 1f;
     public int attackDamage = 100;
@@ -14,6 +14,9 @@ public class LokirAttacks : AttackBaseClass
     Vector3 teleportPos;
 
     public LayerMask enemyLayers;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +36,33 @@ public class LokirAttacks : AttackBaseClass
     {
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetButtonDown("Fire1"))
+            // if (Input.GetButtonDown("Fire1"))
+            // {
+
+            // }
+
+            if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.A))
             {
-                Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
+
+                //StartCoroutine(Dash(1f));
+                LacerateLeft();
+
+            }
+
+            else if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.D))
+            {
+
+                //StartCoroutine(Dash(-1f));
+                LacerateRight();
+
+            }
+
+            else if (Input.GetButtonDown("Fire1"))
+            {
+                // Attack();
+                // nextAttackTime = Time.time + 1f / attackRate;
+                // Debug.Log("Attacking.");
+                NormalLaceration();
             }
         }
 
@@ -54,11 +80,19 @@ public class LokirAttacks : AttackBaseClass
         if (spectralWarlock != null)
         {
             teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
-            if (Input.GetKeyDown(KeyCode.LeftShift)) 
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Teleport();
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        // if (!isDashing)
+        // {
+        //     rb.velocity = new Vector2(mx * speed, rb.velocity.y);
+        // }
     }
 
     // Spectral Laceration
@@ -102,5 +136,39 @@ public class LokirAttacks : AttackBaseClass
             return;
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    IEnumerator Dash(float direction)
+    {
+
+        //isDashing = true;
+        rb.velocity = new Vector2(400f * direction, 0f);
+
+
+        yield return new WaitForSeconds(0.3f);
+
+    }
+
+    public void NormalLaceration()
+    {
+        Attack();
+        nextAttackTime = Time.time + 1f / attackRate;
+        Debug.Log("Attacking.");
+    }
+
+    public void LacerateLeft()
+    {
+        Attack();
+        nextAttackTime = Time.time + 1f / attackRate;
+        StartCoroutine(Dash(-1f));
+        Debug.Log("Dashing Left.");
+    }
+
+    public void LacerateRight()
+    {
+        Attack();
+        nextAttackTime = Time.time + 1f / attackRate;
+        StartCoroutine(Dash(1f));
+        Debug.Log("Dashing Right.");
     }
 }

@@ -294,11 +294,15 @@ MonoBehaviour:
   attackPrefab: {fileID: 0}
   abilityPrefab: {fileID: 7121423283127142723, guid: 103f20c639215804fbdb2d9b1cf8f5f7, type: 3}
   ultPrefab: {fileID: 0}
+  rb: {fileID: 5807222352677156465}
   attackRange: 3
   attackDamage: 100
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
+  dashDistance: 15
+  mx: 0
+  speed: 10
 --- !u!1 &5807222353560896885
 GameObject:
   m_ObjectHideFlags: 0
