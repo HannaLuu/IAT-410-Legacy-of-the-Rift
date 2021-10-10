@@ -13,6 +13,10 @@ public class Enemy : MonoBehaviour
 
     public bool isFlipped = false;
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
 
     public void TakeDamage(int damage)
     {
