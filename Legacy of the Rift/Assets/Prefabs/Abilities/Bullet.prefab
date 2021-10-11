@@ -136,5 +136,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   speed: 20
-  damage: 50
+  damage: 10
+  slowAmount: 4
   rb: {fileID: 1847216396990326401}

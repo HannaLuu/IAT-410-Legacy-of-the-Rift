@@ -11,10 +11,13 @@ public class Enemy : MonoBehaviour
 
     public bool isFlipped = false;
 
+    public bool isSlowed = false;
+
 
     public void TakeDamage(int damage)
     {
         health -= damage;
+        StartCoroutine(Slowed());
 
         if (health <= 0)
         {
@@ -46,5 +49,15 @@ public class Enemy : MonoBehaviour
             transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
         }
+    }
+
+    IEnumerator Slowed()
+    {
+        isSlowed = true;
+
+        yield return new WaitForSeconds(3f);
+
+        isSlowed = false;
+
     }
 }

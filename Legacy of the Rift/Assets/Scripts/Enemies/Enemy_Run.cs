@@ -10,6 +10,8 @@ public class Enemy_Run : StateMachineBehaviour
     Transform player;
     Rigidbody2D rb;
     Enemy enemyScript;
+    Bullet bullet;
+
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -17,6 +19,7 @@ public class Enemy_Run : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         enemyScript = animator.GetComponent<Enemy>();
+        bullet = animator.GetComponent<Bullet>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -28,11 +31,23 @@ public class Enemy_Run : StateMachineBehaviour
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
 
-        if(Vector2.Distance(player.position, rb.position) <= attackRange)
+        if (Vector2.Distance(player.position, rb.position) <= attackRange)
         {
             animator.SetTrigger("Attack");
         }
+
+        if (enemyScript.isSlowed == true)
+        {
+            speed = 0.5f;
+        }
+
+        else
+        {
+            speed = 2.5f;
+        }
+
     }
+
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
