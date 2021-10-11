@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Monolith
+  - SBClone
   layers:
   - Default
   - TransparentFX
@@ -14,8 +16,8 @@ TagManager:
   - UI
   - Enemies
   - Player
-  - Obstacle
-  - 
+  - SBClone
+  - Monolith
   - 
   - 
   - 

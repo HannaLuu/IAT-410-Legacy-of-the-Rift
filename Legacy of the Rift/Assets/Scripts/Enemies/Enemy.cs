@@ -6,10 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public int health = 100;
 
-    public Animator animator;
     //public GameObject deathEffect;
     public Transform player;
-    public float attackRange = 2f;
 
     public bool isFlipped = false;
 

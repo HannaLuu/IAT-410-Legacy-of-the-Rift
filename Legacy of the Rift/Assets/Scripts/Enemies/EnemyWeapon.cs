@@ -8,6 +8,7 @@ public class EnemyWeapon : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask playerLayer;
     public LayerMask monolithLayer;
+    public LayerMask sbCloneLayer;
 
     public Transform attackPoint;
 
@@ -18,6 +19,13 @@ public class EnemyWeapon : MonoBehaviour
         {
             FindObjectOfType<PlayerHealth>().TakeDamage(attackDamage);
         }
+
+        Collider2D colClone = Physics2D.OverlapCircle(attackPoint.position, attackRange, sbCloneLayer);
+        if (colInfo != null)
+        {
+            FindObjectOfType<SpectralBarrage>().TakeDamage(attackDamage);
+        }
+
         Collider2D colMonolith = Physics2D.OverlapCircle(attackPoint.position, attackRange, monolithLayer);
         if (colMonolith != null)
         {

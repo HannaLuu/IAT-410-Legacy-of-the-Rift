@@ -10,13 +10,13 @@ public class LokirAttacks : AttackBaseClass
     public float attackRange = 1f;
     public int attackDamage = 100;
 
+    public int ultClones = 3;
+    private int clonesSpawned = 0;
+
     GameObject spectralWarlock;
     Vector3 teleportPos;
 
     public LayerMask enemyLayers;
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +77,20 @@ public class LokirAttacks : AttackBaseClass
                 nextAbilityTime = Time.time + 1f / abilityRate;
             }
         }
+
+        if (Time.time >= nextUltTime)
+        {
+            if (Input.GetButtonDown("Fire3"))
+            {
+                ActivateUlt();
+                //zealBar.SpendZeal1(zealCost);
+                //animator.SetTrigger("Attack");
+                //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                clonesSpawned = 0;
+                nextUltTime = Time.time + 1f / ultRate;
+            }
+        }
+
         if (spectralWarlock != null)
         {
             teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
@@ -121,7 +135,11 @@ public class LokirAttacks : AttackBaseClass
     // Spectral Barrage
     public override void ActivateUlt()
     {
-        Debug.Log("No Spectral Barrage ability Yet!");
+        while (clonesSpawned < 3)
+        {
+            clonesSpawned += 1;
+            Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
+        }
     }
     void Teleport()
     {
