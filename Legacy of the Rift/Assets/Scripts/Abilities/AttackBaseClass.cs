@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-abstract public class AttackBaseClass : MonoBehaviour
+public abstract class AttackBaseClass : MonoBehaviour
 {
     // Attack Rate and Time
-    public float attackRate;
-    protected float nextAttackTime;
+    public bool isAttackReady;
+    public float attackCooldown;
 
     // Ability Rate and Time
-    public float abilityRate;
-    protected float nextAbilityTime;
+    public bool isAbilityReady;
+    public float abilityCooldown;
 
     // Ult Rate and Time
-    public float ultRate;
-    protected float nextUltTime;
+    public bool isUltReady;
+    public float ultCooldown;
 
-    // Zeal Crap
+    // Zeal Crapshitstuff
     public float zealCost;
 
     // Animator
@@ -38,5 +38,23 @@ abstract public class AttackBaseClass : MonoBehaviour
     public abstract void ActivateAbility();
 
     public abstract void ActivateUlt();
+    
+    protected IEnumerator BasicCooldown() {
+        isAttackReady = false;
+        yield return new WaitForSeconds(attackCooldown);
+        isAttackReady = true;
+    }
+    
+    protected IEnumerator AbilityCooldown() {
+        isAbilityReady = false;
+        yield return new WaitForSeconds(abilityCooldown);
+        isAbilityReady = true;
+    }
+    
+    protected IEnumerator UltCooldown() {
+        isUltReady = false;
+        yield return new WaitForSeconds(ultCooldown);
+        isUltReady = true;
+    }
 
 }

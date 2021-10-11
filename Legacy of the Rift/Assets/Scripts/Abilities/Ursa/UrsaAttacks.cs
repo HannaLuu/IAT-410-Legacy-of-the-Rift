@@ -9,14 +9,14 @@ public class UrsaAttacks : AttackBaseClass
     // Start is called before the first frame update
     void Start()
     {
-        attackRate = 2f;
-        nextAttackTime = 0f;
+        attackCooldown = 2f;
+        // nextAttackTime = 0f;
 
-        abilityRate = 4f;
-        nextAbilityTime = 0f;
+        abilityCooldown = 4f;
+        // nextAbilityTime = 0f;
 
-        ultRate = 6f;
-        nextUltTime = 0f;
+        ultCooldown = 6f;
+        // nextUltTime = 0f;
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class UrsaAttacks : AttackBaseClass
         //    FindObjectOfType<AudioManager>().Play("OutOfZeal");
         //}
 
-        if (Time.time >= nextAttackTime)
+        // if (Time.time >= nextAttackTime)
         {
             if (Input.GetButtonDown("Fire1"))
             {
@@ -35,11 +35,11 @@ public class UrsaAttacks : AttackBaseClass
                 //zealBar.SpendZea1(manaCost);
                 animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                nextAttackTime = Time.time + 1f / attackRate;
+                // nextAttackTime = Time.time + 1f / attackCooldown;
             }
         }
 
-        if (Time.time >= nextAbilityTime)
+        // if (Time.time >= nextAbilityTime)
         {
             if (Input.GetButtonDown("Fire2"))
             {
@@ -47,7 +47,7 @@ public class UrsaAttacks : AttackBaseClass
                 //zealBar.SpendZeal1(zealCost);
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                nextAbilityTime = Time.time + 1f / abilityRate;
+                // nextAbilityTime = Time.time + 1f / abilityCooldown;
             }
         }
     }

@@ -21,65 +21,54 @@ public class LokirAttacks : AttackBaseClass
     // Start is called before the first frame update
     void Start()
     {
-        attackRate = 2f;
-        nextAttackTime = 0f;
+        attackCooldown = 1f;
+        isAttackReady = true;
+        // nextAttackTime = 0f;
 
-        abilityRate = 20f;
-        nextAbilityTime = 0f;
+        abilityCooldown = 5f;
+        isAbilityReady = true;
+        // nextAbilityTime = 0f;
 
-        ultRate = 25f;
-        nextUltTime = 0f;
+        ultCooldown = 10f;
+        isUltReady = true;
+        // nextUltTime = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time >= nextAttackTime)
-        {
-            // if (Input.GetButtonDown("Fire1"))
-            // {
-
-            // }
-
+        if (isAttackReady) {
             if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.A))
             {
-
-                //StartCoroutine(Dash(1f));
                 LacerateLeft();
-
+                StartCoroutine(BasicCooldown());
             }
-
+            
             else if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.D))
             {
-
-                //StartCoroutine(Dash(-1f));
                 LacerateRight();
-
+                StartCoroutine(BasicCooldown());
             }
-
+            
             else if (Input.GetButtonDown("Fire1"))
             {
-                // Attack();
-                // nextAttackTime = Time.time + 1f / attackRate;
-                // Debug.Log("Attacking.");
                 NormalLaceration();
+                StartCoroutine(BasicCooldown());
             }
         }
-
-        if (Time.time >= nextAbilityTime)
-        {
+        
+        if (isAbilityReady) {
             if (Input.GetButtonDown("Fire2"))
             {
                 ActivateAbility();
                 //zealBar.SpendZeal1(zealCost);
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                nextAbilityTime = Time.time + 1f / abilityRate;
+                StartCoroutine(AbilityCooldown());
             }
         }
-
-        if (Time.time >= nextUltTime)
-        {
+        
+        if (isUltReady) {
             if (Input.GetButtonDown("Fire3"))
             {
                 ActivateUlt();
@@ -87,10 +76,10 @@ public class LokirAttacks : AttackBaseClass
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                 clonesSpawned = 0;
-                nextUltTime = Time.time + 1f / ultRate;
+                StartCoroutine(UltCooldown());
             }
         }
-
+        
         if (spectralWarlock != null)
         {
             teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
@@ -99,6 +88,72 @@ public class LokirAttacks : AttackBaseClass
                 Teleport();
             }
         }
+        
+        // if (Time.time >= nextAttackTime)
+        // {
+        //     // if (Input.GetButtonDown("Fire1"))
+        //     // {
+        //
+        //     // }
+        //
+        //     if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.A))
+        //     {
+        //
+        //         //StartCoroutine(Dash(1f));
+        //         LacerateLeft();
+        //
+        //     }
+        //
+        //     else if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.D))
+        //     {
+        //
+        //         //StartCoroutine(Dash(-1f));
+        //         LacerateRight();
+        //
+        //     }
+        //
+        //     else if (Input.GetButtonDown("Fire1"))
+        //     {
+        //         // Attack();
+        //         // nextAttackTime = Time.time + 1f / attackRate;
+        //         // Debug.Log("Attacking.");
+        //         NormalLaceration();
+        //     }
+        // }
+        //
+        // if (Time.time >= nextAbilityTime)
+        // {
+        //     if (Input.GetButtonDown("Fire2"))
+        //     {
+        //         ActivateAbility();
+        //         //zealBar.SpendZeal1(zealCost);
+        //         //animator.SetTrigger("Attack");
+        //         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+        //         nextAbilityTime = Time.time + 1f / abilityRate;
+        //     }
+        // }
+        //
+        // if (Time.time >= nextUltTime)
+        // {
+        //     if (Input.GetButtonDown("Fire3"))
+        //     {
+        //         ActivateUlt();
+        //         //zealBar.SpendZeal1(zealCost);
+        //         //animator.SetTrigger("Attack");
+        //         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+        //         clonesSpawned = 0;
+        //         nextUltTime = Time.time + 1f / ultRate;
+        //     }
+        // }
+        //
+        // if (spectralWarlock != null)
+        // {
+        //     teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
+        //     if (Input.GetKeyDown(KeyCode.LeftShift))
+        //     {
+        //         Teleport();
+        //     }
+        // }
     }
 
     private void FixedUpdate()
@@ -170,14 +225,14 @@ public class LokirAttacks : AttackBaseClass
     public void NormalLaceration()
     {
         Attack();
-        nextAttackTime = Time.time + 1f / attackRate;
+        // nextAttackTime = Time.time + 1f / attackCooldown;
         Debug.Log("Attacking.");
     }
 
     public void LacerateLeft()
     {
         Attack();
-        nextAttackTime = Time.time + 1f / attackRate;
+        // nextAttackTime = Time.time + 1f / attackCooldown;
         StartCoroutine(Dash(-1f));
         Debug.Log("Dashing Left.");
     }
@@ -185,7 +240,7 @@ public class LokirAttacks : AttackBaseClass
     public void LacerateRight()
     {
         Attack();
-        nextAttackTime = Time.time + 1f / attackRate;
+        // nextAttackTime = Time.time + 1f / attackCooldown;
         StartCoroutine(Dash(1f));
         Debug.Log("Dashing Right.");
     }
