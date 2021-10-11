@@ -60,5 +60,6 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         isSlowed = false;
+
     }
 }
