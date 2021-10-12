@@ -13,8 +13,12 @@ public class Enemy : MonoBehaviour
 
     public bool isSlowed = false;
 
+    public int overzealRegen = 5;
+    public PlayerZeal playerZeal;
+
     private void Start()
     {
+        playerZeal = GameObject.FindObjectOfType<PlayerZeal>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
@@ -22,6 +26,11 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
         StartCoroutine(Slowed());
+
+        if (playerZeal.isOverzealous == true)
+        {
+            playerZeal.AddOverzeal(overzealRegen);
+        }
 
         if (health <= 0)
         {

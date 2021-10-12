@@ -253,9 +253,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6690da452a906464f8f773af66d5893e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 2
-  abilityRate: 6
-  ultRate: 12
+  isAttackReady: 0
+  attackCooldown: 0
+  isAbilityReady: 0
+  abilityCooldown: 0
+  isUltReady: 0
+  ultCooldown: 0
+  ultZealCost: 50
   zealCost: 0
   animator: {fileID: 4092356082363815208}
   attackPoint: {fileID: 6390096398400635192}
@@ -265,10 +269,12 @@ MonoBehaviour:
   abilityPrefab: {fileID: 126634518127349319, guid: 74c7f6a35c1e8f54d8f7f82cddf0b1ea, type: 3}
   ultPrefab: {fileID: 0}
   attackRange: 3
-  attackDamage: 100
+  attackDamage: 50
+  abilityZealCost: 25
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
+  playerZeal: {fileID: 0}
 --- !u!1 &4092356082818394142
 GameObject:
   m_ObjectHideFlags: 0

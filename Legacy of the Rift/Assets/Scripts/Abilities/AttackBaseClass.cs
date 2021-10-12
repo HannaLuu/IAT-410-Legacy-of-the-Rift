@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class AttackBaseClass : MonoBehaviour
 {
-    // Attack Rate and Time
+    // Attack Rate, Time, Overzealous Regen Amount
     public bool isAttackReady;
     public float attackCooldown;
 
@@ -12,9 +12,10 @@ public abstract class AttackBaseClass : MonoBehaviour
     public bool isAbilityReady;
     public float abilityCooldown;
 
-    // Ult Rate and Time
+    // Ult Rate, Time, Cost
     public bool isUltReady;
     public float ultCooldown;
+    public int ultZealCost;
 
     // Zeal Crapshitstuff
     public float zealCost;

@@ -10,6 +10,8 @@ public class LokirAttacks : AttackBaseClass
     public float attackRange = 1f;
     public int attackDamage = 100;
 
+    public int abilityZealCost = 25;
+
     public int ultClones = 3;
     private int clonesSpawned = 0;
 
@@ -17,6 +19,8 @@ public class LokirAttacks : AttackBaseClass
     Vector3 teleportPos;
 
     public LayerMask enemyLayers;
+
+    public PlayerZeal playerZeal;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +33,8 @@ public class LokirAttacks : AttackBaseClass
 
         ultCooldown = 10f;
         isUltReady = true;
-    }
+        ultZealCost = 150;
+}
 
     // Update is called once per frame
     void Update()
@@ -58,7 +63,7 @@ public class LokirAttacks : AttackBaseClass
             if (Input.GetButtonDown("Fire2"))
             {
                 ActivateAbility();
-                //zealBar.SpendZeal1(zealCost);
+                playerZeal.SpendZeal(abilityZealCost);
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                 StartCoroutine(AbilityCooldown());
@@ -66,14 +71,17 @@ public class LokirAttacks : AttackBaseClass
         }
         
         if (isUltReady) {
-            if (Input.GetButtonDown("Fire3"))
+            if(playerZeal.isOverzealous == true)
             {
-                ActivateUlt();
-                //zealBar.SpendZeal1(zealCost);
-                //animator.SetTrigger("Attack");
-                //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                clonesSpawned = 0;
-                StartCoroutine(UltCooldown());
+                if (Input.GetButtonDown("Fire3"))
+                {
+                    ActivateUlt();
+                    playerZeal.SpendZeal(ultZealCost);
+                    //animator.SetTrigger("Attack");
+                    //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                    clonesSpawned = 0;
+                    StartCoroutine(UltCooldown());
+                }
             }
         }
         

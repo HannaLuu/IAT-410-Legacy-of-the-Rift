@@ -195,12 +195,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  animator: {fileID: 8267758700066203693}
-  monolith: {fileID: 1902554219578425483, guid: 74c7f6a35c1e8f54d8f7f82cddf0b1ea, type: 3}
-  rb: {fileID: 8267758700066203689}
   player: {fileID: 5807222352677156469, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
-  attackRange: 3
   isFlipped: 0
+  isSlowed: 0
+  overzealRegen: 5
+  playerZeal: {fileID: 0}
 --- !u!95 &8267758700066203693
 Animator:
   serializedVersion: 3
@@ -240,4 +239,7 @@ MonoBehaviour:
   monolithLayer:
     serializedVersion: 2
     m_Bits: 256
+  sbCloneLayer:
+    serializedVersion: 2
+    m_Bits: 0
   attackPoint: {fileID: 8267758699397935688}

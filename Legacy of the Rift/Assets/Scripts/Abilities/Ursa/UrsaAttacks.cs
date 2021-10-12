@@ -6,6 +6,10 @@ using UnityEngine;
 // THIS CLASS INHERITS FROM THE ABSTRACT CLASS AttackBaseClass
 public class UrsaAttacks : AttackBaseClass
 {
+    public PlayerZeal playerZeal;
+
+    public int abilityZealCost = 25;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,25 +21,19 @@ public class UrsaAttacks : AttackBaseClass
 
         ultCooldown = 6f;
         isUltReady = true;
+        ultZealCost = 150;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetButtonDown("Fire1") && manaBar.CanSpendZeal(zealBar.zealAttackCost) == false)
-        //{
-        //    FindObjectOfType<AudioManager>().Play("OutOfZeal");
-        //}
-
         if (isAttackReady)
         {
             if (Input.GetButtonDown("Fire1"))
             {
                 Attack();
-                //zealBar.SpendZea1(manaCost);
                 animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                // nextAttackTime = Time.time + 1f / attackCooldown;
             }
         }
 
@@ -44,22 +42,23 @@ public class UrsaAttacks : AttackBaseClass
             if (Input.GetButtonDown("Fire2"))
             {
                 ActivateAbility();
-                //zealBar.SpendZeal1(zealCost);
+                playerZeal.SpendZeal(abilityZealCost);
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                // nextAbilityTime = Time.time + 1f / abilityCooldown;
             }
         }
 
         if (isUltReady)
         {
-            if (Input.GetButtonDown("Fire3"))
+            if(playerZeal.isOverzealous == true)
             {
-                ActivateUlt();
-                //zealBar.SpendZeal1(zealCost);
-                //animator.SetTrigger("Attack");
-                //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                // nextAbilityTime = Time.time + 1f / abilityCooldown;
+                if (Input.GetButtonDown("Fire3"))
+                {
+                    ActivateUlt();
+                    playerZeal.SpendZeal(ultZealCost);
+                    //animator.SetTrigger("Attack");
+                    //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                }
             }
         }
     }
