@@ -7,10 +7,14 @@ public class LegendaryMonolith : MonoBehaviour
     public int maxHealth = 100;
     public float currentHealth;
 
+    public float maxLifeSpan = 8f;
+    public float currentLifeSpan;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        currentLifeSpan = maxLifeSpan;
     }
 
     public void TakeDamage(int damage)
@@ -27,6 +31,10 @@ public class LegendaryMonolith : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        currentLifeSpan -= Time.deltaTime;
+        if (currentLifeSpan <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
