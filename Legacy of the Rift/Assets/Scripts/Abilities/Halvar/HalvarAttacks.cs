@@ -13,32 +13,43 @@ public class HalvarAttacks : AttackBaseClass
     void Start()
     {
         attackCooldown = 2f;
-        // nextAttackTime = 0f;
+        isAttackReady = true;
 
         abilityCooldown = 6f;
-        // nextAbilityTime = 0f;
+        isAbilityReady = true;
 
         ultCooldown = 12f;
-        // nextUltTime = 0f;
+        isUltReady = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // if (Time.time >= nextAttackTime)
+        if (isAttackReady)
         {
             if (Input.GetButtonDown("Fire1"))
             {
                 Attack();
-                // nextAttackTime = Time.time + 1f / attackCooldown;
             }
         }
 
-        // if (Time.time >= nextAbilityTime)
+        if (isAbilityReady)
         {
             if (Input.GetButtonDown("Fire2"))
             {
                 ActivateAbility();
+                //zealBar.SpendZeal1(zealCost);
+                //animator.SetTrigger("Attack");
+                //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                // nextAbilityTime = Time.time + 1f / abilityCooldown;
+            }
+        }
+
+        if (isUltReady)
+        {
+            if (Input.GetButtonDown("Fire3"))
+            {
+                ActivateUlt();
                 //zealBar.SpendZeal1(zealCost);
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");

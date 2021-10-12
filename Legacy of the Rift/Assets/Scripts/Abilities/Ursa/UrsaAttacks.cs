@@ -10,13 +10,13 @@ public class UrsaAttacks : AttackBaseClass
     void Start()
     {
         attackCooldown = 2f;
-        // nextAttackTime = 0f;
+        isAttackReady = true;
 
         abilityCooldown = 4f;
-        // nextAbilityTime = 0f;
+        isAbilityReady = true;
 
         ultCooldown = 6f;
-        // nextUltTime = 0f;
+        isUltReady = true;
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class UrsaAttacks : AttackBaseClass
         //    FindObjectOfType<AudioManager>().Play("OutOfZeal");
         //}
 
-        // if (Time.time >= nextAttackTime)
+        if (isAttackReady)
         {
             if (Input.GetButtonDown("Fire1"))
             {
@@ -39,11 +39,23 @@ public class UrsaAttacks : AttackBaseClass
             }
         }
 
-        // if (Time.time >= nextAbilityTime)
+        if (isAbilityReady)
         {
             if (Input.GetButtonDown("Fire2"))
             {
                 ActivateAbility();
+                //zealBar.SpendZeal1(zealCost);
+                //animator.SetTrigger("Attack");
+                //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                // nextAbilityTime = Time.time + 1f / abilityCooldown;
+            }
+        }
+
+        if (isUltReady)
+        {
+            if (Input.GetButtonDown("Fire3"))
+            {
+                ActivateUlt();
                 //zealBar.SpendZeal1(zealCost);
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
@@ -70,6 +82,6 @@ public class UrsaAttacks : AttackBaseClass
     public override void ActivateUlt()
     {
         //manaBar.SpendZeal1(zealCost);
-        Instantiate(ultPoint, ultPoint.position, ultPoint.rotation);
+        Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
     }
 }
