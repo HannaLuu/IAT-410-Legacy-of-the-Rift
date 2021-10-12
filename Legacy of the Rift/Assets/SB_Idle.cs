@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SB_Idle : StateMachineBehaviour
 {
-    Enemy enemyScript;
+    public float visionRange = 3f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -15,12 +15,16 @@ public class SB_Idle : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
-        enemyScript = FindObjectOfType<Enemy>();
-        if (enemyScript != null)
+        WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
+        if (waveSpawner.EnemyIsAlive() == true)
         {
             animator.SetBool("EnemyDetected", true);
         }
+        //Transform enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
+        //if (enemy != null)
+        //{
+        //    animator.SetBool("EnemyDetected", true);
+        //}
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
