@@ -15,6 +15,8 @@ public class SpectralBarrage : MonoBehaviour
     public float maxLifeSpan = 8f;
     public float currentLifeSpan;
 
+    WaveSpawner waveSpawner;
+
     void Start()
     {
         currentLifeSpan = maxLifeSpan;
@@ -53,6 +55,12 @@ public class SpectralBarrage : MonoBehaviour
         //EnemyCounter.enemiesKilled = EnemyCounter.enemiesKilled += 1;
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    public void removeClones()
+    {
+        Destroy(gameObject);
+        // Debug.Log("KLFSDJK:JDSF");
     }
 
     private void OnDrawGizmosSelected()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SB_Run : StateMachineBehaviour
 {
@@ -10,17 +11,28 @@ public class SB_Run : StateMachineBehaviour
     Transform enemy;
     Rigidbody2D rb;
 
+    // SpectralBarrage clones;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
         rb = animator.GetComponent<Rigidbody2D>();
+
+        // clones = animator.GetComponent<SpectralBarrage>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         Vector2 target = new Vector2(enemy.position.x, rb.position.y);
+
+        if (enemy == null)
+        {
+            animator.SetBool("EnemyDetected", false);
+        }
+
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
 
@@ -29,6 +41,7 @@ public class SB_Run : StateMachineBehaviour
             animator.SetTrigger("Attack");
         }
     }
+
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

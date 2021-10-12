@@ -34,32 +34,34 @@ public class LokirAttacks : AttackBaseClass
         ultCooldown = 10f;
         isUltReady = true;
         ultZealCost = 150;
-}
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (isAttackReady) {
+        if (isAttackReady)
+        {
             if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.A))
             {
                 LacerateLeft();
                 StartCoroutine(BasicCooldown());
             }
-            
+
             else if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.D))
             {
                 LacerateRight();
                 StartCoroutine(BasicCooldown());
             }
-            
+
             else if (Input.GetButtonDown("Fire1"))
             {
                 NormalLaceration();
                 StartCoroutine(BasicCooldown());
             }
         }
-        
-        if (isAbilityReady) {
+
+        if (isAbilityReady)
+        {
             if (Input.GetButtonDown("Fire2"))
             {
                 ActivateAbility();
@@ -69,9 +71,10 @@ public class LokirAttacks : AttackBaseClass
                 StartCoroutine(AbilityCooldown());
             }
         }
-        
-        if (isUltReady) {
-            if(playerZeal.isOverzealous == true)
+
+        if (isUltReady)
+        {
+            if (playerZeal.isOverzealous == true)
             {
                 if (Input.GetButtonDown("Fire3"))
                 {
@@ -84,7 +87,7 @@ public class LokirAttacks : AttackBaseClass
                 }
             }
         }
-        
+
         if (spectralWarlock != null)
         {
             teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;

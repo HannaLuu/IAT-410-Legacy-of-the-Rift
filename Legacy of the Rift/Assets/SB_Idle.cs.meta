@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: ac8c8bc3530f4104f98fe52b3e20e814
+guid: ebb72c280fcb77142a3a57999747ddb5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - spectralBarrageClones: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class WaveSpawner : MonoBehaviour
 {
 
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
+
+    [SerializeField] UnityEvent endOfWave;
 
     [System.Serializable]
     public class Wave
@@ -35,6 +38,8 @@ public class WaveSpawner : MonoBehaviour
         }
 
         waveCountdown = timeBetweenWaves;
+
+        //clones = GameObject.FindGameObjectWithTag("SBClone").transform;
     }
 
     void Update()
@@ -44,6 +49,7 @@ public class WaveSpawner : MonoBehaviour
             if (!EnemyIsAlive())
             {
                 WaveCompleted();
+                endOfWave.Invoke();
             }
             else
             {
@@ -82,7 +88,7 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    bool EnemyIsAlive()
+    public bool EnemyIsAlive()
     {
         searchCountdown -= Time.deltaTime;
         if (searchCountdown <= 0f)
