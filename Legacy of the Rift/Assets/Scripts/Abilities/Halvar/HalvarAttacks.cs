@@ -42,9 +42,7 @@ public class HalvarAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2"))
             {
-                ActivateAbility();
-                playerZeal.SpendZeal(abilityZealCost);
-                //animator.SetTrigger("Attack");
+                animator.SetTrigger("Ability");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
         }
@@ -56,9 +54,6 @@ public class HalvarAttacks : AttackBaseClass
                 if (Input.GetButtonDown("Fire3"))
                 {
                     ActivateUlt();
-                    playerZeal.SpendZeal(ultZealCost);
-                    //animator.SetTrigger("Attack");
-                    //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                 }
             }
         }
@@ -83,7 +78,7 @@ public class HalvarAttacks : AttackBaseClass
     // Defense of the Ancients
     public override void ActivateAbility()
     {
-        //manaBar.SpendZeal1(zealCost);
+        playerZeal.SpendZeal(abilityZealCost);
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 
@@ -91,6 +86,9 @@ public class HalvarAttacks : AttackBaseClass
     public override void ActivateUlt()
     {
         Debug.Log("No Guardian of the Rock ability Yet!");
+        //playerZeal.SpendZeal(ultZealCost);
+        //animator.SetTrigger("Attack");
+        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
     }
 
     private void OnDrawGizmosSelected()
