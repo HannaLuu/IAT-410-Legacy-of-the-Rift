@@ -254,11 +254,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttackReady: 0
-  attackCooldown: 0
+  attackCooldown: 2
   isAbilityReady: 0
-  abilityCooldown: 0
+  abilityCooldown: 4
   isUltReady: 0
-  ultCooldown: 0
+  ultCooldown: 30
   ultZealCost: 50
   zealCost: 0
   animator: {fileID: 4092356082363815208}

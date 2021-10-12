@@ -285,11 +285,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttackReady: 0
-  attackCooldown: 0
+  attackCooldown: 1
   isAbilityReady: 0
-  abilityCooldown: 0
+  abilityCooldown: 10
   isUltReady: 0
-  ultCooldown: 0
+  ultCooldown: 20
+  ultZealCost: 0
   zealCost: 0
   animator: {fileID: 6510522073437167068}
   attackPoint: {fileID: 6510522073740800959}
@@ -298,6 +299,8 @@ MonoBehaviour:
   attackPrefab: {fileID: 6750669263218135290, guid: 4f16afe1ed3b2ad45a696ec1ea2cbcfe, type: 3}
   abilityPrefab: {fileID: 3170107516403426130, guid: e34da3432c62b1947942a783972695f6, type: 3}
   ultPrefab: {fileID: 2942944832457428792, guid: 99d406458e0d4594a8dea1f9692f9dda, type: 3}
+  playerZeal: {fileID: 0}
+  abilityZealCost: 25
 --- !u!1 &6510522073740800956
 GameObject:
   m_ObjectHideFlags: 0

@@ -219,3 +219,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackPoint: {fileID: 5781445290239065982}
+  maxLifeSpan: 20
+  currentLifeSpan: 0
