@@ -39,7 +39,12 @@ public class PlayerSwitching : MonoBehaviour
         {
             SwitchCharacter(Hero.Ursa);
         }
-        
+
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+
         Player.transform.position = GetCurrentHeroObj().transform.position;
     }
 
