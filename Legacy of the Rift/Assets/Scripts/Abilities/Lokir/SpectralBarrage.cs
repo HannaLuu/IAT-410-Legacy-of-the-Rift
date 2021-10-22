@@ -20,6 +20,7 @@ public class SpectralBarrage : MonoBehaviour
     void Start()
     {
         currentLifeSpan = maxLifeSpan;
+        //Physics2D.IgnoreLayerCollision(8, 8, true);
     }
 
     void Update()
