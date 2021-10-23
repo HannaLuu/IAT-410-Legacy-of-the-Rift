@@ -25,17 +25,17 @@ public class PlayerSwitching : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Lokir"))
+        if (currHero != Hero.Lokir && Input.GetButtonDown("Lokir"))
         {
             SwitchCharacter(Hero.Lokir);
         }
 
-        if (Input.GetButtonDown("Halvar"))
+        if (currHero != Hero.Halvar && Input.GetButtonDown("Halvar"))
         {
             SwitchCharacter(Hero.Halvar);
         }
 
-        if (Input.GetButtonDown("Ursa"))
+        if (currHero != Hero.Ursa && Input.GetButtonDown("Ursa"))
         {
             SwitchCharacter(Hero.Ursa);
         }

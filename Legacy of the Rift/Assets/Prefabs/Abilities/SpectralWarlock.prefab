@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 558216547017234398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3177904279812983496}
   - component: {fileID: 8478541946434938884}
   - component: {fileID: 6890333370922390656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpectralWarlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}

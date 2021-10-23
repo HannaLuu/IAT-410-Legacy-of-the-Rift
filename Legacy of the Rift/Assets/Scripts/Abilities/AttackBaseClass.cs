@@ -6,15 +6,18 @@ public abstract class AttackBaseClass : MonoBehaviour
 {
     // Attack Rate, Time, Overzealous Regen Amount
     public bool isAttackReady;
-    public float attackCooldown;
+    public float maxAttackCooldown;
+    public float currAttackCooldown;
 
     // Ability Rate and Time
     public bool isAbilityReady;
-    public float abilityCooldown;
+    public float maxAbilityCooldown;
+    public float currAbilityCooldown;
 
     // Ult Rate, Time, Cost
     public bool isUltReady;
-    public float ultCooldown;
+    public float maxUltCooldown;
+    public float currUltCooldown;
     public int ultZealCost;
 
     // Zeal Crapshitstuff
@@ -42,20 +45,47 @@ public abstract class AttackBaseClass : MonoBehaviour
     
     protected IEnumerator BasicCooldown() {
         isAttackReady = false;
-        yield return new WaitForSeconds(attackCooldown);
-        isAttackReady = true;
+        currAttackCooldown = 0;
+        while (currAttackCooldown < maxAttackCooldown)
+        {
+            currAttackCooldown += Time.deltaTime;
+            if (currAttackCooldown >= maxAttackCooldown)
+            {
+                isAttackReady = true;
+                currAttackCooldown = maxAttackCooldown;
+            }
+            yield return null;
+        }
     }
     
     protected IEnumerator AbilityCooldown() {
         isAbilityReady = false;
-        yield return new WaitForSeconds(abilityCooldown);
-        isAbilityReady = true;
+        currAbilityCooldown = 0;
+        while (currAbilityCooldown < maxAbilityCooldown)
+        {
+            currAbilityCooldown += Time.deltaTime;
+            if (currAbilityCooldown >= maxAbilityCooldown)
+            {
+                isAbilityReady = true;
+                currAbilityCooldown = maxAbilityCooldown;
+            }
+            yield return null;
+        }
     }
     
     protected IEnumerator UltCooldown() {
         isUltReady = false;
-        yield return new WaitForSeconds(ultCooldown);
-        isUltReady = true;
+        currUltCooldown = 0;
+        while (currUltCooldown < maxUltCooldown)
+        {
+            currUltCooldown += Time.deltaTime;
+            if (currUltCooldown >= maxUltCooldown)
+            {
+                isUltReady = true;
+                currUltCooldown = maxUltCooldown;
+            }
+            yield return null;
+        }
     }
 
 }

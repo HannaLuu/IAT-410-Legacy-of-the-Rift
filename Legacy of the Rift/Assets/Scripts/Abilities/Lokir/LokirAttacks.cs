@@ -9,6 +9,7 @@ public class LokirAttacks : AttackBaseClass
 
     public float attackRange = 1f;
     public int attackDamage = 100;
+    public int overzealRegenAmount = 5;
 
     public int abilityZealCost = 25;
 
@@ -22,41 +23,45 @@ public class LokirAttacks : AttackBaseClass
 
     public PlayerZeal playerZeal;
 
+    public CooldownBar abilityCooldownBar;
+    public CooldownBar ultCooldownBar;
+
     // Start is called before the first frame update
     void Start()
     {
-        attackCooldown = 1f;
         isAttackReady = true;
+        currAttackCooldown = maxAttackCooldown;
 
-        abilityCooldown = 5f;
         isAbilityReady = true;
+        currAbilityCooldown = maxAbilityCooldown;
+        abilityCooldownBar.SetMaxCooldown(maxAbilityCooldown);
 
-        ultCooldown = 10f;
         isUltReady = true;
-        ultZealCost = 150;
+        currUltCooldown = maxUltCooldown;
+        ultCooldownBar.SetMaxCooldown(maxUltCooldown);
     }
 
     // Update is called once per frame
     void Update()
     {
+        abilityCooldownBar.SetCooldown(currAbilityCooldown);
+        ultCooldownBar.SetCooldown(currUltCooldown);
+
         if (isAttackReady)
         {
             if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.A))
             {
                 LacerateLeft();
-                StartCoroutine(BasicCooldown());
             }
 
             else if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.D))
             {
                 LacerateRight();
-                StartCoroutine(BasicCooldown());
             }
 
             else if (Input.GetButtonDown("Fire1"))
             {
                 NormalLaceration();
-                StartCoroutine(BasicCooldown());
             }
         }
 
@@ -68,7 +73,6 @@ public class LokirAttacks : AttackBaseClass
                 playerZeal.SpendZeal(abilityZealCost);
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                StartCoroutine(AbilityCooldown());
             }
         }
 
@@ -83,7 +87,6 @@ public class LokirAttacks : AttackBaseClass
                     //animator.SetTrigger("Attack");
                     //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                     clonesSpawned = 0;
-                    StartCoroutine(UltCooldown());
                 }
             }
         }
@@ -120,18 +123,26 @@ public class LokirAttacks : AttackBaseClass
         {
             Debug.Log("HIT");
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            if (playerZeal.isOverzealous == true)
+            {
+                playerZeal.AddOverzeal(overzealRegenAmount);
+            }
         }
+
+        StartCoroutine(BasicCooldown());
     }
 
     // Spectral Warlock
     public override void ActivateAbility()
     {
         spectralWarlock = Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation) as GameObject;
+        StartCoroutine(AbilityCooldown());
     }
 
     // Spectral Barrage
     public override void ActivateUlt()
     {
+        StartCoroutine(UltCooldown());
         while (clonesSpawned < 3)
         {
             clonesSpawned += 1;

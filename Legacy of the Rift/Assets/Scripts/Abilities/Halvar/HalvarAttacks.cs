@@ -6,6 +6,7 @@ public class HalvarAttacks : AttackBaseClass
 {
     public float attackRange = 1f;
     public int attackDamage = 100;
+    public int overzealRegenAmount = 5;
 
     public int abilityZealCost = 25;
 
@@ -15,23 +16,30 @@ public class HalvarAttacks : AttackBaseClass
 
     public Transform ultPoint2;
 
+    public CooldownBar abilityCooldownBar;
+    public CooldownBar ultCooldownBar;
+
     // Start is called before the first frame update
     void Start()
     {
-        attackCooldown = 2f;
         isAttackReady = true;
+        currAttackCooldown = maxAttackCooldown;
 
-        abilityCooldown = 6f;
         isAbilityReady = true;
+        currAbilityCooldown = maxAbilityCooldown;
+        abilityCooldownBar.SetMaxCooldown(maxAbilityCooldown);
 
-        ultCooldown = 12f;
         isUltReady = true;
-        ultZealCost = 150;
+        currUltCooldown = maxUltCooldown;
+        ultCooldownBar.SetMaxCooldown(maxUltCooldown);
     }
 
     // Update is called once per frame
     void Update()
     {
+        abilityCooldownBar.SetCooldown(currAbilityCooldown);
+        ultCooldownBar.SetCooldown(currUltCooldown);
+
         if (isAttackReady)
         {
             if (Input.GetButtonDown("Fire1"))
@@ -74,7 +82,13 @@ public class HalvarAttacks : AttackBaseClass
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            if (playerZeal.isOverzealous == true)
+            {
+                playerZeal.AddOverzeal(overzealRegenAmount);
+            }
         }
+
+        StartCoroutine(BasicCooldown());
     }
 
     // Defense of the Ancients
@@ -82,6 +96,7 @@ public class HalvarAttacks : AttackBaseClass
     {
         playerZeal.SpendZeal(abilityZealCost);
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
+        StartCoroutine(AbilityCooldown());
     }
 
     // Guardian of the Rock
@@ -92,6 +107,7 @@ public class HalvarAttacks : AttackBaseClass
         Instantiate(ultPrefab, ultPoint2.position, ultPoint2.rotation);
         //animator.SetTrigger("Attack");
         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+        StartCoroutine(UltCooldown());
     }
 
     private void OnDrawGizmosSelected()
