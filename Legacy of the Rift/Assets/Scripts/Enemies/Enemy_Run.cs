@@ -38,7 +38,7 @@ public class Enemy_Run : StateMachineBehaviour
 
         if (enemyScript.isSlowed == true)
         {
-            speed = 0.5f;
+            speed = 1.5f;
         }
 
         else

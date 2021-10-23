@@ -13,6 +13,8 @@ public class HalvarAttacks : AttackBaseClass
 
     public PlayerZeal playerZeal;
 
+    public Transform ultPoint2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +55,7 @@ public class HalvarAttacks : AttackBaseClass
             {
                 if (Input.GetButtonDown("Fire3"))
                 {
-                    ActivateUlt();
+                    animator.SetTrigger("Ultimate");
                 }
             }
         }
@@ -85,8 +87,9 @@ public class HalvarAttacks : AttackBaseClass
     // Guardian of the Rock
     public override void ActivateUlt()
     {
-        Debug.Log("No Guardian of the Rock ability Yet!");
-        //playerZeal.SpendZeal(ultZealCost);
+        playerZeal.SpendZeal(ultZealCost);
+        Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
+        Instantiate(ultPrefab, ultPoint2.position, ultPoint2.rotation);
         //animator.SetTrigger("Attack");
         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
     }
