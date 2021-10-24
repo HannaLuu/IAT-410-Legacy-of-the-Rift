@@ -11,11 +11,15 @@ public class PlayerSwitching : MonoBehaviour
     public GameObject Player;
 
     public enum Hero {Lokir, Halvar, Ursa};
+    public Hero pastHero;
     public Hero currHero;
+
+    public bool isSwitch = false;
 
     private void Start()
     {
         currHero = Hero.Lokir;
+        isSwitch = false;
         Player.transform.position = Lokir.transform.position;
         Lokir.SetActive(true);
         Halvar.SetActive(false);
@@ -25,18 +29,23 @@ public class PlayerSwitching : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isSwitch = false;
+        pastHero = currHero;
         if (currHero != Hero.Lokir && Input.GetButtonDown("Lokir"))
         {
+            isSwitch = true;
             SwitchCharacter(Hero.Lokir);
         }
 
         if (currHero != Hero.Halvar && Input.GetButtonDown("Halvar"))
         {
+            isSwitch = true;
             SwitchCharacter(Hero.Halvar);
         }
 
         if (currHero != Hero.Ursa && Input.GetButtonDown("Ursa"))
         {
+            isSwitch = true;
             SwitchCharacter(Hero.Ursa);
         }
 
