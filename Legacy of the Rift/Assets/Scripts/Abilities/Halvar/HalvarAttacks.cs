@@ -81,7 +81,7 @@ public class HalvarAttacks : AttackBaseClass
         //Damage them
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             if (playerZeal.isOverzealous == true)
             {
                 playerZeal.AddOverzeal(overzealRegenAmount);

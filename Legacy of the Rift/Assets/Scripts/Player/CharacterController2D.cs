@@ -51,12 +51,6 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
-    public void Update()
-    {
-        Debug.Log("Grounded: " + m_Grounded);
-    }
-
-
     public void Move(float move, bool crouch, bool jump)
     {
         //only control the player if grounded or airControl is turned on
@@ -81,7 +75,6 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 
-        Debug.Log("jump: " + jump);
         // If the player should jump...
         if (m_Grounded && jump && m_Rigidbody2D.velocity.y <= 0f)
         {

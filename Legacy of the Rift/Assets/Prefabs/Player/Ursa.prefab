@@ -293,7 +293,7 @@ MonoBehaviour:
   isUltReady: 0
   maxUltCooldown: 10
   currUltCooldown: 0
-  ultZealCost: 0
+  ultZealCost: 150
   zealCost: 0
   animator: {fileID: 6510522073437167068}
   attackPoint: {fileID: 6510522073740800959}
