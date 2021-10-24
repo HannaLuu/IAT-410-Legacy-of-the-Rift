@@ -51,6 +51,11 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        Debug.Log("Grounded: " + m_Grounded);
+    }
+
 
     public void Move(float move, bool crouch, bool jump)
     {
@@ -75,6 +80,8 @@ public class CharacterController2D : MonoBehaviour
                 Flip();
             }
         }
+
+        Debug.Log("jump: " + jump);
         // If the player should jump...
         if (m_Grounded && jump && m_Rigidbody2D.velocity.y <= 0f)
         {

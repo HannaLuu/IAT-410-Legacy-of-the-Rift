@@ -1287,7 +1287,7 @@ GameObject:
   - component: {fileID: 488425067}
   - component: {fileID: 488425070}
   - component: {fileID: 488425069}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bg_castleseggs-grayscale-Sheet_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

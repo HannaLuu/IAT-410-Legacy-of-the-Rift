@@ -170,7 +170,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   m_GroundCheck: {fileID: 6510522072655516039}
   OnLandEvent:
     m_PersistentCalls:
@@ -303,7 +303,10 @@ MonoBehaviour:
   abilityPrefab: {fileID: 3170107516403426130, guid: e34da3432c62b1947942a783972695f6, type: 3}
   ultPrefab: {fileID: 2942944832457428792, guid: 99d406458e0d4594a8dea1f9692f9dda, type: 3}
   playerZeal: {fileID: 0}
+  overzealRegenAmount: 5
   abilityZealCost: 25
+  abilityCooldownBar: {fileID: 0}
+  ultCooldownBar: {fileID: 0}
 --- !u!1 &6510522073740800956
 GameObject:
   m_ObjectHideFlags: 0
