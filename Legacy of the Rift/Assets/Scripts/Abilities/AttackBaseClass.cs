@@ -42,8 +42,9 @@ public abstract class AttackBaseClass : MonoBehaviour
     public abstract void ActivateAbility();
 
     public abstract void ActivateUlt();
-    
-    protected IEnumerator BasicCooldown() {
+
+    protected IEnumerator BasicCooldown()
+    {
         isAttackReady = false;
         currAttackCooldown = 0;
         while (currAttackCooldown < maxAttackCooldown)
@@ -57,8 +58,9 @@ public abstract class AttackBaseClass : MonoBehaviour
             yield return null;
         }
     }
-    
-    protected IEnumerator AbilityCooldown() {
+
+    protected IEnumerator AbilityCooldown()
+    {
         isAbilityReady = false;
         currAbilityCooldown = 0;
         while (currAbilityCooldown < maxAbilityCooldown)
@@ -72,8 +74,9 @@ public abstract class AttackBaseClass : MonoBehaviour
             yield return null;
         }
     }
-    
-    protected IEnumerator UltCooldown() {
+
+    protected IEnumerator UltCooldown()
+    {
         isUltReady = false;
         currUltCooldown = 0;
         while (currUltCooldown < maxUltCooldown)

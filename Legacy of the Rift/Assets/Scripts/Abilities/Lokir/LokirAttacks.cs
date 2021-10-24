@@ -26,6 +26,11 @@ public class LokirAttacks : AttackBaseClass
     public CooldownBar abilityCooldownBar;
     public CooldownBar ultCooldownBar;
 
+    public bool ignoreEnemyCollision;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +51,7 @@ public class LokirAttacks : AttackBaseClass
     {
         abilityCooldownBar.SetCooldown(currAbilityCooldown);
         ultCooldownBar.SetCooldown(currUltCooldown);
+
 
         if (isAttackReady)
         {
@@ -99,6 +105,7 @@ public class LokirAttacks : AttackBaseClass
                 Teleport();
             }
         }
+
     }
 
     private void FixedUpdate()
@@ -115,21 +122,23 @@ public class LokirAttacks : AttackBaseClass
         //Play Attack Animation
         animator.SetTrigger("Attack");
 
-        //Detect Enemies in range of attack
+        StartCoroutine(BasicCooldown());
+
+        //Detect Enemies in range of basic attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        //Damage them
-        foreach (Collider2D enemy in hitEnemies)
-        {
-            Debug.Log("HIT");
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            if (playerZeal.isOverzealous == true)
-            {
-                playerZeal.AddOverzeal(overzealRegenAmount);
-            }
-        }
+        // Damage them
+        // foreach (Collider2D enemy in hitEnemies)
+        // {
+        //     Debug.Log("HIT");
+        //     enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+        //     if (playerZeal.isOverzealous == true)
+        //     {
+        //         playerZeal.AddOverzeal(overzealRegenAmount);
+        //     }
+        // }
 
-        StartCoroutine(BasicCooldown());
+
     }
 
     // Spectral Warlock
@@ -164,16 +173,34 @@ public class LokirAttacks : AttackBaseClass
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-    IEnumerator Dash(float direction)
+    IEnumerator Dash(float distanceMultiplier)
     {
+        float speed = 400f;
 
-        //isDashing = true;
-        rb.velocity = new Vector2(400f * direction, 0f);
+        rb.velocity = new Vector2(speed * distanceMultiplier, 0f);
 
+        ignoreEnemyCollision = true;
 
         yield return new WaitForSeconds(0.3f);
 
+        ignoreEnemyCollision = false;
+
     }
+
+    private void OnTriggerEnter2D(Collider2D otherCollider)
+    {
+        if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == true)
+        {
+            Debug.Log("PASS THROUGH ENEMY");
+            Physics2D.IgnoreLayerCollision(7, 6, true);
+
+        }
+        else if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == false)
+        {
+            Physics2D.IgnoreLayerCollision(7, 6, false);
+        }
+    }
+
 
     public void NormalLaceration()
     {

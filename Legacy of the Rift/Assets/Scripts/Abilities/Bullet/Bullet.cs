@@ -42,6 +42,7 @@ public class Bullet : MonoBehaviour
         Enemy enemy = hitInfo.GetComponent<Enemy>();
         if (enemy != null)
         {
+            Debug.Log("ARROW PASS THROUGH ENEMY");
             currentHealth -= 1;
             enemy.TakeDamage(damage);
         }
