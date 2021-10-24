@@ -11,9 +11,6 @@ public class UrsaAttacks : AttackBaseClass
 
     public int abilityZealCost = 25;
 
-    public CooldownBar abilityCooldownBar;
-    public CooldownBar ultCooldownBar;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,18 +19,17 @@ public class UrsaAttacks : AttackBaseClass
 
         isAbilityReady = true;
         currAbilityCooldown = maxAbilityCooldown;
-        abilityCooldownBar.SetMaxCooldown(maxAbilityCooldown);
 
         isUltReady = true;
         currUltCooldown = maxUltCooldown;
-        ultCooldownBar.SetMaxCooldown(maxUltCooldown);
     }
 
     // Update is called once per frame
     void Update()
     {
-        abilityCooldownBar.SetCooldown(currAbilityCooldown);
-        ultCooldownBar.SetCooldown(currUltCooldown);
+        attackActivated = false;
+        abilityActivated = false;
+        ultActivated = false;
 
         if (isAttackReady)
         {
@@ -50,7 +46,6 @@ public class UrsaAttacks : AttackBaseClass
             if (Input.GetButtonDown("Fire2"))
             {
                 ActivateAbility();
-                playerZeal.SpendZeal(abilityZealCost);
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
@@ -63,7 +58,6 @@ public class UrsaAttacks : AttackBaseClass
                 if (Input.GetButtonDown("Fire3"))
                 {
                     ActivateUlt();
-                    playerZeal.SpendZeal(ultZealCost);
                     //animator.SetTrigger("Attack");
                     //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                 }
@@ -74,28 +68,27 @@ public class UrsaAttacks : AttackBaseClass
     // Munir's Arrow
     public override void Attack()
     {
-        //manaBar.SpendZeal1(zealCost);
+        attackActivated = true;
         Instantiate(attackPrefab, attackPoint.position, attackPoint.rotation);
         if (playerZeal.isOverzealous == true)
         {
             playerZeal.AddOverzeal(overzealRegenAmount);
         }
-        StartCoroutine(BasicCooldown());
     }
 
     // Harbinger of Life
     public override void ActivateAbility()
     {
-        //manaBar.SpendZeal1(zealCost);
+        abilityActivated = true;
+        playerZeal.SpendZeal(abilityZealCost);
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
-        StartCoroutine(AbilityCooldown());
     }
 
     // Herald of Ruin
     public override void ActivateUlt()
     {
-        //manaBar.SpendZeal1(zealCost);
+        ultActivated = true;
+        playerZeal.SpendZeal(ultZealCost);
         Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
-        StartCoroutine(UltCooldown());
     }
 }

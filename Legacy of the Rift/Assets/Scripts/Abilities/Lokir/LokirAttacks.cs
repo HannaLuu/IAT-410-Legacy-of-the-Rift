@@ -22,13 +22,7 @@ public class LokirAttacks : AttackBaseClass
 
     public PlayerZeal playerZeal;
 
-    public CooldownBar abilityCooldownBar;
-    public CooldownBar ultCooldownBar;
-
     public bool ignoreEnemyCollision;
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -38,19 +32,17 @@ public class LokirAttacks : AttackBaseClass
 
         isAbilityReady = true;
         currAbilityCooldown = maxAbilityCooldown;
-        abilityCooldownBar.SetMaxCooldown(maxAbilityCooldown);
 
         isUltReady = true;
         currUltCooldown = maxUltCooldown;
-        ultCooldownBar.SetMaxCooldown(maxUltCooldown);
     }
 
     // Update is called once per frame
     void Update()
     {
-        abilityCooldownBar.SetCooldown(currAbilityCooldown);
-        ultCooldownBar.SetCooldown(currUltCooldown);
-
+        attackActivated = false;
+        abilityActivated = false;
+        ultActivated = false;
 
         if (isAttackReady)
         {
@@ -112,21 +104,20 @@ public class LokirAttacks : AttackBaseClass
     {
         //Play Attack Animation
         animator.SetTrigger("Attack");
-
-        StartCoroutine(BasicCooldown());
+        attackActivated = true;
     }
 
     // Spectral Warlock
     public override void ActivateAbility()
     {
+        abilityActivated = true;
         spectralWarlock = Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation) as GameObject;
-        StartCoroutine(AbilityCooldown());
     }
 
     // Spectral Barrage
     public override void ActivateUlt()
     {
-        StartCoroutine(UltCooldown());
+        ultActivated = true;
         while (clonesSpawned < 3)
         {
             clonesSpawned += 1;
@@ -163,18 +154,13 @@ public class LokirAttacks : AttackBaseClass
         {
             otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             Debug.Log("DASH THROUGH DAMAGE");
-            //otherCollider.GetComponent<Enemy>().TakeDamage(attackDamage);
+
             if (playerZeal.isOverzealous == true)
             {
                 playerZeal.AddOverzeal(overzealRegenAmount);
             }
-            //Physics2D.IgnoreLayerCollision(7, 6, true);
 
         }
-        // else if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == false)
-        // {
-        //     //Physics2D.IgnoreLayerCollision(7, 6, false);
-        // }
     }
 
 

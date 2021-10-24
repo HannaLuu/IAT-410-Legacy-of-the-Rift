@@ -316,12 +316,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttackReady: 0
+  attackActivated: 0
   maxAttackCooldown: 1
   currAttackCooldown: 0
   isAbilityReady: 0
+  abilityActivated: 0
   maxAbilityCooldown: 4
   currAbilityCooldown: 0
   isUltReady: 0
+  ultActivated: 0
   maxUltCooldown: 10
   currUltCooldown: 0
   ultZealCost: 150
@@ -333,7 +336,7 @@ MonoBehaviour:
   attackPrefab: {fileID: 0}
   abilityPrefab: {fileID: 126634518127349319, guid: 74c7f6a35c1e8f54d8f7f82cddf0b1ea, type: 3}
   ultPrefab: {fileID: 8027434218581657759, guid: 38f9a9ad9e295f44594e71d46b525279, type: 3}
-  attackRange: 3
+  attackRange: 1.5
   attackDamage: 50
   overzealRegenAmount: 5
   abilityZealCost: 25
@@ -342,8 +345,6 @@ MonoBehaviour:
     m_Bits: 64
   playerZeal: {fileID: 0}
   ultPoint2: {fileID: 653068521751126187}
-  abilityCooldownBar: {fileID: 0}
-  ultCooldownBar: {fileID: 0}
 --- !u!1 &4092356082818394142
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7335534039178926389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.571, y: 0.162, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4092356082363815203}

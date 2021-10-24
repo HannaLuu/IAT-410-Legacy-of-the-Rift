@@ -600,6 +600,7 @@ GameObject:
   - component: {fileID: 213085915}
   - component: {fileID: 213085914}
   - component: {fileID: 213085917}
+  - component: {fileID: 213085918}
   m_Layer: 0
   m_Name: PlayerHandler
   m_TagString: Untagged
@@ -671,6 +672,27 @@ MonoBehaviour:
   zealRegenAmount: 10
   isOverzealous: 0
   zealBar: {fileID: 1413289330}
+--- !u!114 &213085918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213085913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e779686b74933114f98056fba4bba590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lokirAbilityCooldownBar: {fileID: 460339357}
+  lokirUltCooldownBar: {fileID: 961648576}
+  halvarAbilityCooldownBar: {fileID: 1183479283}
+  halvarUltCooldownBar: {fileID: 2098383}
+  ursaAbilityCooldownBar: {fileID: 2011669928}
+  ursaUltCooldownBar: {fileID: 1436147701}
+  Lokir: {fileID: 508733383}
+  Halvar: {fileID: 1769947045}
+  Ursa: {fileID: 1109874728}
 --- !u!1 &276549341
 GameObject:
   m_ObjectHideFlags: 0

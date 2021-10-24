@@ -6,16 +6,19 @@ public abstract class AttackBaseClass : MonoBehaviour
 {
     // Attack Rate, Time, Overzealous Regen Amount
     public bool isAttackReady;
+    public bool attackActivated;
     public float maxAttackCooldown;
     public float currAttackCooldown;
 
     // Ability Rate and Time
     public bool isAbilityReady;
+    public bool abilityActivated;
     public float maxAbilityCooldown;
     public float currAbilityCooldown;
 
     // Ult Rate, Time, Cost
     public bool isUltReady;
+    public bool ultActivated;
     public float maxUltCooldown;
     public float currUltCooldown;
     public int ultZealCost;
@@ -43,7 +46,7 @@ public abstract class AttackBaseClass : MonoBehaviour
 
     public abstract void ActivateUlt();
 
-    protected IEnumerator BasicCooldown()
+    public IEnumerator BasicCooldown()
     {
         isAttackReady = false;
         currAttackCooldown = 0;
@@ -59,7 +62,7 @@ public abstract class AttackBaseClass : MonoBehaviour
         }
     }
 
-    protected IEnumerator AbilityCooldown()
+    public IEnumerator AbilityCooldown()
     {
         isAbilityReady = false;
         currAbilityCooldown = 0;
@@ -75,7 +78,7 @@ public abstract class AttackBaseClass : MonoBehaviour
         }
     }
 
-    protected IEnumerator UltCooldown()
+    public IEnumerator UltCooldown()
     {
         isUltReady = false;
         currUltCooldown = 0;
