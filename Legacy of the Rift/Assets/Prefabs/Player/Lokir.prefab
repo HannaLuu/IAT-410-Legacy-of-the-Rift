@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &589939261175970677
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3512918653134511439}
-  m_Layer: 7
-  m_Name: AttackPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3512918653134511439
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589939261175970677}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.534, y: 0.057, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2016021677601461824
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4997600957896317330
 GameObject:
@@ -88,7 +58,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5807222352677156475
 GameObject:
@@ -126,7 +96,6 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 5807222353560896886}
-  - {fileID: 3512918653134511439}
   - {fileID: 6646633428125080967}
   - {fileID: 3689608880295959782}
   - {fileID: 5565003550432907362}
@@ -327,14 +296,13 @@ MonoBehaviour:
   ultZealCost: 50
   zealCost: 0
   animator: {fileID: 5807222352677156467}
-  attackPoint: {fileID: 3512918653134511439}
+  attackPoint: {fileID: 0}
   abilityPoint: {fileID: 6646633428125080967}
   ultPoint: {fileID: 3689608880295959782}
   attackPrefab: {fileID: 0}
   abilityPrefab: {fileID: 7121423283127142723, guid: 103f20c639215804fbdb2d9b1cf8f5f7, type: 3}
   ultPrefab: {fileID: 7381604623743189407, guid: f8865192a3c354e438cb2f7b4fbf9730, type: 3}
   rb: {fileID: 7111613358293209999}
-  attackRange: 3
   attackDamage: 15
   overzealRegenAmount: 5
   abilityZealCost: 25
@@ -345,10 +313,7 @@ MonoBehaviour:
   playerZeal: {fileID: 0}
   abilityCooldownBar: {fileID: 0}
   ultCooldownBar: {fileID: 0}
-  dashPoint: {fileID: 5565003550432907362}
   ignoreEnemyCollision: 0
-  isPhasing: 0
-  boxCollider2D: {fileID: 0}
 --- !u!1 &5807222353560896885
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5807222353560896885}
   m_LocalRotation: {x: -0.0010471215, y: 0, z: 0, w: 0.9999995}
-  m_LocalPosition: {x: 0.044, y: -0.401, z: -0}
+  m_LocalPosition: {x: 0.044, y: -0.582, z: 0}
   m_LocalScale: {x: 0.3, y: 0.42, z: 1}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
@@ -393,9 +358,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.6}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.60303867
 --- !u!1 &7211195956582409371
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +390,7 @@ Transform:
   m_LocalScale: {x: 0.38, y: 0.83, z: 0.25}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3344644179209385558
 BoxCollider2D:

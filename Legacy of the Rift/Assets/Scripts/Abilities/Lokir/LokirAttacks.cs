@@ -7,7 +7,6 @@ public class LokirAttacks : AttackBaseClass
     // Start is called before the first frame update
     public Rigidbody2D rb;
 
-    public float attackRange = 1f;
     public int attackDamage = 100;
     public int overzealRegenAmount = 5;
 
@@ -108,14 +107,6 @@ public class LokirAttacks : AttackBaseClass
 
     }
 
-    private void FixedUpdate()
-    {
-        // if (!isDashing)
-        // {
-        //     rb.velocity = new Vector2(mx * speed, rb.velocity.y);
-        // }
-    }
-
     // Spectral Laceration
     public override void Attack()
     {
@@ -123,22 +114,6 @@ public class LokirAttacks : AttackBaseClass
         animator.SetTrigger("Attack");
 
         StartCoroutine(BasicCooldown());
-
-        //Detect Enemies in range of basic attack
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
-        // Damage them
-        // foreach (Collider2D enemy in hitEnemies)
-        // {
-        //     Debug.Log("HIT");
-        //     enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-        //     if (playerZeal.isOverzealous == true)
-        //     {
-        //         playerZeal.AddOverzeal(overzealRegenAmount);
-        //     }
-        // }
-
-
     }
 
     // Spectral Warlock
@@ -164,15 +139,6 @@ public class LokirAttacks : AttackBaseClass
         Destroy(spectralWarlock);
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null)
-        {
-            return;
-        }
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }
-
     IEnumerator Dash(float distanceMultiplier)
     {
         float speed = 400f;
@@ -191,7 +157,12 @@ public class LokirAttacks : AttackBaseClass
     {
         if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == true)
         {
-            Debug.Log("PASS THROUGH ENEMY");
+            otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+            //otherCollider.GetComponent<Enemy>().TakeDamage(attackDamage);
+            if (playerZeal.isOverzealous == true)
+            {
+                playerZeal.AddOverzeal(overzealRegenAmount);
+            }
             Physics2D.IgnoreLayerCollision(7, 6, true);
 
         }
