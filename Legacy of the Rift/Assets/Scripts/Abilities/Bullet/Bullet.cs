@@ -33,23 +33,14 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        //TrainingDummy td = hitInfo.GetComponent<TrainingDummy>();
-        //if (td != null)
-        //{
-        //    td.TakeDamage(damage);
-        //}
-
-        Enemy enemy = hitInfo.GetComponent<Enemy>();
-        if (enemy != null)
+        if (hitInfo.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("ARROW PASS THROUGH ENEMY");
+            hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
             currentHealth -= 1;
-            enemy.TakeDamage(damage);
+
         }
 
         //Instantiate(impactEffect, transform.position, transform.rotation);
-
-
     }
 
     void OnBecameInvisible()
