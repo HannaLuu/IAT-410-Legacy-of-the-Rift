@@ -146,10 +146,14 @@ public class LokirAttacks : AttackBaseClass
         rb.velocity = new Vector2(speed * distanceMultiplier, 0f);
 
         ignoreEnemyCollision = true;
+        Physics2D.IgnoreLayerCollision(7, 6, true);
+
 
         yield return new WaitForSeconds(0.3f);
 
+
         ignoreEnemyCollision = false;
+        Physics2D.IgnoreLayerCollision(7, 6, false);
 
     }
 
@@ -158,19 +162,21 @@ public class LokirAttacks : AttackBaseClass
         if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == true)
         {
             otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+            Debug.Log("DASH THROUGH DAMAGE");
             //otherCollider.GetComponent<Enemy>().TakeDamage(attackDamage);
             if (playerZeal.isOverzealous == true)
             {
                 playerZeal.AddOverzeal(overzealRegenAmount);
             }
-            Physics2D.IgnoreLayerCollision(7, 6, true);
+            //Physics2D.IgnoreLayerCollision(7, 6, true);
 
         }
-        else if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == false)
-        {
-            Physics2D.IgnoreLayerCollision(7, 6, false);
-        }
+        // else if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == false)
+        // {
+        //     //Physics2D.IgnoreLayerCollision(7, 6, false);
+        // }
     }
+
 
 
     public void NormalLaceration()
