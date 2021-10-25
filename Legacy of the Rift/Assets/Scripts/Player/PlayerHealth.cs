@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public GameObject gameOverUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,8 +47,6 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
-        //well shit... bjorn dead...
-        //EnemyCounter.enemiesKilled = 0;
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameOverUI.SetActive(true);
     }
 }
