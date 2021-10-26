@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3056156213355905241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3056156213355905244}
+  - component: {fileID: 3056156213355905243}
+  - component: {fileID: 3056156213355905247}
+  - component: {fileID: 3056156213355905242}
+  - component: {fileID: 3056156213355905245}
+  - component: {fileID: 3056156213355905246}
+  m_Layer: 0
+  m_Name: PlayerHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3056156213355905244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056156213355905241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.8767934, y: 2.1378613, z: -15.8892}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3056156213355905243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056156213355905241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9137533571e2049afcdf7d26e3d6d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lokir: {fileID: 0}
+  Halvar: {fileID: 0}
+  Ursa: {fileID: 0}
+  Player: {fileID: 0}
+  pastHero: 0
+  currHero: 0
+  isSwitch: 0
+--- !u!114 &3056156213355905247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056156213355905241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3747ae607440d47b59f5c2447717e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LokirBars: {fileID: 0}
+  HalvarBars: {fileID: 0}
+  UrsaBars: {fileID: 0}
+  psScript: {fileID: 3056156213355905243}
+--- !u!114 &3056156213355905242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056156213355905241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14993a83918704742b69146d3c7e9a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
+  healthBar: {fileID: 0}
+  gameOverUI: {fileID: 0}
+--- !u!114 &3056156213355905245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056156213355905241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45f9124c501334048a9893f360c75f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxZeal: 150
+  overzealousAmount: 50
+  currentZeal: 0
+  zealRegenAmount: 10
+  isOverzealous: 0
+  zealBar: {fileID: 0}
+--- !u!114 &3056156213355905246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056156213355905241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e779686b74933114f98056fba4bba590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lokirAbilityCooldownBar: {fileID: 0}
+  lokirUltCooldownBar: {fileID: 0}
+  halvarAbilityCooldownBar: {fileID: 0}
+  halvarUltCooldownBar: {fileID: 0}
+  ursaAbilityCooldownBar: {fileID: 0}
+  ursaUltCooldownBar: {fileID: 0}
+  Lokir: {fileID: 0}
+  Halvar: {fileID: 0}
+  Ursa: {fileID: 0}
