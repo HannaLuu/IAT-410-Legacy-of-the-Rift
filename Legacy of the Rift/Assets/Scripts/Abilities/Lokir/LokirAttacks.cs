@@ -56,10 +56,10 @@ public class LokirAttacks : AttackBaseClass
                 LacerateRight();
             }
 
-            else if (Input.GetButtonDown("Fire1"))
-            {
-                NormalLaceration();
-            }
+            //else if (Input.GetButtonDown("Fire1"))
+            //{
+            //    NormalLaceration();
+            //}
         }
 
         if (isAbilityReady)
@@ -165,10 +165,10 @@ public class LokirAttacks : AttackBaseClass
 
 
 
-    public void NormalLaceration()
-    {
-        Attack();
-    }
+    //public void NormalLaceration()
+    //{
+    //    Attack();
+    //}
 
     public void LacerateLeft()
     {

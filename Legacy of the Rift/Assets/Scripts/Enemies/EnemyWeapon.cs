@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyWeapon : MonoBehaviour
 {
+    public Rigidbody2D rb;
+
     public int attackDamage = 10;
     public float attackRange = 0.5f;
     public LayerMask playerLayer;

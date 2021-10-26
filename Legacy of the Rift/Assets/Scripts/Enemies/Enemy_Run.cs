@@ -10,7 +10,6 @@ public class Enemy_Run : StateMachineBehaviour
     Transform player;
     Rigidbody2D rb;
     Enemy enemyScript;
-    Bullet bullet;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -19,7 +18,6 @@ public class Enemy_Run : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         enemyScript = animator.GetComponent<Enemy>();
-        bullet = animator.GetComponent<Bullet>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -38,12 +36,12 @@ public class Enemy_Run : StateMachineBehaviour
 
         if (enemyScript.isSlowed == true)
         {
-            speed = 1.5f;
+            speed = 3f;
         }
 
         else
         {
-            speed = 2.5f;
+            speed = 4f;
         }
 
     }
