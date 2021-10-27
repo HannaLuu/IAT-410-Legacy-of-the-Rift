@@ -18,7 +18,7 @@ public class HalvarTutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (flowchart.GetBooleanVariable("isLokirQ") == true)
+        if (flowchart.GetBooleanVariable("isLokirTP") == true)
         {
             flowchart.SetBooleanVariable("isHalvar", true);
         }

@@ -45,7 +45,6 @@ public class LokirAttacks : AttackBaseClass
         attackActivated = false;
         abilityActivated = false;
         ultActivated = false;
-        enemyCollided = false;
 
         if (isAttackReady)
         {
@@ -155,8 +154,8 @@ public class LokirAttacks : AttackBaseClass
     {
         if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == true)
         {
-            otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             enemyCollided = true;
+            otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             Debug.Log("DASH THROUGH DAMAGE");
 
             if (playerZeal.isOverzealous == true)

@@ -26,5 +26,9 @@ public class LokirTutorial : MonoBehaviour
         {
             flowchart.SetBooleanVariable("isLokirQ", true);
         }
+        if (flowchart.GetBooleanVariable("isLokirQ") == true && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            flowchart.SetBooleanVariable("isLokirTP", true);
+        }
     }
 }
