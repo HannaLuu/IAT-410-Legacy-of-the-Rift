@@ -4,6 +4,9 @@ using UnityEngine;
 
 public abstract class AttackBaseClass : MonoBehaviour
 {
+    //Tutorial Boolean
+    public bool enemyCollided;
+
     // Attack Rate, Time, Overzealous Regen Amount
     public bool isAttackReady;
     public bool attackActivated;

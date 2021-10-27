@@ -35,6 +35,8 @@ public class LokirAttacks : AttackBaseClass
 
         isUltReady = true;
         currUltCooldown = maxUltCooldown;
+
+        enemyCollided = false;
     }
 
     // Update is called once per frame
@@ -43,6 +45,7 @@ public class LokirAttacks : AttackBaseClass
         attackActivated = false;
         abilityActivated = false;
         ultActivated = false;
+        enemyCollided = false;
 
         if (isAttackReady)
         {
@@ -153,6 +156,7 @@ public class LokirAttacks : AttackBaseClass
         if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == true)
         {
             otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+            enemyCollided = true;
             Debug.Log("DASH THROUGH DAMAGE");
 
             if (playerZeal.isOverzealous == true)

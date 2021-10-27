@@ -27,6 +27,8 @@ public class HalvarAttacks : AttackBaseClass
 
         isUltReady = true;
         currUltCooldown = maxUltCooldown;
+
+        enemyCollided = false;
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class HalvarAttacks : AttackBaseClass
         attackActivated = false;
         abilityActivated = false;
         ultActivated = false;
+        enemyCollided = false;
 
         if (isAttackReady)
         {
@@ -79,6 +82,7 @@ public class HalvarAttacks : AttackBaseClass
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+            enemyCollided = true;
             if (playerZeal.isOverzealous == true)
             {
                 playerZeal.AddOverzeal(overzealRegenAmount);
