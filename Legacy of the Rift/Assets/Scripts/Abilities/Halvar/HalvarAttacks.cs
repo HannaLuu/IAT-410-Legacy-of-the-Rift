@@ -58,7 +58,7 @@ public class HalvarAttacks : AttackBaseClass
 
         if (isUltReady)
         {
-            if(playerZeal.isOverzealous == true)
+            if(playerZeal.fullyZealous == true)
             {
                 if (Input.GetButtonDown("Fire3"))
                 {
@@ -83,7 +83,7 @@ public class HalvarAttacks : AttackBaseClass
         {
             enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             enemyCollided = true;
-            if (playerZeal.isOverzealous == true)
+            if (playerZeal.isOverzealous == true && playerZeal.currentZeal < playerZeal.maxZeal)
             {
                 playerZeal.AddOverzeal(overzealRegenAmount);
             }

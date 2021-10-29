@@ -53,7 +53,7 @@ public class UrsaAttacks : AttackBaseClass
 
         if (isUltReady)
         {
-            if(playerZeal.isOverzealous == true)
+            if (playerZeal.fullyZealous == true)
             {
                 if (Input.GetButtonDown("Fire3"))
                 {
@@ -70,10 +70,6 @@ public class UrsaAttacks : AttackBaseClass
     {
         attackActivated = true;
         Instantiate(attackPrefab, attackPoint.position, attackPoint.rotation);
-        if (playerZeal.isOverzealous == true)
-        {
-            playerZeal.AddOverzeal(overzealRegenAmount);
-        }
     }
 
     // Harbinger of Life

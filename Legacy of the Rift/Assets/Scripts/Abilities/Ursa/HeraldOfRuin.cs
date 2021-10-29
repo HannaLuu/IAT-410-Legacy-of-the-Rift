@@ -23,7 +23,7 @@ public class HeraldOfRuin : MonoBehaviour
             foreach (var hitCollider in hitColliders)
             {
                 //if the object has an enemy script, store it
-                var enemy = hitCollider.GetComponent<Enemy>();
+                var enemy = hitCollider.GetComponentInParent<Enemy>();
                 if (enemy)
                 {
                     //calculate falloff distance for damage, the father the enemy is from center of explosion, the less damage it takes

@@ -77,7 +77,7 @@ public class LokirAttacks : AttackBaseClass
 
         if (isUltReady)
         {
-            if (playerZeal.isOverzealous == true)
+            if (playerZeal.fullyZealous == true)
             {
                 if (Input.GetButtonDown("Fire3"))
                 {
@@ -158,7 +158,7 @@ public class LokirAttacks : AttackBaseClass
             otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             Debug.Log("DASH THROUGH DAMAGE");
 
-            if (playerZeal.isOverzealous == true)
+            if (playerZeal.isOverzealous == true && playerZeal.currentZeal < playerZeal.maxZeal)
             {
                 playerZeal.AddOverzeal(overzealRegenAmount);
             }
