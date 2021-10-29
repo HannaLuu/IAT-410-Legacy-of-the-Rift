@@ -33,12 +33,17 @@ public class HeraldOfRuin : MonoBehaviour
                     var damagePercent = Mathf.InverseLerp(explosionRange, 0, distance);
                     enemy.TakeDamage(damagePercent * attackDamage);
 
-                    // Start Debuff Coroutine
-                    // StartCoroutine(DebuffTimer());
-                    // if (debuffApplied == true)
-                    // {
-                    //     enemy.ApplyDebuff(1.2f);
-                    // }
+                    // Apply Damage Absorption Debuff. Legacies deal 25% more damage for 20 secs
+                    StartCoroutine(DebuffTimer());
+                    if (debuffApplied == true)
+                    {
+                        enemy.damageReceivedMultiplier = 1.25f;
+                    }
+
+                    else
+                    {
+                        enemy.damageReceivedMultiplier = 1f;
+                    }
 
                     //destroy itself after explosion done
                     Destroy(gameObject);

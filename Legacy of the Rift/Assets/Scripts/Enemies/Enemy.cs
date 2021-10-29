@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float health = 100;
 
-    public float damageMultiplier;
+    public float damageReceivedMultiplier;
 
     //public GameObject deathEffect;
     public Transform player;
@@ -18,12 +18,12 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        damageMultiplier = 1f;
+        damageReceivedMultiplier = 1f;
     }
 
     public void TakeDamage(float damage)
     {
-        health -= damage * damageMultiplier;
+        health -= damage * damageReceivedMultiplier;
         StartCoroutine(Slowed());
 
         if (health <= 0)
@@ -31,13 +31,7 @@ public class Enemy : MonoBehaviour
             Die();
         }
 
-        //
-        Debug.Log(health);
-    }
-
-    public void ApplyDebuff(float damageMult)
-    {
-        damageMultiplier *= damageMult;
+        Debug.Log(damage * damageReceivedMultiplier);
     }
 
     void Die()
