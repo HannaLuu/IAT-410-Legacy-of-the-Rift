@@ -15,12 +15,15 @@ public class SpectralBarrage : MonoBehaviour
     public float maxLifeSpan = 8f;
     public float currentLifeSpan;
 
-    WaveSpawner waveSpawner;
+    public WaveSpawner waveSpawner;
 
-    //public Transform enemy;
+    public bool isFlipped = false;
+    private List<Transform> enemies = new List<Transform>();
+    public Transform nearestEnemy;
 
     void Start()
     {
+       waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
         currentLifeSpan = maxLifeSpan;
         //Physics2D.IgnoreLayerCollision(8, 8, true);
     }
@@ -31,6 +34,11 @@ public class SpectralBarrage : MonoBehaviour
         if (currentLifeSpan <= 0)
         {
             Destroy(gameObject);
+        }
+
+        if (waveSpawner.EnemyIsAlive() == true)
+        {
+            FindNearestEnemy();
         }
     }
 
@@ -66,24 +74,49 @@ public class SpectralBarrage : MonoBehaviour
         // Debug.Log("KLFSDJK:JDSF");
     }
 
-    //public void LookAtEnemies()
-    //{
-    //    Vector3 flipped = transform.localScale;
-    //    flipped.z *= -1f;
+    public void LookAtEnemies()
+    {
+        Vector3 flipped = transform.localScale;
+        flipped.z *= -1f;
 
-    //    if (transform.position.x > player.position.x && isFlipped)
-    //    {
-    //        transform.localScale = flipped;
-    //        transform.Rotate(0f, 180f, 0f);
-    //        isFlipped = false;
-    //    }
-    //    else if (transform.position.x < player.position.x && !isFlipped)
-    //    {
-    //        transform.localScale = flipped;
-    //        transform.Rotate(0f, 180f, 0f);
-    //        isFlipped = true;
-    //    }
-    //}
+        if (transform.position.x > nearestEnemy.position.x && !isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = true;
+        }
+        else if (transform.position.x < nearestEnemy.position.x && isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = false;
+        }
+    }
+
+    public void FindNearestEnemy()
+    {
+        float nearestEnemyDistance = 666;
+
+        Enemy[] enemyArray = FindObjectsOfType<Enemy>();
+
+        foreach (Enemy enemy in enemyArray)
+        {
+            enemies.Add(enemy.transform);
+        }
+
+        foreach (Transform enemy in enemies)
+        {
+            float currEnemyDistance;
+            if(enemy != null)
+            {
+                currEnemyDistance = Vector2.Distance(transform.position, enemy.position);
+                if (nearestEnemyDistance > currEnemyDistance)
+                {
+                    nearestEnemy = enemy;
+                }
+            }
+        }
+    }
 
     private void OnDrawGizmosSelected()
     {

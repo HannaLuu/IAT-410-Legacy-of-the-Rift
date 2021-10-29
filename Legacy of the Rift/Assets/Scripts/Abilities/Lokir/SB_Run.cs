@@ -10,16 +10,18 @@ public class SB_Run : StateMachineBehaviour
 
     Transform enemy;
     Rigidbody2D rb;
+    SpectralBarrage spectralBarrage;
 
     // SpectralBarrage clones;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        spectralBarrage = animator.GetComponent<SpectralBarrage>();
         WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
         if (waveSpawner.EnemyIsAlive() == true)
         {
-            enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
+            enemy = spectralBarrage.nearestEnemy;
         }
         rb = animator.GetComponent<Rigidbody2D>();
 
@@ -36,6 +38,8 @@ public class SB_Run : StateMachineBehaviour
         }
         if (waveSpawner.EnemyIsAlive() == true)
         {
+            enemy = spectralBarrage.nearestEnemy;
+            spectralBarrage.LookAtEnemies();
             Vector2 target = new Vector2(enemy.position.x, rb.position.y);
             Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
             rb.MovePosition(newPos);

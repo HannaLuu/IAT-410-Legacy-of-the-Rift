@@ -24,6 +24,8 @@ public class LokirAttacks : AttackBaseClass
 
     public bool ignoreEnemyCollision;
 
+    public List<Transform> ultPoints = new List<Transform>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,10 +60,10 @@ public class LokirAttacks : AttackBaseClass
                 LacerateRight();
             }
 
-            //else if (Input.GetButtonDown("Fire1"))
-            //{
-            //    NormalLaceration();
-            //}
+            else if (Input.GetButtonDown("Fire1"))
+            {
+                NormalLaceration();
+            }
         }
 
         if (isAbilityReady)
@@ -120,11 +122,15 @@ public class LokirAttacks : AttackBaseClass
     public override void ActivateUlt()
     {
         ultActivated = true;
-        while (clonesSpawned < 3)
+        foreach (Transform spawnPoint in ultPoints)
         {
-            clonesSpawned += 1;
-            Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
+            Instantiate(ultPrefab, spawnPoint.position, spawnPoint.rotation);
         }
+        //while (clonesSpawned < 3)
+        //{
+        //    clonesSpawned += 1;
+        //    Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
+        //}
     }
     void Teleport()
     {
@@ -168,10 +174,10 @@ public class LokirAttacks : AttackBaseClass
 
 
 
-    //public void NormalLaceration()
-    //{
-    //    Attack();
-    //}
+    public void NormalLaceration()
+    {
+        Attack();
+    }
 
     public void LacerateLeft()
     {

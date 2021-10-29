@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1832156179771298213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2511525954750676545}
+  m_Layer: 7
+  m_Name: UltPoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2511525954750676545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832156179771298213}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.764, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5807222352677156469}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2016021677601461824
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3689608880295959782}
   m_Layer: 7
-  m_Name: UltPoint
+  m_Name: UltPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016021677601461824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.407, y: 0, z: 0}
+  m_LocalPosition: {x: 1.061, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
@@ -96,6 +126,8 @@ Transform:
   - {fileID: 5807222353560896886}
   - {fileID: 6646633428125080967}
   - {fileID: 3689608880295959782}
+  - {fileID: 6157020988655925686}
+  - {fileID: 2511525954750676545}
   - {fileID: 5565003550432907362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -240,13 +272,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625183ac109d25149904d84c94a0c971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyCollided: 0
   isAttackReady: 0
-  maxAttackCooldown: 2
+  attackActivated: 0
+  maxAttackCooldown: 1
   currAttackCooldown: 0
   isAbilityReady: 0
+  abilityActivated: 0
   maxAbilityCooldown: 4
   currAbilityCooldown: 0
   isUltReady: 0
+  ultActivated: 0
   maxUltCooldown: 10
   currUltCooldown: 0
   ultZealCost: 150
@@ -267,9 +303,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   playerZeal: {fileID: 0}
-  abilityCooldownBar: {fileID: 0}
-  ultCooldownBar: {fileID: 0}
   ignoreEnemyCollision: 0
+  ultPoints:
+  - {fileID: 3689608880295959782}
+  - {fileID: 6157020988655925686}
+  - {fileID: 2511525954750676545}
 --- !u!1 &5807222353560896885
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +355,36 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.6}
   serializedVersion: 2
   m_Radius: 0.60303867
+--- !u!1 &6807720671233177595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6157020988655925686}
+  m_Layer: 7
+  m_Name: UltPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6157020988655925686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6807720671233177595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.807, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5807222352677156469}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7211195956582409371
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +414,7 @@ Transform:
   m_LocalScale: {x: 0.38, y: 0.83, z: 0.25}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3344644179209385558
 BoxCollider2D:
