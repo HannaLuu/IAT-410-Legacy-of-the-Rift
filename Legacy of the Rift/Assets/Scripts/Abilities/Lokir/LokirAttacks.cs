@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,8 @@ public class LokirAttacks : AttackBaseClass
     public bool ignoreEnemyCollision;
 
     public List<Transform> ultPoints = new List<Transform>();
+
+    public static event EventHandler OnDashCollide;
 
     // Start is called before the first frame update
     void Start()
@@ -160,7 +163,7 @@ public class LokirAttacks : AttackBaseClass
     {
         if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == true)
         {
-            enemyCollided = true;
+            OnDashCollide?.Invoke(this, EventArgs.Empty);
             otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             Debug.Log("DASH THROUGH DAMAGE");
 

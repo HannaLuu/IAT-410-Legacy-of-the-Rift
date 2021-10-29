@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,15 +14,13 @@ public class LokirTutorial : MonoBehaviour
     void Start()
     {
         lokirAttacksScript = gameObject.GetComponent<LokirAttacks>();
+        LokirAttacks.OnDashCollide += BroadcastLokirDash;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (lokirAttacksScript.enemyCollided == true)
-        {
-            flowchart.SetBooleanVariable("isLokirDash", true);
-        }
+        Debug.Log(lokirAttacksScript.enemyCollided);
         if (flowchart.GetBooleanVariable("isLokirDash") == true && Input.GetKeyDown(KeyCode.Q))
         {
             flowchart.SetBooleanVariable("isLokirQ", true);
@@ -30,5 +29,16 @@ public class LokirTutorial : MonoBehaviour
         {
             flowchart.SetBooleanVariable("isLokirTP", true);
         }
+    }
+
+    public void RemoveLokirDashBroadcast()
+    {
+        LokirAttacks.OnDashCollide -= BroadcastLokirDash;
+    }
+
+    private void BroadcastLokirDash(object sender, EventArgs e)
+    {
+        Fungus.Flowchart.BroadcastFungusMessage("LokirBasicDone");
+        flowchart.SetBooleanVariable("isLokirDash", true);
     }
 }
