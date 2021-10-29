@@ -30,10 +30,17 @@ public class UnearthlyTremor : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
 
-        Enemy enemy = hitInfo.GetComponent<Enemy>();
-        if (enemy != null)
+        // Enemy enemy = hitInfo.GetComponent<Enemy>();
+        // if (enemy != null)
+        // {
+        //     enemy.TakeDamage(damage);
+        //     Debug.Log(damage);
+        // }
+
+        if (hitInfo.gameObject.CompareTag("Enemy"))
         {
-            enemy.TakeDamage(damage);
+            hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
+            Debug.Log(damage);
         }
 
         //Instantiate(impactEffect, transform.position, transform.rotation);

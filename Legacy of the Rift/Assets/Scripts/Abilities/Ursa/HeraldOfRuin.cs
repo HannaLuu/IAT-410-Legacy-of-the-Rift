@@ -10,15 +10,17 @@ public class HeraldOfRuin : MonoBehaviour
     public float explosionRange = 6f;
     public LayerMask enemyLayer;
 
+    private bool debuffApplied;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //if an explosion range is set
-        if(explosionRange > 0)
+        if (explosionRange > 0)
         {
             //collect all objects the explosion collides with
             var hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRange);
             //for each object in the list
-            foreach(var hitCollider in hitColliders)
+            foreach (var hitCollider in hitColliders)
             {
                 //if the object has an enemy script, store it
                 var enemy = hitCollider.GetComponent<Enemy>();
@@ -30,12 +32,21 @@ public class HeraldOfRuin : MonoBehaviour
 
                     var damagePercent = Mathf.InverseLerp(explosionRange, 0, distance);
                     enemy.TakeDamage(damagePercent * attackDamage);
+
+                    // Start Debuff Coroutine
+                    // StartCoroutine(DebuffTimer());
+                    // if (debuffApplied == true)
+                    // {
+                    //     enemy.ApplyDebuff(1.2f);
+                    // }
+
                     //destroy itself after explosion done
                     Destroy(gameObject);
                 }
             }
             //if the explosion range is not set, it acts like a charge attack on a single enemy
-        } else
+        }
+        else
         {
             Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, collisionRange, enemyLayer);
             if (colInfo != null)
@@ -43,7 +54,17 @@ public class HeraldOfRuin : MonoBehaviour
                 FindObjectOfType<Enemy>().TakeDamage(attackDamage);
             }
         }
-        
+
+    }
+
+    IEnumerator DebuffTimer()
+    {
+        debuffApplied = true;
+
+        yield return new WaitForSeconds(20f);
+
+        debuffApplied = false;
+
     }
 
     private void OnDrawGizmosSelected()
@@ -56,3 +77,5 @@ public class HeraldOfRuin : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, collisionRange);
     }
 }
+
+
