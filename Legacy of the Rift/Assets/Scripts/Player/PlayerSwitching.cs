@@ -18,12 +18,31 @@ public class PlayerSwitching : MonoBehaviour
 
     private void Start()
     {
-        currHero = Hero.Lokir;
+        if(Lokir.activeInHierarchy)
+        {
+            currHero = Hero.Lokir;
+            Player.transform.position = Lokir.transform.position;
+            Lokir.SetActive(true);
+            Halvar.SetActive(false);
+            Ursa.SetActive(false);
+        }
+        if (Halvar.activeInHierarchy)
+        {
+            currHero = Hero.Halvar;
+            Player.transform.position = Halvar.transform.position;
+            Lokir.SetActive(false);
+            Halvar.SetActive(true);
+            Ursa.SetActive(false);
+        }
+        if (Ursa.activeInHierarchy)
+        {
+            currHero = Hero.Ursa;
+            Player.transform.position = Ursa.transform.position;
+            Lokir.SetActive(false);
+            Halvar.SetActive(false);
+            Ursa.SetActive(true);
+        }
         isSwitch = false;
-        Player.transform.position = Lokir.transform.position;
-        Lokir.SetActive(true);
-        Halvar.SetActive(false);
-        Ursa.SetActive(false);
     }
 
     // Update is called once per frame
