@@ -29,6 +29,12 @@ public class LokirAttacks : AttackBaseClass
 
     public static event EventHandler OnDashCollide;
 
+    //public static event EventHandler OnAttack;
+
+    //public static event EventHandler OnAbility;
+
+    //public static event EventHandler OnUltimate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,8 +79,14 @@ public class LokirAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2"))
             {
-                ActivateAbility();
                 playerZeal.SpendZeal(abilityZealCost);
+                if(playerZeal.canSpendZeal == true)
+                {
+                    ActivateAbility();
+                } else
+                {
+                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                }
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
@@ -86,11 +98,17 @@ public class LokirAttacks : AttackBaseClass
             {
                 if (Input.GetButtonDown("Fire3"))
                 {
-                    ActivateUlt();
                     playerZeal.SpendZeal(ultZealCost);
-                    //animator.SetTrigger("Attack");
-                    //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                    clonesSpawned = 0;
+                    if (playerZeal.canSpendZeal == true)
+                    {
+                        ActivateUlt();
+                        //animator.SetTrigger("Attack");
+                        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                        clonesSpawned = 0;
+                    } else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
                 }
             }
         }
@@ -109,31 +127,32 @@ public class LokirAttacks : AttackBaseClass
     // Spectral Laceration
     public override void Attack()
     {
+        //OnAttack?.Invoke(this, EventArgs.Empty);
         //Play Attack Animation
         animator.SetTrigger("Attack");
+        StartCoroutine(BasicCooldown());
         attackActivated = true;
     }
 
     // Spectral Warlock
     public override void ActivateAbility()
     {
+        //OnAbility?.Invoke(this, EventArgs.Empty);
         abilityActivated = true;
+        StartCoroutine(AbilityCooldown());
         spectralWarlock = Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation) as GameObject;
     }
 
     // Spectral Barrage
     public override void ActivateUlt()
     {
+        //OnUltimate?.Invoke(this, EventArgs.Empty);
         ultActivated = true;
+        StartCoroutine(UltCooldown());
         foreach (Transform spawnPoint in ultPoints)
         {
             Instantiate(ultPrefab, spawnPoint.position, spawnPoint.rotation);
         }
-        //while (clonesSpawned < 3)
-        //{
-        //    clonesSpawned += 1;
-        //    Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
-        //}
     }
     void Teleport()
     {

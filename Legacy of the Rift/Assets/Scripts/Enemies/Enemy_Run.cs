@@ -7,7 +7,7 @@ public class Enemy_Run : StateMachineBehaviour
     public float speed = 2.5f;
     public float attackRange = 3f;
 
-    Transform player;
+    Transform player, legendaryMonolith;
     Rigidbody2D rb;
     Enemy enemyScript;
 
@@ -28,6 +28,13 @@ public class Enemy_Run : StateMachineBehaviour
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
+
+        legendaryMonolith = GameObject.FindGameObjectWithTag("Monolith").transform;
+
+        if (legendaryMonolith != null)
+        {
+
+        }
 
         if (Vector2.Distance(player.position, rb.position) <= attackRange)
         {

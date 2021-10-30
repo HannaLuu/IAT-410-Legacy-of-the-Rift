@@ -45,9 +45,16 @@ public class UrsaAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2"))
             {
-                ActivateAbility();
-                //animator.SetTrigger("Attack");
-                //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                playerZeal.SpendZeal(abilityZealCost);
+                if (playerZeal.canSpendZeal == true)
+                {
+                    ActivateAbility();
+                    //animator.SetTrigger("Attack");
+                    //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                } else
+                {
+                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                }
             }
         }
 
@@ -57,9 +64,16 @@ public class UrsaAttacks : AttackBaseClass
             {
                 if (Input.GetButtonDown("Fire3"))
                 {
-                    ActivateUlt();
-                    //animator.SetTrigger("Attack");
-                    //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                    playerZeal.SpendZeal(ultZealCost);
+                    if (playerZeal.canSpendZeal == true)
+                    {
+                        ActivateUlt();
+                        //animator.SetTrigger("Attack");
+                        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                    } else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
                 }
             }
         }
@@ -69,6 +83,7 @@ public class UrsaAttacks : AttackBaseClass
     public override void Attack()
     {
         attackActivated = true;
+        StartCoroutine(BasicCooldown());
         Instantiate(attackPrefab, attackPoint.position, attackPoint.rotation);
     }
 
@@ -76,7 +91,7 @@ public class UrsaAttacks : AttackBaseClass
     public override void ActivateAbility()
     {
         abilityActivated = true;
-        playerZeal.SpendZeal(abilityZealCost);
+        StartCoroutine(AbilityCooldown());
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 
@@ -84,7 +99,7 @@ public class UrsaAttacks : AttackBaseClass
     public override void ActivateUlt()
     {
         ultActivated = true;
-        playerZeal.SpendZeal(ultZealCost);
+        StartCoroutine(UltCooldown());
         Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
     }
 }

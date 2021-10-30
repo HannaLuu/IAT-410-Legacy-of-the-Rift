@@ -51,7 +51,14 @@ public class HalvarAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2"))
             {
-                animator.SetTrigger("Ability");
+                playerZeal.SpendZeal(abilityZealCost);
+                if (playerZeal.canSpendZeal == true)
+                {
+                    animator.SetTrigger("Ability");
+                } else
+                {
+                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                }
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
         }
@@ -62,7 +69,14 @@ public class HalvarAttacks : AttackBaseClass
             {
                 if (Input.GetButtonDown("Fire3"))
                 {
-                    animator.SetTrigger("Ultimate");
+                    playerZeal.SpendZeal(ultZealCost);
+                    if (playerZeal.canSpendZeal == true)
+                    {
+                        animator.SetTrigger("Ultimate");
+                    } else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
                 }
             }
         }
@@ -74,6 +88,8 @@ public class HalvarAttacks : AttackBaseClass
         //Play Attack Animation
         animator.SetTrigger("Attack");
         attackActivated = true;
+
+        StartCoroutine(BasicCooldown());
 
         //Detect Enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -94,7 +110,7 @@ public class HalvarAttacks : AttackBaseClass
     public override void ActivateAbility()
     {
         abilityActivated = true;
-        playerZeal.SpendZeal(abilityZealCost);
+        StartCoroutine(AbilityCooldown());
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 
@@ -102,7 +118,7 @@ public class HalvarAttacks : AttackBaseClass
     public override void ActivateUlt()
     {
         ultActivated = true;
-        playerZeal.SpendZeal(ultZealCost);
+        StartCoroutine(UltCooldown());
         Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
         Instantiate(ultPrefab, ultPoint2.position, ultPoint2.rotation);
         //animator.SetTrigger("Attack");

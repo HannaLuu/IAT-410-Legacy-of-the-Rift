@@ -10,6 +10,7 @@ public class PlayerZeal : MonoBehaviour
     public float zealRegenAmount = 10f;
     public bool isOverzealous = false;
     public bool fullyZealous = false;
+    public bool canSpendZeal = false;
 
     public ZealBar zealBar;
 
@@ -19,6 +20,7 @@ public class PlayerZeal : MonoBehaviour
         currentZeal = 0;
         isOverzealous = false;
         fullyZealous = false;
+        canSpendZeal = false;
         zealBar.SetMaxZeal(maxZeal);
         zealBar.SetZeal(currentZeal);
     }
@@ -27,11 +29,12 @@ public class PlayerZeal : MonoBehaviour
     {
         if(currentZeal >= zealCost)
         {
+            canSpendZeal = true;
             currentZeal -= zealCost;
             zealBar.SetZeal(currentZeal);
         } else
         {
-            Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+            canSpendZeal = false;
         }
     }
 

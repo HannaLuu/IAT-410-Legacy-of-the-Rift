@@ -20,7 +20,6 @@ public class LokirTutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(lokirAttacksScript.enemyCollided);
         if (flowchart.GetBooleanVariable("isLokirDash") == true && Input.GetKeyDown(KeyCode.Q))
         {
             flowchart.SetBooleanVariable("isLokirQ", true);

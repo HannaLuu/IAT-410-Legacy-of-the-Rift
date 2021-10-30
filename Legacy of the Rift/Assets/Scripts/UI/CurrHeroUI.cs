@@ -19,16 +19,43 @@ public class CurrHeroUI : MonoBehaviour
     protected Vector2 secondHeroSlotScale;
     protected Vector2 thirdHeroSlotScale;
 
+    public GameObject Lokir;
+    public GameObject Halvar;
+    public GameObject Ursa;
+
     // Start is called before the first frame update
     void Start()
     {
-        currHeroSlotPos = LokirBars.anchoredPosition;
-        secondHeroSlotPos = HalvarBars.anchoredPosition;
-        thirdHeroSlotPos = UrsaBars.anchoredPosition;
+        if (Lokir.activeInHierarchy)
+        {
+            currHeroSlotPos = LokirBars.anchoredPosition;
+            secondHeroSlotPos = HalvarBars.anchoredPosition;
+            thirdHeroSlotPos = UrsaBars.anchoredPosition;
 
-        currHeroSlotScale = LokirBars.transform.localScale;
-        secondHeroSlotScale = HalvarBars.transform.localScale;
-        thirdHeroSlotScale = UrsaBars.transform.localScale;
+            currHeroSlotScale = LokirBars.transform.localScale;
+            secondHeroSlotScale = HalvarBars.transform.localScale;
+            thirdHeroSlotScale = UrsaBars.transform.localScale;
+        }
+        if (Halvar.activeInHierarchy)
+        {
+            secondHeroSlotPos = LokirBars.anchoredPosition;
+            currHeroSlotPos = HalvarBars.anchoredPosition;
+            thirdHeroSlotPos = UrsaBars.anchoredPosition;
+
+            secondHeroSlotScale = LokirBars.transform.localScale;
+            currHeroSlotScale = HalvarBars.transform.localScale;
+            thirdHeroSlotScale = UrsaBars.transform.localScale;
+        }
+        if (Ursa.activeInHierarchy)
+        {
+            secondHeroSlotPos = LokirBars.anchoredPosition;
+            thirdHeroSlotPos = HalvarBars.anchoredPosition;
+            currHeroSlotPos = UrsaBars.anchoredPosition;
+
+            secondHeroSlotScale = LokirBars.transform.localScale;
+            thirdHeroSlotScale = HalvarBars.transform.localScale;
+            currHeroSlotScale = UrsaBars.transform.localScale;
+        }
     }
 
     // Update is called once per frame
