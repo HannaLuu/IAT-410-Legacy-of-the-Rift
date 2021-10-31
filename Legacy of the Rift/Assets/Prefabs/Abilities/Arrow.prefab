@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 91463266197498051}
   - component: {fileID: 555795438772048141}
   - component: {fileID: 1847216396990326401}
-  - component: {fileID: 2184017816437409884}
+  - component: {fileID: 1030622406079170005}
   - component: {fileID: -7321436346546099054}
   m_Layer: 4
   m_Name: Arrow
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7121448532257522777, guid: 24d100d1fbf7a794a89c4243a13fae64, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fab996eac7f34934faa9c6015c746bf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,16 +98,16 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_LinearDrag: 0.1
+  m_AngularDrag: 0.1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
---- !u!58 &2184017816437409884
-CircleCollider2D:
+  m_Constraints: 0
+--- !u!61 &1030622406079170005
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -120,8 +120,18 @@ CircleCollider2D:
   m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.78, y: 0.02}
+    newSize: {x: 0.24, y: 0.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.12
+  m_Size: {x: 0.78, y: 0.02}
+  m_EdgeRadius: 0
 --- !u!114 &-7321436346546099054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  speed: 20
+  speed: 30
   damage: 15
   slowAmount: 1
   rb: {fileID: 1847216396990326401}

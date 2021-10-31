@@ -80,6 +80,7 @@ public class HeraldOfRuin : MonoBehaviour
         }
 
         Gizmos.DrawWireSphere(attackPoint.position, collisionRange);
+        Gizmos.DrawWireSphere(attackPoint.position, explosionRange);
     }
 }
 

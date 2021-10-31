@@ -48,6 +48,11 @@ public class Arrow : MonoBehaviour
                 playerZeal.AddOverzeal(ursaAttackScript.overzealRegenAmount);
             }
         }
+        if (hitInfo.gameObject.CompareTag("Ground"))
+        {
+            enabled = false;
+            Destroy(gameObject);
+        }
 
         //Instantiate(impactEffect, transform.position, transform.rotation);
     }

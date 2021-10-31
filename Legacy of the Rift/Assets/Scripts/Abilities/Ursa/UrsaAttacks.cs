@@ -35,7 +35,6 @@ public class UrsaAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                Attack();
                 animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
@@ -48,7 +47,7 @@ public class UrsaAttacks : AttackBaseClass
                 playerZeal.SpendZeal(abilityZealCost);
                 if (playerZeal.canSpendZeal == true)
                 {
-                    ActivateAbility();
+                    animator.SetTrigger("Ability");
                     //animator.SetTrigger("Attack");
                     //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                 } else
@@ -67,7 +66,7 @@ public class UrsaAttacks : AttackBaseClass
                     playerZeal.SpendZeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
                     {
-                        ActivateUlt();
+                        animator.SetTrigger("Ultimate");
                         //animator.SetTrigger("Attack");
                         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                     } else

@@ -12,9 +12,12 @@ public class HarbingerOfLife : MonoBehaviour
     public float maxLifeSpan = 8f;
     public float currentLifeSpan;
 
+    public Animator animator;
+
     void Start()
     {
         currentLifeSpan = maxLifeSpan;
+        animator = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -45,5 +48,10 @@ public class HarbingerOfLife : MonoBehaviour
         }
 
         Gizmos.DrawWireSphere(abilityPoint.position, abilityRange);
+    }
+
+    public void DoneAnimation()
+    {
+        animator.SetBool("Idle", true);
     }
 }

@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 3170107516403426135}
   - component: {fileID: 3170107516403426128}
   - component: {fileID: 3170107516403426129}
+  - component: {fileID: 7062417286461328245}
   m_Layer: 0
   m_Name: HarbingerOfLife
   m_TagString: Untagged
@@ -57,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 3170107516403426130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 3170107515239913622}
   m_Father: {fileID: 0}
@@ -103,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2f076d72fb2c507479c95061f29331a5, type: 3}
+  m_Sprite: {fileID: 1036825730448728187, guid: 0ea67f9b7cf8b004d9bf7188e44ad23e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -134,3 +135,23 @@ MonoBehaviour:
     m_Bits: 128
   maxLifeSpan: 8
   currentLifeSpan: 0
+  animator: {fileID: 0}
+--- !u!95 &7062417286461328245
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3170107516403426130}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a338e945c84ceb340a9606bc5e3a80ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

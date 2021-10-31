@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 2942944832457428792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.82, y: -1.31, z: -0.6142843}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 2942944832199538349}
   m_Father: {fileID: 0}
@@ -106,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0eb228d2ed2f8a7439864a296cd35ffb, type: 3}
+  m_Sprite: {fileID: -1212606174517095661, guid: 05196afee66b0f14fa2b5c08e30269d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,8 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 2942944832199538349}
   attackDamage: 30
-  collisionRange: 2
-  explosionRange: 6
+  collisionRange: 3.32
+  explosionRange: 8
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -149,18 +149,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.15}
+  m_Offset: {x: 0, y: 0.014102101}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8, y: 6.73}
+    oldSize: {x: 2.83, y: 1.71}
     newSize: {x: 8, y: 6.73}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 3.5}
+  m_Size: {x: 2.6820593, y: 1.48192}
   m_EdgeRadius: 0
 --- !u!50 &6171085712266113013
 Rigidbody2D:

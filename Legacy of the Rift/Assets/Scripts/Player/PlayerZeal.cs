@@ -11,6 +11,7 @@ public class PlayerZeal : MonoBehaviour
     public bool isOverzealous = false;
     public bool fullyZealous = false;
     public bool canSpendZeal = false;
+    public bool overzealCheat;
 
     public ZealBar zealBar;
 
@@ -47,6 +48,13 @@ public class PlayerZeal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(overzealCheat == true)
+        {
+            currentZeal = maxZeal + overzealousAmount;
+            isOverzealous = true;
+            zealBar.SetZeal(currentZeal);
+            fullyZealous = true;
+        }
         if(currentZeal <= maxZeal - overzealousAmount)
         {
             isOverzealous = false;

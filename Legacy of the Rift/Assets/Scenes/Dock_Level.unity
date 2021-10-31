@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 79711767}
   m_Layer: 3
   m_Name: bg_castleseggs-grayscale-Sheet_1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -588,18 +588,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1802929834071000892, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1802929834071000892, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2412864318649474439, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2412864318649474439, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006518878487237339, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414504638333649610, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5724404876855053445, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
@@ -624,6 +632,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5724404877257651438, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724404877353518514, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5724404877769385058, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
@@ -752,10 +764,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5724404878745814118, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5724404878745814118, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6022966656898171270, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6832123339906573702, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
@@ -1498,9 +1514,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 974722076}
-  selectedCommands:
-  - {fileID: 974722078}
+  - {fileID: 974722049}
+  selectedCommands: []
   variables:
   - {fileID: 974722036}
   - {fileID: 974722035}
