@@ -20,6 +20,7 @@ public abstract class AttackBaseClass : MonoBehaviour
     public float currAbilityCooldown;
 
     // Ult Rate, Time, Cost
+    public bool isUltUnlocked;
     public bool isUltReady;
     public bool ultActivated;
     public float maxUltCooldown;

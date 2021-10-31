@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
         if (hitInfo.gameObject.CompareTag("Enemy"))
         {
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
-
+            Destroy(gameObject);
         }
 
         //Instantiate(impactEffect, transform.position, transform.rotation);

@@ -283,7 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 4092356082363815205}
   animator: {fileID: 4092356082363815208}
-  runSpeed: 50
+  runSpeed: 40
 --- !u!95 &4092356082363815208
 Animator:
   serializedVersion: 3
@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6690da452a906464f8f773af66d5893e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyCollided: 0
   isAttackReady: 0
   attackActivated: 0
   maxAttackCooldown: 1
@@ -323,6 +324,7 @@ MonoBehaviour:
   abilityActivated: 0
   maxAbilityCooldown: 4
   currAbilityCooldown: 0
+  isUltUnlocked: 1
   isUltReady: 0
   ultActivated: 0
   maxUltCooldown: 10
@@ -336,7 +338,7 @@ MonoBehaviour:
   attackPrefab: {fileID: 0}
   abilityPrefab: {fileID: 126634518127349319, guid: 74c7f6a35c1e8f54d8f7f82cddf0b1ea, type: 3}
   ultPrefab: {fileID: 8027434218581657759, guid: 38f9a9ad9e295f44594e71d46b525279, type: 3}
-  attackRange: 1.5
+  attackRange: {x: 14, y: 6, z: 6}
   attackDamage: 50
   overzealRegenAmount: 5
   abilityZealCost: 25
@@ -399,7 +401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7335534039178926389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.571, y: 0.162, z: 0}
+  m_LocalPosition: {x: 1.143, y: -0.389, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4092356082363815203}

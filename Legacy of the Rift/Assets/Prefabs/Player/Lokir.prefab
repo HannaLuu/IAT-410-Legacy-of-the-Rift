@@ -281,6 +281,7 @@ MonoBehaviour:
   abilityActivated: 0
   maxAbilityCooldown: 4
   currAbilityCooldown: 0
+  isUltUnlocked: 1
   isUltReady: 0
   ultActivated: 0
   maxUltCooldown: 10
@@ -308,6 +309,7 @@ MonoBehaviour:
   - {fileID: 3689608880295959782}
   - {fileID: 6157020988655925686}
   - {fileID: 2511525954750676545}
+  teleported: 0
 --- !u!1 &5807222353560896885
 GameObject:
   m_ObjectHideFlags: 0

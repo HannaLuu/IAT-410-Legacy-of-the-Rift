@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HalvarAttacks : AttackBaseClass
 {
-    public float attackRange = 1f;
+    public Vector3 attackRange;
     public int attackDamage = 100;
     public int overzealRegenAmount = 5;
 
@@ -43,7 +43,8 @@ public class HalvarAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                Attack();
+                //Play Attack Animation
+                animator.SetTrigger("Attack");
             }
         }
 
@@ -63,7 +64,7 @@ public class HalvarAttacks : AttackBaseClass
             }
         }
 
-        if (isUltReady)
+        if (isUltReady && isUltUnlocked)
         {
             if(playerZeal.fullyZealous == true)
             {
@@ -85,14 +86,13 @@ public class HalvarAttacks : AttackBaseClass
     // Hands of Stone
     public override void Attack()
     {
-        //Play Attack Animation
-        animator.SetTrigger("Attack");
         attackActivated = true;
 
         StartCoroutine(BasicCooldown());
 
         //Detect Enemies in range of attack
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, enemyLayers);
 
         //Damage them
         foreach (Collider2D enemy in hitEnemies)
@@ -121,7 +121,6 @@ public class HalvarAttacks : AttackBaseClass
         StartCoroutine(UltCooldown());
         Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
         Instantiate(ultPrefab, ultPoint2.position, ultPoint2.rotation);
-        //animator.SetTrigger("Attack");
         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
     }
 
@@ -131,6 +130,6 @@ public class HalvarAttacks : AttackBaseClass
         {
             return;
         }
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireCube(attackPoint.position, attackRange);
     }
 }

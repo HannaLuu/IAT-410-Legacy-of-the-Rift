@@ -293,6 +293,7 @@ MonoBehaviour:
   abilityActivated: 0
   maxAbilityCooldown: 4
   currAbilityCooldown: 0
+  isUltUnlocked: 1
   isUltReady: 0
   ultActivated: 0
   maxUltCooldown: 10

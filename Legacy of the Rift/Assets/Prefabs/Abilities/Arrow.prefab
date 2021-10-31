@@ -136,6 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   speed: 20
-  damage: 10
+  damage: 15
   slowAmount: 1
   rb: {fileID: 1847216396990326401}
+  playerZeal: {fileID: 3056156213355905245, guid: 3f3d1987a47fbea4d88a01881d07f3e9, type: 3}
+  ursaAttackScript: {fileID: 6510522073437167044, guid: 74c81666b0de9434da977b9130b7386b, type: 3}

@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d3c55dde4c49845b08c506c4253427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLifeSpan: 18
+  maxLifeSpan: 20
   currentLifeSpan: 0
   attackRate: 0.5
   nextAttackTime: 0

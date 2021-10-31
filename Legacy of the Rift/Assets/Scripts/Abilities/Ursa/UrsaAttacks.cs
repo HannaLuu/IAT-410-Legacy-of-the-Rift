@@ -58,7 +58,7 @@ public class UrsaAttacks : AttackBaseClass
             }
         }
 
-        if (isUltReady)
+        if (isUltReady && isUltUnlocked)
         {
             if (playerZeal.fullyZealous == true)
             {

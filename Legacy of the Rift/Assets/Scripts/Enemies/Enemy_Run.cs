@@ -29,7 +29,7 @@ public class Enemy_Run : StateMachineBehaviour
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
 
-        legendaryMonolith = GameObject.FindGameObjectWithTag("Monolith").transform;
+        //legendaryMonolith = GameObject.FindGameObjectWithTag("Monolith").transform;
 
         if (legendaryMonolith != null)
         {

@@ -12,6 +12,7 @@ public class HalvarTutorial : MonoBehaviour
 
     public GameObject halvarBasicGlow;
     public GameObject halvarAbilityGlow;
+    public GameObject ursaBasicGlow;
 
     public CMTutorialSwitcher cmSwitcher;
 
@@ -25,21 +26,53 @@ public class HalvarTutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (flowchart.GetBooleanVariable("isLokirTP") == true)
-        //{
-        //    flowchart.SetBooleanVariable("isHalvar", true);
-        //}
-        //if (halvarAttacksScript.enemyCollided == true)
-        //{
-        //    flowchart.SetBooleanVariable("isHalvarBasic", true);
-        //}
         if (Input.GetKeyDown(KeyCode.Q))
         {
             flowchart.SetBooleanVariable("isHalvarQ", true);
             cmSwitcher.phase2 = true;
             Fungus.Flowchart.BroadcastFungusMessage("HalvarWallUp");
-            halvarAbilityGlow.SetActive(false);
+            HalvarAbilityGlowOff();
+            cmSwitcher.phase1 = false;
             cmSwitcher.SwitchCamera();
         }
+        if(flowchart.GetBooleanVariable("isHalvarQ") == true && flowchart.GetBooleanVariable("isHalvarBasic") == false && halvarAttacksScript.enemyCollided == true)
+        {
+            flowchart.SetBooleanVariable("isHalvarBasic", true);
+            cmSwitcher.phase3 = true;
+            Fungus.Flowchart.BroadcastFungusMessage("HalvarBasicDone");
+            HalvarBasicGlowOff();
+            cmSwitcher.phase2 = false;
+            cmSwitcher.SwitchCamera();
+        }
+    }
+
+    public void HalvarBasicGlowOn()
+    {
+        halvarBasicGlow.SetActive(true);
+    }
+
+    public void HalvarBasicGlowOff()
+    {
+        halvarBasicGlow.SetActive(false);
+    }
+
+    public void HalvarAbilityGlowOn()
+    {
+        halvarAbilityGlow.SetActive(true);
+    }
+
+    public void HalvarAbilityGlowOff()
+    {
+        halvarAbilityGlow.SetActive(false);
+    }
+
+    public void UrsaBasicGlowOn()
+    {
+        ursaBasicGlow.SetActive(true);
+    }
+
+    public void UrsaBasicGlowOff()
+    {
+        ursaBasicGlow.SetActive(false);
     }
 }

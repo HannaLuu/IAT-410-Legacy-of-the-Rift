@@ -16,7 +16,7 @@ public class LokirAttacks : AttackBaseClass
     public int ultClones = 3;
     private int clonesSpawned = 0;
 
-    GameObject spectralWarlock;
+    GameObject spectralWarlock = null;
     Vector3 teleportPos;
 
     public LayerMask enemyLayers;
@@ -28,6 +28,8 @@ public class LokirAttacks : AttackBaseClass
     public List<Transform> ultPoints = new List<Transform>();
 
     public static event EventHandler OnDashCollide;
+
+    public bool teleported = false;
 
     //public static event EventHandler OnAttack;
 
@@ -56,6 +58,7 @@ public class LokirAttacks : AttackBaseClass
         attackActivated = false;
         abilityActivated = false;
         ultActivated = false;
+        teleported = false;
 
         if (isAttackReady)
         {
@@ -77,7 +80,7 @@ public class LokirAttacks : AttackBaseClass
 
         if (isAbilityReady)
         {
-            if (Input.GetButtonDown("Fire2"))
+            if (Input.GetButtonDown("Fire2") && spectralWarlock == null)
             {
                 playerZeal.SpendZeal(abilityZealCost);
                 if(playerZeal.canSpendZeal == true)
@@ -89,10 +92,15 @@ public class LokirAttacks : AttackBaseClass
                 }
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+            } else if (Input.GetButtonDown("Fire2") && spectralWarlock != null)
+            {
+                teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
+                Teleport();
+                teleported = true;
             }
         }
 
-        if (isUltReady)
+        if (isUltReady && isUltUnlocked)
         {
             if (playerZeal.fullyZealous == true)
             {
@@ -112,16 +120,6 @@ public class LokirAttacks : AttackBaseClass
                 }
             }
         }
-
-        if (spectralWarlock != null)
-        {
-            teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                Teleport();
-            }
-        }
-
     }
 
     // Spectral Laceration

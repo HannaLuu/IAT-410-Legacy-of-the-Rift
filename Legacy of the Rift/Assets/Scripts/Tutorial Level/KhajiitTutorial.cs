@@ -5,36 +5,20 @@ using Fungus;
 
 public class KhajiitTutorial : MonoBehaviour
 {
-    public Animator animator;
+    public Animator khajiitAnimator, cameraAnimator;
 
     private bool facingRight = true;
 
     private void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
+        khajiitAnimator = gameObject.GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.D))
-        {
-            if (facingRight == false)
-            {
-                transform.Rotate(0f, 180f, 0f);
-                facingRight = true;
-            }
-            animator.SetBool("isRun", true);
-        } else if (Input.GetKey(KeyCode.A))
-        {
-            if (facingRight == true)
-            {
-                transform.Rotate(0f, 180f, 0f);
-                facingRight = false;
-            }
-            animator.SetBool("isRun", true);
-        } else
-        {
-            animator.SetBool("isRun", false);
-        }
+        //if(cameraAnimator.GetCurrentAnimatorStateInfo(0).IsName("Phase 2"))
+        //{
+
+        //}
     }
 }
