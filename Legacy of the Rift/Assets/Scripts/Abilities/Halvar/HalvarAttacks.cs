@@ -88,8 +88,6 @@ public class HalvarAttacks : AttackBaseClass
     {
         attackActivated = true;
 
-        StartCoroutine(BasicCooldown());
-
         //Detect Enemies in range of attack
         //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, enemyLayers);
@@ -110,7 +108,6 @@ public class HalvarAttacks : AttackBaseClass
     public override void ActivateAbility()
     {
         abilityActivated = true;
-        StartCoroutine(AbilityCooldown());
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 
@@ -118,7 +115,6 @@ public class HalvarAttacks : AttackBaseClass
     public override void ActivateUlt()
     {
         ultActivated = true;
-        StartCoroutine(UltCooldown());
         Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
         Instantiate(ultPrefab, ultPoint2.position, ultPoint2.rotation);
         //FindObjectOfType<AudioManager>().Play("PlayerAttack");

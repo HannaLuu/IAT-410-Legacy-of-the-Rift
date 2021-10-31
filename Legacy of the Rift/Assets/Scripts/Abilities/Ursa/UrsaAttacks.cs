@@ -83,7 +83,6 @@ public class UrsaAttacks : AttackBaseClass
     public override void Attack()
     {
         attackActivated = true;
-        StartCoroutine(BasicCooldown());
         Instantiate(attackPrefab, attackPoint.position, attackPoint.rotation);
     }
 
@@ -91,7 +90,6 @@ public class UrsaAttacks : AttackBaseClass
     public override void ActivateAbility()
     {
         abilityActivated = true;
-        StartCoroutine(AbilityCooldown());
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 
@@ -99,7 +97,6 @@ public class UrsaAttacks : AttackBaseClass
     public override void ActivateUlt()
     {
         ultActivated = true;
-        StartCoroutine(UltCooldown());
         Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
     }
 }

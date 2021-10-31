@@ -128,7 +128,6 @@ public class LokirAttacks : AttackBaseClass
         //OnAttack?.Invoke(this, EventArgs.Empty);
         //Play Attack Animation
         animator.SetTrigger("Attack");
-        StartCoroutine(BasicCooldown());
         attackActivated = true;
     }
 
@@ -137,7 +136,6 @@ public class LokirAttacks : AttackBaseClass
     {
         //OnAbility?.Invoke(this, EventArgs.Empty);
         abilityActivated = true;
-        StartCoroutine(AbilityCooldown());
         spectralWarlock = Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation) as GameObject;
     }
 
@@ -146,7 +144,6 @@ public class LokirAttacks : AttackBaseClass
     {
         //OnUltimate?.Invoke(this, EventArgs.Empty);
         ultActivated = true;
-        StartCoroutine(UltCooldown());
         foreach (Transform spawnPoint in ultPoints)
         {
             Instantiate(ultPrefab, spawnPoint.position, spawnPoint.rotation);
