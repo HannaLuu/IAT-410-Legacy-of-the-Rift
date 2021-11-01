@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3688485832822561895}
   - component: {fileID: 2162288540220380525}
   - component: {fileID: 2822445498897786780}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Monolith
   m_TagString: Monolith
   m_Icon: {fileID: 0}

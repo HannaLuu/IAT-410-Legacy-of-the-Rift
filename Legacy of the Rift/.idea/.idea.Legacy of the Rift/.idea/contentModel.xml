@@ -6,6 +6,15 @@
     <e p="D:\Unity Projects\IAT-410-Legacy-of-the-Rift\Legacy of the Rift" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Art" t="Include">
+          <e p="Temp Art" t="Include">
+            <e p="UI" t="Include">
+              <e p="Gerald's Keys" t="Include">
+                <e p="README.txt" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Fungus" t="Include">
           <e p="Docs" t="Include">
             <e p="CHANGELOG.txt" t="Include" />
@@ -930,12 +939,53 @@
               <e p="iTween.cs" t="Include" />
             </e>
             <e p="LeanTween" t="Include">
+              <e p="Editor" t="Include">
+                <e p="LeanTweenDocumentationEditor.cs" t="Include" />
+              </e>
+              <e p="Examples" t="Include">
+                <e p="Archived" t="Include">
+                  <e p="2dUnlitWithFade.shader" t="Include" />
+                  <e p="OldGUIExamplesCS.cs" t="Include" />
+                  <e p="TestingPunch.cs" t="Include" />
+                  <e p="TestingRigidbodyCS.cs" t="Include" />
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="Following.cs" t="Include" />
+                  <e p="GeneralAdvancedTechniques.cs" t="Include" />
+                  <e p="GeneralBasic.cs" t="Include" />
+                  <e p="GeneralBasics2d.cs" t="Include" />
+                  <e p="GeneralCameraShake.cs" t="Include" />
+                  <e p="GeneralEasingTypes.cs" t="Include" />
+                  <e p="GeneralEventsListeners.cs" t="Include" />
+                  <e p="GeneralSequencer.cs" t="Include" />
+                  <e p="GeneralSimpleUI.cs" t="Include" />
+                  <e p="GeneralUISpace.cs" t="Include" />
+                  <e p="LogoCinematic.cs" t="Include" />
+                  <e p="PathBezier.cs" t="Include" />
+                  <e p="PathBezier2d.cs" t="Include" />
+                  <e p="PathSpline.cs" t="Include" />
+                  <e p="PathSpline2d.cs" t="Include" />
+                  <e p="PathSplineEndless.cs" t="Include" />
+                  <e p="PathSplinePerformance.cs" t="Include" />
+                  <e p="PathSplines.cs" t="Include" />
+                  <e p="PathSplineTrack.cs" t="Include" />
+                  <e p="TestingUnitTests.cs" t="Include" />
+                  <e p="TestingZLegacy.cs" t="Include" />
+                  <e p="TestingZLegacyExt.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Framework" t="Include">
+                <e p="LeanSmooth.cs" t="Include" />
+                <e p="LeanTweenExt.cs" t="Include" />
+              </e>
               <e p="LeanAudio.cs" t="Include" />
               <e p="LeanTest.cs" t="Include" />
               <e p="LeanTween.cs" t="Include" />
+              <e p="LICENSE.txt" t="Include" />
               <e p="LTDescr.cs" t="Include" />
               <e p="LTDescrOptional.cs" t="Include" />
               <e p="LTSeq.cs" t="Include" />
+              <e p="README.txt" t="Include" />
             </e>
             <e p="LineEndings" t="Include">
               <e p="Editor" t="Include">
@@ -986,30 +1036,50 @@
             </e>
           </e>
         </e>
-        <e p="SB_Run.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Abilities" t="Include">
             <e p="AttackBaseClass.cs" t="Include" />
             <e p="Bullet" t="Include">
+              <e p="Arrow.cs" t="Include" />
               <e p="Bullet.cs" t="Include" />
               <e p="DestroyOnExit.cs" t="Include" />
             </e>
             <e p="Halvar" t="Include">
               <e p="HalvarAttacks.cs" t="Include" />
               <e p="LegendaryMonolith.cs" t="Include" />
+              <e p="UnearthlyTremor.cs" t="Include" />
             </e>
             <e p="Lokir" t="Include">
               <e p="LokirAttacks.cs" t="Include" />
+              <e p="SB_Idle.cs" t="Include" />
+              <e p="SB_Run.cs" t="Include" />
               <e p="SpectralBarrage.cs" t="Include" />
               <e p="SpectralWarlock.cs" t="Include" />
               <e p="SWProjectile.cs" t="Include" />
             </e>
             <e p="Ursa" t="Include">
               <e p="HarbingerOfLife.cs" t="Include" />
+              <e p="HeraldOfRuin.cs" t="Include" />
+              <e p="HoR_Idle.cs" t="Include" />
+              <e p="HoR_Run.cs" t="Include" />
               <e p="UrsaAttacks.cs" t="Include" />
             </e>
           </e>
+          <e p="Camera" t="Include">
+            <e p="CMDockSwitcher.cs" t="Include" />
+            <e p="CMTutorialSwitcher.cs" t="Include" />
+          </e>
+          <e p="DebuffsBaseClass.cs" t="Include" />
+          <e p="Dock Tutorial" t="Include">
+            <e p="HalvarDockTutorial.cs" t="Include" />
+            <e p="KhajiitDockTutorial.cs" t="Include" />
+            <e p="LokirDockTutorial.cs" t="Include" />
+            <e p="UrsaDockTutorial.cs" t="Include" />
+          </e>
           <e p="Enemies" t="Include">
+            <e p="Dead Baby" t="Include">
+              <e p="DeadBaby_Pounce.cs" t="Include" />
+            </e>
             <e p="Enemy.cs" t="Include" />
             <e p="Enemy_Run.cs" t="Include" />
             <e p="EnemyWeapon.cs" t="Include" />
@@ -1017,16 +1087,37 @@
           <e p="Player" t="Include">
             <e p="CharacterController2D.cs" t="Include" />
             <e p="Player_Attack.cs" t="Include" />
+            <e p="PlayerCooldown.cs" t="Include" />
             <e p="PlayerHealth.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerSwitching.cs" t="Include" />
+            <e p="PlayerZeal.cs" t="Include" />
+          </e>
+          <e p="Tutorial Level" t="Include">
+            <e p="HalvarTutorial.cs" t="Include" />
+            <e p="KhajiitTutorial.cs" t="Include" />
+            <e p="LokirTutorial.cs" t="Include" />
+            <e p="UrsaTutorial.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="CooldownBar.cs" t="Include" />
+            <e p="CurrHeroUI.cs" t="Include" />
+            <e p="GameOverManager.cs" t="Include" />
             <e p="HealthBar.cs" t="Include" />
+            <e p="UIOutline.cs" t="Include" />
+            <e p="ZealBar.cs" t="Include" />
+          </e>
+          <e p="Ult Tutorial" t="Include">
+            <e p="HalvarUltTutorial.cs" t="Include" />
+            <e p="LokirUltTutorial.cs" t="Include" />
+            <e p="UrsaUltTutorial.cs" t="Include" />
           </e>
           <e p="Wave System" t="Include">
             <e p="WaveSpawner.cs" t="Include" />
           </e>
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="UIOutline.shader" t="Include" />
         </e>
       </e>
       <e p="Fungus.csproj" t="IncludeRecursive" />

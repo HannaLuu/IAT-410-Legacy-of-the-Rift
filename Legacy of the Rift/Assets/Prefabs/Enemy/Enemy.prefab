@@ -298,4 +298,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  monolithLayer:
+    serializedVersion: 2
+    m_Bits: 512
   attackPoint: {fileID: 8267758699397935688}
