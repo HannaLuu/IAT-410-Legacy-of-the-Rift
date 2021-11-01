@@ -495,7 +495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569405719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4321346, y: 2.1860006, z: -0.39999962}
+  m_LocalPosition: {x: -2.191712, y: 2.1860006, z: -0.39999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2171,7 +2171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9193589512551265415, guid: ecf2ec5ce53286b4f925bd3d8ec7ffba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -5.0000005
       objectReference: {fileID: 0}
     - target: {fileID: 9193589512551265415, guid: ecf2ec5ce53286b4f925bd3d8ec7ffba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2401,7 +2401,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2138538754}
   selectedCommands:
-  - {fileID: 2138538769}
+  - {fileID: 2138538756}
   variables:
   - {fileID: 2138538717}
   - {fileID: 2138538715}
@@ -2447,7 +2447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 120
   indentLevel: 0
-  storyText: Try making spirit! I- I- I help you!
+  storyText: Try making spirit BEAR! I- I- I help you!
   description: 
   character: {fileID: 3654323703702907746, guid: 2f0cb242de099e148b74a700658edce0, type: 3}
   portrait: {fileID: 0}
@@ -3233,7 +3233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 111
   indentLevel: 0
-  storyText: Oh MAN! I should've started carrying you around earlier Morkvar!
+  storyText: Maker's cheeks, Mork...YOU'RE AMAZING!!!!
   description: 
   character: {fileID: 4061733457296371413, guid: 9cb3e431286ab1348a8bfffff94ecfdd, type: 3}
   portrait: {fileID: 0}
@@ -3337,7 +3337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 106
   indentLevel: 1
-  storyText: SWING!!! SWING!!!
+  storyText: CRUSH    THE STINKY STINKY    WITH ROCK!!!!!
   description: 
   character: {fileID: 405215632748643784, guid: 970cad8969116e342aec272d593b2347, type: 3}
   portrait: {fileID: 0}
@@ -3607,7 +3607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 103
   indentLevel: 0
-  storyText: WUAEEEE!!! TRY SWING HAMMER!!!
+  storyText: WUAEEEE!!!    CRUSH    STINKY     MONSTER      WITH ROCK!!!!
   description: 
   character: {fileID: 405215632748643784, guid: 970cad8969116e342aec272d593b2347, type: 3}
   portrait: {fileID: 0}
@@ -3634,7 +3634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 102
   indentLevel: 0
-  storyText: Haha, okay I'm here! What did you want to show-
+  storyText: I'm here Mork!!!! What did you want to show-
   description: 
   character: {fileID: 4061733457296371413, guid: 9cb3e431286ab1348a8bfffff94ecfdd, type: 3}
   portrait: {fileID: 0}
@@ -3710,7 +3710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 99
   indentLevel: 1
-  storyText: I help you clone...
+  storyText: I help you make many clone!!!!
   description: 
   character: {fileID: 3096375148459290163, guid: 04226414334dcc84092f773965d9366d, type: 3}
   portrait: {fileID: 0}
@@ -3805,7 +3805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 96
   indentLevel: 0
-  storyText: WUAEEEE!!! I GIVE HALVAR POWER TOO!!!!
+  storyText: WUAEEEE!!! I        GIVE     HALVAR     POWER    TOO!!!!
   description: 
   character: {fileID: 405215632748643784, guid: 970cad8969116e342aec272d593b2347, type: 3}
   portrait: {fileID: 0}
@@ -4048,7 +4048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 138
   indentLevel: 0
-  storyText: Alright alright! I can sense more scourged coming towards us. We'll
+  storyText: OW, Alright alright! I can sense more scourged coming towards us. We'll
     need your help little ones...
   description: 
   character: {fileID: 6663355596719516269, guid: 07d2d678718514c498ddc2da10c5150c, type: 3}
@@ -4159,7 +4159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 33
   indentLevel: 1
-  storyText: LOKIR!!! I WANT SHOW HALVAR!!!
+  storyText: LOKIR!!! I       WANT    SHOW   HALVAR     POWER!!!
   description: 
   character: {fileID: 405215632748643784, guid: 970cad8969116e342aec272d593b2347, type: 3}
   portrait: {fileID: 0}

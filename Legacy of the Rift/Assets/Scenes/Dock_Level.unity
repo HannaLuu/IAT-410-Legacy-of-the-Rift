@@ -1502,11 +1502,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 558.573, y: 277.01474}
+  scrollPos: {x: 651.0725, y: 241.30026}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 522
-  zoom: 0.7000003
+  zoom: 0.64000034
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1514,8 +1514,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 974722049}
-  selectedCommands: []
+  - {fileID: 974722076}
+  selectedCommands:
+  - {fileID: 974722081}
   variables:
   - {fileID: 974722036}
   - {fileID: 974722035}
@@ -1687,7 +1688,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -323.27277
     y: 60.563354
-    width: 78.57142
+    width: 78.124985
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1780,8 +1781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: ...Yes Khajit... But I'm not wrong! Halvar's way more suited to be carrying
-    the heavy lifting!
+  storyText: I'M..SORRY-
   description: 
   character: {fileID: 6093848993457428730, guid: c1e403b09f9f7b44da542f20dfc3d2d9, type: 3}
   portrait: {fileID: 0}
@@ -1808,7 +1808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: Hey! That's mean!
+  storyText: Hey! You VERY MEAN!!!!
   description: 
   character: {fileID: 3096375148459290163, guid: 04226414334dcc84092f773965d9366d, type: 3}
   portrait: {fileID: 0}
@@ -1835,8 +1835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: Oh man, are we almost at the dock yet? I'm not cut out to be carrying
-    Eerika around for this long...
+  storyText: FUCK, EERIKA'S TOO HEAVY!!! WE HAVE TO RUN FASTER-
   description: 
   character: {fileID: 6093848993457428730, guid: c1e403b09f9f7b44da542f20dfc3d2d9, type: 3}
   portrait: {fileID: 0}
@@ -1878,8 +1877,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: Children! Listen to me. You all will be much stronger if you work together
-    rather than squabble. This journey will be tough.
+  storyText: DAMN IT, CALM DOWN!!! You all will be much stronger if you work together
+    rather than squabble-
   description: 
   character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
   portrait: {fileID: 0}
@@ -1906,7 +1905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: Can't you climb on Halvar's back? He's way stronger than-
+  storyText: EERIKA, GO ON HALVAR'S BACK, HE'S WAY STRONGE-
   description: 
   character: {fileID: 6093848993457428730, guid: c1e403b09f9f7b44da542f20dfc3d2d9, type: 3}
   portrait: {fileID: 0}
@@ -1962,7 +1961,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -197.14485
     y: 57.2707
-    width: 157.14282
+    width: 149.99994
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2010,9 +2009,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -5.716316
-    y: 55.842125
-    width: 118.5714
+    x: -2.5913181
+    y: 57.404625
+    width: 115.62496
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2057,8 +2056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 50
   indentLevel: 1
-  storyText: Please... Take your time Halvar... It's not like there is a horde of
-    scourged charging towards you....
+  storyText: TAKE YOUR TIME, FOOL!!! DON'T FALTER!!!
   description: 
   character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
   portrait: {fileID: 0}
@@ -2629,7 +2627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 48
   indentLevel: 0
-  storyText: Oh yeah! Time to put up my rock wall!
+  storyText: 'Stone Form: Legendary Monolith!!!'
   description: 
   character: {fileID: 4061733457296371413, guid: 9cb3e431286ab1348a8bfffff94ecfdd, type: 3}
   portrait: {fileID: 0}
@@ -3364,7 +3362,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 147.1407
     y: 50.127846
-    width: 132.85712
+    width: 131.24995
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3417,7 +3415,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &974722075
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3435,7 +3433,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &974722076
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3447,9 +3445,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 477.141
-    y: 51.55655
-    width: 165.71423
+    x: 484.9535
+    y: 54.68155
+    width: 159.37494
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3472,7 +3470,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &974722077
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3486,7 +3484,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &974722078
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3511,7 +3509,7 @@ MonoBehaviour:
   parameterNameOLD: 
 --- !u!114 &974722079
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3523,8 +3521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 84
   indentLevel: 0
-  storyText: I believe in you... Find the cure for your younger siblings. Don't worry
-    about me. This isn't my first time saving Wulfgard from utter destruction...
+  storyText: GO!!!!!!!!
   description: 
   character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
   portrait: {fileID: 0}
@@ -3539,7 +3536,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &974722080
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3551,7 +3548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 83
   indentLevel: 0
-  storyText: But Khajiit! We've never gone on such a long journey alone before!
+  storyText: KHAJIIT-
   description: 
   character: {fileID: 6663355596719516269, guid: 07d2d678718514c498ddc2da10c5150c, type: 3}
   portrait: {fileID: 0}
@@ -3566,7 +3563,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &974722081
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3578,8 +3575,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 82
   indentLevel: 0
-  storyText: Children... This is where we must part ways... I would not be able to
-    live with myself if I let the villagers of Snowspell City fend for themselves.
+  storyText: THIS...WILL BE THE END OF MY TALE. GO...AND THANK YOU. TELL YOUR FATHER
+    WE WILL MEET AGAIN.
   description: 
   character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
   portrait: {fileID: 0}
@@ -3594,7 +3591,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &974722082
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3606,7 +3603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 81
   indentLevel: 0
-  storyText: Thank you Khajiit. Let's see what Sir Dickon has made for us!
+  storyText: NO, KHAJIIT, JUST COME-
   description: 
   character: {fileID: 6663355596719516269, guid: 07d2d678718514c498ddc2da10c5150c, type: 3}
   portrait: {fileID: 0}
@@ -3621,7 +3618,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &974722083
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3633,8 +3630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 80
   indentLevel: 0
-  storyText: See! The journey forward will be much easier if you all work together
-    as one. Do not forget that.
+  storyText: GO, QUICKLY!!! I'LL HOLD OFF THE REST BEHIND US-
   description: 
   character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
   portrait: {fileID: 0}
@@ -3649,7 +3645,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &974722084
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3666,7 +3662,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &974722085
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4035,7 +4031,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 321.4264
     y: 47.270718
-    width: 107.14284
+    width: 106.24997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4111,7 +4107,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &974722097
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4128,7 +4124,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &974722098
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4527,7 +4523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667548729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60, y: -2.0756145, z: -10}
+  m_LocalPosition: {x: -60, y: -2.0193954, z: -0.39999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
