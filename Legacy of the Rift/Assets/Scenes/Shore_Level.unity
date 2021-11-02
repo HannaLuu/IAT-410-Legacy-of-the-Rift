@@ -495,7 +495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569405719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.191712, y: 2.1860006, z: -0.39999962}
+  m_LocalPosition: {x: -5.0000024, y: 2.1860006, z: -0.39999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2367,6 +2367,10 @@ GameObject:
   - component: {fileID: 2138538764}
   - component: {fileID: 2138538755}
   - component: {fileID: 2138538769}
+  - component: {fileID: 2138538772}
+  - component: {fileID: 2138538771}
+  - component: {fileID: 2138538774}
+  - component: {fileID: 2138538773}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2399,9 +2403,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2138538754}
-  selectedCommands:
-  - {fileID: 2138538756}
+  - {fileID: 2138538767}
+  selectedCommands: []
   variables:
   - {fileID: 2138538717}
   - {fileID: 2138538715}
@@ -3233,7 +3236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 111
   indentLevel: 0
-  storyText: Maker's cheeks, Mork...YOU'RE AMAZING!!!!
+  storyText: Divine shit...so I can crush enemies around me with these rocks?? HAHA!!!
+    Look at them, all stunned--
   description: 
   character: {fileID: 4061733457296371413, guid: 9cb3e431286ab1348a8bfffff94ecfdd, type: 3}
   portrait: {fileID: 0}
@@ -3288,6 +3292,8 @@ MonoBehaviour:
   commandList:
   - {fileID: 2138538751}
   - {fileID: 2138538728}
+  - {fileID: 2138538774}
+  - {fileID: 2138538773}
   - {fileID: 2138538750}
   - {fileID: 2138538727}
   - {fileID: 2138538726}
@@ -3607,7 +3613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 103
   indentLevel: 0
-  storyText: WUAEEEE!!!    CRUSH    STINKY     MONSTER      WITH ROCK!!!!
+  storyText: WUAEEEE!!!    CRUSH    STINKY     MONSTERS      WITH ROCK!!!!
   description: 
   character: {fileID: 405215632748643784, guid: 970cad8969116e342aec272d593b2347, type: 3}
   portrait: {fileID: 0}
@@ -4017,6 +4023,8 @@ MonoBehaviour:
   - {fileID: 2138538758}
   - {fileID: 2138538757}
   - {fileID: 2138538756}
+  - {fileID: 2138538772}
+  - {fileID: 2138538771}
   - {fileID: 2138538769}
   - {fileID: 2138538755}
   suppressAllAutoSelections: 0
@@ -4048,8 +4056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 138
   indentLevel: 0
-  storyText: OW, Alright alright! I can sense more scourged coming towards us. We'll
-    need your help little ones...
+  storyText: OW, Alright alright!
   description: 
   character: {fileID: 6663355596719516269, guid: 07d2d678718514c498ddc2da10c5150c, type: 3}
   portrait: {fileID: 0}
@@ -4076,7 +4083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 137
   indentLevel: 0
-  storyText: '*Slaps Ursa''s face* SHHH!!! It''s a secret!!!'
+  storyText: '*SLAP* SHHH!!! It''s a secret!!!'
   description: 
   character: {fileID: 3654323703702907746, guid: 2f0cb242de099e148b74a700658edce0, type: 3}
   portrait: {fileID: 0}
@@ -4103,8 +4110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 136
   indentLevel: 0
-  storyText: Hjallna.... How in the GODS were you able to help me summon a Herald
-    of Ruin?!?!
+  storyText: Hjallna.... How--
   description: 
   character: {fileID: 6663355596719516269, guid: 07d2d678718514c498ddc2da10c5150c, type: 3}
   portrait: {fileID: 0}
@@ -4797,6 +4803,115 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &2138538771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138538708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 143
+  indentLevel: 0
+  storyText: This is amazing. Children, we will need your help going forward...
+  description: 
+  character: {fileID: 6663355596719516269, guid: 07d2d678718514c498ddc2da10c5150c, type: 3}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2138538772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138538708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 142
+  indentLevel: 0
+  storyText: The Herald of Ruin applies some strange hex on the enemies...making
+    them more vulnerable to attacks...?
+  description: 
+  character: {fileID: 6663355596719516269, guid: 07d2d678718514c498ddc2da10c5150c, type: 3}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2138538773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138538708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 145
+  indentLevel: 0
+  storyText: SORRY MORK!!!!
+  description: 
+  character: {fileID: 4061733457296371413, guid: 9cb3e431286ab1348a8bfffff94ecfdd, type: 3}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2138538774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138538708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 144
+  indentLevel: 0
+  storyText: '*SLAP* NO         BAD WORD   HALVAR!!!!'
+  description: 
+  character: {fileID: 405215632748643784, guid: 970cad8969116e342aec272d593b2347, type: 3}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &2138538778
 MonoBehaviour:
   m_ObjectHideFlags: 2
