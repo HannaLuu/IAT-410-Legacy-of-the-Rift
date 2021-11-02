@@ -279,7 +279,7 @@ MonoBehaviour:
   currAttackCooldown: 0
   isAbilityReady: 0
   abilityActivated: 0
-  maxAbilityCooldown: 10
+  maxAbilityCooldown: 20
   currAbilityCooldown: 0
   isUltUnlocked: 1
   isUltReady: 0

@@ -94,12 +94,12 @@ public class LokirAttacks : AttackBaseClass
                 }
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-            } else if (Input.GetButtonDown("Fire2") && spectralWarlock != null)
-            {
-                teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
-                Teleport();
-                teleported = true;
             }
+        } else if (Input.GetButtonDown("Fire2") && spectralWarlock != null)
+        {
+            teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
+            Teleport();
+            teleported = true;
         }
 
         if (isUltReady && isUltUnlocked)
