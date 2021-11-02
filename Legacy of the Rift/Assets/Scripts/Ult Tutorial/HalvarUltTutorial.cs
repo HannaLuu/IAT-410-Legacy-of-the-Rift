@@ -22,7 +22,7 @@ public class HalvarUltTutorial : MonoBehaviour
             playerZeal.overzealCheat = true;
             Fungus.Flowchart.BroadcastFungusMessage("HalvarTime");
         }
-        if (flowchart.GetBooleanVariable("isHalvar") == true && Input.GetKeyDown(KeyCode.E))
+        if (flowchart.GetBooleanVariable("isHalvar") == true && Input.GetKeyDown(KeyCode.E) && flowchart.GetBooleanVariable("isHalvarE") == false)
         {
             flowchart.SetBooleanVariable("isHalvarE", true);
             Fungus.Flowchart.BroadcastFungusMessage("HalvarUltActivated");

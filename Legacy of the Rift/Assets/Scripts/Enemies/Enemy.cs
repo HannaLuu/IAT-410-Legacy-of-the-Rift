@@ -26,12 +26,12 @@ public class Enemy : MonoBehaviour
         health -= damage * damageReceivedMultiplier;
         StartCoroutine(Slowed());
 
+        Debug.Log(damage * damageReceivedMultiplier);
+
         if (health <= 0)
         {
             Die();
         }
-
-        Debug.Log(damage * damageReceivedMultiplier);
     }
 
     void Die()

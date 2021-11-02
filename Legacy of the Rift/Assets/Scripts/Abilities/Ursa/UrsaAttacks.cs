@@ -35,6 +35,7 @@ public class UrsaAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire1"))
             {
+                attackActivated = true;
                 animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
@@ -47,6 +48,7 @@ public class UrsaAttacks : AttackBaseClass
                 playerZeal.SpendZeal(abilityZealCost);
                 if (playerZeal.canSpendZeal == true)
                 {
+                    abilityActivated = true;
                     animator.SetTrigger("Ability");
                     //animator.SetTrigger("Attack");
                     //FindObjectOfType<AudioManager>().Play("PlayerAttack");
@@ -66,6 +68,7 @@ public class UrsaAttacks : AttackBaseClass
                     playerZeal.SpendZeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
                     {
+                        ultActivated = true;
                         animator.SetTrigger("Ultimate");
                         //animator.SetTrigger("Attack");
                         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
@@ -81,21 +84,18 @@ public class UrsaAttacks : AttackBaseClass
     // Munir's Arrow
     public override void Attack()
     {
-        attackActivated = true;
         Instantiate(attackPrefab, attackPoint.position, attackPoint.rotation);
     }
 
     // Harbinger of Life
     public override void ActivateAbility()
     {
-        abilityActivated = true;
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 
     // Herald of Ruin
     public override void ActivateUlt()
     {
-        ultActivated = true;
         Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
     }
 }

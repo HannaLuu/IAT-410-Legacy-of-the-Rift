@@ -16,6 +16,8 @@ public class HalvarAttacks : AttackBaseClass
 
     public Transform ultPoint2;
 
+    public GameObject impactEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,7 @@ public class HalvarAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire1"))
             {
+                attackActivated = true;
                 //Play Attack Animation
                 animator.SetTrigger("Attack");
             }
@@ -55,6 +58,7 @@ public class HalvarAttacks : AttackBaseClass
                 playerZeal.SpendZeal(abilityZealCost);
                 if (playerZeal.canSpendZeal == true)
                 {
+                    abilityActivated = true;
                     animator.SetTrigger("Ability");
                 } else
                 {
@@ -73,6 +77,7 @@ public class HalvarAttacks : AttackBaseClass
                     playerZeal.SpendZeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
                     {
+                        ultActivated = true;
                         animator.SetTrigger("Ultimate");
                     } else
                     {
@@ -86,7 +91,6 @@ public class HalvarAttacks : AttackBaseClass
     // Hands of Stone
     public override void Attack()
     {
-        attackActivated = true;
 
         //Detect Enemies in range of attack
         //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -96,6 +100,7 @@ public class HalvarAttacks : AttackBaseClass
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+            Instantiate(impactEffect, enemy.gameObject.transform.position, enemy.gameObject.transform.rotation);
             enemyCollided = true;
             if (playerZeal.isOverzealous == true && playerZeal.currentZeal < playerZeal.maxZeal)
             {

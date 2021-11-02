@@ -9,6 +9,8 @@ public class SWProjectile : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    public GameObject impactEffect;
+
     private void Start()
     {
         rb.velocity = transform.right * speed;
@@ -16,9 +18,10 @@ public class SWProjectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
 
-        Enemy enemy = hitInfo.GetComponent<Enemy>();
+        Enemy enemy = hitInfo.GetComponentInParent<Enemy>();
         if (enemy != null)
         {
+            Instantiate(impactEffect, transform.position, transform.rotation);
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         }

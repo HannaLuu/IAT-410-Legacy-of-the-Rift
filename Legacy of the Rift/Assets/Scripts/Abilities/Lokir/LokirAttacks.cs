@@ -31,6 +31,8 @@ public class LokirAttacks : AttackBaseClass
 
     public bool teleported = false;
 
+    public GameObject impactEffect;
+
     //public static event EventHandler OnAttack;
 
     //public static event EventHandler OnAbility;
@@ -178,6 +180,7 @@ public class LokirAttacks : AttackBaseClass
         if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == true)
         {
             OnDashCollide?.Invoke(this, EventArgs.Empty);
+            Instantiate(impactEffect, transform.position, transform.rotation);
             otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             Debug.Log("DASH THROUGH DAMAGE");
 

@@ -322,12 +322,12 @@ MonoBehaviour:
   currAttackCooldown: 0
   isAbilityReady: 0
   abilityActivated: 0
-  maxAbilityCooldown: 4
+  maxAbilityCooldown: 10
   currAbilityCooldown: 0
   isUltUnlocked: 1
   isUltReady: 0
   ultActivated: 0
-  maxUltCooldown: 10
+  maxUltCooldown: 20
   currUltCooldown: 0
   ultZealCost: 150
   zealCost: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
   abilityPrefab: {fileID: 126634518127349319, guid: 74c7f6a35c1e8f54d8f7f82cddf0b1ea, type: 3}
   ultPrefab: {fileID: 8027434218581657759, guid: 38f9a9ad9e295f44594e71d46b525279, type: 3}
   attackRange: {x: 14, y: 6, z: 6}
-  attackDamage: 50
+  attackDamage: 25
   overzealRegenAmount: 5
   abilityZealCost: 25
   enemyLayers:
@@ -347,6 +347,7 @@ MonoBehaviour:
     m_Bits: 64
   playerZeal: {fileID: 0}
   ultPoint2: {fileID: 653068521751126187}
+  impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
 --- !u!1 &4092356082818394142
 GameObject:
   m_ObjectHideFlags: 0

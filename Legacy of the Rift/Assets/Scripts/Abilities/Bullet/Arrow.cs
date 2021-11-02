@@ -18,7 +18,7 @@ public class Arrow : MonoBehaviour
 
     public UrsaAttacks ursaAttackScript;
 
-    //public GameObject impactEffect;
+    public GameObject impactEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +42,7 @@ public class Arrow : MonoBehaviour
         if (hitInfo.gameObject.CompareTag("Enemy"))
         {
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
+            Instantiate(impactEffect, transform.position, transform.rotation);
             currentHealth -= 1;
             if (playerZeal.isOverzealous == true && playerZeal.currentZeal < playerZeal.maxZeal)
             {

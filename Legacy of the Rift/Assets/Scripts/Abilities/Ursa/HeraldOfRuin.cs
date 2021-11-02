@@ -12,6 +12,8 @@ public class HeraldOfRuin : MonoBehaviour
 
     private bool debuffApplied;
 
+    public GameObject impactEffect;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //if an explosion range is set
@@ -26,6 +28,8 @@ public class HeraldOfRuin : MonoBehaviour
                 var enemy = hitCollider.GetComponentInParent<Enemy>();
                 if (enemy)
                 {
+                    Instantiate(impactEffect, transform.position, transform.rotation);
+                    impactEffect.transform.localScale = new Vector3(4, 4, 4);
                     //calculate falloff distance for damage, the father the enemy is from center of explosion, the less damage it takes
                     var closestPoint = hitCollider.ClosestPoint(transform.position);
                     var distance = Vector3.Distance(closestPoint, transform.position);
@@ -54,9 +58,10 @@ public class HeraldOfRuin : MonoBehaviour
         else
         {
             Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, collisionRange, enemyLayer);
-            if (colInfo != null)
+            if (colInfo.gameObject.CompareTag("Enemy"))
             {
-                FindObjectOfType<Enemy>().TakeDamage(attackDamage);
+                Instantiate(impactEffect, transform.position, transform.rotation);
+                colInfo.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             }
         }
 

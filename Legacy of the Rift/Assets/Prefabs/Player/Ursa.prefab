@@ -291,12 +291,12 @@ MonoBehaviour:
   currAttackCooldown: 0
   isAbilityReady: 0
   abilityActivated: 0
-  maxAbilityCooldown: 4
+  maxAbilityCooldown: 10
   currAbilityCooldown: 0
   isUltUnlocked: 1
   isUltReady: 0
   ultActivated: 0
-  maxUltCooldown: 10
+  maxUltCooldown: 20
   currUltCooldown: 0
   ultZealCost: 150
   zealCost: 0

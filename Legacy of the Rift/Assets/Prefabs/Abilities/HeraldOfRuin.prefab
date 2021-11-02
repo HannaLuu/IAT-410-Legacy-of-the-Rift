@@ -130,12 +130,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 2942944832199538349}
-  attackDamage: 30
+  attackDamage: 50
   collisionRange: 3.32
   explosionRange: 8
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+  impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
 --- !u!61 &2031036715121719418
 BoxCollider2D:
   m_ObjectHideFlags: 0

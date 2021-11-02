@@ -6,13 +6,11 @@ public class CMTutorialSwitcher : MonoBehaviour
 {
     public Animator khajiitAnimator, cameraAnimator;
 
-    public bool phase1, phase2, phase3, phase4;
-
-    public bool fuck = false;
+    public bool phase1, phase2, phase3, phase4, phase5;
 
     public float timeToWait = 6f;
 
-    public GameObject Phase1Enemies, Phase2Enemies;
+    public GameObject Phase1Enemies, Phase2Enemies, Phase4Enemies;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +21,7 @@ public class CMTutorialSwitcher : MonoBehaviour
 
     public void SwitchCamera()
     {
-        if (phase1 && fuck == true)
+        if (phase1)
         {
             cameraAnimator.Play("Phase 1");
             khajiitAnimator.SetBool("isRun", true);
@@ -45,8 +43,13 @@ public class CMTutorialSwitcher : MonoBehaviour
         {
             cameraAnimator.Play("Phase 4");
             khajiitAnimator.SetBool("isRun", true);
-            fuck = true;
             StartCoroutine(CameraTransitionToPhase4());
+        }
+        if (phase5)
+        {
+            cameraAnimator.Play("Phase 5");
+            khajiitAnimator.SetBool("isRun", true);
+            StartCoroutine(CameraTransitionToPhase5());
         }
     }
 
@@ -71,6 +74,13 @@ public class CMTutorialSwitcher : MonoBehaviour
     }
 
     public IEnumerator CameraTransitionToPhase4()
+    {
+        yield return new WaitForSeconds(timeToWait);
+        Phase4Enemies.SetActive(true);
+        khajiitAnimator.SetBool("isRun", false);
+    }
+
+    public IEnumerator CameraTransitionToPhase5()
     {
         yield return new WaitForSeconds(timeToWait);
         khajiitAnimator.SetBool("isRun", false);

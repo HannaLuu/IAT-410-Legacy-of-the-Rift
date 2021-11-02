@@ -16,6 +16,8 @@ public class DeadBaby_Pounce : MonoBehaviour
 
     public bool ignorePlayerCollision;
 
+    public GameObject impactEffect;
+
     public void Attack()
     {
         if(babyEnemyScript.isFlipped == false)
@@ -31,6 +33,7 @@ public class DeadBaby_Pounce : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
         if (colInfo != null)
         {
+            Instantiate(impactEffect, transform.position, transform.rotation);
             FindObjectOfType<PlayerHealth>().TakeDamage(attackDamage);
         }
     }

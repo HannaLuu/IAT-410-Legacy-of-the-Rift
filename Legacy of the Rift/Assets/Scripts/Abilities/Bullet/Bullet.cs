@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    //public GameObject impactEffect;
+    public GameObject impactEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,7 @@ public class Bullet : MonoBehaviour
     {
         if (hitInfo.gameObject.CompareTag("Enemy"))
         {
+            Instantiate(impactEffect, transform.position, transform.rotation);
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
             Destroy(gameObject);
         }

@@ -9,15 +9,26 @@ public class EnemyWeapon : MonoBehaviour
     public int attackDamage = 10;
     public float attackRange = 0.5f;
     public LayerMask playerLayer;
+    public LayerMask monolithLayer;
 
     public Transform attackPoint;
 
+    public GameObject impactEffect;
+
     public void Attack()
     {
-        Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
-        if (colInfo != null)
+        Collider2D playerColInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
+        if (playerColInfo != null)
         {
+            Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
             FindObjectOfType<PlayerHealth>().TakeDamage(attackDamage);
+        }
+        
+        Collider2D monolithColInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, monolithLayer);
+        if (monolithColInfo != null)
+        {
+            Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
+            FindObjectOfType<LegendaryMonolith>().TakeDamage(attackDamage);
         }
     }
 

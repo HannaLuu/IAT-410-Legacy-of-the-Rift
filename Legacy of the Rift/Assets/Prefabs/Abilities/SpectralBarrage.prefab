@@ -219,7 +219,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackPoint: {fileID: 5781445290239065982}
-  maxLifeSpan: 20
+  maxLifeSpan: 25
   currentLifeSpan: 0
+  waveSpawner: {fileID: 0}
   isFlipped: 0
-  enemy: {fileID: 8267758700066203703, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
+  nearestEnemy: {fileID: 0}
+  impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
