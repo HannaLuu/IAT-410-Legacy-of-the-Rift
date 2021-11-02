@@ -40,7 +40,7 @@ public class LokirTutorial : MonoBehaviour
         if (flowchart.GetBooleanVariable("isLokirDash") == true && lokirAttacksScript.teleported == true && flowchart.GetBooleanVariable("isLokirTP") == false)
         {
             flowchart.SetBooleanVariable("isLokirTP", true);
-            cmSwitcher.phase1 = true;
+            cmSwitcher.phase5 = true;
             LokirAbilityGlowOff();
             Fungus.Flowchart.BroadcastFungusMessage("LokirTeleported");
             cmSwitcher.phase4 = false;

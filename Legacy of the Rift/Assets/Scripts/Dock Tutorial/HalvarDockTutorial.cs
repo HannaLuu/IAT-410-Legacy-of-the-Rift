@@ -19,7 +19,7 @@ public class HalvarDockTutorial : MonoBehaviour
             flowchart.SetBooleanVariable("isHalvar", true);
             Fungus.Flowchart.BroadcastFungusMessage("HalvarTime");
         }
-        if (flowchart.GetBooleanVariable("isHalvar") == true && Input.GetKeyDown(KeyCode.Q))
+        if (flowchart.GetBooleanVariable("isHalvar") == true && Input.GetKeyDown(KeyCode.Q) && flowchart.GetBooleanVariable("isHalvarQ") == false)
         {
             flowchart.SetBooleanVariable("isHalvarQ", true);
             Fungus.Flowchart.BroadcastFungusMessage("HalvarWallUp");

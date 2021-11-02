@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  damageReceivedMultiplier: 0
   player: {fileID: 5807222352677156469, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
   isFlipped: 0
   isSlowed: 0
@@ -270,6 +271,7 @@ MonoBehaviour:
   babyEnemyScript: {fileID: 5253987250411552437}
   attackPoint: {fileID: 5253987251253153288}
   ignorePlayerCollision: 0
+  impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
 --- !u!1 &5253987251253153287
 GameObject:
   m_ObjectHideFlags: 0

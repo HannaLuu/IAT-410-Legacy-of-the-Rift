@@ -13,17 +13,21 @@ public class EnemyWeapon : MonoBehaviour
 
     public Transform attackPoint;
 
+    public GameObject impactEffect;
+
     public void Attack()
     {
         Collider2D playerColInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
         if (playerColInfo != null)
         {
+            Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
             FindObjectOfType<PlayerHealth>().TakeDamage(attackDamage);
         }
         
         Collider2D monolithColInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, monolithLayer);
         if (monolithColInfo != null)
         {
+            Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
             FindObjectOfType<LegendaryMonolith>().TakeDamage(attackDamage);
         }
     }

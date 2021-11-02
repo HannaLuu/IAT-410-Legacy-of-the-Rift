@@ -136,6 +136,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+  impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
 --- !u!61 &2031036715121719418
 BoxCollider2D:
   m_ObjectHideFlags: 0

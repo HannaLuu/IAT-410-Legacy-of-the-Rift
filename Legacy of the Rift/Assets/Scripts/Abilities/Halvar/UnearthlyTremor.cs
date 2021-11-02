@@ -11,6 +11,8 @@ public class UnearthlyTremor : MonoBehaviour
 
     public int damage = 100;
 
+    public GameObject impactEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,19 +32,11 @@ public class UnearthlyTremor : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
 
-        // Enemy enemy = hitInfo.GetComponent<Enemy>();
-        // if (enemy != null)
-        // {
-        //     enemy.TakeDamage(damage);
-        //     Debug.Log(damage);
-        // }
-
         if (hitInfo.gameObject.CompareTag("Enemy"))
         {
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
+            Instantiate(impactEffect, hitInfo.gameObject.transform.position, hitInfo.gameObject.transform.rotation);
             Debug.Log(damage);
         }
-
-        //Instantiate(impactEffect, transform.position, transform.rotation);
     }
 }

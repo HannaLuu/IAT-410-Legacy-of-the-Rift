@@ -21,6 +21,8 @@ public class SpectralBarrage : MonoBehaviour
     private List<Transform> enemies = new List<Transform>();
     public Transform nearestEnemy;
 
+    public GameObject impactEffect;
+
     void Start()
     {
        waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
@@ -47,6 +49,7 @@ public class SpectralBarrage : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyLayer);
         if (colInfo != null)
         {
+            Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
             FindObjectOfType<Enemy>().TakeDamage(attackDamage);
         }
     }
