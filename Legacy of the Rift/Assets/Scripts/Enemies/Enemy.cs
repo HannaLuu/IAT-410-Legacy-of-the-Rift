@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         damageReceivedMultiplier = 1f;
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        //healthBar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamage(float damage)
@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage * damageReceivedMultiplier;
         StartCoroutine(Slowed());
 
-        healthBar.SetHealth(currentHealth);
+        //healthBar.SetHealth(currentHealth);
 
         Debug.Log(damage * damageReceivedMultiplier);
 
