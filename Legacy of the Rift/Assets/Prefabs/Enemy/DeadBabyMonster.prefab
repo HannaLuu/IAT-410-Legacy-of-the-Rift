@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b35274902b000647872651e300a19ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 75
   damageReceivedMultiplier: 0
   player: {fileID: 5807222352677156469, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
   isFlipped: 0
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5253987250411552433}
-  attackDamage: 10
+  attackDamage: 20
   attackRange: 1
   playerLayer:
     serializedVersion: 2
