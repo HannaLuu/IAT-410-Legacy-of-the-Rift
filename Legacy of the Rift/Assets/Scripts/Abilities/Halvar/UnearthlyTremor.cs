@@ -6,27 +6,13 @@ public class UnearthlyTremor : MonoBehaviour
 {
     public Rigidbody2D rb;
 
-    public float maxLifeSpan = 1f;
-    public float currentLifeSpan;
-
     public int damage = 100;
 
     public GameObject impactEffect;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Delete()
     {
-        currentLifeSpan = maxLifeSpan;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        currentLifeSpan -= Time.deltaTime;
-        if (currentLifeSpan <= 0)
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
@@ -36,7 +22,6 @@ public class UnearthlyTremor : MonoBehaviour
         {
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
             Instantiate(impactEffect, hitInfo.gameObject.transform.position, hitInfo.gameObject.transform.rotation);
-            Debug.Log(damage);
         }
     }
 }

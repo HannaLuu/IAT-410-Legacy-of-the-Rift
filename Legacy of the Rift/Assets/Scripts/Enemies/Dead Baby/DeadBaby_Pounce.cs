@@ -18,18 +18,30 @@ public class DeadBaby_Pounce : MonoBehaviour
 
     public GameObject impactEffect;
 
-    public void Attack()
+    public Animator animator;
+
+    void Start()
     {
-        if(babyEnemyScript.isFlipped == false)
+        animator = this.GetComponent<Animator>();
+    }
+
+    public void Pounce()
+    {
+        if (babyEnemyScript.isFlipped == false)
         {
             StartCoroutine(Pounce(-1f, 15f));
+            animator.SetBool("isPounce", true);
         }
 
         if (babyEnemyScript.isFlipped == true)
         {
             StartCoroutine(Pounce(1f, 15f));
+            animator.SetBool("isPounce", true);
         }
+    }
 
+    public void Attack()
+    {
         Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
         if (colInfo != null)
         {

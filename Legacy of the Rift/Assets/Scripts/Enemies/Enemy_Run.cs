@@ -11,7 +11,6 @@ public class Enemy_Run : StateMachineBehaviour
     Rigidbody2D rb;
     Enemy enemyScript;
 
-
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -52,7 +51,6 @@ public class Enemy_Run : StateMachineBehaviour
         {
             speed = 4f;
         }
-
     }
 
 
