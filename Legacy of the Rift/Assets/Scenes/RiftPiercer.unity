@@ -507,7 +507,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2111180278}
   selectedCommands:
-  - {fileID: 2111180298}
+  - {fileID: 2111180292}
   variables: []
   description: 
   stepPause: 0
@@ -601,9 +601,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: Can someone tell me what the ASS is going on here?
+  storyText: Can someone tell me WHAT is going on here?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2486228424414903859, guid: 1430777e8a053a64a888ebd3ac86cb55, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -848,7 +848,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: As you wish..
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2486228424414903859, guid: 1430777e8a053a64a888ebd3ac86cb55, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1

@@ -14,10 +14,14 @@ public class WaveSpawner : MonoBehaviour
     public class Wave
     {
         public string name;
-        public Transform enemy;
+        //public Transform enemy;
+        //public GameObject[] enemy;
         public int count;
         public float rate;
     }
+
+    public GameObject[] enemy;
+
 
     public Wave[] waves;
     private int nextWave = 0;
@@ -114,7 +118,8 @@ public class WaveSpawner : MonoBehaviour
 
         for (int i = 0; i < _wave.count; i++)
         {
-            SpawnEnemy(_wave.enemy);
+            //SpawnEnemy(_wave.enemy);
+            SpawnEnemy();
             yield return new WaitForSeconds(1f / _wave.rate);
         }
 
@@ -123,12 +128,19 @@ public class WaveSpawner : MonoBehaviour
         yield break;
     }
 
-    void SpawnEnemy(Transform _enemy)
-    {
-        Debug.Log("Spawning Enemy: " + _enemy.name);
+    // void SpawnEnemy(Transform _enemy)
+    // {
+    //     Debug.Log("Spawning Enemy: " + _enemy.name);
 
+    //     Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
+    //     Instantiate(_enemy, _sp.position, _sp.rotation);
+    // }
+
+    public void SpawnEnemy()
+    {
+        int randomEnemy = Random.Range(0, enemy.Length); //Selecing a random enemy
         Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        Instantiate(_enemy, _sp.position, _sp.rotation);
+        Instantiate(enemy[randomEnemy], _sp.position, _sp.rotation);
     }
 
 }

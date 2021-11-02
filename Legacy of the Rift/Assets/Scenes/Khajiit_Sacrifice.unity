@@ -342,7 +342,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 524534568}
   selectedCommands:
-  - {fileID: 524534578}
+  - {fileID: 524534572}
   variables: []
   description: 
   stepPause: 0
@@ -411,7 +411,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: KSULFLKUSDFLKSEGGSKULSDKF!!!!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 6084983056797304660, guid: fd0283cd2fbeffa4cbcffee06ac0a4ad, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -519,7 +519,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: ASJWEHEW(&$(*E*S&(R&&(*!!!!!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 6084983056797304660, guid: fd0283cd2fbeffa4cbcffee06ac0a4ad, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1

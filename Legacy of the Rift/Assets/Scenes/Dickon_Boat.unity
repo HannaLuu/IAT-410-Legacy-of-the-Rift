@@ -375,7 +375,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1121269208}
   selectedCommands:
-  - {fileID: 1121269220}
+  - {fileID: 1121269219}
   variables: []
   description: 
   stepPause: 0
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: "GET ON THE DAMN BOAT NOW OR I\u2019LL FEED YOU TO THE SCOURGES RIGHT
+  storyText: "GET ON THE DAMN SHIP NOW OR I\u2019LL FEED YOU TO THE SCOURGES RIGHT
     BEHIND US!!!!"
   description: 
   character: {fileID: 4061733457296371413, guid: 9cb3e431286ab1348a8bfffff94ecfdd, type: 3}
@@ -445,7 +445,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: BUT SER, THE SHIP IS NOT FINISHE--
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2486228424414903859, guid: 1430777e8a053a64a888ebd3ac86cb55, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -472,7 +472,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: WHAT IS GOING ON??? WHY DOES THE AIR REEK OF SHI--
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2486228424414903859, guid: 1430777e8a053a64a888ebd3ac86cb55, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -526,7 +526,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: SDYFOSDF#(#*&(!!#EFS!!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 6084983056797304660, guid: fd0283cd2fbeffa4cbcffee06ac0a4ad, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -553,7 +553,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: I WILL GET ON THE SHIP IMMEDIATELY.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2486228424414903859, guid: 1430777e8a053a64a888ebd3ac86cb55, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  storyText: GET ON THE FUCKING BOAT, DICKON!!!
+  storyText: GET ON THE SHIP, DICKON!!!
   description: 
   character: {fileID: 6093848993457428730, guid: c1e403b09f9f7b44da542f20dfc3d2d9, type: 3}
   portrait: {fileID: 0}

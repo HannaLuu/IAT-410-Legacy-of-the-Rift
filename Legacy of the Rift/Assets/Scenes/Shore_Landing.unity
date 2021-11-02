@@ -489,7 +489,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2091109260}
   selectedCommands:
-  - {fileID: 2091109271}
+  - {fileID: 2091109269}
   variables: []
   description: 
   stepPause: 0
@@ -614,7 +614,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: '*Sniffs* That smell-'
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2486228424414903859, guid: 1430777e8a053a64a888ebd3ac86cb55, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -693,9 +693,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: "Hard work pays off, they said. I\u2019m going back to the ship."
+  storyText: BACK TO THE SHIP I GO--
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2486228424414903859, guid: 1430777e8a053a64a888ebd3ac86cb55, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
