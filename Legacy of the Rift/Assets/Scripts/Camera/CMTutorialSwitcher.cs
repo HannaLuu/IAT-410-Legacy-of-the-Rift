@@ -19,6 +19,21 @@ public class CMTutorialSwitcher : MonoBehaviour
         phase1 = true;
     }
 
+    public void SpawnPhase1Enemies()
+    {
+        Phase1Enemies.SetActive(true);
+    }
+
+    public void SpawnPhase2Enemies()
+    {
+        Phase2Enemies.SetActive(true);
+    }
+
+    public void SpawnPhase4Enemies()
+    {
+        Phase4Enemies.SetActive(true);
+    }
+
     public void SwitchCamera()
     {
         if (phase1)
@@ -64,7 +79,6 @@ public class CMTutorialSwitcher : MonoBehaviour
         yield return new WaitForSeconds(timeToWait);
         khajiitAnimator.SetBool("isRun", false);
         Phase1Enemies.SetActive(false);
-        Phase2Enemies.SetActive(true);
     }
     public IEnumerator CameraTransitionToPhase3()
     {
@@ -76,7 +90,6 @@ public class CMTutorialSwitcher : MonoBehaviour
     public IEnumerator CameraTransitionToPhase4()
     {
         yield return new WaitForSeconds(timeToWait);
-        Phase4Enemies.SetActive(true);
         khajiitAnimator.SetBool("isRun", false);
     }
 

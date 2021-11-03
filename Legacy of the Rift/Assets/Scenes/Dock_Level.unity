@@ -829,6 +829,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcddb9238d2d3534192a2c4cbaffbc79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &175669366 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7815705731023937759, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 175669360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &175669367 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7110227604197058337, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 175669360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &175669368 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3363292013906861127, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 175669360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &175669369 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5724404878773863229, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
@@ -867,6 +882,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41b14bb9694f454d8514513da946b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &175669373 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1114385732870923244, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 175669360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &309983653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1322,16 @@ GameObject:
   - component: {fileID: 974722097}
   - component: {fileID: 974722098}
   - component: {fileID: 974722040}
+  - component: {fileID: 974722105}
+  - component: {fileID: 974722104}
+  - component: {fileID: 974722103}
+  - component: {fileID: 974722102}
+  - component: {fileID: 974722101}
+  - component: {fileID: 974722100}
+  - component: {fileID: 974722099}
+  - component: {fileID: 974722090}
+  - component: {fileID: 974722045}
+  - component: {fileID: 974722039}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1335,7 +1365,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 974722076}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 974722098}
   variables:
   - {fileID: 974722036}
   - {fileID: 974722035}
@@ -1506,7 +1537,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -323.27277
-    y: 60.563354
+    y: 59.34384
     width: 76.82926
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1520,6 +1551,7 @@ MonoBehaviour:
   - {fileID: 974722041}
   - {fileID: 974722044}
   - {fileID: 974722055}
+  - {fileID: 974722105}
   - {fileID: 974722096}
   - {fileID: 974722038}
   - {fileID: 974722054}
@@ -1541,7 +1573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: LOKIR, {b}PRESS Q{/b} BEHIND ME!!!
+  storyText: Lokir, {b}PRESS Q{/b} behind me!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -1554,6 +1586,31 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &974722039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 103
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 175669367}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &974722040
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1568,7 +1625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 91
   indentLevel: 0
-  storyText: '{b}PRESS THE LEFT MOUSE BUTTON{/b} AND SHOOT THROUGH THE MONOLITH!!!'
+  storyText: '{b}PRESS THE LEFT MOUSE BUTTON{/b} to shoot through the Monolith!'
   description: 
   character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
   portrait: {fileID: 0}
@@ -1664,7 +1721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: 'DAMN IT, CALM DOWN AND WORK TOEGHER!!! '
+  storyText: CALM DOWN! You must work together! Listen to me!
   description: 
   character: {fileID: 2188339453429304748, guid: f62fe914767bef44986d897eaed0b246, type: 3}
   portrait: {fileID: 0}
@@ -1677,6 +1734,31 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &974722045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 102
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 175669367}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &974722046
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1691,7 +1773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 0
-  storyText: '{b}PRESS 2{/b} AND SWITCH TO HALVAR!!!'
+  storyText: Now {b}PRESS 2{/b} to let Halvar shine!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -1718,7 +1800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -197.14485
+    x: -193.48631
     y: 57.2707
     width: 156.09753
     height: 40
@@ -1730,7 +1812,9 @@ MonoBehaviour:
   eventHandler: {fileID: 974722066}
   commandList:
   - {fileID: 974722065}
+  - {fileID: 974722103}
   - {fileID: 974722064}
+  - {fileID: 974722104}
   - {fileID: 974722046}
   - {fileID: 974722063}
   - {fileID: 974722062}
@@ -1769,7 +1853,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1.2061491
-    y: 59.93627
+    y: 58.71676
     width: 117.07316
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1780,7 +1864,9 @@ MonoBehaviour:
   eventHandler: {fileID: 974722059}
   commandList:
   - {fileID: 974722058}
+  - {fileID: 974722102}
   - {fileID: 974722048}
+  - {fileID: 974722101}
   - {fileID: 974722057}
   - {fileID: 974722056}
   - {fileID: 974722051}
@@ -1815,7 +1901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 50
   indentLevel: 1
-  storyText: TAKE YOUR TIME, {b}PRESS Q{/b} AND BLOCK THE SCOURGED IN FRONT OF US!!!
+  storyText: Hurry! {b}PRESS Q{/b} to block the scourged in front of us!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -1856,7 +1942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 1
-  storyText: Focus Lokir, {b}PRESS Q{/b} BEHIND ME!!!
+  storyText: Trust me, {b}PRESS Q{/b} to summon a clone behind me!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -2386,7 +2472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 48
   indentLevel: 0
-  storyText: HALVAR, {b}PRESS Q{/b} AND CREATE A MONOLITH IN FRONT OF US!!!
+  storyText: Now, {b}PRESS Q{/b} to create a Monolith {b}IN FRONT OF US{/b}!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -2473,7 +2559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 33
   indentLevel: 1
-  storyText: COME ON, {b}PRESS 2{/b} AND SWITCH TO HALVAR!!!
+  storyText: COME ON! {b}PRESS 2{/b} to give Halvar a turn!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -2806,7 +2892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 60
   indentLevel: 1
-  storyText: '{b}PRESS 3{/b} TO SWITCH TO URSA!!!'
+  storyText: '{b}PRESS 3{/b} and give Ursa a chance!'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3076,7 +3162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 58
   indentLevel: 0
-  storyText: NOW, {b}PRESS 3{/b} TO SWITCH TO URSA!!!
+  storyText: Now, {b}PRESS 3{/b} to let Ursa show you boys up!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3130,7 +3216,9 @@ MonoBehaviour:
   eventHandler: {fileID: 974722071}
   commandList:
   - {fileID: 974722074}
+  - {fileID: 974722100}
   - {fileID: 974722073}
+  - {fileID: 974722099}
   - {fileID: 974722070}
   - {fileID: 974722069}
   - {fileID: 974722068}
@@ -3215,6 +3303,7 @@ MonoBehaviour:
   eventHandler: {fileID: 974722085}
   commandList:
   - {fileID: 974722084}
+  - {fileID: 974722039}
   - {fileID: 974722097}
   - {fileID: 974722083}
   - {fileID: 974722082}
@@ -3474,7 +3563,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 75
   indentLevel: 1
-  storyText: '{b}PRESS THE LEFT MOUSE BUTTON{/b} AND SHOOT THROUGH THE MONOLITH!!!'
+  storyText: Work together with your brothers and {b}PRESS THE LEFT MOUSE BUTTON{/b}
+    to shoot through the Monolith!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3730,6 +3820,31 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &974722090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 100
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 175669373}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &974722091
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3770,6 +3885,8 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 974722091}
   commandList:
+  - {fileID: 974722090}
+  - {fileID: 974722045}
   - {fileID: 974722040}
   - {fileID: 974722089}
   - {fileID: 974722088}
@@ -3869,6 +3986,181 @@ MonoBehaviour:
   targetObject: {fileID: 132244560}
   methodName: End
   delay: 0
+--- !u!114 &974722099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 98
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 175669373}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &974722100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 97
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 175669366}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &974722101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 96
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 175669366}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &974722102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 95
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 175669368}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &974722103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 94
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 175669366}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &974722104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 93
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 175669368}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &974722105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 92
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 175669366}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!4 &974722216
 Transform:
   m_ObjectHideFlags: 0
@@ -4180,7 +4472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667548729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60, y: -2.0193954, z: -0.39999962}
+  m_LocalPosition: {x: -60, y: -2.0756145, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

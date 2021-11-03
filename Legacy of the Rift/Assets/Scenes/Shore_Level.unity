@@ -615,7 +615,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569405719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5931702, y: 2.1860006, z: -0.39999962}
+  m_LocalPosition: {x: -3.1692123, y: 2.1860006, z: -0.39999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2616,7 +2616,6 @@ GameObject:
   - component: {fileID: 2138538765}
   - component: {fileID: 2138538758}
   - component: {fileID: 2138538757}
-  - component: {fileID: 2138538756}
   - component: {fileID: 2138538764}
   - component: {fileID: 2138538755}
   - component: {fileID: 2138538769}
@@ -2635,7 +2634,6 @@ GameObject:
   - component: {fileID: 2138538775}
   - component: {fileID: 2138538789}
   - component: {fileID: 2138538790}
-  - component: {fileID: 2138538791}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -3207,7 +3205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 114
   indentLevel: 1
-  storyText: '{b}PRESS 3{/b} OR I PEE!!!!'
+  storyText: '{b}PRESS 3{/b} or I PEE!!!'
   description: 
   character: {fileID: 8042595455408976571, guid: 3d528a8b758b3954c9bec866e7614137, type: 3}
   portrait: {fileID: 0}
@@ -3477,7 +3475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 112
   indentLevel: 0
-  storyText: '{b}PRESS 3{/b} HALVAR!!! I- I want to try with Ursa!  PLEEAASEE!!!'
+  storyText: HALVAR!!! {b}PRESS 3{/b} I want to try with Ursa! PLEEAASEE!!!
   description: 
   character: {fileID: 8042595455408976571, guid: 3d528a8b758b3954c9bec866e7614137, type: 3}
   portrait: {fileID: 0}
@@ -3611,7 +3609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 106
   indentLevel: 1
-  storyText: '{b}PRESS E{/b} AND STAB    THE STINKY STINKY   WITH ROCK!!!!!'
+  storyText: '{b}PRESS E{/b} AND STAB THE STINKY STINKY WITH ROCK!!!!!'
   description: 
   character: {fileID: 6851886508992462375, guid: a1a86817a173e7748afbfdc5a28d38e6, type: 3}
   portrait: {fileID: 0}
@@ -3881,7 +3879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 103
   indentLevel: 0
-  storyText: '{b}PRESS E{/b} AND  STAB    STINKY     MONSTERS      WITH ROCK!!!!'
+  storyText: '{b}PRESS E{/b} AND STAB STINKY MONSTERS WITH ROCK!!!!'
   description: 
   character: {fileID: 6851886508992462375, guid: a1a86817a173e7748afbfdc5a28d38e6, type: 3}
   portrait: {fileID: 0}
@@ -4082,7 +4080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 96
   indentLevel: 0
-  storyText: 'WUAEEEE!!! {b}PRESS 2!!!{/b} I      GIVE     HALVAR     POWER    TOO, '
+  storyText: WUAEEEE!!! {b}PRESS 2!!!{/b} I GIVE HALVAR POWER TOO!
   description: 
   character: {fileID: 6851886508992462375, guid: a1a86817a173e7748afbfdc5a28d38e6, type: 3}
   portrait: {fileID: 0}
@@ -4294,7 +4292,6 @@ MonoBehaviour:
   - {fileID: 2138538775}
   - {fileID: 2138538758}
   - {fileID: 2138538757}
-  - {fileID: 2138538756}
   - {fileID: 2138538772}
   - {fileID: 2138538771}
   - {fileID: 2138538769}
@@ -4314,33 +4311,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 140
   indentLevel: 0
---- !u!114 &2138538756
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138538708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 138
-  indentLevel: 0
-  storyText: OW, alright alright!
-  description: 
-  character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &2138538757
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4437,7 +4407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 33
   indentLevel: 1
-  storyText: LOKIR!!! {b}PRESS 2!!!{/b}   STINKY!!!!
+  storyText: LOKIR!!! {b}PRESS 2!!!{/b} STINKY!!!!
   description: 
   character: {fileID: 6851886508992462375, guid: a1a86817a173e7748afbfdc5a28d38e6, type: 3}
   portrait: {fileID: 0}
@@ -4793,7 +4763,6 @@ MonoBehaviour:
   eventHandler: {fileID: 2138538766}
   commandList:
   - {fileID: 2138538744}
-  - {fileID: 2138538791}
   - {fileID: 2138538787}
   - {fileID: 2138538763}
   - {fileID: 2138538747}
@@ -5120,8 +5089,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 142
   indentLevel: 0
-  storyText: The Herald of Ruin applies some strange hex on the enemies...making
-    them more vulnerable to attacks...?
+  storyText: OW, alright alright! The Herald of Ruin applies some strange hex on
+    the enemies...making them more vulnerable to attacks...?
   description: 
   character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
   portrait: {fileID: 0}
@@ -5148,7 +5117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 144
   indentLevel: 0
-  storyText: '*SLAP* NO     BAD WORD   HALVAR!!!!'
+  storyText: '*SLAP* NO BAD WORD HALVAR!!!!'
   description: 
   character: {fileID: 6851886508992462375, guid: a1a86817a173e7748afbfdc5a28d38e6, type: 3}
   portrait: {fileID: 0}
@@ -5292,7 +5261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -321.8442
+    x: -323.48355
     y: 59.134785
     width: 74.590164
     height: 40
@@ -5536,23 +5505,6 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1177002403}
   methodName: SpawnTutorialEnemies
-  delay: 0
---- !u!114 &2138538791
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138538708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 158
-  indentLevel: 0
-  targetObject: {fileID: 7381604623743189407, guid: f8865192a3c354e438cb2f7b4fbf9730, type: 3}
-  methodName: Die
   delay: 0
 --- !u!1 &2144845838
 GameObject:
