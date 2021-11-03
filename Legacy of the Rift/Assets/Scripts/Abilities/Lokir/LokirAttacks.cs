@@ -27,8 +27,6 @@ public class LokirAttacks : AttackBaseClass
 
     public List<Transform> ultPoints = new List<Transform>();
 
-    public static event EventHandler OnDashCollide;
-
     public bool teleported = false;
 
     public GameObject impactEffect;
@@ -94,12 +92,12 @@ public class LokirAttacks : AttackBaseClass
                 }
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-            } else if (Input.GetButtonDown("Fire2") && spectralWarlock != null)
-            {
-                teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
-                Teleport();
-                teleported = true;
             }
+        } else if (Input.GetButtonDown("Fire2") && spectralWarlock != null)
+        {
+            teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
+            Teleport();
+            teleported = true;
         }
 
         if (isUltReady && isUltUnlocked)
@@ -179,7 +177,6 @@ public class LokirAttacks : AttackBaseClass
     {
         if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == true)
         {
-            OnDashCollide?.Invoke(this, EventArgs.Empty);
             Instantiate(impactEffect, transform.position, transform.rotation);
             otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             Debug.Log("DASH THROUGH DAMAGE");

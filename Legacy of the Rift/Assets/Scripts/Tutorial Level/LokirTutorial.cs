@@ -8,19 +8,10 @@ public class LokirTutorial : MonoBehaviour
 {
     public Flowchart flowchart;
 
-    public LokirAttacks lokirAttacksScript;
-
     public GameObject lokirBasicGlow;
     public GameObject lokirAbilityGlow;
 
     public CMTutorialSwitcher cmSwitcher;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        lokirAttacksScript = gameObject.GetComponent<LokirAttacks>();
-        LokirAttacks.OnDashCollide += BroadcastLokirDash;
-    }
 
     // Update is called once per frame
     void Update()
@@ -37,30 +28,13 @@ public class LokirTutorial : MonoBehaviour
             LokirAbilityGlowOff();
             Fungus.Flowchart.BroadcastFungusMessage("LokirPlacedClone");
         }
-        if (flowchart.GetBooleanVariable("isLokirDash") == true && lokirAttacksScript.teleported == true && flowchart.GetBooleanVariable("isLokirTP") == false)
-        {
-            flowchart.SetBooleanVariable("isLokirTP", true);
-            cmSwitcher.phase5 = true;
-            LokirAbilityGlowOff();
-            Fungus.Flowchart.BroadcastFungusMessage("LokirTeleported");
-            cmSwitcher.phase4 = false;
-            cmSwitcher.SwitchCamera();
-        }
     }
 
-    public void RemoveLokirDashBroadcast()
+    public void SwitchCam()
     {
-        LokirAttacks.OnDashCollide -= BroadcastLokirDash;
-    }
-
-    private void BroadcastLokirDash(object sender, EventArgs e)
-    {
-        if (flowchart.GetBooleanVariable("isLokirQ") == true && flowchart.GetBooleanVariable("isLokirDash") == false)
-        {
-            lokirBasicGlow.SetActive(false);
-            Fungus.Flowchart.BroadcastFungusMessage("LokirBasicDone");
-            flowchart.SetBooleanVariable("isLokirDash", true);
-        }
+        cmSwitcher.phase5 = true;
+        cmSwitcher.phase4 = false;
+        cmSwitcher.SwitchCamera();
     }
 
     public void LokirBasicGlowOn()

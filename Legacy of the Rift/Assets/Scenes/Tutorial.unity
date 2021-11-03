@@ -287,11 +287,192 @@ MonoBehaviour:
   ursaAbilityGlow: {fileID: 472473801}
   lokirBasicGlow: {fileID: 1487197763}
   cmSwitcher: {fileID: 504966934}
+--- !u!1 &180045587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180045590}
+  - component: {fileID: 180045589}
+  - component: {fileID: 180045588}
+  m_Layer: 0
+  m_Name: Hjallna
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &180045588
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180045587}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 035d27bd7138b6d4aabe59ea51f668ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &180045589
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180045587}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 849053959405209751, guid: 62930b20875691749a13ac6c488ca34c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.36, y: 0.83}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &180045590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180045587}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3400002, y: 0.14999962, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children: []
+  m_Father: {fileID: 242348155}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &183582586 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6983987899774842946, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
   m_PrefabInstance: {fileID: 1111694859}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &242348153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 242348155}
+  - component: {fileID: 242348154}
+  - component: {fileID: 242348156}
+  m_Layer: 0
+  m_Name: PickUpKids
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &242348154
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242348153}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.041627884, y: 0.06531954}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.8922234, y: 2.88345}
+  m_EdgeRadius: 0
+--- !u!4 &242348155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242348153}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40.68, y: -4.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 180045590}
+  - {fileID: 418413486}
+  - {fileID: 1025016161}
+  - {fileID: 911544865}
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &242348156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242348153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786a095e8c1ed184c85d6cf2971ae7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupAllowed: 0
+  fuck: 0
+  pickUpKey: {fileID: 911544864}
+  flowchart: {fileID: 796375074}
+  cmSwitcher: {fileID: 504966934}
 --- !u!95 &277876952 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7313151525691141434, guid: 6ff773c6dc3d62441a5214572b6e2a9c, type: 3}
@@ -329,11 +510,118 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &366640693 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 801909679987936381, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 1111694859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &388282862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8267758700066203703, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
   m_PrefabInstance: {fileID: 1721041039}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &418413483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418413486}
+  - component: {fileID: 418413485}
+  - component: {fileID: 418413484}
+  m_Layer: 0
+  m_Name: Eerika
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &418413484
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418413483}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a38831f11d437e94689e3fee88865cfe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &418413485
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418413483}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 3146917572314369136, guid: e170483b7e3505240ba55dd01b651cf3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.36, y: 0.83}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &418413486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418413483}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.049999237, y: 0.14999962, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children: []
+  m_Father: {fileID: 242348155}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &435859482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -341,6 +629,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1379009203}
     m_Modifications:
+    - target: {fileID: 110432586303464645, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 110432586303464645, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8267758700066203695, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
@@ -398,6 +694,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1379009203}
     m_Modifications:
+    - target: {fileID: 110432586303464645, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 110432586303464645, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8267758700066203695, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -1124,7 +1428,6 @@ GameObject:
   - component: {fileID: 796375076}
   - component: {fileID: 796375077}
   - component: {fileID: 796375075}
-  - component: {fileID: 796375080}
   - component: {fileID: 796375086}
   - component: {fileID: 796375085}
   - component: {fileID: 796375087}
@@ -1137,7 +1440,6 @@ GameObject:
   - component: {fileID: 796375167}
   - component: {fileID: 796375166}
   - component: {fileID: 796375228}
-  - component: {fileID: 796375106}
   - component: {fileID: 796375079}
   - component: {fileID: 796375082}
   - component: {fileID: 796375084}
@@ -1205,15 +1507,6 @@ GameObject:
   - component: {fileID: 796375179}
   - component: {fileID: 796375177}
   - component: {fileID: 796375175}
-  - component: {fileID: 796375174}
-  - component: {fileID: 796375173}
-  - component: {fileID: 796375172}
-  - component: {fileID: 796375171}
-  - component: {fileID: 796375182}
-  - component: {fileID: 796375181}
-  - component: {fileID: 796375183}
-  - component: {fileID: 796375185}
-  - component: {fileID: 796375169}
   - component: {fileID: 796375186}
   - component: {fileID: 796375130}
   - component: {fileID: 796375123}
@@ -1230,8 +1523,34 @@ GameObject:
   - component: {fileID: 796375164}
   - component: {fileID: 796375178}
   - component: {fileID: 796375176}
-  - component: {fileID: 796375163}
   - component: {fileID: 796375180}
+  - component: {fileID: 796375080}
+  - component: {fileID: 796375171}
+  - component: {fileID: 796375106}
+  - component: {fileID: 796375163}
+  - component: {fileID: 796375195}
+  - component: {fileID: 796375194}
+  - component: {fileID: 796375193}
+  - component: {fileID: 796375192}
+  - component: {fileID: 796375191}
+  - component: {fileID: 796375190}
+  - component: {fileID: 796375189}
+  - component: {fileID: 796375188}
+  - component: {fileID: 796375187}
+  - component: {fileID: 796375185}
+  - component: {fileID: 796375184}
+  - component: {fileID: 796375183}
+  - component: {fileID: 796375182}
+  - component: {fileID: 796375174}
+  - component: {fileID: 796375173}
+  - component: {fileID: 796375172}
+  - component: {fileID: 796375169}
+  - component: {fileID: 796375181}
+  - component: {fileID: 796375197}
+  - component: {fileID: 796375196}
+  - component: {fileID: 796375199}
+  - component: {fileID: 796375198}
+  - component: {fileID: 796375200}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1252,11 +1571,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -211.0895, y: 205.939}
+  scrollPos: {x: 322.11258, y: 190.24886}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 435
-  zoom: 0.7900002
+  zoom: 0.6700003
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1264,9 +1583,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 796375182}
+  - {fileID: 796375170}
   selectedCommands:
-  - {fileID: 796375183}
+  - {fileID: 796375106}
   variables:
   - {fileID: 796375137}
   - {fileID: 796375168}
@@ -1278,11 +1597,10 @@ MonoBehaviour:
   - {fileID: 796375091}
   - {fileID: 796375122}
   - {fileID: 796375134}
-  - {fileID: 796375080}
   - {fileID: 796375087}
-  - {fileID: 796375106}
   - {fileID: 796375133}
   - {fileID: 796375132}
+  - {fileID: 796375080}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -1309,7 +1627,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Halvar, rub the sleep out of your eyes quickly!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1335,8 +1653,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -323.49948
-    y: 57.706215
-    width: 76.582275
+    y: 58.97204
+    width: 78.3582
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1348,6 +1666,7 @@ MonoBehaviour:
   - {fileID: 796375186}
   - {fileID: 796375075}
   - {fileID: 796375130}
+  - {fileID: 796375195}
   - {fileID: 796375082}
   - {fileID: 796375095}
   - {fileID: 796375090}
@@ -1410,7 +1729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 0
-  key: isLokirDash
+  key: pickedUpBabies
   value: 0
 --- !u!114 &796375081
 MonoBehaviour:
@@ -1442,7 +1761,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Barricade the door behind us with your Legendary Monolith!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1514,7 +1833,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -208.32513
     y: 52.049488
-    width: 133.54428
+    width: 135.07458
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1524,9 +1843,11 @@ MonoBehaviour:
   eventHandler: {fileID: 796375085}
   commandList:
   - {fileID: 796375123}
+  - {fileID: 796375194}
   - {fileID: 796375113}
   - {fileID: 796375097}
   - {fileID: 796375111}
+  - {fileID: 796375193}
   - {fileID: 796375094}
   - {fileID: 796375093}
   - {fileID: 796375092}
@@ -1593,7 +1914,7 @@ MonoBehaviour:
   storyText: Hurry and barricade the door! We need to grab Morkvar, Hjallna, and
     Eerika!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1635,7 +1956,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: Swing that damn thing into them, NOW!!!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1905,7 +2226,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: IT'S HAMMER TIME!!!
   description: 
-  character: {fileID: 4061733457296371413, guid: 9cb3e431286ab1348a8bfffff94ecfdd, type: 3}
+  character: {fileID: 4959002723986858963, guid: 9f504fa81c6a289469edb53902d688f2, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2193,7 +2514,7 @@ MonoBehaviour:
   storyText: "Maker\u2019s Balls... The kitchen is overrun...Halvar, you know what
     time it is."
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2284,9 +2605,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -26.853157
+    x: -25.424585
     y: 54.413357
-    width: 156.32909
+    width: 157.46265
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2296,8 +2617,10 @@ MonoBehaviour:
   eventHandler: {fileID: 796375101}
   commandList:
   - {fileID: 796375104}
+  - {fileID: 796375192}
   - {fileID: 796375103}
   - {fileID: 796375100}
+  - {fileID: 796375191}
   - {fileID: 796375110}
   - {fileID: 796375109}
   - {fileID: 796375108}
@@ -2320,7 +2643,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Hahaha! Take that! Let me destroy them Khajiit!
   description: 
-  character: {fileID: 4061733457296371413, guid: 9cb3e431286ab1348a8bfffff94ecfdd, type: 3}
+  character: {fileID: 4959002723986858963, guid: 9f504fa81c6a289469edb53902d688f2, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2371,12 +2694,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 796375073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 0
-  key: isLokirTP
-  value: 0
+  itemId: 317
+  indentLevel: 0
+  storyText: Now we need to get to the dock! Quickly!!!
+  description: 
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &796375107
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2407,7 +2742,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: Now's not the time to mess around! We need your sister's spiritual prowess!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2678,7 +3013,7 @@ MonoBehaviour:
   storyText: The scourged have broken through your Monolith! We need Ursa's Spirit
     Form to slow down the horde!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2737,7 +3072,7 @@ MonoBehaviour:
   storyText: "Okay, we have about 8 seconds! Let\u2019s go to the next room before
     my Monolith breaks!"
   description: 
-  character: {fileID: 4061733457296371413, guid: 9cb3e431286ab1348a8bfffff94ecfdd, type: 3}
+  character: {fileID: 4959002723986858963, guid: 9f504fa81c6a289469edb53902d688f2, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2779,7 +3114,7 @@ MonoBehaviour:
   storyText: It's just like when your father taught you how to bowfish. Do not worry,
     I won't tell Halvar. Try again!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3050,7 +3385,7 @@ MonoBehaviour:
   storyText: Let me show Halvar how my arrows are much more efficient at slowing
     the scourged down...
   description: 
-  character: {fileID: 6663355596719516269, guid: 07d2d678718514c498ddc2da10c5150c, type: 3}
+  character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3077,7 +3412,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 'I never should have given Halvar that hammer as a baby... '
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3105,7 +3440,7 @@ MonoBehaviour:
   storyText: Am I the only one in this family that's capable of defeating the scourged
     WITHOUT destroying the house?!?
   description: 
-  character: {fileID: 6663355596719516269, guid: 07d2d678718514c498ddc2da10c5150c, type: 3}
+  character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3147,7 +3482,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 163.11516
     y: 52.98801
-    width: 106.962006
+    width: 108.20892
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3156,8 +3491,12 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 796375120}
   commandList:
+  - {fileID: 796375199}
+  - {fileID: 796375197}
   - {fileID: 796375119}
   - {fileID: 796375118}
+  - {fileID: 796375198}
+  - {fileID: 796375196}
   - {fileID: 796375117}
   - {fileID: 796375116}
   - {fileID: 796375115}
@@ -3212,7 +3551,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 315.92755
     y: 51.48735
-    width: 144.93668
+    width: 145.52234
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3222,7 +3561,9 @@ MonoBehaviour:
   eventHandler: {fileID: 796375131}
   commandList:
   - {fileID: 796375099}
+  - {fileID: 796375190}
   - {fileID: 796375098}
+  - {fileID: 796375189}
   - {fileID: 796375129}
   - {fileID: 796375128}
   - {fileID: 796375127}
@@ -3274,7 +3615,7 @@ MonoBehaviour:
   storyText: Hold on! We need to defeat the scourged first! I can't focus on casting
     spirits while they're this close to me!
   description: 
-  character: {fileID: 6663355596719516269, guid: 07d2d678718514c498ddc2da10c5150c, type: 3}
+  character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3545,7 +3886,7 @@ MonoBehaviour:
   storyText: "We\u2019re getting wounded! We have to heal up! Ursa, summon your Harbinger
     of Life!"
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3650,7 +3991,7 @@ MonoBehaviour:
   storyText: Your arrows will only slow them down for so long! We need Lokir's speed
     NOW!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3677,7 +4018,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 490.97186
     y: 50.870697
-    width: 147.46832
+    width: 149.99995
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3687,7 +4028,9 @@ MonoBehaviour:
   eventHandler: {fileID: 796375144}
   commandList:
   - {fileID: 796375096}
+  - {fileID: 796375188}
   - {fileID: 796375142}
+  - {fileID: 796375187}
   - {fileID: 796375141}
   - {fileID: 796375140}
   - {fileID: 796375135}
@@ -3997,7 +4340,7 @@ MonoBehaviour:
   storyText: Ursa, we need to get Morkvar, Hjallna, and Eerika quickly! Lokir will
     be able to get us to their room the fastest!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4071,9 +4414,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 840.4161
-    y: 51.6436
-    width: 158.86073
+    x: 845.9328
+    y: 56.93361
+    width: 160.44771
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4083,16 +4426,18 @@ MonoBehaviour:
   eventHandler: {fileID: 796375146}
   commandList:
   - {fileID: 796375143}
+  - {fileID: 796375183}
   - {fileID: 796375156}
   - {fileID: 796375164}
+  - {fileID: 796375182}
   - {fileID: 796375180}
   - {fileID: 796375155}
   - {fileID: 796375162}
+  - {fileID: 796375181}
   - {fileID: 796375161}
   - {fileID: 796375160}
   - {fileID: 796375159}
   - {fileID: 796375158}
-  - {fileID: 796375169}
   - {fileID: 796375157}
   suppressAllAutoSelections: 0
 --- !u!114 &796375146
@@ -4174,7 +4519,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: Hurry! Place your Spectral Warlock by the nightstand!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4445,7 +4790,7 @@ MonoBehaviour:
   storyText: Okay Lokir, I have a plan. Place your Spectral Warlock by the nightstand
     on the right before we attack.
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4487,7 +4832,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 683.1064
     y: 50.544678
-    width: 109.49365
+    width: 111.194
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4497,7 +4842,9 @@ MonoBehaviour:
   eventHandler: {fileID: 796375153}
   commandList:
   - {fileID: 796375148}
+  - {fileID: 796375185}
   - {fileID: 796375147}
+  - {fileID: 796375184}
   - {fileID: 796375152}
   - {fileID: 796375151}
   - {fileID: 796375150}
@@ -4521,7 +4868,7 @@ MonoBehaviour:
   storyText: Lacerate through the scourged to get to your siblings, then swap places
     with your clone so we can get out of here quickly!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4548,7 +4895,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Okay, now what?
   description: 
-  character: {fileID: 6093848993457428730, guid: c1e403b09f9f7b44da542f20dfc3d2d9, type: 3}
+  character: {fileID: 2188339453429304748, guid: f62fe914767bef44986d897eaed0b246, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4604,7 +4951,7 @@ MonoBehaviour:
   storyText: We don't have all day! Lacerate through the scourged so we can get your
     siblings out of here!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4875,7 +5222,7 @@ MonoBehaviour:
   storyText: "Time\u2019s ticking, idiot! Lacerate through the scourged so we can
     get your siblings out of here!"
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4903,7 +5250,7 @@ MonoBehaviour:
   storyText: I inherited your speed and my father's barren skull... Is this what
     it is like to be blessed AND cursed?
   description: 
-  character: {fileID: 6093848993457428730, guid: c1e403b09f9f7b44da542f20dfc3d2d9, type: 3}
+  character: {fileID: 2188339453429304748, guid: f62fe914767bef44986d897eaed0b246, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4923,14 +5270,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 796375073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 314
+  itemId: 318
   indentLevel: 0
-  targetObject: {fileID: 2099273414}
-  methodName: LokirAbilityGlowOff
-  delay: 0
+  _sceneName:
+    stringRef: {fileID: 0}
+    stringVal: Dock_Level
+  loadingImage: {fileID: 0}
+  sceneNameOLD: 
 --- !u!114 &796375164
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5016,14 +5365,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 796375073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 297
+  itemId: 335
   indentLevel: 0
-  targetObject: {fileID: 2099273414}
-  methodName: RemoveLokirDashBroadcast
-  delay: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694872}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &796375170
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5038,25 +5395,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1050.3066
-    y: 56.67171
-    width: 127.21517
+    x: 1051.7992
+    y: 52.647526
+    width: 151.4925
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 279
-  blockName: Lokir Dashed
+  blockName: Babies Picked Up
   description: 
   eventHandler: {fileID: 796375179}
   commandList:
   - {fileID: 796375178}
-  - {fileID: 796375177}
-  - {fileID: 796375176}
-  - {fileID: 796375175}
   - {fileID: 796375174}
+  - {fileID: 796375177}
+  - {fileID: 796375175}
+  - {fileID: 796375176}
   - {fileID: 796375173}
   - {fileID: 796375172}
   - {fileID: 796375171}
+  - {fileID: 796375169}
+  - {fileID: 796375200}
+  - {fileID: 796375106}
+  - {fileID: 796375163}
   suppressAllAutoSelections: 0
 --- !u!114 &796375171
 MonoBehaviour:
@@ -5067,26 +5428,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 796375073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1ca510a57aa47568a5e4ee558ff41f, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 286
+  itemId: 316
   indentLevel: 0
+  targetObject: {fileID: 2099273414}
+  methodName: LokirAbilityGlowOff
+  delay: 0
 --- !u!114 &796375172
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796375073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 285
-  indentLevel: 0
---- !u!114 &796375173
 MonoBehaviour:
   m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5098,11 +5448,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 284
-  indentLevel: 1
-  storyText: I need to teleport everyone out of here quickly!
+  itemId: 334
+  indentLevel: 0
+  storyText: Now teleport back to your Spectral Warlock's position to get us out
+    of here!
   description: 
-  character: {fileID: 6093848993457428730, guid: c1e403b09f9f7b44da542f20dfc3d2d9, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -5113,6 +5464,31 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &796375173
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 333
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694872}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &796375174
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5122,240 +5498,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 796375073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 663c8a7831a104d16ad7078a4dc2bd10, type: 3}
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 283
+  itemId: 332
   indentLevel: 0
-  anyOrAllConditions: 0
-  conditions:
-  - compareOperator: 0
-    anyVar:
-      variable: {fileID: 796375106}
-      data:
-        animatorData:
-          animatorRef: {fileID: 0}
-          animatorVal: {fileID: 0}
-        audioSourceData:
-          audioSourceRef: {fileID: 0}
-          audioSourceVal: {fileID: 0}
-        booleanData:
-          booleanRef: {fileID: 0}
-          booleanVal: 0
-        collectionData:
-          collectionRef: {fileID: 0}
-          collectionVal: {fileID: 0}
-        collider2DData:
-          collider2DRef: {fileID: 0}
-          collider2DVal: {fileID: 0}
-        colliderData:
-          colliderRef: {fileID: 0}
-          colliderVal: {fileID: 0}
-        colorData:
-          colorRef: {fileID: 0}
-          colorVal: {r: 0, g: 0, b: 0, a: 0}
-        floatData:
-          floatRef: {fileID: 0}
-          floatVal: 0
-        gameObjectData:
-          gameObjectRef: {fileID: 0}
-          gameObjectVal: {fileID: 0}
-        integerData:
-          integerRef: {fileID: 0}
-          integerVal: 0
-        materialData:
-          materialRef: {fileID: 0}
-          materialVal: {fileID: 0}
-        matrix4x4Data:
-          matrix4x4Ref: {fileID: 0}
-          matrix4x4Val:
-            e00: 0
-            e01: 0
-            e02: 0
-            e03: 0
-            e10: 0
-            e11: 0
-            e12: 0
-            e13: 0
-            e20: 0
-            e21: 0
-            e22: 0
-            e23: 0
-            e30: 0
-            e31: 0
-            e32: 0
-            e33: 0
-        objectData:
-          objectRef: {fileID: 0}
-          objectVal: {fileID: 0}
-        quaternionData:
-          quaternionRef: {fileID: 0}
-          quaternionVal: {x: 0, y: 0, z: 0, w: 0}
-        rigidbody2DData:
-          rigidbody2DRef: {fileID: 0}
-          rigidbody2DVal: {fileID: 0}
-        rigidbodyData:
-          rigidbodyRef: {fileID: 0}
-          rigidbodyVal: {fileID: 0}
-        spriteData:
-          spriteRef: {fileID: 0}
-          spriteVal: {fileID: 0}
-        stringData:
-          stringRef: {fileID: 0}
-          stringVal: 
-        textureData:
-          textureRef: {fileID: 0}
-          textureVal: {fileID: 0}
-        transformData:
-          transformRef: {fileID: 0}
-          transformVal: {fileID: 0}
-        vector2Data:
-          vector2Ref: {fileID: 0}
-          vector2Val: {x: 0, y: 0}
-        vector3Data:
-          vector3Ref: {fileID: 0}
-          vector3Val: {x: 0, y: 0, z: 0}
-        vector4Data:
-          vector4Ref: {fileID: 0}
-          vector4Val: {x: 0, y: 0, z: 0, w: 0}
-  compareOperator: 0
-  anyVar:
-    variable: {fileID: 0}
-    data:
-      animatorData:
-        animatorRef: {fileID: 0}
-        animatorVal: {fileID: 0}
-      audioSourceData:
-        audioSourceRef: {fileID: 0}
-        audioSourceVal: {fileID: 0}
-      booleanData:
-        booleanRef: {fileID: 0}
-        booleanVal: 0
-      collectionData:
-        collectionRef: {fileID: 0}
-        collectionVal: {fileID: 0}
-      collider2DData:
-        collider2DRef: {fileID: 0}
-        collider2DVal: {fileID: 0}
-      colliderData:
-        colliderRef: {fileID: 0}
-        colliderVal: {fileID: 0}
-      colorData:
-        colorRef: {fileID: 0}
-        colorVal: {r: 0, g: 0, b: 0, a: 0}
-      floatData:
-        floatRef: {fileID: 0}
-        floatVal: 0
-      gameObjectData:
-        gameObjectRef: {fileID: 0}
-        gameObjectVal: {fileID: 0}
-      integerData:
-        integerRef: {fileID: 0}
-        integerVal: 0
-      materialData:
-        materialRef: {fileID: 0}
-        materialVal: {fileID: 0}
-      matrix4x4Data:
-        matrix4x4Ref: {fileID: 0}
-        matrix4x4Val:
-          e00: 0
-          e01: 0
-          e02: 0
-          e03: 0
-          e10: 0
-          e11: 0
-          e12: 0
-          e13: 0
-          e20: 0
-          e21: 0
-          e22: 0
-          e23: 0
-          e30: 0
-          e31: 0
-          e32: 0
-          e33: 0
-      objectData:
-        objectRef: {fileID: 0}
-        objectVal: {fileID: 0}
-      quaternionData:
-        quaternionRef: {fileID: 0}
-        quaternionVal: {x: 0, y: 0, z: 0, w: 0}
-      rigidbody2DData:
-        rigidbody2DRef: {fileID: 0}
-        rigidbody2DVal: {fileID: 0}
-      rigidbodyData:
-        rigidbodyRef: {fileID: 0}
-        rigidbodyVal: {fileID: 0}
-      spriteData:
-        spriteRef: {fileID: 0}
-        spriteVal: {fileID: 0}
-      stringData:
-        stringRef: {fileID: 0}
-        stringVal: 
-      textureData:
-        textureRef: {fileID: 0}
-        textureVal: {fileID: 0}
-      transformData:
-        transformRef: {fileID: 0}
-        transformVal: {fileID: 0}
-      vector2Data:
-        vector2Ref: {fileID: 0}
-        vector2Val: {x: 0, y: 0}
-      vector3Data:
-        vector3Ref: {fileID: 0}
-        vector3Val: {x: 0, y: 0, z: 0}
-      vector4Data:
-        vector4Ref: {fileID: 0}
-        vector4Val: {x: 0, y: 0, z: 0, w: 0}
-  variable: {fileID: 0}
-  booleanData:
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694873}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
     booleanRef: {fileID: 0}
     booleanVal: 0
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
-  animatorData:
-    animatorRef: {fileID: 0}
-    animatorVal: {fileID: 0}
-  audioSourceData:
-    audioSourceRef: {fileID: 0}
-    audioSourceVal: {fileID: 0}
-  colorData:
-    colorRef: {fileID: 0}
-    colorVal: {r: 0, g: 0, b: 0, a: 0}
-  gameObjectData:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  materialData:
-    materialRef: {fileID: 0}
-    materialVal: {fileID: 0}
-  objectData:
-    objectRef: {fileID: 0}
-    objectVal: {fileID: 0}
-  rigidbody2DData:
-    rigidbody2DRef: {fileID: 0}
-    rigidbody2DVal: {fileID: 0}
-  spriteData:
-    spriteRef: {fileID: 0}
-    spriteVal: {fileID: 0}
-  textureData:
-    textureRef: {fileID: 0}
-    textureVal: {fileID: 0}
-  transformData:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 0}
-  vector2Data:
-    vector2Ref: {fileID: 0}
-    vector2Val: {x: 0, y: 0}
-  vector3Data:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &796375175
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5373,7 +5531,7 @@ MonoBehaviour:
   storyText: "That\u2019s it... Just ride on our backs, okay? Close your eyes and
     count to 60..."
   description: 
-  character: {fileID: 6093848993457428730, guid: c1e403b09f9f7b44da542f20dfc3d2d9, type: 3}
+  character: {fileID: 2188339453429304748, guid: f62fe914767bef44986d897eaed0b246, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -5417,7 +5575,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: WUAUUEEEE!!!!
   description: 
-  character: {fileID: 405215632748643784, guid: 970cad8969116e342aec272d593b2347, type: 3}
+  character: {fileID: 6851886508992462375, guid: a1a86817a173e7748afbfdc5a28d38e6, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -5459,10 +5617,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 796375170}
   suppressBlockAutoSelect: 0
-  message: LokirBasicDone
+  message: PickedUpBabies
 --- !u!114 &796375180
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5476,7 +5634,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Use that barren head of yours to think!
   description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -5496,12 +5654,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 796375073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 796375182}
-  suppressBlockAutoSelect: 0
-  message: LokirTeleported
+  itemId: 336
+  indentLevel: 0
+  targetObject: {fileID: 242348153}
+  methodName: AllowPickup
+  delay: 0
 --- !u!114 &796375182
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5511,26 +5671,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 796375073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1245.5479
-    y: 50.20672
-    width: 144.93668
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 287
-  blockName: Lokir Teleported
-  description: 
-  eventHandler: {fileID: 796375181}
-  commandList:
-  - {fileID: 796375163}
-  - {fileID: 796375183}
-  - {fileID: 796375185}
-  suppressAllAutoSelections: 0
+  itemId: 331
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694873}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &796375183
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5540,24 +5696,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 796375073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 291
+  itemId: 330
   indentLevel: 0
-  storyText: Okay, now we need to get to the dock! Quickly!!!
-  description: 
-  character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694872}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375184
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 329
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694872}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &796375185
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5567,16 +5746,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 796375073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 296
+  itemId: 328
   indentLevel: 0
-  _sceneName:
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 366640693}
+  _parameterName:
     stringRef: {fileID: 0}
-    stringVal: Dock_Level
-  loadingImage: {fileID: 0}
-  sceneNameOLD: 
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &796375186
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5593,6 +5778,332 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1747894054}
   methodName: HalvarAbilityGlowOff
+  delay: 0
+--- !u!114 &796375187
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 327
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 366640693}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375188
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 326
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694872}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375189
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 325
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694872}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375190
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 324
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694873}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375191
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 323
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1181234242}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375192
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 322
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694873}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375193
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 321
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694873}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375194
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 320
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694872}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375195
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 319
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694872}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375196
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 338
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1111694873}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375197
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 337
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1181234242}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: indicate
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &796375198
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 340
+  indentLevel: 0
+  targetObject: {fileID: 42379684}
+  methodName: UrsaBasicGlowOn
+  delay: 0
+--- !u!114 &796375199
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 339
+  indentLevel: 0
+  targetObject: {fileID: 42379684}
+  methodName: UrsaBasicGlowOff
+  delay: 0
+--- !u!114 &796375200
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 341
+  indentLevel: 0
+  targetObject: {fileID: 2099273414}
+  methodName: SwitchCam
   delay: 0
 --- !u!114 &796375228
 MonoBehaviour:
@@ -6024,6 +6535,108 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &911544864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 911544865}
+  - component: {fileID: 911544867}
+  - component: {fileID: 911544866}
+  m_Layer: 0
+  m_Name: F Key
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &911544865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911544864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.38, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 242348155}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &911544866
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911544864}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a73b1b7c2c19adf48837c02ef3ae8446, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &911544867
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911544864}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 595652075108135232, guid: f4f6435c5340dcc43be67ee76929e2b0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &998215688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6102,6 +6715,108 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6989997285941053574, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
   m_PrefabInstance: {fileID: 1111694859}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1025016158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1025016161}
+  - component: {fileID: 1025016160}
+  - component: {fileID: 1025016159}
+  m_Layer: 0
+  m_Name: Morkvar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1025016159
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025016158}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bed24fa099bf2e54da3467028bbef056, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1025016160
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025016158}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 849053959405209751, guid: 62930b20875691749a13ac6c488ca34c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.36, y: 0.83}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1025016161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025016158}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2399979, y: 0.14999962, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children: []
+  m_Father: {fileID: 242348155}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1056336252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6262,6 +6977,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414504638333649610, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642400417850969893, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642400417850969893, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5724404876855053445, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
@@ -6500,6 +7223,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7589336375096395165, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -20.599972
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589336375096395165, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.800001
+      objectReference: {fileID: 0}
     - target: {fileID: 8601996823563416945, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -20.50003
@@ -6529,7 +7260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &1111694863 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5673007003473124060, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1086672816506494890, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
   m_PrefabInstance: {fileID: 1111694859}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -6614,6 +7345,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41b14bb9694f454d8514513da946b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1111694872 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7815705731023937759, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 1111694859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1111694873 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7110227604197058337, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 1111694859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1126322050
 GameObject:
   m_ObjectHideFlags: 3
@@ -6701,6 +7442,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1181234242 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1114385732870923244, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 1111694859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1197291175
 GameObject:
   m_ObjectHideFlags: 3
@@ -7290,21 +8036,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1358655865}
     m_Modifications:
+    - target: {fileID: 110432586303464645, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 110432586303464645, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8267758700066203695, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8267758700066203703, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8267758700066203703, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.97
+      value: -5.1
       objectReference: {fileID: 0}
     - target: {fileID: 8267758700066203703, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.063458
+      value: -2.65
       objectReference: {fileID: 0}
     - target: {fileID: 8267758700066203703, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7352,6 +8106,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1379009203}
     m_Modifications:
+    - target: {fileID: 110432586303464645, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 110432586303464645, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8267758700066203695, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -7443,7 +8205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092356082363815211, guid: bcc9e13a83d6cd74389edf7df0010d03, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Lokir
       objectReference: {fileID: 0}
     - target: {fileID: 4539396504465934491, guid: bcc9e13a83d6cd74389edf7df0010d03, type: 3}
       propertyPath: playerZeal
@@ -7761,13 +8523,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5807222352677156475, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 5807222353560896885, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807222353560896885, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
+      propertyPath: m_TagString
+      value: Lokir
       objectReference: {fileID: 0}
     - target: {fileID: 7211195956582409371, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
       propertyPath: m_IsActive
@@ -7775,7 +8537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7211195956582409371, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Lokir
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
@@ -7784,17 +8546,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5807222352677156475, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
   m_PrefabInstance: {fileID: 2099273413}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2099273416 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3940783632309258382, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
-  m_PrefabInstance: {fileID: 2099273413}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099273414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 625183ac109d25149904d84c94a0c971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2099273422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7808,7 +8559,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowchart: {fileID: 796375074}
-  lokirAttacksScript: {fileID: 2099273416}
   lokirBasicGlow: {fileID: 1487197763}
   lokirAbilityGlow: {fileID: 868020582}
   cmSwitcher: {fileID: 504966934}

@@ -19,24 +19,22 @@ public class SB_Run : StateMachineBehaviour
     {
         spectralBarrage = animator.GetComponent<SpectralBarrage>();
         WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
-        if (waveSpawner.EnemyIsAlive() == true)
+        if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
         {
             enemy = spectralBarrage.nearestEnemy;
         }
         rb = animator.GetComponent<Rigidbody2D>();
-
-        // clones = animator.GetComponent<SpectralBarrage>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
-        if (waveSpawner.EnemyIsAlive() == false)
+        if (waveSpawner != null && waveSpawner.EnemyIsAlive() == false)
         {
             animator.SetBool("EnemyDetected", false);
         }
-        if (waveSpawner.EnemyIsAlive() == true)
+        if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
         {
             enemy = spectralBarrage.nearestEnemy;
             spectralBarrage.LookAtEnemies();
@@ -48,10 +46,27 @@ public class SB_Run : StateMachineBehaviour
                 animator.SetTrigger("Attack");
             }
         }
-        //if (enemy == null)
-        //{
-        //    animator.SetBool("EnemyDetected", false);
-        //} 
+
+        if (waveSpawner == null)
+        {
+            Enemy enemyObj = GameObject.FindObjectOfType<Enemy>();
+            if (enemyObj == null)
+            {
+                animator.SetBool("EnemyDetected", false);
+            }
+            if (enemyObj != null)
+            {
+                enemy = spectralBarrage.nearestEnemy;
+                spectralBarrage.LookAtEnemies();
+                Vector2 target = new Vector2(enemy.position.x, rb.position.y);
+                Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+                rb.MovePosition(newPos);
+                if (Vector2.Distance(enemy.position, rb.position) <= attackRange)
+                {
+                    animator.SetTrigger("Attack");
+                }
+            }
+        }
     }
 
 

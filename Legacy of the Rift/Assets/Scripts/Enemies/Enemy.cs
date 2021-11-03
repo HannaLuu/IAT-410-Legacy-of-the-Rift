@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float health = 100;
+    public float maxHealth = 100;
+    public float currentHealth;
+
+    public HealthBar healthBar;
 
     public float damageReceivedMultiplier;
 
@@ -19,22 +22,26 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         damageReceivedMultiplier = 1f;
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamage(float damage)
     {
-        health -= damage * damageReceivedMultiplier;
+        currentHealth -= damage * damageReceivedMultiplier;
         StartCoroutine(Slowed());
+
+        healthBar.SetHealth(currentHealth);
 
         Debug.Log(damage * damageReceivedMultiplier);
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
     }
 
-    void Die()
+    public void Die()
     {
         //EnemyCounter.enemiesKilled = EnemyCounter.enemiesKilled += 1;
         //Instantiate(deathEffect, transform.position, Quaternion.identity);

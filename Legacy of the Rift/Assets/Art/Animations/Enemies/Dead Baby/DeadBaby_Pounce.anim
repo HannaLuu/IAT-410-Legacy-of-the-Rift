@@ -20,14 +20,26 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 123b0b4becc9ec640907a458a25239d9, type: 3}
+      value: {fileID: 6699243359776745020, guid: f0b6ce3ead928b347ac9ed62f83557fb, type: 3}
+    - time: 0.125
+      value: {fileID: 7366428548163526197, guid: f0321b881761bb9419018d773baccfae, type: 3}
+    - time: 0.25
+      value: {fileID: 7066607408548373227, guid: f0b6ce3ead928b347ac9ed62f83557fb, type: 3}
+    - time: 0.375
+      value: {fileID: -8050692850169095784, guid: f0321b881761bb9419018d773baccfae, type: 3}
     - time: 0.5
-      value: {fileID: 21300000, guid: 123b0b4becc9ec640907a458a25239d9, type: 3}
+      value: {fileID: -2125438121998652696, guid: f0321b881761bb9419018d773baccfae, type: 3}
+    - time: 0.625
+      value: {fileID: -5596842770196344081, guid: f0321b881761bb9419018d773baccfae, type: 3}
+    - time: 0.75
+      value: {fileID: -882972107176709174, guid: f0321b881761bb9419018d773baccfae, type: 3}
+    - time: 0.875
+      value: {fileID: 744619404596356705, guid: f0321b881761bb9419018d773baccfae, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 2
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -42,8 +54,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 123b0b4becc9ec640907a458a25239d9, type: 3}
-    - {fileID: 21300000, guid: 123b0b4becc9ec640907a458a25239d9, type: 3}
+    - {fileID: 6699243359776745020, guid: f0b6ce3ead928b347ac9ed62f83557fb, type: 3}
+    - {fileID: 7366428548163526197, guid: f0321b881761bb9419018d773baccfae, type: 3}
+    - {fileID: 7066607408548373227, guid: f0b6ce3ead928b347ac9ed62f83557fb, type: 3}
+    - {fileID: -8050692850169095784, guid: f0321b881761bb9419018d773baccfae, type: 3}
+    - {fileID: -2125438121998652696, guid: f0321b881761bb9419018d773baccfae, type: 3}
+    - {fileID: -5596842770196344081, guid: f0321b881761bb9419018d773baccfae, type: 3}
+    - {fileID: -882972107176709174, guid: f0321b881761bb9419018d773baccfae, type: 3}
+    - {fileID: 744619404596356705, guid: f0321b881761bb9419018d773baccfae, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -69,7 +87,42 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
+  - time: 0.375
+    functionName: Attack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.375
+    functionName: Pounce
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: Attack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.625
+    functionName: OnDrawGizmosSelected
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.75
+    functionName: Attack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.875
     functionName: Attack
     data: 
     objectReferenceParameter: {fileID: 0}
