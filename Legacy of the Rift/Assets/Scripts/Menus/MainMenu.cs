@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Intro_AfterVO");
+        SceneManager.LoadScene("Intro_BeforeAttack");
     }
 
     public void QuitGame()

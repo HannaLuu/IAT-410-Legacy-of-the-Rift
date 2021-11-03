@@ -14,10 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 3c7c38d9ed3651b45804c7b46e89a6b5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Intro_AfterVO.unity
     guid: 3540eff34229b124682c95485ff1c489
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Intro_AfterVO2.unity
     guid: e0367b6e2c1e833439f5aac49deb532e
   - enabled: 1
@@ -29,16 +29,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dock_Level.unity
     guid: 6be7877cd2698f14584d0cc3a899723c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Dickon_Boat.unity
     guid: b931213b6d51b3749a37560f2622f96a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Khajiit_Sacrifice.unity
     guid: f0ff31be919c6874bbd77fe628a3aaf2
   - enabled: 1
     path: Assets/Scenes/RiftPiercer.unity
     guid: 5faf3fa050ebcd2449f21cc8c490a241
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Shore_Landing.unity
     guid: 8f24cd33428825d48b551d49e271d0bc
   - enabled: 1
