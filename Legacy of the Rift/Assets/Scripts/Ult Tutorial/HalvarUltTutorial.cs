@@ -11,6 +11,8 @@ public class HalvarUltTutorial : MonoBehaviour
     public GameObject halvarUltGlow;
     public GameObject ursaBasicGlow;
 
+    public GameObject phase2Enemy;
+
     public PlayerZeal playerZeal;
 
     // Update is called once per frame
@@ -28,6 +30,11 @@ public class HalvarUltTutorial : MonoBehaviour
             Fungus.Flowchart.BroadcastFungusMessage("HalvarUltActivated");
             playerZeal.overzealCheat = false;
         }
+    }
+
+    public void SpawnTutorialEnemies()
+    {
+        phase2Enemy.SetActive(true);
     }
 
     public void HalvarBasicGlowOn()

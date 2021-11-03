@@ -10,6 +10,8 @@ TagManager:
   - PlayerHandler
   - Ursa
   - Ground
+  - Lokir
+  - Halvar
   layers:
   - Default
   - TransparentFX

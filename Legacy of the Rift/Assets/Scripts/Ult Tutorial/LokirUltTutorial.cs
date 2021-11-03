@@ -28,10 +28,10 @@ public class LokirUltTutorial : MonoBehaviour
         }
     }
 
-    //public void SpawnTutorialEnemies()
-    //{
-    //    phase1Enemy.SetActive(true);
-    //}
+    public void SpawnTutorialEnemies()
+    {
+        phase1Enemy.SetActive(true);
+    }
 
     public void LokirUltGlowOn()
     {

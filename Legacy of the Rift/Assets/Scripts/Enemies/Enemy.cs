@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         //EnemyCounter.enemiesKilled = EnemyCounter.enemiesKilled += 1;
         //Instantiate(deathEffect, transform.position, Quaternion.identity);

@@ -10,9 +10,13 @@ public class UrsaUltTutorial : MonoBehaviour
     public GameObject ursaBasicGlow;
     public GameObject ursaUltGlow;
 
+    public GameObject phase3Enemy;
+
     public GameObject dialogueShit;
 
     public PlayerZeal playerZeal;
+
+    public CMDockSwitcher cmSwitcher;
 
     // Update is called once per frame
     void Update()
@@ -29,6 +33,11 @@ public class UrsaUltTutorial : MonoBehaviour
             flowchart.SetBooleanVariable("isUrsaE", true);
             Fungus.Flowchart.BroadcastFungusMessage("End");
         }
+    }
+
+    public void SpawnTutorialEnemies()
+    {
+        phase3Enemy.SetActive(true);
     }
 
     public void UrsaBasicGlowOn()
@@ -53,6 +62,9 @@ public class UrsaUltTutorial : MonoBehaviour
 
     public void End()
     {
+        cmSwitcher.phase1 = false;
+        cmSwitcher.phase2 = true;
+        cmSwitcher.SwitchCamera();
         dialogueShit.SetActive(false);
     }
 }

@@ -45,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
         //FindObjectOfType<AudioManager>().Play("BjornHit");
     }
 
-    void Die()
+    public void Die()
     {
         gameOverUI.SetActive(true);
     }
