@@ -1444,7 +1444,6 @@ GameObject:
   - component: {fileID: 796375082}
   - component: {fileID: 796375084}
   - component: {fileID: 796375097}
-  - component: {fileID: 796375094}
   - component: {fileID: 796375093}
   - component: {fileID: 796375092}
   - component: {fileID: 796375089}
@@ -1452,7 +1451,6 @@ GameObject:
   - component: {fileID: 796375088}
   - component: {fileID: 796375102}
   - component: {fileID: 796375101}
-  - component: {fileID: 796375103}
   - component: {fileID: 796375110}
   - component: {fileID: 796375109}
   - component: {fileID: 796375108}
@@ -1463,7 +1461,6 @@ GameObject:
   - component: {fileID: 796375120}
   - component: {fileID: 796375119}
   - component: {fileID: 796375118}
-  - component: {fileID: 796375117}
   - component: {fileID: 796375116}
   - component: {fileID: 796375115}
   - component: {fileID: 796375114}
@@ -1496,9 +1493,7 @@ GameObject:
   - component: {fileID: 796375146}
   - component: {fileID: 796375156}
   - component: {fileID: 796375155}
-  - component: {fileID: 796375162}
   - component: {fileID: 796375160}
-  - component: {fileID: 796375159}
   - component: {fileID: 796375158}
   - component: {fileID: 796375157}
   - component: {fileID: 796375165}
@@ -1548,7 +1543,7 @@ GameObject:
   - component: {fileID: 796375199}
   - component: {fileID: 796375198}
   - component: {fileID: 796375200}
-  - component: {fileID: 796375201}
+  - component: {fileID: 796375103}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1569,11 +1564,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1036.0906, y: 812.8723}
+  scrollPos: {x: 378.01816, y: 194.58725}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 435
-  zoom: 0.34000045
+  zoom: 0.5500004
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1581,9 +1576,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 796375145}
-  selectedCommands:
-  - {fileID: 796375159}
+  - {fileID: 796375136}
+  selectedCommands: []
   variables:
   - {fileID: 796375137}
   - {fileID: 796375168}
@@ -1652,7 +1646,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -323.49948
     y: 58.97204
-    width: 73.52938
+    width: 75.45453
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1757,7 +1751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 216
   indentLevel: 0
-  storyText: PLACE YOUR LEGENDARY MONOLITH BEHIND ME!!!!
+  storyText: '{b}PRESS Q{/b} and place a Monolith behind me to block off the Scourged!!!'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -1831,7 +1825,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -208.32513
     y: 52.049488
-    width: 126.47049
+    width: 137.27266
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1846,7 +1840,6 @@ MonoBehaviour:
   - {fileID: 796375097}
   - {fileID: 796375111}
   - {fileID: 796375193}
-  - {fileID: 796375094}
   - {fileID: 796375093}
   - {fileID: 796375092}
   - {fileID: 796375089}
@@ -1909,7 +1902,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 1
-  storyText: HURRY AND GET THAT DAMN ROCK UP!!! We need to grab YOUR SIBLINGS--
+  storyText: HURRY AND {b}PRESS Q{/b} TO GET THAT DAMN ROCK UP!!! We need to grab
+    YOUR SIBLINGS--
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -1951,7 +1945,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 223
   indentLevel: 1
-  storyText: Swing that damn thing into them, NOW!!!
+  storyText: '{b}PRESS THE LEFT MOUSE BUTTON{/b} and swing that damn thing into them,
+    NOW!!!'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -2207,33 +2202,6 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &796375094
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796375073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 221
-  indentLevel: 0
-  storyText: Hammer time.
-  description: 
-  character: {fileID: 4959002723986858963, guid: 9f504fa81c6a289469edb53902d688f2, type: 3}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &796375095
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2508,8 +2476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 220
   indentLevel: 0
-  storyText: "Maker\u2019s Balls... The kitchen is overrun...Halvar, you know what
-    time it is."
+  storyText: Halvar, {b}PRESS THE LEFT MOUSE BUTTON{/b}!!! IT'S HAMMER TIME--
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -2604,7 +2571,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -25.424585
     y: 54.413357
-    width: 144.11752
+    width: 157.27264
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2615,7 +2582,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 796375104}
   - {fileID: 796375192}
-  - {fileID: 796375103}
   - {fileID: 796375100}
   - {fileID: 796375191}
   - {fileID: 796375110}
@@ -2636,11 +2602,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 228
-  indentLevel: 0
-  storyText: DIE, YOU RACCOONS--
+  itemId: 342
+  indentLevel: 1
+  storyText: ' {b}PRESS F{/b} TO PICK UP YOUR SIBLINGS!!!
+
+'
   description: 
-  character: {fileID: 4959002723986858963, guid: 9f504fa81c6a289469edb53902d688f2, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2696,7 +2664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 317
   indentLevel: 0
-  storyText: KILL THE SCOURGED AND GET TO THE DOCKS!!!!!
+  storyText: GOOD, NOW GET TO THE DOCKS!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -2737,7 +2705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 232
   indentLevel: 1
-  storyText: Now's not the time to mess around! We need your sister's spiritual prowess!
+  storyText: '{b}PRESS 3 TO SWITCH TO URSA{/b} ONCE YOU''RE DONE!!!'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3007,8 +2975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 230
   indentLevel: 0
-  storyText: The scourged have broken through your Monolith! We need Ursa's Spirit
-    Form to slow down the horde!
+  storyText: KILL THEM THEN {b}PRESS 3 TO SWITCH TO URSA!!!{/b}
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3108,7 +3075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 241
   indentLevel: 1
-  storyText: Shoot them, quickly!!!!
+  storyText: '{b}PRESS THE LEFT MOUSE BUTTON{/b} TO SHOOT!!!'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3364,33 +3331,6 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &796375117
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796375073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 239
-  indentLevel: 0
-  storyText: An elegant weapon for a more civilized age--
-  description: 
-  character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &796375118
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3405,7 +3345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 238
   indentLevel: 0
-  storyText: Once the Scourged behind us show up, shoot them!!!!
+  storyText: Once again, {b}PRESS THE LEFT MOUSE BUTTON{/b} to shoot your arrows!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3476,7 +3416,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 163.11516
     y: 52.98801
-    width: 102.9411
+    width: 108.18178
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3491,7 +3431,6 @@ MonoBehaviour:
   - {fileID: 796375118}
   - {fileID: 796375198}
   - {fileID: 796375196}
-  - {fileID: 796375117}
   - {fileID: 796375116}
   - {fileID: 796375115}
   - {fileID: 796375114}
@@ -3545,7 +3484,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 315.92755
     y: 51.48735
-    width: 135.294
+    width: 144.54538
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3558,7 +3497,6 @@ MonoBehaviour:
   - {fileID: 796375190}
   - {fileID: 796375098}
   - {fileID: 796375189}
-  - {fileID: 796375201}
   - {fileID: 796375129}
   - {fileID: 796375128}
   - {fileID: 796375127}
@@ -3607,7 +3545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 248
   indentLevel: 1
-  storyText: DAMN IT KHAJIIT!!! I CAN'T FOCUS ON WHEN I'M BEING ATTACKED--
+  storyText: I have to {b}PRESS Q{/b} to summon my wolf and heal our wounds!!!
   description: 
   character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
   portrait: {fileID: 0}
@@ -3877,8 +3815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 246
   indentLevel: 0
-  storyText: "We\u2019re getting wounded! We have to heal up! Ursa, summon that damn
-    wolf!!!"
+  storyText: GOOD!! Ursa, {b}PRESS Q{/b} to summon that wolf, we have to heal up!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3982,8 +3919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 257
   indentLevel: 1
-  storyText: Your arrows will only slow them down for so long! We need Lokir's speed
-    NOW!
+  storyText: '{b}PRESS 1{/b} TO SWITCH TO LOKIR, QUICKLY!!!'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -4012,7 +3948,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 490.97186
     y: 50.870697
-    width: 138.23517
+    width: 149.99992
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4331,8 +4267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 253
   indentLevel: 0
-  storyText: Ursa, we need to get Morkvar, Hjallna, and Eerika quickly! Lokir will
-    be able to get us to their room the fastest!
+  storyText: Ursa, we need to get Morkvar, Hjallna, and Eerika quickly! {b}PRESS
+    1{/b} TO SWITCH TO LOKIR!!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -4410,7 +4346,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 845.9328
     y: 56.93361
-    width: 144.11752
+    width: 160.909
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4426,10 +4362,9 @@ MonoBehaviour:
   - {fileID: 796375182}
   - {fileID: 796375180}
   - {fileID: 796375155}
-  - {fileID: 796375162}
   - {fileID: 796375181}
   - {fileID: 796375160}
-  - {fileID: 796375159}
+  - {fileID: 796375103}
   - {fileID: 796375158}
   - {fileID: 796375157}
   suppressAllAutoSelections: 0
@@ -4510,7 +4445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 263
   indentLevel: 1
-  storyText: Hurry! Place your Spectral Warlock by the nightstand!
+  storyText: Hurry! {b}PRESS Q{/b} and place your clone by the bed!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -4780,8 +4715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 261
   indentLevel: 0
-  storyText: Okay Lokir, I have a plan. Place your Spectral Warlock by the nightstand
-    on the far right while facing me.
+  storyText: Lokir, {b}PRESS Q{/b} and place your clone by the bed while facing me.
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -4825,7 +4759,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 683.1064
     y: 50.544678
-    width: 102.9411
+    width: 111.81813
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4858,7 +4792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 269
   indentLevel: 0
-  storyText: ONCE THE SCOURGED SHOW UP, DASH THROUGH THEM AND GRAB THE KIDS!!!
+  storyText: '{b}PRESS THE LEFT MOUSE BUTTON{/b} while moving towards me to dash!!!'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -4926,33 +4860,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 274
   indentLevel: 0
---- !u!114 &796375159
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796375073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 273
-  indentLevel: 1
-  storyText: HURRY, LOKIR!!! DASH THROUGH THEM AND GRAB THE KIDS!!!!!
-  description: 
-  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &796375160
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5196,33 +5103,6 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &796375162
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796375073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 270
-  indentLevel: 0
-  storyText: REALLY MAKING FUN OF MY BARREN HEAD RIGHT NOW??
-  description: 
-  character: {fileID: 2188339453429304748, guid: f62fe914767bef44986d897eaed0b246, type: 3}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &796375163
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5359,7 +5239,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1051.7992
     y: 52.647526
-    width: 141.17636
+    width: 151.8181
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5410,7 +5290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 334
   indentLevel: 0
-  storyText: Now, SWAP PLACES WITH YOUR CLONE, NOW!!!!!
+  storyText: Now, {b}PRESS Q{/b} again to SWAP PLACES with your clone!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -6009,33 +5889,6 @@ MonoBehaviour:
   targetObject: {fileID: 2099273414}
   methodName: SwitchCam
   delay: 0
---- !u!114 &796375201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796375073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 342
-  indentLevel: 0
-  storyText: URSA, THAT STILL ONLY COUNTS AS ONE!!!!
-  description: 
-  character: {fileID: 4061733457296371413, guid: 9cb3e431286ab1348a8bfffff94ecfdd, type: 3}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &796375228
 MonoBehaviour:
   m_ObjectHideFlags: 2

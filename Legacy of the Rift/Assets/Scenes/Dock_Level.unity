@@ -1248,7 +1248,6 @@ GameObject:
   - component: {fileID: 974722028}
   - component: {fileID: 974722034}
   - component: {fileID: 974722044}
-  - component: {fileID: 974722039}
   - component: {fileID: 974722038}
   - component: {fileID: 974722055}
   - component: {fileID: 974722054}
@@ -1285,7 +1284,6 @@ GameObject:
   - component: {fileID: 974722093}
   - component: {fileID: 974722092}
   - component: {fileID: 974722091}
-  - component: {fileID: 974722090}
   - component: {fileID: 974722089}
   - component: {fileID: 974722088}
   - component: {fileID: 974722087}
@@ -1303,6 +1301,7 @@ GameObject:
   - component: {fileID: 974722077}
   - component: {fileID: 974722097}
   - component: {fileID: 974722098}
+  - component: {fileID: 974722040}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1323,11 +1322,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 414.21112, y: 197.01723}
+  scrollPos: {x: 473.172, y: 200.41158}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 522
-  zoom: 0.7900002
+  zoom: 0.8200002
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1336,8 +1335,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 974722076}
-  selectedCommands:
-  - {fileID: 974722083}
+  selectedCommands: []
   variables:
   - {fileID: 974722036}
   - {fileID: 974722035}
@@ -1509,7 +1507,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -323.27277
     y: 60.563354
-    width: 76.582275
+    width: 76.82926
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1521,7 +1519,6 @@ MonoBehaviour:
   - {fileID: 974722042}
   - {fileID: 974722041}
   - {fileID: 974722044}
-  - {fileID: 974722039}
   - {fileID: 974722055}
   - {fileID: 974722096}
   - {fileID: 974722038}
@@ -1544,8 +1541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: Lokir, conjure a Spectral Warlock behind me. Then let Halvar create
-    a Monolith in front of you to prevent the Scourged from coming towards you!
+  storyText: LOKIR, {b}PRESS Q{/b} BEHIND ME!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -1558,7 +1554,7 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &974722039
+--- !u!114 &974722040
 MonoBehaviour:
   m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1570,11 +1566,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 6
+  itemId: 91
   indentLevel: 0
-  storyText: ' REMEMBER YOUR TRAINING? LET''S PUT THAT TO USE.'
+  storyText: '{b}PRESS THE LEFT MOUSE BUTTON{/b} AND SHOOT THROUGH THE MONOLITH!!!'
   description: 
-  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
+  character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1626,7 +1622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: FUCK, EERIKA'S TOO HEAVY!!! WE HAVE TO RUN FASTER-
+  storyText: EERIKA'S TOO HEAVY!!! WE HAVE TO RUN FASTER-
   description: 
   character: {fileID: 2188339453429304748, guid: f62fe914767bef44986d897eaed0b246, type: 3}
   portrait: {fileID: 0}
@@ -1695,7 +1691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 0
-  storyText: NOW LET HALVAR CREATE A MONOLITH IN FRONT OF US TO BARRICADE THE SCOURGED!!!
+  storyText: '{b}PRESS 2{/b} AND SWITCH TO HALVAR!!!'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -1724,7 +1720,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -197.14485
     y: 57.2707
-    width: 158.86073
+    width: 156.09753
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1774,7 +1770,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1.2061491
     y: 59.93627
-    width: 118.354416
+    width: 117.07316
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1819,7 +1815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 50
   indentLevel: 1
-  storyText: TAKE YOUR TIME, FOOL!!! DON'T FALTER!!!
+  storyText: TAKE YOUR TIME, {b}PRESS Q{/b} AND BLOCK THE SCOURGED IN FRONT OF US!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -1860,7 +1856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 1
-  storyText: Focus Lokir, conjure a Spectral Warlock.
+  storyText: Focus Lokir, {b}PRESS Q{/b} BEHIND ME!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -2390,9 +2386,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 48
   indentLevel: 0
-  storyText: 'Stone Form: Legendary Monolith!!!'
+  storyText: HALVAR, {b}PRESS Q{/b} AND CREATE A MONOLITH IN FRONT OF US!!!
   description: 
-  character: {fileID: 4959002723986858963, guid: 9f504fa81c6a289469edb53902d688f2, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2477,7 +2473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 33
   indentLevel: 1
-  storyText: Work together with Halvar!
+  storyText: COME ON, {b}PRESS 2{/b} AND SWITCH TO HALVAR!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -2810,7 +2806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 60
   indentLevel: 1
-  storyText: QUICKLY, URSA!!!!
+  storyText: '{b}PRESS 3{/b} TO SWITCH TO URSA!!!'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3080,7 +3076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 58
   indentLevel: 0
-  storyText: URSA, FIRE YOUR ARROWS THROUGH THE MONOLITH!!!!
+  storyText: NOW, {b}PRESS 3{/b} TO SWITCH TO URSA!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3122,9 +3118,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 147.1407
+    x: 148.40652
     y: 50.127846
-    width: 133.54428
+    width: 130.4878
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3208,8 +3204,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 484.9535
-    y: 54.68155
-    width: 166.45566
+    y: 53.415726
+    width: 163.41461
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3478,7 +3474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 75
   indentLevel: 1
-  storyText: Show those boys what you're capable of Ursa!
+  storyText: '{b}PRESS THE LEFT MOUSE BUTTON{/b} AND SHOOT THROUGH THE MONOLITH!!!'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3734,33 +3730,6 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &974722090
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974722026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 73
-  indentLevel: 0
-  storyText: Time to pierce through these putrid bitches!!!
-  description: 
-  character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &974722091
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3791,8 +3760,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 326.48965
-    y: 48.53654
-    width: 106.962006
+    y: 47.270718
+    width: 106.09755
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3801,7 +3770,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 974722091}
   commandList:
-  - {fileID: 974722090}
+  - {fileID: 974722040}
   - {fileID: 974722089}
   - {fileID: 974722088}
   - {fileID: 974722087}
