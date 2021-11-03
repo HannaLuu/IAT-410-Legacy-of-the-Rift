@@ -14,9 +14,18 @@ public class HoR_Idle : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
-        if (waveSpawner.EnemyIsAlive() == true)
+        if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
         {
             animator.SetBool("EnemyDetected", true);
+        }
+
+        if (waveSpawner == null)
+        {
+            Enemy enemy = GameObject.FindObjectOfType<Enemy>();
+            if (enemy != null)
+            {
+                animator.SetBool("EnemyDetected", true);
+            }
         }
     }
 

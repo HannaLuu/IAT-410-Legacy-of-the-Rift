@@ -13,7 +13,7 @@ public class HoR_Run : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
-        if (waveSpawner.EnemyIsAlive() == true)
+        if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
         {
             enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
         }
@@ -24,16 +24,32 @@ public class HoR_Run : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
-        if (waveSpawner.EnemyIsAlive() == false)
+        if (waveSpawner != null && waveSpawner.EnemyIsAlive() == false)
         {
             animator.SetBool("EnemyDetected", false);
         }
 
-        if (waveSpawner.EnemyIsAlive() == true)
+        if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
         {
             Vector2 target = new Vector2(enemy.position.x, rb.position.y);
             Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
             rb.MovePosition(newPos);
+        }
+
+        if(waveSpawner == null)
+        {
+            Enemy enemyObj = GameObject.FindObjectOfType<Enemy>();
+            if (enemyObj == null)
+            {
+                animator.SetBool("EnemyDetected", false);
+            }
+            if (enemyObj != null)
+            {
+                Vector2 target = new Vector2(enemy.position.x, rb.position.y);
+                Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+                rb.MovePosition(newPos);
+            }
+
         }
     }
 
