@@ -615,7 +615,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569405719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7812347, y: 1.9825749, z: -10.000366}
+  m_LocalPosition: {x: -3.5931702, y: 2.1860006, z: -0.39999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2656,11 +2656,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 552.94403, y: 277.2919}
+  scrollPos: {x: 697.08136, y: 360.12592}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 522
-  zoom: 0.7000003
+  zoom: 0.6099999
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -2668,9 +2668,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2138538767}
-  selectedCommands:
-  - {fileID: 2138538743}
+  - {fileID: 2138538754}
+  selectedCommands: []
   variables:
   - {fileID: 2138538717}
   - {fileID: 2138538715}
@@ -2716,7 +2715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 120
   indentLevel: 0
-  storyText: '{b}PRESS E{/b} spirit BEAR! I- I- I help you make big mess!'
+  storyText: '{b}PRESS E{/b} and make spirit BEAR!!!!'
   description: 
   character: {fileID: 8042595455408976571, guid: 3d528a8b758b3954c9bec866e7614137, type: 3}
   portrait: {fileID: 0}
@@ -2775,7 +2774,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 355.7124
     y: 57.270844
-    width: 107.14284
+    width: 105.73772
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3138,7 +3137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 119
   indentLevel: 0
-  storyText: Alright alright, slow down Hjallna! What did you want to try?
+  storyText: Slow down Hjallna! What did you want to try?
   description: 
   character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
   portrait: {fileID: 0}
@@ -3478,7 +3477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 112
   indentLevel: 0
-  storyText: '{b}PRESS 3{/b} HALVAR!!! I- I- I want to try with Ursa !  PLEEAASEE!!!'
+  storyText: '{b}PRESS 3{/b} HALVAR!!! I- I want to try with Ursa!  PLEEAASEE!!!'
   description: 
   character: {fileID: 8042595455408976571, guid: 3d528a8b758b3954c9bec866e7614137, type: 3}
   portrait: {fileID: 0}
@@ -3505,7 +3504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 111
   indentLevel: 0
-  storyText: 'Divine shit...so I can crush enemies around me with these rocks?? '
+  storyText: Divine shit...so I can damage Scourged around me--
   description: 
   character: {fileID: 4959002723986858963, guid: 9f504fa81c6a289469edb53902d688f2, type: 3}
   portrait: {fileID: 0}
@@ -3549,7 +3548,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 154.28384
     y: 55.84225
-    width: 164.28568
+    width: 156.5574
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3953,7 +3952,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -4.287483
     y: 52.985138
-    width: 118.5714
+    width: 115.573784
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4282,7 +4281,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 520.25397
     y: 58.827324
-    width: 71.42856
+    width: 69.672134
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4784,7 +4783,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -197.08089
     y: 58.763237
-    width: 155.71423
+    width: 148.36067
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5149,7 +5148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 144
   indentLevel: 0
-  storyText: '*SLAP* NO         BAD WORD   HALVAR!!!!'
+  storyText: '*SLAP* NO     BAD WORD   HALVAR!!!!'
   description: 
   character: {fileID: 6851886508992462375, guid: a1a86817a173e7748afbfdc5a28d38e6, type: 3}
   portrait: {fileID: 0}
@@ -5164,7 +5163,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &2138538775
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5189,7 +5188,7 @@ MonoBehaviour:
   parameterNameOLD: 
 --- !u!114 &2138538776
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5214,7 +5213,7 @@ MonoBehaviour:
   parameterNameOLD: 
 --- !u!114 &2138538777
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5295,7 +5294,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -321.8442
     y: 59.134785
-    width: 78.57142
+    width: 74.590164
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5331,7 +5330,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2138538782
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5356,7 +5355,7 @@ MonoBehaviour:
   parameterNameOLD: 
 --- !u!114 &2138538783
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5381,7 +5380,7 @@ MonoBehaviour:
   parameterNameOLD: 
 --- !u!114 &2138538784
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5406,7 +5405,7 @@ MonoBehaviour:
   parameterNameOLD: 
 --- !u!114 &2138538785
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5431,7 +5430,7 @@ MonoBehaviour:
   parameterNameOLD: 
 --- !u!114 &2138538786
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5456,7 +5455,7 @@ MonoBehaviour:
   parameterNameOLD: 
 --- !u!114 &2138538787
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5506,7 +5505,7 @@ MonoBehaviour:
   parameterNameOLD: 
 --- !u!114 &2138538789
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5523,7 +5522,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &2138538790
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5540,7 +5539,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &2138538791
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
