@@ -319,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79454830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.52, y: -18.59, z: 0}
+  m_LocalPosition: {x: 36.5, y: -19.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 342162363}
@@ -921,7 +921,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311679908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.56, y: -18.55, z: 0}
+  m_LocalPosition: {x: 31.4, y: -20.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 342162363}
@@ -1062,7 +1062,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649348324}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.13, y: -19.09, z: 0}
+  m_LocalPosition: {x: 23.7, y: -19.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 342162363}
@@ -1247,9 +1247,7 @@ GameObject:
   - component: {fileID: 974722029}
   - component: {fileID: 974722028}
   - component: {fileID: 974722034}
-  - component: {fileID: 974722045}
   - component: {fileID: 974722044}
-  - component: {fileID: 974722040}
   - component: {fileID: 974722039}
   - component: {fileID: 974722038}
   - component: {fileID: 974722055}
@@ -1338,7 +1336,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 974722076}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 974722083}
   variables:
   - {fileID: 974722036}
   - {fileID: 974722035}
@@ -1521,9 +1520,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 974722042}
   - {fileID: 974722041}
-  - {fileID: 974722045}
   - {fileID: 974722044}
-  - {fileID: 974722040}
   - {fileID: 974722039}
   - {fileID: 974722055}
   - {fileID: 974722096}
@@ -1575,37 +1572,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  storyText: Then let your differences be your strength, and not your weakness! Here,
-    let me guide you.
+  storyText: ' REMEMBER YOUR TRAINING? LET''S PUT THAT TO USE.'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &974722040
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974722026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 5
-  indentLevel: 0
-  storyText: I'M..SORRY-
-  description: 
-  character: {fileID: 2188339453429304748, guid: f62fe914767bef44986d897eaed0b246, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1699,35 +1668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: DAMN IT, CALM DOWN!!! You all will be much stronger if you work together
-    rather than squabble-
-  description: 
-  character: {fileID: 2188339453429304748, guid: f62fe914767bef44986d897eaed0b246, type: 3}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &974722045
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974722026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 3
-  indentLevel: 0
-  storyText: EERIKA, GO ON HALVAR'S BACK, HE'S WAY STRONGE-
+  storyText: 'DAMN IT, CALM DOWN AND WORK TOEGHER!!! '
   description: 
   character: {fileID: 2188339453429304748, guid: f62fe914767bef44986d897eaed0b246, type: 3}
   portrait: {fileID: 0}
@@ -1754,8 +1695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 0
-  storyText: Now let Halvar create a Monolith in front of us  to block off their
-    advancements!
+  storyText: NOW LET HALVAR CREATE A MONOLITH IN FRONT OF US TO BARRICADE THE SCOURGED!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -2870,8 +2810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 60
   indentLevel: 1
-  storyText: You boys have had your turn already! Let your sister show you how easily
-    she could destroy you both!
+  storyText: QUICKLY, URSA!!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3141,7 +3080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 58
   indentLevel: 0
-  storyText: Okay, now let Ursa fire her arrows through your Monolith!
+  storyText: URSA, FIRE YOUR ARROWS THROUGH THE MONOLITH!!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3344,7 +3283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 84
   indentLevel: 0
-  storyText: KEEP RUNNING FORWARD TO THE DOCKS!!! GO!!!!!!!
+  storyText: RUN FORWARD TO THE DOCKS AND CLEAR A PATH!!!! GO!!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3452,7 +3391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 80
   indentLevel: 0
-  storyText: GO, QUICKLY!!! I'LL HOLD OFF THE REST BEHIND US-
+  storyText: ' I''LL HOLD OFF THE REST BEHIND US-'
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3809,7 +3748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 73
   indentLevel: 0
-  storyText: Time to pierce through these putrid bitches!
+  storyText: Time to pierce through these putrid bitches!!!
   description: 
   character: {fileID: 2149784498469283262, guid: e6b83ea7f632d924d954b70a1fb856d7, type: 3}
   portrait: {fileID: 0}
@@ -4272,7 +4211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667548729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60, y: -2.0756145, z: -10}
+  m_LocalPosition: {x: -60, y: -2.0193954, z: -0.39999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4559,6 +4498,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7825555273368544809, guid: 4c2321b1b821e9149bc58b9247ed98fa, type: 3}
+      propertyPath: waves.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825555273368544809, guid: 4c2321b1b821e9149bc58b9247ed98fa, type: 3}
       propertyPath: enemy.Array.data[0]
       value: 
       objectReference: {fileID: 8267758700066203695, guid: 951625a1648d4a841a6c43ecc3c5ce0d, type: 3}
@@ -4574,6 +4517,14 @@ PrefabInstance:
       propertyPath: spawnPoints.Array.data[2]
       value: 
       objectReference: {fileID: 649348325}
+    - target: {fileID: 7825555273368544809, guid: 4c2321b1b821e9149bc58b9247ed98fa, type: 3}
+      propertyPath: waves.Array.data[0].count
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825555273368544809, guid: 4c2321b1b821e9149bc58b9247ed98fa, type: 3}
+      propertyPath: waves.Array.data[1].count
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c2321b1b821e9149bc58b9247ed98fa, type: 3}
 --- !u!1 &2025942199

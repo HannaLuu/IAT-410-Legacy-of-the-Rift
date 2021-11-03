@@ -388,7 +388,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1005592355}
   selectedCommands:
-  - {fileID: 1005592366}
+  - {fileID: 1005592362}
   variables: []
   description: 
   stepPause: 0
@@ -457,7 +457,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: UWAUHEUWHDWHUW~!~*#&$*)(EUAAUAAA
   description: 
-  character: {fileID: 0}
+  character: {fileID: 6084983056797304660, guid: fd0283cd2fbeffa4cbcffee06ac0a4ad, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: zzzzzz...
+  storyText: zzzzzz...gmmp...
   description: 
   character: {fileID: 6093848993457428730, guid: c1e403b09f9f7b44da542f20dfc3d2d9, type: 3}
   portrait: {fileID: 0}
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: zzzzzz...meow...purreEAERRRe..zz..
+  storyText: zzz...meow...purREEERRRUE...zzz...
   description: 
   character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
   portrait: {fileID: 0}

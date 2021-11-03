@@ -342,7 +342,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 524534568}
   selectedCommands:
-  - {fileID: 524534572}
+  - {fileID: 524534575}
   variables: []
   description: 
   stepPause: 0
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: Only in the face of death, did I vow to use this spell...
+  storyText: Only in the face of death, did I vow to use this...
   description: 
   character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
   portrait: {fileID: 0}
