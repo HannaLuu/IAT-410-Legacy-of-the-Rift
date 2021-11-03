@@ -1515,7 +1515,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 974722076}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 974722079}
   variables:
   - {fileID: 974722036}
   - {fileID: 974722035}
@@ -1724,8 +1725,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: Lokir, conjure a Spectral Warlock. Then let Halvar create a Monolith
-    to prevent the scourged from getting close to you all.
+  storyText: Lokir, conjure a Spectral Warlock behind me. Then let Halvar create
+    a Monolith in front of you to prevent the Scourged from coming towards you!
   description: 
   character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
   portrait: {fileID: 0}
@@ -1931,7 +1932,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 0
-  storyText: Now let Halvar create a Monolith to block off their advancements!
+  storyText: Now let Halvar create a Monolith in front of us  to block off their
+    advancements!
   description: 
   character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
   portrait: {fileID: 0}
@@ -3520,7 +3522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 84
   indentLevel: 0
-  storyText: GO STRAIGHT TO THE DOCKS!!! GO!!!!!!!
+  storyText: KEEP RUNNING FORWARD TO THE DOCKS!!! GO!!!!!!!
   description: 
   character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
   portrait: {fileID: 0}
@@ -3574,8 +3576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 82
   indentLevel: 0
-  storyText: THIS...WILL BE THE END OF MY TALE. GO...AND THANK YOU. TELL YOUR FATHER
-    WE WILL MEET AGAIN.
+  storyText: TELL YOUR FATHER WE WILL MEET AGAIN.
   description: 
   character: {fileID: 7682598339211462870, guid: 9723cf63b0d17af4897173b14786a879, type: 3}
   portrait: {fileID: 0}
@@ -3986,7 +3987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 73
   indentLevel: 0
-  storyText: Time to pierce through these damned scourged!
+  storyText: Time to pierce through these putrid bitches!
   description: 
   character: {fileID: 6663355596719516269, guid: 07d2d678718514c498ddc2da10c5150c, type: 3}
   portrait: {fileID: 0}

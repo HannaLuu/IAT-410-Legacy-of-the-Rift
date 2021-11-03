@@ -507,7 +507,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2111180278}
   selectedCommands:
-  - {fileID: 2111180292}
+  - {fileID: 2111180296}
   variables: []
   description: 
   stepPause: 0
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
-  storyText: "Yeah...sleep now. We\u2019re going to find mama and papa very soon."
+  storyText: "...yeah...sleep now. We\u2019re going to find mama and papa very soon."
   description: 
   character: {fileID: 6093848993457428730, guid: c1e403b09f9f7b44da542f20dfc3d2d9, type: 3}
   portrait: {fileID: 0}
