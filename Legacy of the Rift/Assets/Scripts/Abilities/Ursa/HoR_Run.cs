@@ -6,7 +6,6 @@ public class HoR_Run : StateMachineBehaviour
 {
     public float speed = 2.5f;
 
-    Transform enemy;
     Rigidbody2D rb;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -15,7 +14,7 @@ public class HoR_Run : StateMachineBehaviour
         WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
         if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
         {
-            enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
+            Transform enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
         }
         rb = animator.GetComponent<Rigidbody2D>();
     }
@@ -31,6 +30,7 @@ public class HoR_Run : StateMachineBehaviour
 
         if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
         {
+            Transform enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
             Vector2 target = new Vector2(enemy.position.x, rb.position.y);
             Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
             rb.MovePosition(newPos);
@@ -45,6 +45,7 @@ public class HoR_Run : StateMachineBehaviour
             }
             if (enemyObj != null)
             {
+                Transform enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
                 Vector2 target = new Vector2(enemy.position.x, rb.position.y);
                 Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
                 rb.MovePosition(newPos);
