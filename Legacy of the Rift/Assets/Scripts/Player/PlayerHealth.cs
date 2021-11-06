@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,9 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar healthBar;
 
     public GameObject gameOverUI;
-
+    public GameObject dialogueUI;
+    
+    public static EventHandler OnDeath;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +31,21 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            StartCoroutine(DelayGameOver());
+            
         }
+    }
+
+    IEnumerator DelayGameOver() {
+        List<GameObject> enemies = new List<GameObject>();
+        enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+        foreach (var e in enemies) {
+            Destroy(e);
+        }
+        OnDeath?.Invoke(this,EventArgs.Empty);
+        dialogueUI.SetActive(false);
+        yield return new WaitForSeconds(1.5f);
+        Die();
     }
 
     public void Heal(float healAmount)

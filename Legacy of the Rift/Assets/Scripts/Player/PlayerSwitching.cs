@@ -16,8 +16,8 @@ public class PlayerSwitching : MonoBehaviour
 
     public bool isSwitch = false;
 
-    private void Start()
-    {
+    private void Start() {
+     
         if(Lokir.activeInHierarchy)
         {
             currHero = Hero.Lokir;
@@ -118,4 +118,5 @@ public class PlayerSwitching : MonoBehaviour
         Debug.LogError("currHero is invalid");
         return null;
     }
+
 }
