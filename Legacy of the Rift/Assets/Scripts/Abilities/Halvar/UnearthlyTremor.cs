@@ -21,6 +21,7 @@ public class UnearthlyTremor : MonoBehaviour
         if (hitInfo.gameObject.CompareTag("Enemy"))
         {
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
+            hitInfo.GetComponentInParent<Enemy>().SlowMe();
             Instantiate(impactEffect, hitInfo.gameObject.transform.position, hitInfo.gameObject.transform.rotation);
         }
     }

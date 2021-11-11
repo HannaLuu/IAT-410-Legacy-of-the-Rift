@@ -41,6 +41,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void SlowMe()
+    {
+        StartCoroutine(Slowed());
+    }
+
     public void Die()
     {
         //EnemyCounter.enemiesKilled = EnemyCounter.enemiesKilled += 1;

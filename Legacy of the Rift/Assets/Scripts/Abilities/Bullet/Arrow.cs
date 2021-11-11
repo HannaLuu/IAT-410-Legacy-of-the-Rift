@@ -42,6 +42,7 @@ public class Arrow : MonoBehaviour
         if (hitInfo.gameObject.CompareTag("Enemy"))
         {
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
+            hitInfo.GetComponentInParent<Enemy>().SlowMe();
             Instantiate(impactEffect, transform.position, transform.rotation);
             currentHealth -= 1;
             if (playerZeal.isOverzealous == true && playerZeal.currentZeal < playerZeal.maxZeal)
