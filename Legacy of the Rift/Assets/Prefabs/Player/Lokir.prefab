@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 3940783632309258382}
   m_Layer: 7
   m_Name: Lokir
-  m_TagString: Untagged
+  m_TagString: Lokir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac02b76580d3be04b982795a2ad63650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 800
+  m_JumpForce: 1200
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 8552193417152347415}
   m_Layer: 7
   m_Name: GroundCheck
-  m_TagString: Untagged
+  m_TagString: Lokir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 3344644179209385558}
   m_Layer: 10
   m_Name: DashTrigger
-  m_TagString: Untagged
+  m_TagString: Lokir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

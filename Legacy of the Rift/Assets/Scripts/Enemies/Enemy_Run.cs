@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Enemy_Run : StateMachineBehaviour
 {
-    public float speed = 2.5f;
-    public float attackRange = 3f;
+    public float currSpeed;
+    public float normalSpeed;
+    public float slowedSpeed;
+
+    public float attackRange;
+
+    public bool delay = false;
+    private float timeBtwAttacks;
+    public float startTimeBtwAttacks;
 
     Transform player;
     Rigidbody2D rb;
@@ -17,6 +24,8 @@ public class Enemy_Run : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         enemyScript = animator.GetComponent<Enemy>();
+
+        timeBtwAttacks = startTimeBtwAttacks;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -25,31 +34,40 @@ public class Enemy_Run : StateMachineBehaviour
         enemyScript.LookAtPlayer();
 
         Vector2 target = new Vector2(player.position.x, rb.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+        Vector2 newPos = Vector2.MoveTowards(rb.position, target, currSpeed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
 
         GameObject legendaryMonolithObject = GameObject.FindGameObjectWithTag("Monolith");
         if (legendaryMonolithObject != null)
         {
-            if (Vector2.Distance(legendaryMonolithObject.transform.position, rb.position) <= attackRange)
+            if (delay == false && Vector2.Distance(legendaryMonolithObject.transform.position, rb.position) <= attackRange)
             {
                 animator.SetTrigger("Attack");
             }
         }
 
-        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        if (delay == false && Vector2.Distance(player.position, rb.position) <= attackRange)
         {
             animator.SetTrigger("Attack");
         }
 
         if (enemyScript.isSlowed == true)
         {
-            speed = 3f;
+            currSpeed = slowedSpeed;
         }
 
         else
         {
-            speed = 4f;
+            currSpeed = normalSpeed;
+        }
+
+        //Time Between Attack animations code if needed
+        if (delay == true && timeBtwAttacks <= 0)
+        {
+            animator.SetTrigger("Attack");
+        } else
+        {
+            timeBtwAttacks -= Time.deltaTime;
         }
     }
 
