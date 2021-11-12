@@ -12,6 +12,11 @@ TagManager:
   - Ground
   - Lokir
   - Halvar
+  - GW_MovePoint1
+  - GW_MovePoint2
+  - GW_DropPoint
+  - GW_CP
+  - GW_ReturnPoint
   layers:
   - Default
   - TransparentFX
