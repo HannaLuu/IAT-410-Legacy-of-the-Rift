@@ -13,6 +13,7 @@ public class HalvarAttacks : AttackBaseClass
     public LayerMask enemyLayers;
 
     public PlayerZeal playerZeal;
+    public PlayerZeal2 playerZeal2;
 
     public Transform ultPoint2;
 
@@ -55,14 +56,31 @@ public class HalvarAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2"))
             {
-                playerZeal.SpendZeal(abilityZealCost);
-                if (playerZeal.canSpendZeal == true)
+                if (playerZeal != null)
                 {
-                    abilityActivated = true;
-                    animator.SetTrigger("Ability");
-                } else
+                    playerZeal.SpendZeal(abilityZealCost);
+                    if (playerZeal.canSpendZeal == true)
+                    {
+                        abilityActivated = true;
+                        animator.SetTrigger("Ability");
+                    }
+                    else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
+                }
+                if (playerZeal2 != null)
                 {
-                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    playerZeal2.SpendZeal(abilityZealCost);
+                    if (playerZeal2.canSpendZeal == true)
+                    {
+                        abilityActivated = true;
+                        animator.SetTrigger("Ability");
+                    }
+                    else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
                 }
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
@@ -70,21 +88,37 @@ public class HalvarAttacks : AttackBaseClass
 
         if (isUltReady && isUltUnlocked)
         {
-            if(playerZeal.fullyZealous == true)
+            if (Input.GetButtonDown("Fire3"))
             {
-                if (Input.GetButtonDown("Fire3"))
+                if (playerZeal != null && playerZeal.fullyZealous == true)
                 {
                     playerZeal.SpendZeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
                     {
                         ultActivated = true;
                         animator.SetTrigger("Ultimate");
-                    } else
+                    }
+                    else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
+                }
+                if (playerZeal2 != null && playerZeal2.fullyZealous == true)
+                {
+                    playerZeal2.SpendOverzeal(ultZealCost);
+                    if (playerZeal2.canSpendOverzeal == true)
+                    {
+                        playerZeal2.SpendZeal(100);
+                        ultActivated = true;
+                        animator.SetTrigger("Ultimate");
+                    }
+                    else
                     {
                         Debug.Log("You've Run Out of Zeal! Wait to Regen!");
                     }
                 }
             }
+
         }
     }
 
@@ -102,9 +136,13 @@ public class HalvarAttacks : AttackBaseClass
             enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             Instantiate(impactEffect, enemy.gameObject.transform.position, enemy.gameObject.transform.rotation);
             enemyCollided = true;
-            if (playerZeal.isOverzealous == true && playerZeal.currentZeal < playerZeal.maxZeal)
+            if (playerZeal != null && playerZeal.isOverzealous == true)
             {
                 playerZeal.AddOverzeal(overzealRegenAmount);
+            }
+            if (playerZeal2 != null && playerZeal2.isOverzealous == true)
+            {
+                playerZeal2.AddOverzeal(overzealRegenAmount);
             }
         }
     }

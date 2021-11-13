@@ -22,6 +22,7 @@ public class LokirAttacks : AttackBaseClass
     public LayerMask enemyLayers;
 
     public PlayerZeal playerZeal;
+    public PlayerZeal2 playerZeal2;
 
     public bool ignoreEnemyCollision;
 
@@ -82,18 +83,35 @@ public class LokirAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2") && spectralWarlock == null)
             {
-                playerZeal.SpendZeal(abilityZealCost);
-                if(playerZeal.canSpendZeal == true)
+                if (playerZeal != null)
                 {
-                    ActivateAbility();
-                } else
+                    playerZeal.SpendZeal(abilityZealCost);
+                    if (playerZeal.canSpendZeal == true)
+                    {
+                        ActivateAbility();
+                    }
+                    else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
+                }
+                if (playerZeal2 != null)
                 {
-                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    playerZeal2.SpendZeal(abilityZealCost);
+                    if (playerZeal2.canSpendZeal == true)
+                    {
+                        ActivateAbility();
+                    }
+                    else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
                 }
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
-        } else if (Input.GetButtonDown("Fire2") && spectralWarlock != null)
+        }
+        else if (Input.GetButtonDown("Fire2") && spectralWarlock != null)
         {
             teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
             Teleport();
@@ -102,9 +120,9 @@ public class LokirAttacks : AttackBaseClass
 
         if (isUltReady && isUltUnlocked)
         {
-            if (playerZeal.fullyZealous == true)
+            if (Input.GetButtonDown("Fire3"))
             {
-                if (Input.GetButtonDown("Fire3"))
+                if (playerZeal != null && playerZeal.fullyZealous == true)
                 {
                     playerZeal.SpendZeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
@@ -113,12 +131,30 @@ public class LokirAttacks : AttackBaseClass
                         //animator.SetTrigger("Attack");
                         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                         clonesSpawned = 0;
-                    } else
+                    }
+                    else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
+                }
+                if (playerZeal2 != null && playerZeal2.fullyZealous == true)
+                {
+                    playerZeal2.SpendOverzeal(ultZealCost);
+                    if (playerZeal2.canSpendOverzeal == true)
+                    {
+                        playerZeal2.SpendZeal(100);
+                        ActivateUlt();
+                        //animator.SetTrigger("Attack");
+                        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                        clonesSpawned = 0;
+                    }
+                    else
                     {
                         Debug.Log("You've Run Out of Zeal! Wait to Regen!");
                     }
                 }
             }
+
         }
     }
 
@@ -181,9 +217,13 @@ public class LokirAttacks : AttackBaseClass
             otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             Debug.Log("DASH THROUGH DAMAGE");
 
-            if (playerZeal.isOverzealous == true && playerZeal.currentZeal < playerZeal.maxZeal)
+            if (playerZeal != null && playerZeal.isOverzealous == true)
             {
                 playerZeal.AddOverzeal(overzealRegenAmount);
+            }
+            if (playerZeal2 != null && playerZeal2.isOverzealous == true)
+            {
+                playerZeal2.AddOverzeal(overzealRegenAmount);
             }
 
         }

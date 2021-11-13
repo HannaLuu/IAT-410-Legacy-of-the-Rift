@@ -7,6 +7,7 @@ using UnityEngine;
 public class UrsaAttacks : AttackBaseClass
 {
     public PlayerZeal playerZeal;
+    public PlayerZeal2 playerZeal2;
     public int overzealRegenAmount = 5;
 
     public int abilityZealCost = 25;
@@ -45,23 +46,42 @@ public class UrsaAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2"))
             {
-                playerZeal.SpendZeal(abilityZealCost);
-                if (playerZeal.canSpendZeal == true)
+                if (playerZeal != null)
                 {
-                    abilityActivated = true;
-                    animator.SetTrigger("Ability");
-                    //animator.SetTrigger("Attack");
-                    //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                } else
+                    playerZeal.SpendZeal(abilityZealCost);
+                    if (playerZeal.canSpendZeal == true)
+                    {
+                        abilityActivated = true;
+                        animator.SetTrigger("Ability");
+                        //animator.SetTrigger("Attack");
+                        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                    }
+                    else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
+                }
+                if (playerZeal2 != null)
                 {
-                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    playerZeal2.SpendZeal(abilityZealCost);
+                    if (playerZeal2.canSpendZeal == true)
+                    {
+                        abilityActivated = true;
+                        animator.SetTrigger("Ability");
+                        //animator.SetTrigger("Attack");
+                        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                    }
+                    else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
                 }
             }
         }
 
         if (isUltReady && isUltUnlocked)
         {
-            if (playerZeal.fullyZealous == true)
+            if (playerZeal != null && playerZeal.fullyZealous == true)
             {
                 if (Input.GetButtonDown("Fire3"))
                 {
@@ -72,7 +92,27 @@ public class UrsaAttacks : AttackBaseClass
                         animator.SetTrigger("Ultimate");
                         //animator.SetTrigger("Attack");
                         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                    } else
+                    }
+                    else
+                    {
+                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
+                    }
+                }
+            }
+            if (playerZeal2 != null && playerZeal2.fullyZealous == true)
+            {
+                if (Input.GetButtonDown("Fire3"))
+                {
+                    playerZeal2.SpendOverzeal(ultZealCost);
+                    if (playerZeal2.canSpendOverzeal == true)
+                    {
+                        playerZeal2.SpendZeal(100);
+                        ultActivated = true;
+                        animator.SetTrigger("Ultimate");
+                        //animator.SetTrigger("Attack");
+                        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+                    }
+                    else
                     {
                         Debug.Log("You've Run Out of Zeal! Wait to Regen!");
                     }

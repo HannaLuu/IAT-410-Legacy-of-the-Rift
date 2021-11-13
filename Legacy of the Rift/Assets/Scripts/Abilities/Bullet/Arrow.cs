@@ -15,6 +15,7 @@ public class Arrow : MonoBehaviour
     public Rigidbody2D rb;
 
     public PlayerZeal playerZeal;
+    public PlayerZeal2 playerZeal2;
 
     public UrsaAttacks ursaAttackScript;
 
@@ -25,6 +26,7 @@ public class Arrow : MonoBehaviour
     {
         ursaAttackScript = GameObject.FindGameObjectWithTag("Ursa").GetComponent<UrsaAttacks>();
         playerZeal = GameObject.FindGameObjectWithTag("PlayerHandler").GetComponent<PlayerZeal>();
+        playerZeal2 = GameObject.FindGameObjectWithTag("PlayerHandler").GetComponent<PlayerZeal2>();
         currentHealth = maxHealth;
         rb.velocity = transform.right * speed;
     }
@@ -45,9 +47,13 @@ public class Arrow : MonoBehaviour
             hitInfo.GetComponentInParent<Enemy>().SlowMe();
             Instantiate(impactEffect, transform.position, transform.rotation);
             currentHealth -= 1;
-            if (playerZeal.isOverzealous == true && playerZeal.currentZeal < playerZeal.maxZeal)
+            if (playerZeal != null && playerZeal.isOverzealous == true)
             {
                 playerZeal.AddOverzeal(ursaAttackScript.overzealRegenAmount);
+            }
+            if (playerZeal2 != null && playerZeal2.isOverzealous == true)
+            {
+                playerZeal2.AddOverzeal(ursaAttackScript.overzealRegenAmount);
             }
         }
         if (hitInfo.gameObject.CompareTag("Ground"))

@@ -29,7 +29,6 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage * damageReceivedMultiplier;
-        StartCoroutine(Slowed());
 
         healthBar.SetHealth(currentHealth);
 

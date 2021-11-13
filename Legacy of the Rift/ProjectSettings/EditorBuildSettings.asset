@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/DialogueTest.unity
     guid: a9f636b6295dfc54c88cb93bf06228bd
   - enabled: 0
-    path: Assets/Scenes/Testing_Level.unity
+    path: Assets/Scenes/Testing Levels/Testing_Level.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Start.unity
