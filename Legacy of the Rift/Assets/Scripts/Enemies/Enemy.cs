@@ -18,12 +18,15 @@ public class Enemy : MonoBehaviour
 
     public bool isSlowed = false;
 
+    public Animator animator;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         damageReceivedMultiplier = 1f;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(float damage)
@@ -33,6 +36,8 @@ public class Enemy : MonoBehaviour
         healthBar.SetHealth(currentHealth);
 
         Debug.Log(damage * damageReceivedMultiplier);
+
+        animator.SetTrigger("Hit");
 
         if (currentHealth <= 0)
         {

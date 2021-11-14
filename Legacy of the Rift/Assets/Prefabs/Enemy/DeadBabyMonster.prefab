@@ -484,7 +484,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 4
@@ -531,6 +531,7 @@ MonoBehaviour:
   player: {fileID: 5807222352677156469, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
   isFlipped: 0
   isSlowed: 0
+  animator: {fileID: 0}
 --- !u!114 &5253987250411552436
 MonoBehaviour:
   m_ObjectHideFlags: 0

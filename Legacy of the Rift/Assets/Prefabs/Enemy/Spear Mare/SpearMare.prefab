@@ -141,11 +141,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1608341386911454461}
   damageReceivedMultiplier: 0
   player: {fileID: 5807222352677156469, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
   isFlipped: 0
   isSlowed: 0
+  animator: {fileID: 1608341385869205802}
 --- !u!95 &1608341385869205802
 Animator:
   serializedVersion: 3
