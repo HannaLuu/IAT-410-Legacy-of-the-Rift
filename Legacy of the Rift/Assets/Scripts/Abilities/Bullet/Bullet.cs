@@ -23,6 +23,7 @@ public class Bullet : MonoBehaviour
         {
             Instantiate(impactEffect, transform.position, transform.rotation);
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
+            FindObjectOfType<PlayerZeal>().AddOverzeal(damage);
             Destroy(gameObject);
         }
 

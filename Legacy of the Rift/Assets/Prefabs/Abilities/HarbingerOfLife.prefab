@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityRange: 10
   abilityPoint: {fileID: 3170107515239913622}
-  healAmount: 0.01
+  healAmount: 0.03
   playerLayer:
     serializedVersion: 2
     m_Bits: 128

@@ -9,12 +9,11 @@ public class LokirAttacks : AttackBaseClass
     public Rigidbody2D rb;
 
     public int attackDamage = 100;
-    public int overzealRegenAmount = 5;
+    
+    //old overzeal mechanic
+    //public int overzealRegenAmount = 5;
 
     public int abilityZealCost = 25;
-
-    public int ultClones = 3;
-    private int clonesSpawned = 0;
 
     GameObject spectralWarlock = null;
     Vector3 teleportPos;
@@ -22,21 +21,20 @@ public class LokirAttacks : AttackBaseClass
     public LayerMask enemyLayers;
 
     public PlayerZeal playerZeal;
-    public PlayerZeal2 playerZeal2;
 
     public bool ignoreEnemyCollision;
-
-    public List<Transform> ultPoints = new List<Transform>();
 
     public bool teleported = false;
 
     public GameObject impactEffect;
 
-    //public static event EventHandler OnAttack;
+    //old ult code
+    //public int ultClones = 3;
+    //private int clonesSpawned = 0;
+    //public List<Transform> ultPoints = new List<Transform>();
 
-    //public static event EventHandler OnAbility;
+    //new ult tings
 
-    //public static event EventHandler OnUltimate;
 
     // Start is called before the first frame update
     void Start()
@@ -83,30 +81,17 @@ public class LokirAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2") && spectralWarlock == null)
             {
-                if (playerZeal != null)
+
+                playerZeal.SpendZeal(abilityZealCost);
+                if (playerZeal.canSpendZeal == true)
                 {
-                    playerZeal.SpendZeal(abilityZealCost);
-                    if (playerZeal.canSpendZeal == true)
-                    {
-                        ActivateAbility();
-                    }
-                    else
-                    {
-                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                    }
+                    ActivateAbility();
                 }
-                if (playerZeal2 != null)
+                else
                 {
-                    playerZeal2.SpendZeal(abilityZealCost);
-                    if (playerZeal2.canSpendZeal == true)
-                    {
-                        ActivateAbility();
-                    }
-                    else
-                    {
-                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                    }
+                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
                 }
+
                 //animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
@@ -122,31 +107,16 @@ public class LokirAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire3"))
             {
-                if (playerZeal != null && playerZeal.fullyZealous == true)
+                if (playerZeal.fullyZealous == true)
                 {
-                    playerZeal.SpendZeal(ultZealCost);
+                    playerZeal.SpendZeal(100);
+                    playerZeal.SpendOverzeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
                     {
                         ActivateUlt();
                         //animator.SetTrigger("Attack");
                         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                        clonesSpawned = 0;
-                    }
-                    else
-                    {
-                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                    }
-                }
-                if (playerZeal2 != null && playerZeal2.fullyZealous == true)
-                {
-                    playerZeal2.SpendOverzeal(ultZealCost);
-                    if (playerZeal2.canSpendOverzeal == true)
-                    {
-                        playerZeal2.SpendZeal(100);
-                        ActivateUlt();
-                        //animator.SetTrigger("Attack");
-                        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                        clonesSpawned = 0;
+                        //clonesSpawned = 0;
                     }
                     else
                     {
@@ -161,7 +131,6 @@ public class LokirAttacks : AttackBaseClass
     // Spectral Laceration
     public override void Attack()
     {
-        //OnAttack?.Invoke(this, EventArgs.Empty);
         //Play Attack Animation
         animator.SetTrigger("Attack");
         attackActivated = true;
@@ -170,7 +139,6 @@ public class LokirAttacks : AttackBaseClass
     // Spectral Warlock
     public override void ActivateAbility()
     {
-        //OnAbility?.Invoke(this, EventArgs.Empty);
         abilityActivated = true;
         spectralWarlock = Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation) as GameObject;
     }
@@ -178,12 +146,18 @@ public class LokirAttacks : AttackBaseClass
     // Spectral Barrage
     public override void ActivateUlt()
     {
-        //OnUltimate?.Invoke(this, EventArgs.Empty);
         ultActivated = true;
-        foreach (Transform spawnPoint in ultPoints)
-        {
-            Instantiate(ultPrefab, spawnPoint.position, spawnPoint.rotation);
-        }
+        Instantiate(lokirUltPrefab, lokirUltPoint.position, lokirUltPoint.rotation);
+        Instantiate(halvarUltPrefab, halvarUltPointL.position, halvarUltPointL.rotation);
+        Instantiate(halvarUltPrefab, halvarUltPointR.position, halvarUltPointR.rotation);
+        Instantiate(ursaUltPrefab, ursaUltPoint.position, ursaUltPoint.rotation);
+        FindObjectOfType<PlayerHealth>().Heal(100);
+
+        //old ult code
+        //foreach (Transform spawnPoint in ultPoints)
+        //{
+        //    Instantiate(ultPrefab, spawnPoint.position, spawnPoint.rotation);
+        //}
     }
     void Teleport()
     {
@@ -215,17 +189,13 @@ public class LokirAttacks : AttackBaseClass
         {
             Instantiate(impactEffect, transform.position, transform.rotation);
             otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-            Debug.Log("DASH THROUGH DAMAGE");
+            playerZeal.AddOverzeal(attackDamage);
 
-            if (playerZeal != null && playerZeal.isOverzealous == true)
-            {
-                playerZeal.AddOverzeal(overzealRegenAmount);
-            }
-            if (playerZeal2 != null && playerZeal2.isOverzealous == true)
-            {
-                playerZeal2.AddOverzeal(overzealRegenAmount);
-            }
-
+            //old overzeal mechanic
+            //if (playerZeal.isOverzealous == true)
+            //{
+            //    playerZeal.AddOverzeal(attackDamage);
+            //}
         }
     }
 

@@ -7,7 +7,7 @@ using UnityEngine;
 public class UrsaAttacks : AttackBaseClass
 {
     public PlayerZeal playerZeal;
-    public PlayerZeal2 playerZeal2;
+
     public int overzealRegenAmount = 5;
 
     public int abilityZealCost = 25;
@@ -46,67 +46,31 @@ public class UrsaAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2"))
             {
-                if (playerZeal != null)
+                playerZeal.SpendZeal(abilityZealCost);
+                if (playerZeal.canSpendZeal == true)
                 {
-                    playerZeal.SpendZeal(abilityZealCost);
-                    if (playerZeal.canSpendZeal == true)
-                    {
-                        abilityActivated = true;
-                        animator.SetTrigger("Ability");
-                        //animator.SetTrigger("Attack");
-                        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                    }
-                    else
-                    {
-                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                    }
+                    abilityActivated = true;
+                    animator.SetTrigger("Ability");
+                    //animator.SetTrigger("Attack");
+                    //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                 }
-                if (playerZeal2 != null)
+                else
                 {
-                    playerZeal2.SpendZeal(abilityZealCost);
-                    if (playerZeal2.canSpendZeal == true)
-                    {
-                        abilityActivated = true;
-                        animator.SetTrigger("Ability");
-                        //animator.SetTrigger("Attack");
-                        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                    }
-                    else
-                    {
-                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                    }
+                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
                 }
+
             }
         }
 
         if (isUltReady && isUltUnlocked)
         {
-            if (playerZeal != null && playerZeal.fullyZealous == true)
+            if (playerZeal.fullyZealous == true)
             {
                 if (Input.GetButtonDown("Fire3"))
                 {
                     playerZeal.SpendZeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
                     {
-                        ultActivated = true;
-                        animator.SetTrigger("Ultimate");
-                        //animator.SetTrigger("Attack");
-                        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-                    }
-                    else
-                    {
-                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                    }
-                }
-            }
-            if (playerZeal2 != null && playerZeal2.fullyZealous == true)
-            {
-                if (Input.GetButtonDown("Fire3"))
-                {
-                    playerZeal2.SpendOverzeal(ultZealCost);
-                    if (playerZeal2.canSpendOverzeal == true)
-                    {
-                        playerZeal2.SpendZeal(100);
                         ultActivated = true;
                         animator.SetTrigger("Ultimate");
                         //animator.SetTrigger("Attack");
@@ -136,6 +100,13 @@ public class UrsaAttacks : AttackBaseClass
     // Herald of Ruin
     public override void ActivateUlt()
     {
-        Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
+        Instantiate(lokirUltPrefab, lokirUltPoint.position, lokirUltPoint.rotation);
+        Instantiate(halvarUltPrefab, halvarUltPointL.position, halvarUltPointL.rotation);
+        Instantiate(halvarUltPrefab, halvarUltPointR.position, halvarUltPointR.rotation);
+        Instantiate(ursaUltPrefab, ursaUltPoint.position, ursaUltPoint.rotation);
+        FindObjectOfType<PlayerHealth>().Heal(100);
+
+        //old ult code
+        //Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
     }
 }

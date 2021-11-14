@@ -41,8 +41,6 @@ GameObject:
   - component: {fileID: 2942944832457428773}
   - component: {fileID: 2942944832457428794}
   - component: {fileID: 2942944832457428795}
-  - component: {fileID: 2031036715121719418}
-  - component: {fileID: 6171085712266113013}
   - component: {fileID: 1106545955218431191}
   m_Layer: 0
   m_Name: HeraldOfRuin
@@ -131,59 +129,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 2942944832199538349}
   attackDamage: 50
-  collisionRange: 3.32
-  explosionRange: 8
+  collisionRange: 4
+  explosionRange: 10
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
---- !u!61 &2031036715121719418
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2942944832457428792}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.014102101}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.83, y: 1.71}
-    newSize: {x: 8, y: 6.73}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.6820593, y: 1.48192}
-  m_EdgeRadius: 0
---- !u!50 &6171085712266113013
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2942944832457428792}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!95 &1106545955218431191
 Animator:
   serializedVersion: 3

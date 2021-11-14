@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2511525954750676545}
   m_Layer: 7
-  m_Name: UltPoint3
+  m_Name: HalvarUltPointR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832156179771298213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.764, y: 0, z: 0}
+  m_LocalPosition: {x: 1.838, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3689608880295959782}
   m_Layer: 7
-  m_Name: UltPoint1
+  m_Name: LokirUltPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,6 +59,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4793865588183278191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2414700002954764486}
+  m_Layer: 7
+  m_Name: UrsaUltPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2414700002954764486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793865588183278191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5807222352677156469}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4997600957896317330
 GameObject:
@@ -128,6 +158,7 @@ Transform:
   - {fileID: 3689608880295959782}
   - {fileID: 6157020988655925686}
   - {fileID: 2511525954750676545}
+  - {fileID: 2414700002954764486}
   - {fileID: 5565003550432907362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -291,24 +322,24 @@ MonoBehaviour:
   animator: {fileID: 5807222352677156467}
   attackPoint: {fileID: 0}
   abilityPoint: {fileID: 6646633428125080967}
-  ultPoint: {fileID: 3689608880295959782}
+  lokirUltPoint: {fileID: 3689608880295959782}
+  halvarUltPointL: {fileID: 6157020988655925686}
+  halvarUltPointR: {fileID: 2511525954750676545}
+  ursaUltPoint: {fileID: 2414700002954764486}
   attackPrefab: {fileID: 0}
   abilityPrefab: {fileID: 7121423283127142723, guid: 103f20c639215804fbdb2d9b1cf8f5f7, type: 3}
-  ultPrefab: {fileID: 7381604623743189407, guid: f8865192a3c354e438cb2f7b4fbf9730, type: 3}
+  lokirUltPrefab: {fileID: 7381604623743189407, guid: f8865192a3c354e438cb2f7b4fbf9730, type: 3}
+  halvarUltPrefab: {fileID: 8027434218581657759, guid: 38f9a9ad9e295f44594e71d46b525279, type: 3}
+  ursaUltPrefab: {fileID: 2942944832457428792, guid: 99d406458e0d4594a8dea1f9692f9dda, type: 3}
   rb: {fileID: 7111613358293209999}
   attackDamage: 15
   overzealRegenAmount: 5
   abilityZealCost: 25
-  ultClones: 3
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
   playerZeal: {fileID: 0}
   ignoreEnemyCollision: 0
-  ultPoints:
-  - {fileID: 3689608880295959782}
-  - {fileID: 6157020988655925686}
-  - {fileID: 2511525954750676545}
   teleported: 0
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
 --- !u!1 &5807222353560896885
@@ -368,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6157020988655925686}
   m_Layer: 7
-  m_Name: UltPoint2
+  m_Name: HalvarUltPointL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,7 +413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6807720671233177595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.807, y: 0, z: 0}
+  m_LocalPosition: {x: -1.624, y: 0.129, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
@@ -417,7 +448,7 @@ Transform:
   m_LocalScale: {x: 0.38, y: 0.83, z: 0.25}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3344644179209385558
 BoxCollider2D:

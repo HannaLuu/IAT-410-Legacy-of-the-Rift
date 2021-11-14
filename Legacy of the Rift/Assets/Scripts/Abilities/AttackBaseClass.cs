@@ -36,12 +36,17 @@ public abstract class AttackBaseClass : MonoBehaviour
     // Attack Transforms
     public Transform attackPoint;
     public Transform abilityPoint;
-    public Transform ultPoint;
+    public Transform lokirUltPoint;
+    public Transform halvarUltPointL;
+    public Transform halvarUltPointR;
+    public Transform ursaUltPoint;
 
     // Attack Prefabs
     public GameObject attackPrefab;
     public GameObject abilityPrefab;
-    public GameObject ultPrefab;
+    public GameObject lokirUltPrefab;
+    public GameObject halvarUltPrefab;
+    public GameObject ursaUltPrefab;
 
     // Abstract Methods
     public abstract void Attack();

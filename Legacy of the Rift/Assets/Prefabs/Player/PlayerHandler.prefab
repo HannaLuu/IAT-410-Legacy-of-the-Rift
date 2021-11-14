@@ -70,6 +70,9 @@ MonoBehaviour:
   HalvarBars: {fileID: 0}
   UrsaBars: {fileID: 0}
   psScript: {fileID: 3056156213355905243}
+  Lokir: {fileID: 0}
+  Halvar: {fileID: 0}
+  Ursa: {fileID: 0}
 --- !u!114 &3056156213355905242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,11 +102,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxZeal: 150
-  overzealousAmount: 50
+  maxOverzeal: 2000
   currentZeal: 0
-  zealRegenAmount: 10
+  currentOverzeal: 0
+  zealRegenAmount: 5
   isOverzealous: 0
+  fullyZealous: 0
+  canSpendZeal: 0
+  canSpendOverzeal: 0
+  overzealCheat: 0
   zealBar: {fileID: 0}
+  overzealBar: {fileID: 0}
+  ultReadyIndicator: {fileID: 0}
 --- !u!114 &3056156213355905246
 MonoBehaviour:
   m_ObjectHideFlags: 0

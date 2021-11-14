@@ -13,7 +13,6 @@ public class HalvarAttacks : AttackBaseClass
     public LayerMask enemyLayers;
 
     public PlayerZeal playerZeal;
-    public PlayerZeal2 playerZeal2;
 
     public Transform ultPoint2;
 
@@ -56,32 +55,17 @@ public class HalvarAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2"))
             {
-                if (playerZeal != null)
+                playerZeal.SpendZeal(abilityZealCost);
+                if (playerZeal.canSpendZeal == true)
                 {
-                    playerZeal.SpendZeal(abilityZealCost);
-                    if (playerZeal.canSpendZeal == true)
-                    {
-                        abilityActivated = true;
-                        animator.SetTrigger("Ability");
-                    }
-                    else
-                    {
-                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                    }
+                    abilityActivated = true;
+                    animator.SetTrigger("Ability");
                 }
-                if (playerZeal2 != null)
+                else
                 {
-                    playerZeal2.SpendZeal(abilityZealCost);
-                    if (playerZeal2.canSpendZeal == true)
-                    {
-                        abilityActivated = true;
-                        animator.SetTrigger("Ability");
-                    }
-                    else
-                    {
-                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                    }
+                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
                 }
+
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
         }
@@ -90,25 +74,11 @@ public class HalvarAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire3"))
             {
-                if (playerZeal != null && playerZeal.fullyZealous == true)
+                if (playerZeal.fullyZealous == true)
                 {
                     playerZeal.SpendZeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
                     {
-                        ultActivated = true;
-                        animator.SetTrigger("Ultimate");
-                    }
-                    else
-                    {
-                        Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                    }
-                }
-                if (playerZeal2 != null && playerZeal2.fullyZealous == true)
-                {
-                    playerZeal2.SpendOverzeal(ultZealCost);
-                    if (playerZeal2.canSpendOverzeal == true)
-                    {
-                        playerZeal2.SpendZeal(100);
                         ultActivated = true;
                         animator.SetTrigger("Ultimate");
                     }
@@ -136,14 +106,13 @@ public class HalvarAttacks : AttackBaseClass
             enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             Instantiate(impactEffect, enemy.gameObject.transform.position, enemy.gameObject.transform.rotation);
             enemyCollided = true;
-            if (playerZeal != null && playerZeal.isOverzealous == true)
-            {
-                playerZeal.AddOverzeal(overzealRegenAmount);
-            }
-            if (playerZeal2 != null && playerZeal2.isOverzealous == true)
-            {
-                playerZeal2.AddOverzeal(overzealRegenAmount);
-            }
+            playerZeal.AddOverzeal(attackDamage);
+
+            //old overzeal mechanic
+            //if (playerZeal.isOverzealous == true)
+            //{
+            //    playerZeal.AddOverzeal(overzealRegenAmount);
+            //}
         }
     }
 
@@ -158,8 +127,15 @@ public class HalvarAttacks : AttackBaseClass
     public override void ActivateUlt()
     {
         ultActivated = true;
-        Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
-        Instantiate(ultPrefab, ultPoint2.position, ultPoint2.rotation);
+        Instantiate(lokirUltPrefab, lokirUltPoint.position, lokirUltPoint.rotation);
+        Instantiate(halvarUltPrefab, halvarUltPointL.position, halvarUltPointL.rotation);
+        Instantiate(halvarUltPrefab, halvarUltPointR.position, halvarUltPointR.rotation);
+        Instantiate(ursaUltPrefab, ursaUltPoint.position, ursaUltPoint.rotation);
+        FindObjectOfType<PlayerHealth>().Heal(100);
+
+        //old ult code
+        //Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
+        //Instantiate(ultPrefab, ultPoint2.position, ultPoint2.rotation);
         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
     }
 
