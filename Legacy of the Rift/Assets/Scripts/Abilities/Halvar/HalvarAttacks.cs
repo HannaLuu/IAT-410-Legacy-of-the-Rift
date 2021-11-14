@@ -105,7 +105,14 @@ public class HalvarAttacks : AttackBaseClass
         {
             enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             Instantiate(impactEffect, enemy.gameObject.transform.position, enemy.gameObject.transform.rotation);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, enemy.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(attackDamage);
+
             enemyCollided = true;
+
             playerZeal.AddOverzeal(attackDamage);
 
             //old overzeal mechanic

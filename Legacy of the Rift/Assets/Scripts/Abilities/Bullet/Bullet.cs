@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
 
     public GameObject impactEffect;
+    public GameObject damagePopupPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,12 @@ public class Bullet : MonoBehaviour
         {
             Instantiate(impactEffect, transform.position, transform.rotation);
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, hitInfo.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(damage);
+
             FindObjectOfType<PlayerZeal>().AddOverzeal(damage);
             Destroy(gameObject);
         }

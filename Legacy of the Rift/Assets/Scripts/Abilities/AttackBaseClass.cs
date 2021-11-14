@@ -7,6 +7,9 @@ public abstract class AttackBaseClass : MonoBehaviour
     //Tutorial Boolean
     public bool enemyCollided;
 
+    //Impact Prefabs
+    public GameObject damagePopupPrefab;
+
     // Attack Rate, Time, Overzealous Regen Amount
     public bool isAttackReady;
     public bool attackActivated;

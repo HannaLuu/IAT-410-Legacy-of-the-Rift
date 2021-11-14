@@ -20,6 +20,7 @@ public class SpectralBarrage : MonoBehaviour
     public Transform nearestEnemy;
 
     public GameObject impactEffect;
+    public GameObject damagePopupPrefab;
 
     void Start()
     {
@@ -57,6 +58,11 @@ public class SpectralBarrage : MonoBehaviour
         {
             Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
             FindObjectOfType<Enemy>().TakeDamage(attackDamage);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, colInfo.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(attackDamage);
         }
     }
 

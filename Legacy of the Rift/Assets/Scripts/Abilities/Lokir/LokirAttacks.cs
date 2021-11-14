@@ -26,15 +26,13 @@ public class LokirAttacks : AttackBaseClass
 
     public bool teleported = false;
 
+    //damage feedback
     public GameObject impactEffect;
 
     //old ult code
     //public int ultClones = 3;
     //private int clonesSpawned = 0;
     //public List<Transform> ultPoints = new List<Transform>();
-
-    //new ult tings
-
 
     // Start is called before the first frame update
     void Start()
@@ -187,7 +185,15 @@ public class LokirAttacks : AttackBaseClass
     {
         if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == true)
         {
+            //impact VFX
             Instantiate(impactEffect, transform.position, transform.rotation);
+            
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, otherCollider.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(attackDamage);
+
+
             otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
             playerZeal.AddOverzeal(attackDamage);
 

@@ -19,6 +19,7 @@ public class Arrow : MonoBehaviour
     public UrsaAttacks ursaAttackScript;
 
     public GameObject impactEffect;
+    public GameObject damagePopupPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +44,15 @@ public class Arrow : MonoBehaviour
         {
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
             hitInfo.GetComponentInParent<Enemy>().SlowMe();
+
+            //imapct VFX
             Instantiate(impactEffect, transform.position, transform.rotation);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, hitInfo.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(damage);
+
             currentHealth -= 1;
             playerZeal.AddOverzeal(damage);
 

@@ -9,6 +9,7 @@ public class UnearthlyTremor : MonoBehaviour
     public int damage = 100;
 
     public GameObject impactEffect;
+    public GameObject damagePopupPrefab;
 
     public void Delete()
     {
@@ -22,6 +23,12 @@ public class UnearthlyTremor : MonoBehaviour
         {
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
             hitInfo.GetComponentInParent<Enemy>().SlowMe();
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, hitInfo.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(damage);
+
             Instantiate(impactEffect, hitInfo.gameObject.transform.position, hitInfo.gameObject.transform.rotation);
         }
     }

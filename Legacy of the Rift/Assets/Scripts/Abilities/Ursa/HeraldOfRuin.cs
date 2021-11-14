@@ -13,6 +13,7 @@ public class HeraldOfRuin : MonoBehaviour
     private bool debuffApplied;
 
     public GameObject impactEffect;
+    public GameObject damagePopupPrefab;
 
     public void Explode()
     {
@@ -35,7 +36,13 @@ public class HeraldOfRuin : MonoBehaviour
                     var distance = Vector3.Distance(closestPoint, transform.position);
 
                     var damagePercent = Mathf.InverseLerp(explosionRange, 0, distance);
-                    enemy.TakeDamage(damagePercent * attackDamage);
+                    var explosionDamage = damagePercent * attackDamage;
+                    enemy.TakeDamage(explosionDamage);
+
+                    //damage popup
+                    GameObject damagePopup = Instantiate(damagePopupPrefab, enemy.transform.position, Quaternion.identity);
+                    DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+                    damagePopupScript.Setup((int) explosionDamage);
 
                     // Apply Damage Absorption Debuff. Legacies deal 25% more damage for 20 secs
                     StartCoroutine(DebuffTimer());
@@ -62,6 +69,11 @@ public class HeraldOfRuin : MonoBehaviour
             {
                 Instantiate(impactEffect, transform.position, transform.rotation);
                 colInfo.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+
+                //damage popup
+                GameObject damagePopup = Instantiate(damagePopupPrefab, colInfo.transform.position, Quaternion.identity);
+                DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+                damagePopupScript.Setup(attackDamage);
             }
         }
     }

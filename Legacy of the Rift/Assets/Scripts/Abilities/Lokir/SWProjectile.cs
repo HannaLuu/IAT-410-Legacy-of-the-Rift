@@ -10,6 +10,7 @@ public class SWProjectile : MonoBehaviour
     public Rigidbody2D rb;
 
     public GameObject impactEffect;
+    public GameObject damagePopupPrefab;
 
     private void Start()
     {
@@ -23,6 +24,12 @@ public class SWProjectile : MonoBehaviour
         {
             Instantiate(impactEffect, transform.position, transform.rotation);
             enemy.TakeDamage(damage);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, hitInfo.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(damage);
+
             Destroy(gameObject);
         }
 
