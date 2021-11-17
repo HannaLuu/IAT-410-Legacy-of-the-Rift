@@ -332,7 +332,7 @@ MonoBehaviour:
   ultActivated: 0
   maxUltCooldown: 20
   currUltCooldown: 0
-  ultZealCost: 150
+  ultZealCost: 2000
   zealCost: 0
   animator: {fileID: 4092356082363815208}
   attackPoint: {fileID: 6390096398400635192}
@@ -346,7 +346,7 @@ MonoBehaviour:
   lokirUltPrefab: {fileID: 7381604623743189407, guid: f8865192a3c354e438cb2f7b4fbf9730, type: 3}
   halvarUltPrefab: {fileID: 8027434218581657759, guid: 38f9a9ad9e295f44594e71d46b525279, type: 3}
   ursaUltPrefab: {fileID: 2942944832457428792, guid: 99d406458e0d4594a8dea1f9692f9dda, type: 3}
-  attackRange: {x: 14, y: 6, z: 6}
+  attackRange: {x: 12, y: 6, z: 6}
   attackDamage: 25
   overzealRegenAmount: 5
   abilityZealCost: 25
@@ -470,7 +470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7335534039178926389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.143, y: -0.389, z: 0}
+  m_LocalPosition: {x: 1.143, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4092356082363815203}

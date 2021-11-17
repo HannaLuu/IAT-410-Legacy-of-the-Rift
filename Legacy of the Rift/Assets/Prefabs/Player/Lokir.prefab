@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2016021677601461824
 GameObject:
@@ -58,7 +58,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4793865588183278191
 GameObject:
@@ -88,7 +88,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4997600957896317330
 GameObject:
@@ -118,7 +118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5807222352677156475
 GameObject:
@@ -154,6 +154,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 5807222353560896886}
+  - {fileID: 59522612605983915}
   - {fileID: 6646633428125080967}
   - {fileID: 3689608880295959782}
   - {fileID: 6157020988655925686}
@@ -304,6 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCollided: 0
+  damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
   isAttackReady: 0
   attackActivated: 0
   maxAttackCooldown: 1
@@ -317,10 +319,10 @@ MonoBehaviour:
   ultActivated: 0
   maxUltCooldown: 30
   currUltCooldown: 0
-  ultZealCost: 150
+  ultZealCost: 2000
   zealCost: 0
   animator: {fileID: 5807222352677156467}
-  attackPoint: {fileID: 0}
+  attackPoint: {fileID: 59522612605983915}
   abilityPoint: {fileID: 6646633428125080967}
   lokirUltPoint: {fileID: 3689608880295959782}
   halvarUltPointL: {fileID: 6157020988655925686}
@@ -334,6 +336,7 @@ MonoBehaviour:
   rb: {fileID: 7111613358293209999}
   attackDamage: 15
   abilityZealCost: 25
+  attackRange: 1.1
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -341,8 +344,6 @@ MonoBehaviour:
   ignoreEnemyCollision: 0
   teleported: 0
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
-  damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
-  damagePopup: {fileID: 0}
 --- !u!1 &5807222353560896885
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +419,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7211195956582409371
 GameObject:
@@ -449,7 +450,7 @@ Transform:
   m_LocalScale: {x: 0.38, y: 0.83, z: 0.25}
   m_Children: []
   m_Father: {fileID: 5807222352677156469}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3344644179209385558
 BoxCollider2D:
@@ -477,3 +478,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3358705, y: 1.4690058}
   m_EdgeRadius: 0
+--- !u!1 &7431446868505363410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 59522612605983915}
+  m_Layer: 7
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &59522612605983915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431446868505363410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.581, y: -0.049, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5807222352677156469}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

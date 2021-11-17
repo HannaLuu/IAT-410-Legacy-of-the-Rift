@@ -18,6 +18,7 @@ public class LokirAttacks : AttackBaseClass
     GameObject spectralWarlock = null;
     Vector3 teleportPos;
 
+    public float attackRange;
     public LayerMask enemyLayers;
 
     public PlayerZeal playerZeal;
@@ -134,6 +135,20 @@ public class LokirAttacks : AttackBaseClass
         attackActivated = true;
     }
 
+    public void NormalAttack()
+    {
+        //Play Attack Animation
+        animator.SetTrigger("Attack");
+        attackActivated = true;
+
+        Collider2D enemyColInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyLayers);
+        if (enemyColInfo != null)
+        {
+            Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
+            enemyColInfo.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+        }
+    }
+
     // Spectral Warlock
     public override void ActivateAbility()
     {
@@ -209,7 +224,7 @@ public class LokirAttacks : AttackBaseClass
 
     public void NormalLaceration()
     {
-        Attack();
+        NormalAttack();
     }
 
     public void LacerateLeft()
@@ -222,5 +237,15 @@ public class LokirAttacks : AttackBaseClass
     {
         Attack();
         StartCoroutine(Dash(1f));
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+        {
+            return;
+        }
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

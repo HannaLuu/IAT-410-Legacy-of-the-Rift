@@ -76,7 +76,8 @@ public class HalvarAttacks : AttackBaseClass
             {
                 if (playerZeal.fullyZealous == true)
                 {
-                    playerZeal.SpendZeal(ultZealCost);
+                    playerZeal.SpendZeal(100);
+                    playerZeal.SpendOverzeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
                     {
                         ultActivated = true;

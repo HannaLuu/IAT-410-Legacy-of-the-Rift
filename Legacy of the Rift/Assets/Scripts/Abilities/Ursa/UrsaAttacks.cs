@@ -68,7 +68,8 @@ public class UrsaAttacks : AttackBaseClass
             {
                 if (Input.GetButtonDown("Fire3"))
                 {
-                    playerZeal.SpendZeal(ultZealCost);
+                    playerZeal.SpendZeal(100);
+                    playerZeal.SpendOverzeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
                     {
                         ultActivated = true;
