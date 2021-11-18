@@ -30,14 +30,6 @@ public class LokirAttacks : AttackBaseClass
     //damage feedback
     public GameObject impactEffect;
 
-    public Vector2 positionToMoveTo;
-
-
-    //public float speed = 400f;
-    //public float mx;
-    private float dashTime;
-    public float startDashTime;
-
     //old ult code
     //public int ultClones = 3;
     //private int clonesSpawned = 0;
@@ -78,7 +70,7 @@ public class LokirAttacks : AttackBaseClass
                 LacerateRight();
             }
 
-            else if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1"))
             {
                 NormalLaceration();
             }
@@ -186,53 +178,38 @@ public class LokirAttacks : AttackBaseClass
         Destroy(spectralWarlock);
     }
 
-    // private void FixedUpdate()
-    // {
-    //     if (!isDashing)
-    //     {
-    //         rb.velocity = new Vector2(mx * speed, rb.velocity.y);
-    //     }
-    // }
-
-    IEnumerator Dash(float distanceMultiplier)
+    IEnumerator Dash(Vector2 moveDirection)
     {
         float speed = 400f;
 
-        //float newPosition = Mathf.SmoothDamp(transform.position.x, 0f, ref speed, 2);
-        //transform.position = new Vector2(newPosition, 0f);
+        Vector2 targetVelocity = moveDirection * speed;
 
-        //Vector2 destination;
+        //Find the change of velocity needed to reach target
+        Vector2 velocityChange = targetVelocity - rb.velocity;
 
-        //Moves the GameObject from it's current position to destination over time
-        //transform.position = Vector2.Lerp(transform.position, transform.position * distanceMultiplier, 20 * Time.deltaTime);
+        //Convert to acceleration, which is change of velocity over time
+        Vector2 acceleration = velocityChange / Time.fixedDeltaTime;
 
-        //rb.velocity = new Vector2(speed * distanceMultiplier, 0f);
-        //rb.AddForce(transform.forward * distanceMultiplier, ForceMode2D.Impulse);
+        //Clamp it to your maximum acceleration magnitude
+        acceleration = Vector3.ClampMagnitude(acceleration, 200);
 
-
-
-        //rb.velocity = Vector2.Lerp(transform.position, transform.position.x * distanceMultiplier, speed * Time.deltaTime);
-        //transform.position = 
-        //rb.velocity = Vector2.LerpUnclamped
-        //rb.AddForce(new Vector2(speed * distanceMultiplier, 0f), ForceMode2D.Impulse);
-        //rb.velocity = Vector2.ClampMagnitude(rb.velocity, 100);
-        //rb.AddForce = new Vector2(speed * distanceMultiplier, 0f), ForceMode2D.Impulse);
-
-
-        rb.velocity = new Vector2(speed * distanceMultiplier, 0f);
+        //Then AddForce
+        rb.AddForce(acceleration, ForceMode2D.Impulse);
 
         ignoreEnemyCollision = true;
         Physics2D.IgnoreLayerCollision(7, 6, true);
 
-
         yield return new WaitForSeconds(0.4f);
-
-
-        rb.velocity = Vector2.zero;
 
         ignoreEnemyCollision = false;
         Physics2D.IgnoreLayerCollision(7, 6, false);
 
+    }
+
+    IEnumerator DashLegends(float dashDuration, float dashCooldown)
+    {
+        yield return new WaitForSeconds(dashDuration);
+        yield return new WaitForSeconds(dashCooldown);
     }
 
     private void OnTriggerEnter2D(Collider2D otherCollider)
@@ -269,13 +246,13 @@ public class LokirAttacks : AttackBaseClass
     public void LacerateLeft()
     {
         Attack();
-        StartCoroutine(Dash(-1f));
+        StartCoroutine(Dash(Vector2.left));
     }
 
     public void LacerateRight()
     {
         Attack();
-        StartCoroutine(Dash(1f));
+        StartCoroutine(Dash(Vector2.right));
     }
 
     private void OnDrawGizmosSelected()
