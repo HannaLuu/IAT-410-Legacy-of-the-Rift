@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: 0c7614e61cf56254c9a232804c53fad7
+guid: 248e68dd89a9b2c4ea01d1855fdb2b19
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5023568397510874229
-    second: 204x280flyingmf-drop_0
+      213: -7841971461754002992
+    second: 203x173horsemf-spear_0
   - first:
-      213: 2843152092777792276
-    second: 204x280flyingmf-drop_1
+      213: -918654386603329444
+    second: 203x173horsemf-spear_1
   - first:
-      213: 3587511997385236938
-    second: 204x280flyingmf-drop_2
+      213: 4518558788310794564
+    second: 203x173horsemf-spear_2
   - first:
-      213: 5929321478971208889
-    second: 204x280flyingmf-drop_3
+      213: 2641783623467591224
+    second: 203x173horsemf-spear_3
   - first:
-      213: 7397735202344223561
-    second: 204x280flyingmf-drop_4
+      213: 7877071783857866921
+    second: 203x173horsemf-spear_4
   - first:
-      213: 7353908902583671362
-    second: 204x280flyingmf-drop_5
+      213: -4205259518972778469
+    second: 203x173horsemf-spear_5
+  - first:
+      213: -8973943536613016726
+    second: 203x173horsemf-spear_6
+  - first:
+      213: 1904026501316075306
+    second: 203x173horsemf-spear_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,127 +127,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_0
+      name: 203x173horsemf-spear_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8b6c719823b84ab0800000000000000
-      internalID: -5023568397510874229
+      spriteID: 0d1e66b0188bb2390800000000000000
+      internalID: -7841971461754002992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_1
+      name: 203x173horsemf-spear_1
       rect:
         serializedVersion: 2
-        x: 204
+        x: 203
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 413cd64c3c7e47720800000000000000
-      internalID: 2843152092777792276
+      spriteID: c58772fd3b84043f0800000000000000
+      internalID: -918654386603329444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_2
+      name: 203x173horsemf-spear_2
       rect:
         serializedVersion: 2
-        x: 408
+        x: 407
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac16997772769c130800000000000000
-      internalID: 3587511997385236938
+      spriteID: 4410cf1174525be30800000000000000
+      internalID: 4518558788310794564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_3
+      name: 203x173horsemf-spear_3
       rect:
         serializedVersion: 2
-        x: 612
+        x: 609
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b43c21687e294250800000000000000
-      internalID: 5929321478971208889
+      spriteID: 836ea32753089a420800000000000000
+      internalID: 2641783623467591224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_4
+      name: 203x173horsemf-spear_4
       rect:
         serializedVersion: 2
-        x: 816
+        x: 813
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 943412eb8f80aa660800000000000000
-      internalID: 7397735202344223561
+      spriteID: 9a8c91b8d0bf05d60800000000000000
+      internalID: 7877071783857866921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_5
+      name: 203x173horsemf-spear_5
       rect:
         serializedVersion: 2
-        x: 1020
+        x: 1015
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24a15192f255e0660800000000000000
-      internalID: 7353908902583671362
+      spriteID: b182c477fbae3a5c0800000000000000
+      internalID: -4205259518972778469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 203x173horsemf-spear_6
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 0
+        width: 203
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bb4c146e5267380800000000000000
+      internalID: -8973943536613016726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 203x173horsemf-spear_7
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 0
+        width: 203
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5, y: 0.58}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fdfd5d3067c6a10800000000000000
+      internalID: 1904026501316075306
       vertices: []
       indices: 
       edges: []
