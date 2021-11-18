@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 0c7614e61cf56254c9a232804c53fad7
+guid: e925e838617f9874ca7e0bf8179f011f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5023568397510874229
-    second: 204x280flyingmf-drop_0
+      213: -947220824873160257
+    second: 139X188newHorsemf-attack_0
   - first:
-      213: 2843152092777792276
-    second: 204x280flyingmf-drop_1
+      213: -750156529483895944
+    second: 139X188newHorsemf-attack_1
   - first:
-      213: 3587511997385236938
-    second: 204x280flyingmf-drop_2
+      213: -5866855152616670955
+    second: 139X188newHorsemf-attack_2
   - first:
-      213: 5929321478971208889
-    second: 204x280flyingmf-drop_3
+      213: 623228921776828743
+    second: 139X188newHorsemf-attack_3
   - first:
-      213: 7397735202344223561
-    second: 204x280flyingmf-drop_4
+      213: -5767305933169583639
+    second: 139X188newHorsemf-attack_4
   - first:
-      213: 7353908902583671362
-    second: 204x280flyingmf-drop_5
+      213: -5142546877599040155
+    second: 139X188newHorsemf-attack_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,127 +121,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_0
+      name: 139X188newHorsemf-attack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 139
+        height: 188
+      alignment: 9
+      pivot: {x: 0.9, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8b6c719823b84ab0800000000000000
-      internalID: -5023568397510874229
+      spriteID: fb13599adabcad2f0800000000000000
+      internalID: -947220824873160257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_1
+      name: 139X188newHorsemf-attack_1
       rect:
         serializedVersion: 2
-        x: 204
+        x: 139
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 139
+        height: 188
+      alignment: 9
+      pivot: {x: 0.9, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 413cd64c3c7e47720800000000000000
-      internalID: 2843152092777792276
+      spriteID: 87b2c266c98e695f0800000000000000
+      internalID: -750156529483895944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_2
+      name: 139X188newHorsemf-attack_2
       rect:
         serializedVersion: 2
-        x: 408
+        x: 278
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 139
+        height: 188
+      alignment: 9
+      pivot: {x: 0.9, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac16997772769c130800000000000000
-      internalID: 3587511997385236938
+      spriteID: 519fc97925eb49ea0800000000000000
+      internalID: -5866855152616670955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_3
+      name: 139X188newHorsemf-attack_3
       rect:
         serializedVersion: 2
-        x: 612
+        x: 417
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 139
+        height: 188
+      alignment: 9
+      pivot: {x: 0.9, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b43c21687e294250800000000000000
-      internalID: 5929321478971208889
+      spriteID: 741f140076726a800800000000000000
+      internalID: 623228921776828743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_4
+      name: 139X188newHorsemf-attack_4
       rect:
         serializedVersion: 2
-        x: 816
+        x: 556
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 139
+        height: 188
+      alignment: 9
+      pivot: {x: 0.9, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 943412eb8f80aa660800000000000000
-      internalID: 7397735202344223561
+      spriteID: 9e99c6e6fc966ffa0800000000000000
+      internalID: -5767305933169583639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 204x280flyingmf-drop_5
+      name: 139X188newHorsemf-attack_5
       rect:
         serializedVersion: 2
-        x: 1020
+        x: 695
         y: 0
-        width: 204
-        height: 280
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 139
+        height: 188
+      alignment: 9
+      pivot: {x: 0.9, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24a15192f255e0660800000000000000
-      internalID: 7353908902583671362
+      spriteID: 56d3ae77cd002a8b0800000000000000
+      internalID: -5142546877599040155
       vertices: []
       indices: 
       edges: []
