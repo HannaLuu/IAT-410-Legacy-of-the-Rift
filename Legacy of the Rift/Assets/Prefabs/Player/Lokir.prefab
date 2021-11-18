@@ -344,9 +344,8 @@ MonoBehaviour:
   ignoreEnemyCollision: 0
   teleported: 0
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
-  positionToMoveTo: {x: 0, y: 0}
-  speed: 300
-  acceleration: 50
+  startTimeBetweenTrail: 0.1
+  trail: {fileID: 7881289613514998568, guid: 1ac78dfcba3002c468075b99bf516bbd, type: 3}
 --- !u!1 &5807222353560896885
 GameObject:
   m_ObjectHideFlags: 0
