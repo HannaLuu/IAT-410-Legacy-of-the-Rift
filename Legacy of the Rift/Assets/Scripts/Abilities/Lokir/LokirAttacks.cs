@@ -30,6 +30,14 @@ public class LokirAttacks : AttackBaseClass
     //damage feedback
     public GameObject impactEffect;
 
+    // private float lastImageXpos;
+    // public float distanceBetweenImages;
+
+    private float timeBetweenTrail;
+    public float startTimeBetweenTrail;
+
+    public GameObject trail;
+
     //old ult code
     //public int ultClones = 3;
     //private int clonesSpawned = 0;
@@ -125,6 +133,24 @@ public class LokirAttacks : AttackBaseClass
             }
 
         }
+
+        // When player is dashing, create trail
+        if (ignoreEnemyCollision)
+        {
+            // Trail
+            if (timeBetweenTrail <= 0)
+            {
+
+                GameObject instance = (GameObject)Instantiate(trail, transform.position, transform.rotation);
+                Destroy(instance, 0.4f);
+                timeBetweenTrail = startTimeBetweenTrail;
+            }
+            else
+            {
+                timeBetweenTrail -= Time.deltaTime;
+            }
+        }
+
     }
 
     // Spectral Laceration
@@ -196,20 +222,20 @@ public class LokirAttacks : AttackBaseClass
         //Then AddForce
         rb.AddForce(acceleration, ForceMode2D.Impulse);
 
+
+
         ignoreEnemyCollision = true;
         Physics2D.IgnoreLayerCollision(7, 6, true);
+
+        //
+        // DashTrailPool.Instance.GetFromPool();
+        // lastImageXpos = transform.position.x;
 
         yield return new WaitForSeconds(0.4f);
 
         ignoreEnemyCollision = false;
         Physics2D.IgnoreLayerCollision(7, 6, false);
 
-    }
-
-    IEnumerator DashLegends(float dashDuration, float dashCooldown)
-    {
-        yield return new WaitForSeconds(dashDuration);
-        yield return new WaitForSeconds(dashCooldown);
     }
 
     private void OnTriggerEnter2D(Collider2D otherCollider)
