@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7881289613514998567}
   - component: {fileID: 7881289613514998566}
-  - component: {fileID: 7881289613514998569}
   m_Layer: 7
   m_Name: LokirDashTrail
   m_TagString: Player
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: -1
   m_Sprite: {fileID: -4486682932035644015, guid: 3773b4ce232777642abfef4bdb8a5d12, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.4117647}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -83,17 +82,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7881289613514998569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7881289613514998568}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1bfcd33d0b462648818200b8a7454c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeTime: 0.1
-  alphaSet: 0.8
