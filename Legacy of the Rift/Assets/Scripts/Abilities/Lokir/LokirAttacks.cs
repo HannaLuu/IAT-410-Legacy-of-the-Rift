@@ -9,7 +9,7 @@ public class LokirAttacks : AttackBaseClass
     public Rigidbody2D rb;
 
     public int attackDamage = 100;
-    
+
     //old overzeal mechanic
     //public int overzealRegenAmount = 5;
 
@@ -29,6 +29,14 @@ public class LokirAttacks : AttackBaseClass
 
     //damage feedback
     public GameObject impactEffect;
+
+    public Vector2 positionToMoveTo;
+
+
+    //public float speed = 400f;
+    //public float mx;
+    private float dashTime;
+    public float startDashTime;
 
     //old ult code
     //public int ultClones = 3;
@@ -178,9 +186,38 @@ public class LokirAttacks : AttackBaseClass
         Destroy(spectralWarlock);
     }
 
+    // private void FixedUpdate()
+    // {
+    //     if (!isDashing)
+    //     {
+    //         rb.velocity = new Vector2(mx * speed, rb.velocity.y);
+    //     }
+    // }
+
     IEnumerator Dash(float distanceMultiplier)
     {
         float speed = 400f;
+
+        //float newPosition = Mathf.SmoothDamp(transform.position.x, 0f, ref speed, 2);
+        //transform.position = new Vector2(newPosition, 0f);
+
+        //Vector2 destination;
+
+        //Moves the GameObject from it's current position to destination over time
+        //transform.position = Vector2.Lerp(transform.position, transform.position * distanceMultiplier, 20 * Time.deltaTime);
+
+        //rb.velocity = new Vector2(speed * distanceMultiplier, 0f);
+        //rb.AddForce(transform.forward * distanceMultiplier, ForceMode2D.Impulse);
+
+
+
+        //rb.velocity = Vector2.Lerp(transform.position, transform.position.x * distanceMultiplier, speed * Time.deltaTime);
+        //transform.position = 
+        //rb.velocity = Vector2.LerpUnclamped
+        //rb.AddForce(new Vector2(speed * distanceMultiplier, 0f), ForceMode2D.Impulse);
+        //rb.velocity = Vector2.ClampMagnitude(rb.velocity, 100);
+        //rb.AddForce = new Vector2(speed * distanceMultiplier, 0f), ForceMode2D.Impulse);
+
 
         rb.velocity = new Vector2(speed * distanceMultiplier, 0f);
 
@@ -188,8 +225,10 @@ public class LokirAttacks : AttackBaseClass
         Physics2D.IgnoreLayerCollision(7, 6, true);
 
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.4f);
 
+
+        rb.velocity = Vector2.zero;
 
         ignoreEnemyCollision = false;
         Physics2D.IgnoreLayerCollision(7, 6, false);
@@ -202,7 +241,7 @@ public class LokirAttacks : AttackBaseClass
         {
             //impact VFX
             Instantiate(impactEffect, transform.position, transform.rotation);
-            
+
             //damage popup
             GameObject damagePopup = Instantiate(damagePopupPrefab, otherCollider.transform.position, Quaternion.identity);
             DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
