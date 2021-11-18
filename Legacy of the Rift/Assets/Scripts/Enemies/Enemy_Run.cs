@@ -24,6 +24,7 @@ public class Enemy_Run : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         enemyScript = animator.GetComponent<Enemy>();
+        // Physics2D.gravity = new Vector2(0, -100f);
 
         timeBtwAttacks = startTimeBtwAttacks;
     }
@@ -33,9 +34,20 @@ public class Enemy_Run : StateMachineBehaviour
     {
         enemyScript.LookAtPlayer();
 
-        Vector2 target = new Vector2(player.position.x, rb.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, currSpeed * Time.fixedDeltaTime);
-        rb.MovePosition(newPos);
+        // Vector2 target = new Vector2(player.position.x, rb.position.y);
+        // Vector2 newPos = Vector2.MoveTowards(rb.position, target, currSpeed * Time.fixedDeltaTime);
+        // newPos = new Vector2(newPos.x, 0);
+        // rb.MovePosition(newPos);
+
+        if (player.position.x < rb.position.x)
+        {
+            rb.velocity = new Vector2(-currSpeed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(currSpeed, rb.velocity.y);
+        }
+        
 
 
         GameObject legendaryMonolithObject = GameObject.FindGameObjectWithTag("Monolith");
