@@ -14,8 +14,6 @@ public class GW_Together_Drop : StateMachineBehaviour
     {
         dropPoint = GameObject.FindGameObjectWithTag("GW_DropPoint").transform;
         centrePoint = GameObject.FindGameObjectWithTag("GW_CP").transform;
-        //change this script when animations come thruuuuu
-        Instantiate(legPrefab, dropPoint.position, dropPoint.rotation);
         Instantiate(returnPointPrefab, centrePoint.position, centrePoint.rotation);
         animator.SetBool("isDropped", true);
     }
@@ -23,14 +21,14 @@ public class GW_Together_Drop : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
-        
+
     //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        Instantiate(legPrefab, dropPoint.position, dropPoint.rotation);
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

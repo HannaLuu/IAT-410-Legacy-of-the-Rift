@@ -38,9 +38,16 @@ public class SB_Run : StateMachineBehaviour
         {
             enemy = spectralBarrage.nearestEnemy;
             spectralBarrage.LookAtEnemies();
-            Vector2 target = new Vector2(enemy.position.x, rb.position.y);
-            Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-            rb.MovePosition(newPos);
+
+            if (enemy.position.x < rb.position.x)
+            {
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+            }
+
             if (Vector2.Distance(enemy.position, rb.position) <= attackRange)
             {
                 animator.SetTrigger("Attack");
@@ -58,9 +65,16 @@ public class SB_Run : StateMachineBehaviour
             {
                 enemy = spectralBarrage.nearestEnemy;
                 spectralBarrage.LookAtEnemies();
-                Vector2 target = new Vector2(enemy.position.x, rb.position.y);
-                Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-                rb.MovePosition(newPos);
+
+                if (enemy.position.x < rb.position.x)
+                {
+                    rb.velocity = new Vector2(-speed, rb.velocity.y);
+                }
+                else
+                {
+                    rb.velocity = new Vector2(speed, rb.velocity.y);
+                }
+
                 if (Vector2.Distance(enemy.position, rb.position) <= attackRange)
                 {
                     animator.SetTrigger("Attack");

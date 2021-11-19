@@ -34,11 +34,6 @@ public class Enemy_Run : StateMachineBehaviour
     {
         enemyScript.LookAtPlayer();
 
-        // Vector2 target = new Vector2(player.position.x, rb.position.y);
-        // Vector2 newPos = Vector2.MoveTowards(rb.position, target, currSpeed * Time.fixedDeltaTime);
-        // newPos = new Vector2(newPos.x, 0);
-        // rb.MovePosition(newPos);
-
         if (player.position.x < rb.position.x)
         {
             rb.velocity = new Vector2(-currSpeed, rb.velocity.y);
@@ -47,8 +42,6 @@ public class Enemy_Run : StateMachineBehaviour
         {
             rb.velocity = new Vector2(currSpeed, rb.velocity.y);
         }
-        
-
 
         GameObject legendaryMonolithObject = GameObject.FindGameObjectWithTag("Monolith");
         if (legendaryMonolithObject != null)

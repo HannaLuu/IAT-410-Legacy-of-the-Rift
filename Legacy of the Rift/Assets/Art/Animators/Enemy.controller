@@ -69,7 +69,7 @@ MonoBehaviour:
   currSpeed: 0
   normalSpeed: 5
   slowedSpeed: 2
-  attackRange: 3
+  attackRange: 5
   delay: 0
   startTimeBtwAttacks: 0
 --- !u!1101 &-3168719182625627215
@@ -111,13 +111,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Hit
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

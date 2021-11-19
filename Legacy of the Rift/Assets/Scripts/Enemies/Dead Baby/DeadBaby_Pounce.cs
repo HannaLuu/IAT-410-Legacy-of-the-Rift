@@ -8,6 +8,8 @@ public class DeadBaby_Pounce : MonoBehaviour
 
     public int attackDamage = 10;
     public float attackRange = 0.5f;
+    public float pounceDistance = 20f;
+    public float pounceHeight = 20f;
     public LayerMask playerLayer;
 
     public Enemy babyEnemyScript;
@@ -29,13 +31,13 @@ public class DeadBaby_Pounce : MonoBehaviour
     {
         if (babyEnemyScript.isFlipped == false)
         {
-            StartCoroutine(Pounce(-1f, 15f));
+            StartCoroutine(Pounce(-1f, pounceHeight));
             animator.SetBool("isPounce", true);
         }
 
         if (babyEnemyScript.isFlipped == true)
         {
-            StartCoroutine(Pounce(1f, 15f));
+            StartCoroutine(Pounce(1f, pounceHeight));
             animator.SetBool("isPounce", true);
         }
     }
@@ -52,9 +54,7 @@ public class DeadBaby_Pounce : MonoBehaviour
 
     IEnumerator Pounce(float distanceMultiplier, float jumpHeight)
     {
-        float speed = 15f;
-
-        rb.velocity = new Vector2(speed * distanceMultiplier, jumpHeight);
+        rb.velocity = new Vector2(pounceDistance * distanceMultiplier, jumpHeight);
 
         ignorePlayerCollision = true;
         Physics2D.IgnoreLayerCollision(6, 7, true);

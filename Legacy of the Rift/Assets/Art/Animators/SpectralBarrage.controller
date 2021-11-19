@@ -248,8 +248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384c0fbd9ce614d4e8e75cac7f1a2ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
-  attackRange: 4
+  speed: 4
+  attackRange: 6
 --- !u!114 &8125926417376407675
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -262,7 +262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebb72c280fcb77142a3a57999747ddb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRange: 3
 --- !u!1101 &8204654509952644812
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

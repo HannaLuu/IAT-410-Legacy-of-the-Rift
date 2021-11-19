@@ -27,6 +27,8 @@ public class GW_Top_Move : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        enemyScript.LookAtPlayer();
+
         if (Vector2.Distance(player.position, rb.position) <= chaseRange)
         {
             Vector2 target = new Vector2(player.position.x, player.position.y);

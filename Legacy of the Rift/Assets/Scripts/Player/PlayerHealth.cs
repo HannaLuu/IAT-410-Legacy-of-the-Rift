@@ -19,14 +19,28 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        //playerSwitchScript = GetComponent<PlayerSwitching>();
+        playerSwitchScript = GetComponent<PlayerSwitching>();
         
     }
 
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        //animator.SetTrigger("isOuch");
+        if (playerSwitchScript.currHero == PlayerSwitching.Hero.Lokir)
+        {
+            animator = playerSwitchScript.Lokir.GetComponent<Animator>();
+            animator.SetTrigger("Hit");
+        }
+        if (playerSwitchScript.currHero == PlayerSwitching.Hero.Halvar)
+        {
+            animator = playerSwitchScript.Halvar.GetComponent<Animator>();
+            animator.SetTrigger("Hit");
+        }
+        if (playerSwitchScript.currHero == PlayerSwitching.Hero.Ursa)
+        {
+            animator = playerSwitchScript.Ursa.GetComponent<Animator>();
+            animator.SetTrigger("Hit");
+        }
         healthBar.SetHealth(currentHealth);
         //FindObjectOfType<AudioManager>().Play("BjornHit");
 

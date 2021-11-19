@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enemy_Hit
+  m_Name: GW_Leg_Hit
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,7 +22,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 2.1
+        value: 1.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -96,7 +96,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 2857436635320506431, guid: 21da7e9e86c012f49b9be20de9313451, type: 3}
+      value: {fileID: -4661913598185030868, guid: 2a9918c35c6fa28429b9f9c390ce06c5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -144,7 +144,7 @@ AnimationClip:
       customType: 22
       isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 2857436635320506431, guid: 21da7e9e86c012f49b9be20de9313451, type: 3}
+    - {fileID: -4661913598185030868, guid: 2a9918c35c6fa28429b9f9c390ce06c5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -171,7 +171,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 2.1
+        value: 1.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136

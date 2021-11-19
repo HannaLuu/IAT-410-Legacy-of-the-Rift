@@ -209,7 +209,7 @@ public class LokirAttacks : AttackBaseClass
 
     IEnumerator Dash(Vector2 moveDirection)
     {
-        float speed = 400f;
+        float speed = 500f;
 
         Vector2 targetVelocity = moveDirection * speed;
 
@@ -220,7 +220,7 @@ public class LokirAttacks : AttackBaseClass
         Vector2 acceleration = velocityChange / Time.fixedDeltaTime;
 
         //Clamp it to your maximum acceleration magnitude
-        acceleration = Vector3.ClampMagnitude(acceleration, 200);
+        acceleration = Vector3.ClampMagnitude(acceleration, 1000);
 
         //Then AddForce
         rb.AddForce(acceleration, ForceMode2D.Impulse);
