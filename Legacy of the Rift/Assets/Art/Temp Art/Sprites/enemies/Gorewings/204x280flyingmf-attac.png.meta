@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 3a2a785887a37cf4bb45e6da1c31608a
+guid: adaf5d35c4d683d47bcdd733993b372c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4141723626209422455
-    second: 85x127okirhit_0
+      213: 658037498181992139
+    second: 204x280flyingmf-attac_0
   - first:
-      213: 6675944482358128357
-    second: 85x127okirhit_1
+      213: 6783682405836296028
+    second: 204x280flyingmf-attac_1
   - first:
-      213: 9171965990443153534
-    second: 85x127okirhit_2
+      213: -7745501043539906812
+    second: 204x280flyingmf-attac_2
   - first:
-      213: 80477903525833511
-    second: 85x127okirhit_3
+      213: 6658891789876211841
+    second: 204x280flyingmf-attac_3
   - first:
-      213: 7368451203438242002
-    second: 85x127okirhit_4
+      213: -572508973200997808
+    second: 204x280flyingmf-attac_4
   - first:
-      213: -2928276524119660391
-    second: 85x127okirhit_5
+      213: 4529201391688536499
+    second: 204x280flyingmf-attac_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,7 +50,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -109,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 85x127okirhit_0
+      name: 204x280flyingmf-attac_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77c2e0ab1bb5a7930800000000000000
-      internalID: 4141723626209422455
+      spriteID: bce36004e91d12900800000000000000
+      internalID: 658037498181992139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 85x127okirhit_1
+      name: 204x280flyingmf-attac_1
       rect:
         serializedVersion: 2
-        x: 85
+        x: 204
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee6f23d228b5ac50800000000000000
-      internalID: 6675944482358128357
+      spriteID: c5f80f4e43b742e50800000000000000
+      internalID: 6783682405836296028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 85x127okirhit_2
+      name: 204x280flyingmf-attac_2
       rect:
         serializedVersion: 2
-        x: 170
+        x: 408
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e78f350297e594f70800000000000000
-      internalID: 9171965990443153534
+      spriteID: 40fe26c96d3728490800000000000000
+      internalID: -7745501043539906812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 85x127okirhit_3
+      name: 204x280flyingmf-attac_3
       rect:
         serializedVersion: 2
-        x: 255
+        x: 612
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72bece31a3aed1100800000000000000
-      internalID: 80477903525833511
+      spriteID: 18036557dc2296c50800000000000000
+      internalID: 6658891789876211841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 85x127okirhit_4
+      name: 204x280flyingmf-attac_4
       rect:
         serializedVersion: 2
-        x: 340
+        x: 816
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d86cbd645ff14660800000000000000
-      internalID: 7368451203438242002
+      spriteID: 05281a54f1a0e08f0800000000000000
+      internalID: -572508973200997808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 85x127okirhit_5
+      name: 204x280flyingmf-attac_5
       rect:
         serializedVersion: 2
-        x: 425
+        x: 1020
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9986bb7140cac57d0800000000000000
-      internalID: -2928276524119660391
+      spriteID: 3b1dcc34ba4fade30800000000000000
+      internalID: 4529201391688536499
       vertices: []
       indices: 
       edges: []

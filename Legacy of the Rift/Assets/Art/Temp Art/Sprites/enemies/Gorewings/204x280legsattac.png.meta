@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: 3a2a785887a37cf4bb45e6da1c31608a
+guid: ec4381769cd47074c945faede19c0ddf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4141723626209422455
-    second: 85x127okirhit_0
+      213: 2153173063406734269
+    second: 204x280legsattac_0
   - first:
-      213: 6675944482358128357
-    second: 85x127okirhit_1
+      213: -8955327002729548566
+    second: 204x280legsattac_1
   - first:
-      213: 9171965990443153534
-    second: 85x127okirhit_2
+      213: 3061910352248227076
+    second: 204x280legsattac_2
   - first:
-      213: 80477903525833511
-    second: 85x127okirhit_3
+      213: 3626321794180494140
+    second: 204x280legsattac_3
   - first:
-      213: 7368451203438242002
-    second: 85x127okirhit_4
+      213: -8037048470547120970
+    second: 204x280legsattac_4
   - first:
-      213: -2928276524119660391
-    second: 85x127okirhit_5
+      213: -5156572945297205399
+    second: 204x280legsattac_5
+  - first:
+      213: -1243622458714212422
+    second: 204x280legsattac_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,7 +53,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -109,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 85x127okirhit_0
+      name: 204x280legsattac_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77c2e0ab1bb5a7930800000000000000
-      internalID: 4141723626209422455
+      spriteID: dbb4c404e7b91ed10800000000000000
+      internalID: 2153173063406734269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 85x127okirhit_1
+      name: 204x280legsattac_1
       rect:
         serializedVersion: 2
-        x: 85
+        x: 204
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee6f23d228b5ac50800000000000000
-      internalID: 6675944482358128357
+      spriteID: ae477d2d98948b380800000000000000
+      internalID: -8955327002729548566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 85x127okirhit_2
+      name: 204x280legsattac_2
       rect:
         serializedVersion: 2
-        x: 170
+        x: 408
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e78f350297e594f70800000000000000
-      internalID: 9171965990443153534
+      spriteID: 405c8df1e371e7a20800000000000000
+      internalID: 3061910352248227076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 85x127okirhit_3
+      name: 204x280legsattac_3
       rect:
         serializedVersion: 2
-        x: 255
+        x: 612
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72bece31a3aed1100800000000000000
-      internalID: 80477903525833511
+      spriteID: c33b26f6578435230800000000000000
+      internalID: 3626321794180494140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 85x127okirhit_4
+      name: 204x280legsattac_4
       rect:
         serializedVersion: 2
-        x: 340
+        x: 816
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d86cbd645ff14660800000000000000
-      internalID: 7368451203438242002
+      spriteID: 6bc31768ffaa67090800000000000000
+      internalID: -8037048470547120970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 85x127okirhit_5
+      name: 204x280legsattac_5
       rect:
         serializedVersion: 2
-        x: 425
+        x: 1020
         y: 0
-        width: 85
-        height: 127
+        width: 204
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +231,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9986bb7140cac57d0800000000000000
-      internalID: -2928276524119660391
+      spriteID: 9679b291a3c2078b0800000000000000
+      internalID: -5156572945297205399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 204x280legsattac_6
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 0
+        width: 204
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab734a976f3cdbee0800000000000000
+      internalID: -1243622458714212422
       vertices: []
       indices: 
       edges: []
