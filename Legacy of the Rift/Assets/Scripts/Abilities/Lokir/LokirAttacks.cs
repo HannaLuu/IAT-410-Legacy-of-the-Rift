@@ -30,8 +30,7 @@ public class LokirAttacks : AttackBaseClass
     //damage feedback
     public GameObject impactEffect;
 
-    // private float lastImageXpos;
-    // public float distanceBetweenImages;
+    PlayerSwitching playerSwitching;
 
     private float timeBetweenTrail;
     public float startTimeBetweenTrail;
@@ -44,6 +43,12 @@ public class LokirAttacks : AttackBaseClass
     //public List<Transform> ultPoints = new List<Transform>();
 
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        playerSwitching = GetComponent<PlayerSwitching>();
+    }
+
     void Start()
     {
         isAttackReady = true;
@@ -61,6 +66,7 @@ public class LokirAttacks : AttackBaseClass
     // Update is called once per frame
     void Update()
     {
+
         attackActivated = false;
         abilityActivated = false;
         ultActivated = false;
@@ -99,8 +105,6 @@ public class LokirAttacks : AttackBaseClass
                     Debug.Log("You've Run Out of Zeal! Wait to Regen!");
                 }
 
-                //animator.SetTrigger("Attack");
-                //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
         }
         else if (Input.GetButtonDown("Fire2") && spectralWarlock != null)
@@ -150,7 +154,6 @@ public class LokirAttacks : AttackBaseClass
                 timeBetweenTrail -= Time.deltaTime;
             }
         }
-
     }
 
     // Spectral Laceration
@@ -222,14 +225,8 @@ public class LokirAttacks : AttackBaseClass
         //Then AddForce
         rb.AddForce(acceleration, ForceMode2D.Impulse);
 
-
-
         ignoreEnemyCollision = true;
         Physics2D.IgnoreLayerCollision(7, 6, true);
-
-        //
-        // DashTrailPool.Instance.GetFromPool();
-        // lastImageXpos = transform.position.x;
 
         yield return new WaitForSeconds(0.4f);
 

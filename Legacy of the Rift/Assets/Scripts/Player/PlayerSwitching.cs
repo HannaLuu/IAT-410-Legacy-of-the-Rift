@@ -10,7 +10,7 @@ public class PlayerSwitching : MonoBehaviour
     public GameObject Ursa;
     public GameObject Player;
 
-    public enum Hero {Lokir, Halvar, Ursa};
+    public enum Hero { Lokir, Halvar, Ursa };
     public Hero pastHero;
     public Hero currHero;
 
@@ -18,7 +18,7 @@ public class PlayerSwitching : MonoBehaviour
 
     private void Start()
     {
-        if(Lokir.activeInHierarchy)
+        if (Lokir.activeInHierarchy)
         {
             currHero = Hero.Lokir;
             Player.transform.position = Lokir.transform.position;
@@ -60,12 +60,16 @@ public class PlayerSwitching : MonoBehaviour
         {
             isSwitch = true;
             SwitchCharacter(Hero.Halvar);
+            Lokir.GetComponent<LokirAttacks>().ignoreEnemyCollision = false;
+            Physics2D.IgnoreLayerCollision(7, 6, false);
         }
 
         if (currHero != Hero.Ursa && Input.GetButtonDown("Ursa"))
         {
             isSwitch = true;
             SwitchCharacter(Hero.Ursa);
+            Lokir.GetComponent<LokirAttacks>().ignoreEnemyCollision = false;
+            Physics2D.IgnoreLayerCollision(7, 6, false);
         }
 
         if (Input.GetKey("escape"))
@@ -77,24 +81,24 @@ public class PlayerSwitching : MonoBehaviour
     }
 
     private void SwitchCharacter(Hero newHero)
-    {        
+    {
         Vector3 currHeroPosition = GetCurrentHeroObj().transform.position;
         Halvar.SetActive(false);
         Ursa.SetActive(false);
         Lokir.SetActive(false);
-        
+
         switch (newHero)
         {
             case Hero.Halvar:
                 Halvar.SetActive(true);
                 Halvar.transform.position = currHeroPosition;
                 break;
-            
+
             case Hero.Ursa:
                 Ursa.SetActive(true);
                 Ursa.transform.position = currHeroPosition;
                 break;
-            
+
             case Hero.Lokir:
                 Lokir.SetActive(true);
                 Lokir.transform.position = currHeroPosition;
