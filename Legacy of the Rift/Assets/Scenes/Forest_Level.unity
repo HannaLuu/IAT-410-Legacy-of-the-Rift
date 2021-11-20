@@ -5300,7 +5300,7 @@ MonoBehaviour:
   fullyZealous: 0
   canSpendZeal: 0
   canSpendOverzeal: 0
-  overzealCheat: 1
+  overzealCheat: 0
   zealBar: {fileID: 1979682482}
   overzealBar: {fileID: 1979682481}
   ultReadyIndicator: {fileID: 1979682469}
