@@ -347,7 +347,8 @@ MonoBehaviour:
   halvarUltPrefab: {fileID: 8027434218581657759, guid: 38f9a9ad9e295f44594e71d46b525279, type: 3}
   ursaUltPrefab: {fileID: 2942944832457428792, guid: 99d406458e0d4594a8dea1f9692f9dda, type: 3}
   attackRange: {x: 12, y: 6, z: 6}
-  attackDamage: 25
+  minAttackDamage: 25
+  maxAttackDamage: 35
   overzealRegenAmount: 5
   abilityZealCost: 25
   enemyLayers:

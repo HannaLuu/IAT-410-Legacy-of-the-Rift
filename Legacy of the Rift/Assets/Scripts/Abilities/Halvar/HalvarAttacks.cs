@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class HalvarAttacks : AttackBaseClass
 {
     public Vector3 attackRange;
-    public int attackDamage = 100;
+    // public int attackDamage = 100;
+
+    public int minAttackDamage;
+    public int maxAttackDamage;
+
     public int overzealRegenAmount = 5;
 
     public int abilityZealCost = 25;
@@ -104,17 +109,17 @@ public class HalvarAttacks : AttackBaseClass
         //Damage them
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+            enemy.GetComponentInParent<Enemy>().TakeDamage(Random.Range(minAttackDamage, maxAttackDamage));
             Instantiate(impactEffect, enemy.gameObject.transform.position, enemy.gameObject.transform.rotation);
 
             //damage popup
             GameObject damagePopup = Instantiate(damagePopupPrefab, enemy.transform.position, Quaternion.identity);
             DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
-            damagePopupScript.Setup(attackDamage);
+            damagePopupScript.Setup(Random.Range(minAttackDamage, maxAttackDamage));
 
             enemyCollided = true;
 
-            playerZeal.AddOverzeal(attackDamage);
+            playerZeal.AddOverzeal(Random.Range(minAttackDamage, maxAttackDamage));
 
             //old overzeal mechanic
             //if (playerZeal.isOverzealous == true)

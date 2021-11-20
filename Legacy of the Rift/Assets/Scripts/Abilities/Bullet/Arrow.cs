@@ -7,7 +7,12 @@ public class Arrow : MonoBehaviour
     public int maxHealth = 3;
     private int currentHealth;
     public float speed = 20f;
-    public int damage = 100;
+    //public int damage = 100;
+
+    public int minAttackDamage;
+    public int maxAttackDamage;
+
+
 
     public float slowAmount = 4f;
     float slowTime = 0f;
@@ -42,7 +47,7 @@ public class Arrow : MonoBehaviour
     {
         if (hitInfo.gameObject.CompareTag("Enemy"))
         {
-            hitInfo.GetComponentInParent<Enemy>().TakeDamage(damage);
+            hitInfo.GetComponentInParent<Enemy>().TakeDamage(Random.Range(minAttackDamage, maxAttackDamage));
             hitInfo.GetComponentInParent<Enemy>().SlowMe();
 
             //imapct VFX
@@ -51,10 +56,10 @@ public class Arrow : MonoBehaviour
             //damage popup
             GameObject damagePopup = Instantiate(damagePopupPrefab, hitInfo.transform.position, Quaternion.identity);
             DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
-            damagePopupScript.Setup(damage);
+            damagePopupScript.Setup(Random.Range(minAttackDamage, maxAttackDamage));
 
             currentHealth -= 1;
-            playerZeal.AddOverzeal(damage);
+            playerZeal.AddOverzeal(Random.Range(minAttackDamage, maxAttackDamage));
 
             //old overzeal mechanic
             //if (playerZeal.isOverzealous == true)

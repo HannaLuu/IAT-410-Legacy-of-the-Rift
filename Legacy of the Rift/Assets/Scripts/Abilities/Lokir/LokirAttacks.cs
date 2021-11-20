@@ -2,13 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class LokirAttacks : AttackBaseClass
 {
     // Start is called before the first frame update
     public Rigidbody2D rb;
 
-    public int attackDamage = 100;
+    public int minAttackDamage;
+    public int maxAttackDamage;
 
     //old overzeal mechanic
     //public int overzealRegenAmount = 5;
@@ -174,7 +176,7 @@ public class LokirAttacks : AttackBaseClass
         if (enemyColInfo != null)
         {
             Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
-            enemyColInfo.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+            enemyColInfo.GetComponentInParent<Enemy>().TakeDamage(Random.Range(minAttackDamage, maxAttackDamage));
         }
     }
 
@@ -245,11 +247,11 @@ public class LokirAttacks : AttackBaseClass
             //damage popup
             GameObject damagePopup = Instantiate(damagePopupPrefab, otherCollider.transform.position, Quaternion.identity);
             DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
-            damagePopupScript.Setup(attackDamage);
+            damagePopupScript.Setup(Random.Range(minAttackDamage, maxAttackDamage));
 
 
-            otherCollider.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-            playerZeal.AddOverzeal(attackDamage);
+            otherCollider.GetComponentInParent<Enemy>().TakeDamage(Random.Range(minAttackDamage, maxAttackDamage));
+            playerZeal.AddOverzeal(Random.Range(minAttackDamage, maxAttackDamage));
 
             //old overzeal mechanic
             //if (playerZeal.isOverzealous == true)
