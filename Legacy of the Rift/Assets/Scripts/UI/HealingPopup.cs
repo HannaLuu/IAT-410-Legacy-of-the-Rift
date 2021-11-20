@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DamagePopup : MonoBehaviour
+public class HealingPopup : MonoBehaviour
 {
     public TextMeshPro textMesh;
 
@@ -11,15 +11,15 @@ public class DamagePopup : MonoBehaviour
 
     private const float DISAPPEAR_TIMER_MAX = 1;
     private float disappearTimer;
-    
+
     private Color textColor;
-   
+
     private Vector3 moveVector;
 
 
-    public void Setup(int damageAmount)
+    public void Setup(float healAmount)
     {
-        textMesh.SetText("- " + damageAmount.ToString());
+        textMesh.SetText("+ " + healAmount.ToString());
         textColor = textMesh.color;
         disappearTimer = DISAPPEAR_TIMER_MAX;
 
@@ -39,7 +39,8 @@ public class DamagePopup : MonoBehaviour
             float increaseScaleAmount = 0.5f;
             transform.localScale += Vector3.one * increaseScaleAmount * Time.deltaTime;
 
-        } else
+        }
+        else
         {
             //do things during the second half of the popup
             float decreaseScaleAmount = 0.5f;

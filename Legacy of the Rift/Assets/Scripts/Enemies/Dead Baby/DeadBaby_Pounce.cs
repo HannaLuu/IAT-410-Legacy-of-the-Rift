@@ -11,6 +11,7 @@ public class DeadBaby_Pounce : MonoBehaviour
     public float pounceDistance = 20f;
     public float pounceHeight = 20f;
     public LayerMask playerLayer;
+    public LayerMask monolithLayer;
 
     public Enemy babyEnemyScript;
 
@@ -19,6 +20,8 @@ public class DeadBaby_Pounce : MonoBehaviour
     public bool ignorePlayerCollision;
 
     public GameObject impactEffect;
+
+    public GameObject damagePopupPrefab;
 
     public Animator animator;
 
@@ -49,6 +52,23 @@ public class DeadBaby_Pounce : MonoBehaviour
         {
             Instantiate(impactEffect, transform.position, transform.rotation);
             FindObjectOfType<PlayerHealth>().TakeDamage(attackDamage);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, colInfo.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(attackDamage);
+        }
+
+        Collider2D monolithColInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, monolithLayer);
+        if (monolithColInfo != null)
+        {
+            Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
+            FindObjectOfType<LegendaryMonolith>().TakeDamage(attackDamage);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, monolithColInfo.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(attackDamage);
         }
     }
 

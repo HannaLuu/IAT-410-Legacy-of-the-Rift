@@ -7,9 +7,9 @@ public class Spear : MonoBehaviour
     public float speed = 20f;
     public int damage = 100;
 
-    //public Rigidbody2D rb;
-
     public GameObject impactEffect;
+
+    public GameObject damagePopupPrefab;
 
     //Target Way
     //private Transform player;
@@ -63,8 +63,28 @@ public class Spear : MonoBehaviour
         {
             FindObjectOfType<PlayerHealth>().TakeDamage(damage);
             Instantiate(impactEffect, transform.position, transform.rotation);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(damage);
+
             Destroy(gameObject);
         }
+
+        if (hitInfo.gameObject.CompareTag("Monolith"))
+        {
+            FindObjectOfType<LegendaryMonolith>().TakeDamage(damage);
+            Instantiate(impactEffect, transform.position, transform.rotation);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(damage);
+
+            Destroy(gameObject);
+        }
+
         if (hitInfo.gameObject.CompareTag("Ground"))
         {
             enabled = false;

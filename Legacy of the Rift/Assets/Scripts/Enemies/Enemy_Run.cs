@@ -70,6 +70,7 @@ public class Enemy_Run : StateMachineBehaviour
         //Time Between Attack animations code if needed
         if (delay == true && timeBtwAttacks <= 0)
         {
+            timeBtwAttacks = startTimeBtwAttacks;
             animator.SetTrigger("Attack");
         } else
         {

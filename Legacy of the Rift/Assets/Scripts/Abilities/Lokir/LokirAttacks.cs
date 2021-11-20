@@ -11,6 +11,7 @@ public class LokirAttacks : AttackBaseClass
 
     public int minAttackDamage;
     public int maxAttackDamage;
+    public int damageDone;
 
     //old overzeal mechanic
     //public int overzealRegenAmount = 5;
@@ -118,9 +119,10 @@ public class LokirAttacks : AttackBaseClass
 
         if (isUltReady && isUltUnlocked)
         {
-            if (Input.GetButtonDown("Fire3"))
+            if (playerZeal.fullyZealous == true)
             {
-                if (playerZeal.fullyZealous == true)
+                ultReadyGlow.SetActive(true);
+                if (Input.GetButtonDown("Fire3"))
                 {
                     playerZeal.SpendZeal(100);
                     playerZeal.SpendOverzeal(ultZealCost);
@@ -138,6 +140,11 @@ public class LokirAttacks : AttackBaseClass
                 }
             }
 
+        }
+
+        if(!isUltReady)
+        {
+            ultReadyGlow.SetActive(false);
         }
 
         // When player is dashing, create trail
@@ -168,6 +175,7 @@ public class LokirAttacks : AttackBaseClass
 
     public void NormalAttack()
     {
+        damageDone = Random.Range(minAttackDamage, maxAttackDamage);
         //Play Attack Animation
         animator.SetTrigger("Attack");
         attackActivated = true;
@@ -176,7 +184,7 @@ public class LokirAttacks : AttackBaseClass
         if (enemyColInfo != null)
         {
             Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
-            enemyColInfo.GetComponentInParent<Enemy>().TakeDamage(Random.Range(minAttackDamage, maxAttackDamage));
+            enemyColInfo.GetComponentInParent<Enemy>().TakeDamage(damageDone);
         }
     }
 
@@ -241,17 +249,19 @@ public class LokirAttacks : AttackBaseClass
     {
         if (otherCollider.gameObject.CompareTag("Enemy") && ignoreEnemyCollision == true)
         {
+            damageDone = Random.Range(minAttackDamage, maxAttackDamage);
+
             //impact VFX
             Instantiate(impactEffect, transform.position, transform.rotation);
 
             //damage popup
             GameObject damagePopup = Instantiate(damagePopupPrefab, otherCollider.transform.position, Quaternion.identity);
             DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
-            damagePopupScript.Setup(Random.Range(minAttackDamage, maxAttackDamage));
+            damagePopupScript.Setup(damageDone);
 
 
-            otherCollider.GetComponentInParent<Enemy>().TakeDamage(Random.Range(minAttackDamage, maxAttackDamage));
-            playerZeal.AddOverzeal(Random.Range(minAttackDamage, maxAttackDamage));
+            otherCollider.GetComponentInParent<Enemy>().TakeDamage(damageDone);
+            playerZeal.AddOverzeal(damageDone);
 
             //old overzeal mechanic
             //if (playerZeal.isOverzealous == true)

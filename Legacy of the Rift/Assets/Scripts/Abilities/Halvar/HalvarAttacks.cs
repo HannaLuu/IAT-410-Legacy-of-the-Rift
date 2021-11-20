@@ -10,6 +10,7 @@ public class HalvarAttacks : AttackBaseClass
 
     public int minAttackDamage;
     public int maxAttackDamage;
+    public int damageDone;
 
     public int overzealRegenAmount = 5;
 
@@ -77,9 +78,10 @@ public class HalvarAttacks : AttackBaseClass
 
         if (isUltReady && isUltUnlocked)
         {
-            if (Input.GetButtonDown("Fire3"))
+            if (playerZeal.fullyZealous == true)
             {
-                if (playerZeal.fullyZealous == true)
+                ultReadyGlow.SetActive(true);
+                if (Input.GetButtonDown("Fire3"))
                 {
                     playerZeal.SpendZeal(100);
                     playerZeal.SpendOverzeal(ultZealCost);
@@ -96,6 +98,11 @@ public class HalvarAttacks : AttackBaseClass
             }
 
         }
+
+        if (!isUltReady)
+        {
+            ultReadyGlow.SetActive(false);
+        }
     }
 
     // Hands of Stone
@@ -109,17 +116,18 @@ public class HalvarAttacks : AttackBaseClass
         //Damage them
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponentInParent<Enemy>().TakeDamage(Random.Range(minAttackDamage, maxAttackDamage));
+            damageDone = Random.Range(minAttackDamage, maxAttackDamage);
+            enemy.GetComponentInParent<Enemy>().TakeDamage(damageDone);
             Instantiate(impactEffect, enemy.gameObject.transform.position, enemy.gameObject.transform.rotation);
 
             //damage popup
             GameObject damagePopup = Instantiate(damagePopupPrefab, enemy.transform.position, Quaternion.identity);
             DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
-            damagePopupScript.Setup(Random.Range(minAttackDamage, maxAttackDamage));
+            damagePopupScript.Setup(damageDone);
 
             enemyCollided = true;
 
-            playerZeal.AddOverzeal(Random.Range(minAttackDamage, maxAttackDamage));
+            playerZeal.AddOverzeal(damageDone);
 
             //old overzeal mechanic
             //if (playerZeal.isOverzealous == true)

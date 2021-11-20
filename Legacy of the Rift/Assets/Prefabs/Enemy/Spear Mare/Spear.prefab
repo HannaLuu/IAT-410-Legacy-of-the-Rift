@@ -125,4 +125,5 @@ MonoBehaviour:
   speed: 20
   damage: 10
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
+  damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
   target: {fileID: 0}

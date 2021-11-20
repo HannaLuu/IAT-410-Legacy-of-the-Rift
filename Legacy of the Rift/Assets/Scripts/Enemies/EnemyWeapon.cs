@@ -13,6 +13,8 @@ public class EnemyWeapon : MonoBehaviour
 
     public Transform attackPoint;
 
+    public GameObject damagePopupPrefab;
+
     public GameObject impactEffect;
 
     public void Attack()
@@ -22,6 +24,11 @@ public class EnemyWeapon : MonoBehaviour
         {
             Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
             FindObjectOfType<PlayerHealth>().TakeDamage(attackDamage);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, playerColInfo.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(attackDamage);
         }
         
         Collider2D monolithColInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, monolithLayer);
@@ -29,6 +36,11 @@ public class EnemyWeapon : MonoBehaviour
         {
             Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
             FindObjectOfType<LegendaryMonolith>().TakeDamage(attackDamage);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, monolithColInfo.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(attackDamage);
         }
     }
 

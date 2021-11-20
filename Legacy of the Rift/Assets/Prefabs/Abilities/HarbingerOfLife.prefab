@@ -132,13 +132,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityRange: 10
   abilityPoint: {fileID: 3170107515239913622}
-  healAmount: 0.035
+  startHealTimer: 1
+  healAmount: 2.5
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  maxLifeSpan: 8
+  maxLifeSpan: 10
   currentLifeSpan: 0
-  animator: {fileID: 0}
+  animator: {fileID: 7062417286461328245}
+  healingPopupPrefab: {fileID: 5991670611894702333, guid: a100071762996854a9f0ecc012741fe3, type: 3}
 --- !u!95 &7062417286461328245
 Animator:
   serializedVersion: 3

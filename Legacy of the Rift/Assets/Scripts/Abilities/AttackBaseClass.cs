@@ -7,6 +7,9 @@ public abstract class AttackBaseClass : MonoBehaviour
     //Tutorial Boolean
     public bool enemyCollided;
 
+    //Glow Prefabs
+    public GameObject ultReadyGlow;
+
     //Impact Prefabs
     public GameObject damagePopupPrefab;
 

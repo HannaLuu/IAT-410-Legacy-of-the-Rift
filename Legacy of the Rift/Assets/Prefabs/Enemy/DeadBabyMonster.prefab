@@ -547,13 +547,19 @@ MonoBehaviour:
   rb: {fileID: 5253987250411552433}
   attackDamage: 10
   attackRange: 2
+  pounceDistance: 20
+  pounceHeight: 20
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  monolithLayer:
+    serializedVersion: 2
+    m_Bits: 0
   babyEnemyScript: {fileID: 5253987250411552437}
   attackPoint: {fileID: 5253987251253153288}
   ignorePlayerCollision: 0
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
+  damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
   animator: {fileID: 5253987250411552432}
 --- !u!1 &5253987251253153287
 GameObject:

@@ -67,6 +67,7 @@ public class UrsaAttacks : AttackBaseClass
         {
             if (playerZeal.fullyZealous == true)
             {
+                ultReadyGlow.SetActive(true);
                 if (Input.GetButtonDown("Fire3"))
                 {
                     playerZeal.SpendZeal(100);
@@ -84,6 +85,11 @@ public class UrsaAttacks : AttackBaseClass
                     }
                 }
             }
+        }
+
+        if (!isUltReady)
+        {
+            ultReadyGlow.SetActive(false);
         }
     }
 
