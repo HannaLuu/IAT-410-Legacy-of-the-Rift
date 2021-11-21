@@ -35,12 +35,15 @@ public class UrsaAttacks : AttackBaseClass
 
         if (isAttackReady)
         {
+
             if (Input.GetButtonDown("Fire1"))
             {
                 attackActivated = true;
                 animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
+
+
         }
 
         if (isAbilityReady)
