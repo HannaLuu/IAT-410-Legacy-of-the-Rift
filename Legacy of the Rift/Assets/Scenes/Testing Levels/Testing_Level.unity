@@ -2605,6 +2605,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6359789920620312148, guid: 3c3775bd5d392544db47c974827fd5de, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6359789920620312151, guid: 3c3775bd5d392544db47c974827fd5de, type: 3}
       propertyPath: asteroidSpawnPoints
       value: 

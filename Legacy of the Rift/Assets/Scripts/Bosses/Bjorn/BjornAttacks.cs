@@ -46,17 +46,10 @@ public class BjornAttacks : MonoBehaviour
 
     public void asteroidAttack()
     {
-        //Transform _sp = asteroidSpawnPoints[Random.Range(0, asteroidSpawnPoints.Length)];
-        // Instantiate(asteroidAttackPrefab, _sp.position, _sp.rotation);
-
         for (int i = 0; i < 3; i++)
         {
-            //Transform _sp = asteroidSpawnPoints[Random.Range(0, asteroidSpawnPoints.Length)];
-            // Instantiate(asteroidAttackPrefab, _sp.position, _sp.rotation);
             Instantiate(asteroidAttackPrefab, asteroidSpawnPoints[i].position, asteroidSpawnPoints[i].rotation);
         }
-
-        // Instantiate(asteroidAttackPrefab, asteroidSpawnPoints[i].position, asteroidSpawnPoints[i].rotation);
     }
 
 
@@ -70,7 +63,7 @@ public class BjornAttacks : MonoBehaviour
         //rbBasic = GetComponent<Rigidbody2D>();
 
         InvokeRepeating("Teleport", 0, 10); //calls ChangePosition() every 10 secs
-
+        //Physics2D.IgnoreLayerCollision(7, 6, true);
         // currentHealth = maxHealth;
     }
 
@@ -88,7 +81,15 @@ public class BjornAttacks : MonoBehaviour
 
         Vector2 newPos = Vector2.MoveTowards(_sp.position, target, Time.deltaTime);
 
+        StartCoroutine(Intangible());
         rb.MovePosition(newPos);
+    }
+
+    IEnumerator Intangible()
+    {
+        Physics2D.IgnoreLayerCollision(7, 6, true); // Ignore cols with player while teleporting
+        yield return new WaitForSeconds(0.4f);
+        Physics2D.IgnoreLayerCollision(7, 6, false);
     }
 
 

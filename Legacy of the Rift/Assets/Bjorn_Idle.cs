@@ -43,7 +43,12 @@ public class Bjorn_Idle : StateMachineBehaviour
             attackTimer -= Time.deltaTime;
         }
 
-
+        // Increase Bjorn attack speed
+        if (enemy.currentHealth <= 300)
+        {
+            animator.SetBool("malakai_unleashed", true);
+            Debug.Log("Malakai is unleashed!");
+        }
 
     }
 }
