@@ -17,6 +17,7 @@ TagManager:
   - GW_DropPoint
   - GW_CP
   - GW_ReturnPoint
+  - Lightning
   layers:
   - Default
   - TransparentFX

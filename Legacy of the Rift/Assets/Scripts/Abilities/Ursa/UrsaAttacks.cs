@@ -29,6 +29,8 @@ public class UrsaAttacks : AttackBaseClass
     // Update is called once per frame
     void Update()
     {
+        rb = GetComponent<Rigidbody2D>();
+
         attackActivated = false;
         abilityActivated = false;
         ultActivated = false;

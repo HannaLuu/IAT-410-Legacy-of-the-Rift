@@ -6,9 +6,6 @@ using Random = UnityEngine.Random;
 
 public class LokirAttacks : AttackBaseClass
 {
-    // Start is called before the first frame update
-    public Rigidbody2D rb;
-
     public int minAttackDamage;
     public int maxAttackDamage;
     public int damageDone;
@@ -54,6 +51,7 @@ public class LokirAttacks : AttackBaseClass
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         isAttackReady = true;
         currAttackCooldown = maxAttackCooldown;
 

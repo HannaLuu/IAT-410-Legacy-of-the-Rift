@@ -7,6 +7,9 @@ public abstract class AttackBaseClass : MonoBehaviour
     //Tutorial Boolean
     public bool enemyCollided;
 
+    //Rigidbody
+    public Rigidbody2D rb;
+
     //Glow Prefabs
     public GameObject ultReadyGlow;
 
@@ -107,6 +110,19 @@ public abstract class AttackBaseClass : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+    public IEnumerator Knockback(float knockDur, float knockPwr, Vector3 knockDir)
+    {
+        float timer = 0;
+
+        while (knockDur > timer)
+        {
+            timer += Time.deltaTime;
+            rb.AddForce(new Vector3(knockDir.x * -100, knockDir.y * knockPwr, transform.position.z));
+        }
+
+        yield return 0;
     }
 
 }
