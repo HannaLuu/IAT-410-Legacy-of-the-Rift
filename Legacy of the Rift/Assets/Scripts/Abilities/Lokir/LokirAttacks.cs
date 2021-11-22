@@ -142,7 +142,7 @@ public class LokirAttacks : AttackBaseClass
 
         }
 
-        if(!isUltReady)
+        if (!isUltReady)
         {
             ultReadyGlow.SetActive(false);
         }
@@ -237,11 +237,13 @@ public class LokirAttacks : AttackBaseClass
 
         ignoreEnemyCollision = true;
         Physics2D.IgnoreLayerCollision(7, 6, true);
+        Physics2D.IgnoreLayerCollision(7, 12, true);
 
         yield return new WaitForSeconds(0.4f);
 
         ignoreEnemyCollision = false;
         Physics2D.IgnoreLayerCollision(7, 6, false);
+        Physics2D.IgnoreLayerCollision(7, 12, true);
 
     }
 

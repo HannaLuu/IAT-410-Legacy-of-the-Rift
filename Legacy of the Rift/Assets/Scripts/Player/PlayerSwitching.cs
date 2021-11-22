@@ -62,6 +62,7 @@ public class PlayerSwitching : MonoBehaviour
             SwitchCharacter(Hero.Halvar);
             Lokir.GetComponent<LokirAttacks>().ignoreEnemyCollision = false;
             Physics2D.IgnoreLayerCollision(7, 6, false);
+            Physics2D.IgnoreLayerCollision(7, 12, false);
         }
 
         if (currHero != Hero.Ursa && Input.GetButtonDown("Ursa"))
@@ -70,6 +71,7 @@ public class PlayerSwitching : MonoBehaviour
             SwitchCharacter(Hero.Ursa);
             Lokir.GetComponent<LokirAttacks>().ignoreEnemyCollision = false;
             Physics2D.IgnoreLayerCollision(7, 6, false);
+            Physics2D.IgnoreLayerCollision(7, 12, false);
         }
 
         if (Input.GetKey("escape"))

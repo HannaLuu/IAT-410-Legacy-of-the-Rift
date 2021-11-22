@@ -2,13 +2,62 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BjornAttacks : Enemy
+public class BjornAttacks : MonoBehaviour
 {
-
-    public int health;
+    // public int health;
 
     public Transform[] tpPoints;
     public Rigidbody2D rb;
+
+    // Basic Attack
+    public int basicAttackDamage = 10;
+    public Transform attackPoint;
+    public GameObject basicAttackPrefab;
+
+    // Homing Attack
+    public int homingAttackDamage = 20;
+    public GameObject homingAttackPrefab;
+
+    // Asteroid Attack
+    public Transform[] asteroidSpawnPoints;
+    public GameObject asteroidAttackPrefab;
+
+    private float angle;
+
+    public Transform player;
+
+    public void basicAttack()
+    {
+        float angleIncrease = 15;
+
+        for (int i = 0; i < 3; i++)
+        {
+
+            float tempRot = 5 + angleIncrease * i;
+
+            Instantiate(basicAttackPrefab, attackPoint.position, attackPoint.rotation * Quaternion.Euler(0, 0, tempRot));
+        }
+    }
+
+    public void homingAttack()
+    {
+        Instantiate(homingAttackPrefab, attackPoint.position, attackPoint.rotation);
+    }
+
+    public void asteroidAttack()
+    {
+        //Transform _sp = asteroidSpawnPoints[Random.Range(0, asteroidSpawnPoints.Length)];
+        // Instantiate(asteroidAttackPrefab, _sp.position, _sp.rotation);
+
+        for (int i = 0; i < 3; i++)
+        {
+            //Transform _sp = asteroidSpawnPoints[Random.Range(0, asteroidSpawnPoints.Length)];
+            // Instantiate(asteroidAttackPrefab, _sp.position, _sp.rotation);
+            Instantiate(asteroidAttackPrefab, asteroidSpawnPoints[i].position, asteroidSpawnPoints[i].rotation);
+        }
+
+        // Instantiate(asteroidAttackPrefab, asteroidSpawnPoints[i].position, asteroidSpawnPoints[i].rotation);
+    }
 
 
     // Start is called before the first frame update
@@ -18,13 +67,17 @@ public class BjornAttacks : Enemy
 
         rb = GetComponent<Rigidbody2D>();
 
+        //rbBasic = GetComponent<Rigidbody2D>();
+
         InvokeRepeating("Teleport", 0, 10); //calls ChangePosition() every 10 secs
+
+        // currentHealth = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        LookAtPlayer();
+        // LookAtPlayer();
     }
 
     void Teleport()
