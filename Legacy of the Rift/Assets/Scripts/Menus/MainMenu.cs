@@ -7,7 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Intro_AfterVO");
+        SceneManager.LoadScene("Temp_Instructions");
+    }
+
+    public void PlayShore()
+    {
+        SceneManager.LoadScene("Shore_Level");
     }
 
     public void QuitGame()

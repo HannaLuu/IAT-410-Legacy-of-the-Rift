@@ -15,33 +15,45 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 3c7c38d9ed3651b45804c7b46e89a6b5
   - enabled: 1
-    path: Assets/Scenes/Intro_AfterVO.unity
-    guid: 3540eff34229b124682c95485ff1c489
+    path: Assets/Scenes/Testing Levels/Temp_Instructions.unity
+    guid: 23a0262d20613964fae5d5fc34e9fe03
   - enabled: 1
-    path: Assets/Scenes/Intro_AfterVO2.unity
-    guid: e0367b6e2c1e833439f5aac49deb532e
-  - enabled: 1
-    path: Assets/Scenes/Intro_BeforeAttack.unity
-    guid: 2d9bff8d65609824a83711c8c019bc0c
-  - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: 508d036b9a6ea944986c81e9668171b1
-  - enabled: 1
-    path: Assets/Scenes/Dock_Level.unity
-    guid: 6be7877cd2698f14584d0cc3a899723c
-  - enabled: 1
-    path: Assets/Scenes/Dickon_Boat.unity
-    guid: b931213b6d51b3749a37560f2622f96a
-  - enabled: 1
-    path: Assets/Scenes/Khajiit_Sacrifice.unity
-    guid: f0ff31be919c6874bbd77fe628a3aaf2
-  - enabled: 1
-    path: Assets/Scenes/RiftPiercer.unity
-    guid: 5faf3fa050ebcd2449f21cc8c490a241
-  - enabled: 1
-    path: Assets/Scenes/Shore_Landing.unity
-    guid: 8f24cd33428825d48b551d49e271d0bc
+    path: Assets/Scenes/Testing Levels/New_UI_Test.unity
+    guid: 359ba6f469c1f674a8f44fe9025b2261
   - enabled: 1
     path: Assets/Scenes/Shore_Level.unity
     guid: 34d6f4f5da8ed834d9604f60d901921f
+  - enabled: 1
+    path: Assets/Scenes/Forest_Level.unity
+    guid: faf1f9f35264df64ab579f4fe2c10acc
+  - enabled: 1
+    path: Assets/Scenes/Testing Levels/Temp_Win.unity
+    guid: ccb5fb6182cbeba449a85b6659857d0c
+  - enabled: 0
+    path: Assets/Scenes/Intro_AfterVO.unity
+    guid: 3540eff34229b124682c95485ff1c489
+  - enabled: 0
+    path: Assets/Scenes/Intro_AfterVO2.unity
+    guid: e0367b6e2c1e833439f5aac49deb532e
+  - enabled: 0
+    path: Assets/Scenes/Intro_BeforeAttack.unity
+    guid: 2d9bff8d65609824a83711c8c019bc0c
+  - enabled: 0
+    path: Assets/Scenes/Tutorial.unity
+    guid: 508d036b9a6ea944986c81e9668171b1
+  - enabled: 0
+    path: Assets/Scenes/Dock_Level.unity
+    guid: 6be7877cd2698f14584d0cc3a899723c
+  - enabled: 0
+    path: Assets/Scenes/Dickon_Boat.unity
+    guid: b931213b6d51b3749a37560f2622f96a
+  - enabled: 0
+    path: Assets/Scenes/Khajiit_Sacrifice.unity
+    guid: f0ff31be919c6874bbd77fe628a3aaf2
+  - enabled: 0
+    path: Assets/Scenes/RiftPiercer.unity
+    guid: 5faf3fa050ebcd2449f21cc8c490a241
+  - enabled: 0
+    path: Assets/Scenes/Shore_Landing.unity
+    guid: 8f24cd33428825d48b551d49e271d0bc
   m_configObjects: {}
