@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3003967287443266155}
   - component: {fileID: 6384757435865365204}
   - component: {fileID: 8445154939759971107}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: SWProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,3 +139,4 @@ MonoBehaviour:
   rb: {fileID: 3003967287443266155}
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
   damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
+  target: {fileID: 0}
