@@ -721,6 +721,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
@@ -824,7 +825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479656974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5977612, y: 4.7700806, z: -0.39999962}
+  m_LocalPosition: {x: 4.6667137, y: 4.7700806, z: -0.39999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1536,7 +1537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3266969331733951768, guid: 6b696be5f72f3fc409ce00ea69f8f9cc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3266969331733951970, guid: 6b696be5f72f3fc409ce00ea69f8f9cc, type: 3}
       propertyPath: m_RootOrder
@@ -1584,11 +1585,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6838219146107656448, guid: 6b696be5f72f3fc409ce00ea69f8f9cc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6838219146107656448, guid: 6b696be5f72f3fc409ce00ea69f8f9cc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b696be5f72f3fc409ce00ea69f8f9cc, type: 3}
@@ -2474,11 +2475,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3076475385035567904, guid: 3c3775bd5d392544db47c974827fd5de, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3076475385035567904, guid: 3c3775bd5d392544db47c974827fd5de, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6359789920620312145, guid: 3c3775bd5d392544db47c974827fd5de, type: 3}
       propertyPath: m_Name
@@ -2486,7 +2487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6359789920620312145, guid: 3c3775bd5d392544db47c974827fd5de, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6359789920620312146, guid: 3c3775bd5d392544db47c974827fd5de, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

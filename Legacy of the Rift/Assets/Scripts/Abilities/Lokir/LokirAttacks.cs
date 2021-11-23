@@ -255,13 +255,13 @@ public class LokirAttacks : AttackBaseClass
 
         ignoreEnemyCollision = true;
         Physics2D.IgnoreLayerCollision(7, 6, true); // Ignore col with enemies
-        Physics2D.IgnoreLayerCollision(7, 14, true); // Ignore col with Bjorn's balls
+        Physics2D.IgnoreLayerCollision(7, 12, true); // Ignore col with Bjorn's balls
 
         yield return new WaitForSeconds(0.4f);
 
         ignoreEnemyCollision = false;
         Physics2D.IgnoreLayerCollision(7, 6, false);
-        Physics2D.IgnoreLayerCollision(7, 14, true);
+        Physics2D.IgnoreLayerCollision(7, 12, true);
 
     }
 

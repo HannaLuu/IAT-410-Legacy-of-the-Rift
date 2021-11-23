@@ -18,6 +18,8 @@ TagManager:
   - GW_CP
   - GW_ReturnPoint
   - Lightning
+  - BjornBalls
+  - Teleport_Point
   layers:
   - Default
   - TransparentFX
