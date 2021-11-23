@@ -96,9 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3b19907f8f52247b8457293c4371b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0.03
+  damage: 3
   maxLifeSpan: 10
   currentLifeSpan: 0
+  startDamageTimer: 1
+  damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
+  isColliding: 0
 --- !u!61 &6165023258752162584
 BoxCollider2D:
   m_ObjectHideFlags: 0

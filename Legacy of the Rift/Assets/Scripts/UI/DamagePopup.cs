@@ -17,9 +17,9 @@ public class DamagePopup : MonoBehaviour
     private Vector3 moveVector;
 
 
-    public void Setup(int damageAmount)
+    public void Setup(float damageAmount)
     {
-        textMesh.SetText("- " + damageAmount.ToString());
+        textMesh.SetText("-" + damageAmount.ToString());
         textColor = textMesh.color;
         disappearTimer = DISAPPEAR_TIMER_MAX;
 
