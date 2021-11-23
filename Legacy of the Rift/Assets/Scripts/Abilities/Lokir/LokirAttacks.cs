@@ -144,7 +144,7 @@ public class LokirAttacks : AttackBaseClass
 
         }
 
-        if(!isUltReady)
+        if (!isUltReady)
         {
             ultReadyGlow.SetActive(false);
         }
@@ -254,12 +254,14 @@ public class LokirAttacks : AttackBaseClass
         rb.AddForce(acceleration, ForceMode2D.Impulse);
 
         ignoreEnemyCollision = true;
-        Physics2D.IgnoreLayerCollision(7, 6, true);
+        Physics2D.IgnoreLayerCollision(7, 6, true); // Ignore col with enemies
+        Physics2D.IgnoreLayerCollision(7, 12, true); // Ignore col with Bjorn's balls
 
         yield return new WaitForSeconds(0.4f);
 
         ignoreEnemyCollision = false;
         Physics2D.IgnoreLayerCollision(7, 6, false);
+        Physics2D.IgnoreLayerCollision(7, 12, true);
 
     }
 

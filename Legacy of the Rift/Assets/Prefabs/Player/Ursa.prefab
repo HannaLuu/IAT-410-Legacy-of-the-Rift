@@ -553,6 +553,7 @@ MonoBehaviour:
   playerZeal: {fileID: 0}
   overzealRegenAmount: 5
   abilityZealCost: 25
+  rb: {fileID: 6510522073437167064}
 --- !u!1 &6510522073740800956
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,17 @@ public class SpectralWarlock : MonoBehaviour
     public Transform attackPoint;
     public Animator animator;
 
+    public Transform nearestEnemy;
+
+    private List<Transform> enemies = new List<Transform>();
+
+    Vector2 vectorToEnemy;
+
+    private Vector2 offsetPosition;
+
+
+    public bool isFlipped = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,22 +36,83 @@ public class SpectralWarlock : MonoBehaviour
     {
         currentLifeSpan -= Time.deltaTime;
 
-        if (Time.time >= nextAttackTime)
-        {
-            animator.SetTrigger("Attack");
-            Attack();
-            //FindObjectOfType<AudioManager>().Play("PlayerAttack");
-            nextAttackTime = Time.time + 1f / attackRate;
-        }
-
         if (currentLifeSpan <= 0)
         {
             Destroy(gameObject);
         }
+
+        // LookAtEnemy();
+
+        WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
+        if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
+        {
+            FindNearestEnemy();
+        }
+        if (waveSpawner == null)
+        {
+            Enemy enemy = GameObject.FindObjectOfType<Enemy>();
+            if (enemy != null)
+            {
+                FindNearestEnemy();
+            }
+        }
     }
-    public void Attack()
+    public void AttackEnemy()
     {
-        //manaBar.SpendZeal1(zealCost);
-        Instantiate(attackPrefab, attackPoint.position, attackPoint.rotation);
+        if (nearestEnemy == null)
+            return;
+        GameObject attackObject = Instantiate(attackPrefab, attackPoint.position, attackPoint.rotation);
+
+
+        vectorToEnemy = VectorHelper.GetVectorToPoint(transform.position, nearestEnemy.position);
+
+        attackObject.GetComponent<SWProjectile>().SetDirection(vectorToEnemy);
+    }
+
+    public void LookAtEnemy()
+    {
+        Vector3 flipped = transform.localScale;
+        flipped.z *= -1f;
+
+        if (transform.position.x > nearestEnemy.position.x && !isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = true;
+        }
+        else if (transform.position.x < nearestEnemy.position.x && isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = false;
+        }
+    }
+
+    public void FindNearestEnemy()
+    {
+        float nearestEnemyDistance = float.MaxValue;
+
+        Enemy[] enemyArray = FindObjectsOfType<Enemy>();
+
+        foreach (Enemy enemy in enemyArray)
+        {
+            enemies.Add(enemy.transform);
+        }
+
+        foreach (Transform enemy in enemies)
+        {
+            float currEnemyDistance;
+
+
+            if (enemy != null)
+            {
+                currEnemyDistance = Vector2.Distance(transform.position, enemy.position);
+                if (nearestEnemyDistance > currEnemyDistance)
+                {
+                    nearestEnemyDistance = currEnemyDistance;
+                    nearestEnemy = enemy;
+                }
+            }
+        }
     }
 }

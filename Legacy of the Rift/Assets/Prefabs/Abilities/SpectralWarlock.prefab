@@ -59,7 +59,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7121423283127142723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.44, y: -0.31, z: -7.3749366}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_Children:
   - {fileID: 558216547017234398}
@@ -202,3 +202,5 @@ MonoBehaviour:
   attackPrefab: {fileID: 2349129264633878331, guid: 3cf5324929c0af44388b3e1a56753a20, type: 3}
   attackPoint: {fileID: 558216547017234398}
   animator: {fileID: 8478541946434938884}
+  nearestEnemy: {fileID: 0}
+  isFlipped: 0
