@@ -104,7 +104,7 @@ public class SpectralBarrage : MonoBehaviour
 
     public void FindNearestEnemy()
     {
-        float nearestEnemyDistance = 666;
+        float nearestEnemyDistance = float.MaxValue;
 
         Enemy[] enemyArray = FindObjectsOfType<Enemy>();
 
@@ -121,6 +121,7 @@ public class SpectralBarrage : MonoBehaviour
                 currEnemyDistance = Vector2.Distance(transform.position, enemy.position);
                 if (nearestEnemyDistance > currEnemyDistance)
                 {
+                    nearestEnemyDistance = currEnemyDistance;
                     nearestEnemy = enemy;
                 }
             }

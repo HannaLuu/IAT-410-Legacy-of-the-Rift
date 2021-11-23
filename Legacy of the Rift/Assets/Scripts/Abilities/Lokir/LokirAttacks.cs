@@ -62,12 +62,13 @@ public class LokirAttacks : AttackBaseClass
         currUltCooldown = maxUltCooldown;
 
         enemyCollided = false;
+
+        dontMove = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         attackActivated = false;
         abilityActivated = false;
         ultActivated = false;
@@ -115,6 +116,8 @@ public class LokirAttacks : AttackBaseClass
             teleported = true;
         }
 
+
+        Debug.Log(isUltReady);
         if (isUltReady && isUltUnlocked)
         {
             if (playerZeal.fullyZealous == true)
@@ -126,7 +129,8 @@ public class LokirAttacks : AttackBaseClass
                     playerZeal.SpendOverzeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
                     {
-                        ActivateUlt();
+                        dontMove = true;
+                        animator.SetTrigger("Ultimate");
                         //animator.SetTrigger("Attack");
                         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                         //clonesSpawned = 0;
@@ -194,14 +198,30 @@ public class LokirAttacks : AttackBaseClass
     }
 
     // Spectral Barrage
-    public override void ActivateUlt()
+
+    public void SpectralBarrage()
     {
         ultActivated = true;
+        rb.velocity = new Vector2(0,0);
         Instantiate(lokirUltPrefab, lokirUltPoint.position, lokirUltPoint.rotation);
+    }
+
+    public void HalvarUlt()
+    {
+        rb.velocity = new Vector2(0, 0);
         Instantiate(halvarUltPrefab, halvarUltPointL.position, halvarUltPointL.rotation);
         Instantiate(halvarUltPrefab, halvarUltPointR.position, halvarUltPointR.rotation);
+    }
+
+    public void UrsaUlt()
+    {
+        rb.velocity = new Vector2(0, 0);
         Instantiate(ursaUltPrefab, ursaUltPoint.position, ursaUltPoint.rotation);
         FindObjectOfType<PlayerHealth>().Heal(100);
+    }
+
+    public override void ActivateUlt()
+    {
 
         //old ult code
         //foreach (Transform spawnPoint in ultPoints)

@@ -520,6 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCollided: 0
+  rb: {fileID: 0}
   ultReadyGlow: {fileID: 5435820452094613908}
   damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
   isAttackReady: 0
@@ -533,7 +534,7 @@ MonoBehaviour:
   isUltUnlocked: 1
   isUltReady: 0
   ultActivated: 0
-  maxUltCooldown: 20
+  maxUltCooldown: 0
   currUltCooldown: 0
   ultZealCost: 2000
   zealCost: 0

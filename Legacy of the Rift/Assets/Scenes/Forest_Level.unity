@@ -1996,7 +1996,7 @@ PrefabInstance:
       objectReference: {fileID: 565106545}
     - target: {fileID: 7825555273368544809, guid: 4c2321b1b821e9149bc58b9247ed98fa, type: 3}
       propertyPath: waves.Array.data[0].count
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7825555273368544809, guid: 4c2321b1b821e9149bc58b9247ed98fa, type: 3}
       propertyPath: waves.Array.data[1].count
@@ -4937,7 +4937,7 @@ MonoBehaviour:
   fullyZealous: 0
   canSpendZeal: 0
   canSpendOverzeal: 0
-  overzealCheat: 0
+  overzealCheat: 1
   zealBar: {fileID: 1898871747}
   overzealBar: {fileID: 1898871737}
   ultReadyIndicator: {fileID: 1898871736}

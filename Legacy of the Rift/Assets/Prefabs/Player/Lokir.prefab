@@ -412,6 +412,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   m_GroundCheck: {fileID: 5807222353560896886}
+  playerSwitchingScript: {fileID: 0}
+  lokir: {fileID: 0}
+  halvar: {fileID: 0}
+  ursa: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -483,6 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCollided: 0
+  rb: {fileID: 7111613358293209999}
   ultReadyGlow: {fileID: 1980243976762532564}
   damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
   isAttackReady: 0
@@ -496,7 +501,7 @@ MonoBehaviour:
   isUltUnlocked: 1
   isUltReady: 0
   ultActivated: 0
-  maxUltCooldown: 30
+  maxUltCooldown: 0
   currUltCooldown: 0
   ultZealCost: 2000
   zealCost: 0
@@ -512,7 +517,6 @@ MonoBehaviour:
   lokirUltPrefab: {fileID: 7381604623743189407, guid: f8865192a3c354e438cb2f7b4fbf9730, type: 3}
   halvarUltPrefab: {fileID: 8027434218581657759, guid: 38f9a9ad9e295f44594e71d46b525279, type: 3}
   ursaUltPrefab: {fileID: 2942944832457428792, guid: 99d406458e0d4594a8dea1f9692f9dda, type: 3}
-  rb: {fileID: 7111613358293209999}
   minAttackDamage: 20
   maxAttackDamage: 25
   damageDone: 0
@@ -560,7 +564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5807222353560896885}
   m_LocalRotation: {x: -0.0010471215, y: 0, z: 0, w: 0.9999995}
-  m_LocalPosition: {x: 0.044, y: -0.582, z: 0}
+  m_LocalPosition: {x: 0.044, y: -0.5903, z: 0}
   m_LocalScale: {x: 0.3, y: 0.42, z: 1}
   m_Children: []
   m_Father: {fileID: 8442526151617095098}
@@ -579,7 +583,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.6}
+  m_Offset: {x: 0, y: 0.61}
   serializedVersion: 2
   m_Radius: 0.60303867
 --- !u!1 &6807720671233177595

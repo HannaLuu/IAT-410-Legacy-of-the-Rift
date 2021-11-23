@@ -56,10 +56,10 @@ public class PlayerCooldown : MonoBehaviour
         {
             StartCoroutine(Lokir.GetComponent<LokirAttacks>().AbilityCooldown());
         }
-        if (Lokir.GetComponent<LokirAttacks>().ultActivated == true)
-        {
-            StartCoroutine(Lokir.GetComponent<LokirAttacks>().UltCooldown());
-        }
+        //if (Lokir.GetComponent<LokirAttacks>().ultActivated == true)
+        //{
+        //    StartCoroutine(Lokir.GetComponent<LokirAttacks>().UltCooldown());
+        //}
 
         if (Halvar.GetComponent<HalvarAttacks>().attackActivated == true)
         {
@@ -69,10 +69,10 @@ public class PlayerCooldown : MonoBehaviour
         {
             StartCoroutine(Halvar.GetComponent<HalvarAttacks>().AbilityCooldown());
         }
-        if (Halvar.GetComponent<HalvarAttacks>().ultActivated == true)
-        {
-            StartCoroutine(Halvar.GetComponent<HalvarAttacks>().UltCooldown());
-        }
+        //if (Halvar.GetComponent<HalvarAttacks>().ultActivated == true)
+        //{
+        //    StartCoroutine(Halvar.GetComponent<HalvarAttacks>().UltCooldown());
+        //}
 
         if (Ursa.GetComponent<UrsaAttacks>().attackActivated == true)
         {
@@ -82,9 +82,9 @@ public class PlayerCooldown : MonoBehaviour
         {
             StartCoroutine(Ursa.GetComponent<UrsaAttacks>().AbilityCooldown());
         }
-        if (Ursa.GetComponent<UrsaAttacks>().ultActivated == true)
-        {
-            StartCoroutine(Ursa.GetComponent<UrsaAttacks>().UltCooldown());
-        }
+        //if (Ursa.GetComponent<UrsaAttacks>().ultActivated == true)
+        //{
+        //    StartCoroutine(Ursa.GetComponent<UrsaAttacks>().UltCooldown());
+        //}
     }
 }

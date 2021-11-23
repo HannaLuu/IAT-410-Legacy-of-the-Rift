@@ -68,7 +68,7 @@ public class Enemy_Run : StateMachineBehaviour
         }
 
         //Time Between Attack animations code if needed
-        if (delay == true && timeBtwAttacks <= 0)
+        if (delay == true && timeBtwAttacks <= 0 && Vector2.Distance(player.position, rb.position) <= attackRange)
         {
             timeBtwAttacks = startTimeBtwAttacks;
             animator.SetTrigger("Attack");

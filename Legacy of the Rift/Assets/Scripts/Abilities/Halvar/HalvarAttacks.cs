@@ -39,6 +39,8 @@ public class HalvarAttacks : AttackBaseClass
         currUltCooldown = maxUltCooldown;
 
         enemyCollided = false;
+
+        dontMove = false;
     }
 
     // Update is called once per frame
@@ -53,8 +55,10 @@ public class HalvarAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire1"))
             {
+                dontMove = true;
                 attackActivated = true;
                 //Play Attack Animation
+                rb.velocity = new Vector2(0, 0);
                 animator.SetTrigger("Attack");
             }
         }
@@ -66,7 +70,7 @@ public class HalvarAttacks : AttackBaseClass
                 playerZeal.SpendZeal(abilityZealCost);
                 if (playerZeal.canSpendZeal == true)
                 {
-                    abilityActivated = true;
+                    dontMove = true;
                     animator.SetTrigger("Ability");
                 }
                 else
@@ -89,7 +93,7 @@ public class HalvarAttacks : AttackBaseClass
                     playerZeal.SpendOverzeal(ultZealCost);
                     if (playerZeal.canSpendZeal == true)
                     {
-                        ultActivated = true;
+                        dontMove = true;
                         animator.SetTrigger("Ultimate");
                     }
                     else
@@ -110,7 +114,6 @@ public class HalvarAttacks : AttackBaseClass
     // Hands of Stone
     public override void Attack()
     {
-
         //Detect Enemies in range of attack
         //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, enemyLayers);
@@ -143,24 +146,41 @@ public class HalvarAttacks : AttackBaseClass
     public override void ActivateAbility()
     {
         abilityActivated = true;
+        rb.velocity = new Vector2(0, 0);
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 
     // Guardian of the Rock
-    public override void ActivateUlt()
+    public void SpectralBarrage()
     {
         ultActivated = true;
+        rb.velocity = new Vector2(0, 0);
         Instantiate(lokirUltPrefab, lokirUltPoint.position, lokirUltPoint.rotation);
+    }
+
+    public void HalvarUlt()
+    {
+        rb.velocity = new Vector2(0, 0);
         Instantiate(halvarUltPrefab, halvarUltPointL.position, halvarUltPointL.rotation);
         Instantiate(halvarUltPrefab, halvarUltPointR.position, halvarUltPointR.rotation);
+    }
+
+    public void UrsaUlt()
+    {
+        rb.velocity = new Vector2(0, 0);
         Instantiate(ursaUltPrefab, ursaUltPoint.position, ursaUltPoint.rotation);
         FindObjectOfType<PlayerHealth>().Heal(100);
+    }
+
+    public override void ActivateUlt()
+    {
 
         //old ult code
-        //Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
-        //Instantiate(ultPrefab, ultPoint2.position, ultPoint2.rotation);
-        //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+        //foreach (Transform spawnPoint in ultPoints)
+        //{
+        //    Instantiate(ultPrefab, spawnPoint.position, spawnPoint.rotation);
     }
+
 
     private void OnDrawGizmosSelected()
     {

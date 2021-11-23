@@ -55,11 +55,12 @@ public class HeraldOfRuin : MonoBehaviour
                     {
                         enemy.damageReceivedMultiplier = 1f;
                     }
-
-                    //destroy itself after explosion done
-                    Destroy(gameObject);
                 }
             }
+            Instantiate(impactEffect, transform.position, transform.rotation);
+            //destroy itself after explosion done
+            Destroy(gameObject);
+
             //if the explosion range is not set, it acts like a charge attack on a single enemy
         }
         else

@@ -24,6 +24,8 @@ public class UrsaAttacks : AttackBaseClass
 
         isUltReady = true;
         currUltCooldown = maxUltCooldown;
+
+        dontMove = false;
     }
 
     // Update is called once per frame
@@ -40,6 +42,8 @@ public class UrsaAttacks : AttackBaseClass
             if (Input.GetButtonDown("Fire1"))
             {
                 attackActivated = true;
+                dontMove = true;
+                rb.velocity = new Vector2(0, 0);
                 animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
@@ -53,6 +57,8 @@ public class UrsaAttacks : AttackBaseClass
                 if (playerZeal.canSpendZeal == true)
                 {
                     abilityActivated = true;
+                    dontMove = true;
+                    rb.velocity = new Vector2(0, 0);
                     animator.SetTrigger("Ability");
                     //animator.SetTrigger("Attack");
                     //FindObjectOfType<AudioManager>().Play("PlayerAttack");
@@ -77,6 +83,8 @@ public class UrsaAttacks : AttackBaseClass
                     if (playerZeal.canSpendZeal == true)
                     {
                         ultActivated = true;
+                        dontMove = true;
+                        rb.velocity = new Vector2(0, 0);
                         animator.SetTrigger("Ultimate");
                         //animator.SetTrigger("Attack");
                         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
@@ -108,15 +116,34 @@ public class UrsaAttacks : AttackBaseClass
     }
 
     // Herald of Ruin
-    public override void ActivateUlt()
+    public void SpectralBarrage()
     {
+        ultActivated = true;
+        rb.velocity = new Vector2(0, 0);
         Instantiate(lokirUltPrefab, lokirUltPoint.position, lokirUltPoint.rotation);
+    }
+
+    public void HalvarUlt()
+    {
+        rb.velocity = new Vector2(0, 0);
         Instantiate(halvarUltPrefab, halvarUltPointL.position, halvarUltPointL.rotation);
         Instantiate(halvarUltPrefab, halvarUltPointR.position, halvarUltPointR.rotation);
+    }
+
+    public void UrsaUlt()
+    {
+        rb.velocity = new Vector2(0, 0);
         Instantiate(ursaUltPrefab, ursaUltPoint.position, ursaUltPoint.rotation);
         FindObjectOfType<PlayerHealth>().Heal(100);
+    }
+
+    public override void ActivateUlt()
+    {
 
         //old ult code
-        //Instantiate(ultPrefab, ultPoint.position, ultPoint.rotation);
+        //foreach (Transform spawnPoint in ultPoints)
+        //{
+        //    Instantiate(ultPrefab, spawnPoint.position, spawnPoint.rotation);
+
     }
 }

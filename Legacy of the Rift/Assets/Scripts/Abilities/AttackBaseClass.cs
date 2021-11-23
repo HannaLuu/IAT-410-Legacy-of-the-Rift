@@ -57,6 +57,9 @@ public abstract class AttackBaseClass : MonoBehaviour
     public GameObject halvarUltPrefab;
     public GameObject ursaUltPrefab;
 
+    //STINKEY
+    public bool dontMove;
+
     // Abstract Methods
     public abstract void Attack();
 
@@ -74,6 +77,7 @@ public abstract class AttackBaseClass : MonoBehaviour
             if (currAttackCooldown >= maxAttackCooldown)
             {
                 isAttackReady = true;
+                attackActivated = false;
                 currAttackCooldown = maxAttackCooldown;
             }
             yield return null;
@@ -123,6 +127,11 @@ public abstract class AttackBaseClass : MonoBehaviour
         }
 
         yield return 0;
+    }
+
+    public void MoveAgain()
+    {
+        dontMove = false;
     }
 
 }
