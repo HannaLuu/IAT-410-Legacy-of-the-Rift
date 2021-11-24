@@ -13,6 +13,8 @@ public class UrsaAttacks : AttackBaseClass
 
     public int abilityZealCost = 25;
 
+    public GameObject healingPopupPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +56,7 @@ public class UrsaAttacks : AttackBaseClass
 
         if (isAbilityReady)
         {
-            if (Input.GetButtonDown("Fire2"))
+            if (Input.GetButtonDown("Fire2") && dontMove == false)
             {
                 playerZeal.SpendZeal(abilityZealCost);
                 if (playerZeal.canSpendZeal == true)
@@ -79,7 +81,7 @@ public class UrsaAttacks : AttackBaseClass
             if (playerZeal.fullyZealous == true)
             {
                 ultReadyGlow.SetActive(true);
-                if (Input.GetButtonDown("Fire3"))
+                if (Input.GetButtonDown("Fire3") && dontMove == false)
                 {
                     playerZeal.SpendZeal(100);
                     playerZeal.SpendOverzeal(ultZealCost);
@@ -124,6 +126,12 @@ public class UrsaAttacks : AttackBaseClass
         ultActivated = true;
         rb.velocity = new Vector2(0, 0);
         Instantiate(lokirUltPrefab, lokirUltPoint.position, lokirUltPoint.rotation);
+
+        //healing popup
+        GameObject healingPopup = Instantiate(healingPopupPrefab, transform.position, Quaternion.identity);
+        HealingPopup healingPopupScript = healingPopup.GetComponent<HealingPopup>();
+        healingPopupScript.Setup(100);
+        FindObjectOfType<PlayerHealth>().Heal(100);
     }
 
     public void HalvarUlt()
@@ -131,12 +139,23 @@ public class UrsaAttacks : AttackBaseClass
         rb.velocity = new Vector2(0, 0);
         Instantiate(halvarUltPrefab, halvarUltPointL.position, halvarUltPointL.rotation);
         Instantiate(halvarUltPrefab, halvarUltPointR.position, halvarUltPointR.rotation);
+
+        //healing popup
+        GameObject healingPopup = Instantiate(healingPopupPrefab, transform.position, Quaternion.identity);
+        HealingPopup healingPopupScript = healingPopup.GetComponent<HealingPopup>();
+        healingPopupScript.Setup(100);
+        FindObjectOfType<PlayerHealth>().Heal(100);
     }
 
     public void UrsaUlt()
     {
         rb.velocity = new Vector2(0, 0);
         Instantiate(ursaUltPrefab, ursaUltPoint.position, ursaUltPoint.rotation);
+
+        //healing popup
+        GameObject healingPopup = Instantiate(healingPopupPrefab, transform.position, Quaternion.identity);
+        HealingPopup healingPopupScript = healingPopup.GetComponent<HealingPopup>();
+        healingPopupScript.Setup(100);
         FindObjectOfType<PlayerHealth>().Heal(100);
     }
 

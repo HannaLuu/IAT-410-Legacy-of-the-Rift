@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 5253987250033963297}
   m_Layer: 6
   m_Name: BodyCollision
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b35274902b000647872651e300a19ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 75
   currentHealth: 0
   healthBar: {fileID: 4811868954300745265}
   damageReceivedMultiplier: 0
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5253987250411552433}
-  attackDamage: 10
+  attackDamage: 5
   attackRange: 2
   pounceDistance: 20
   pounceHeight: 20

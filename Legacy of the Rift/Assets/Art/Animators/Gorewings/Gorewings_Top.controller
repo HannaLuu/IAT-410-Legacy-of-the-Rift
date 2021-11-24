@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currSpeed: 0
-  normalSpeed: 5
-  slowedSpeed: 4
+  normalSpeed: 6
+  slowedSpeed: 2
   dropRange: 15
 --- !u!1102 &-1622440008315076141
 AnimatorState:
@@ -364,7 +364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   legPrefab: {fileID: 7747586405611502230, guid: fa6eae6c25b85f54cb868c8e560bf2ea, type: 3}
-  returnPointPrefab: {fileID: 8036140641540145289, guid: 61577bd60d0d28440a8bbd61b930c6ab, type: 3}
 --- !u!1102 &7800206905883220619
 AnimatorState:
   serializedVersion: 6
@@ -407,8 +406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currSpeed: 0
-  normalSpeed: 5
-  slowedSpeed: 4
+  normalSpeed: 6
+  slowedSpeed: 1
   chaseRange: 15
   attackRange: 3
 --- !u!1101 &8939154072278002799

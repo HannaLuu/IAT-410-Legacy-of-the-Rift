@@ -133,7 +133,7 @@ MonoBehaviour:
   abilityRange: 10
   abilityPoint: {fileID: 3170107515239913622}
   startHealTimer: 1
-  healAmount: 2.5
+  healAmount: 3
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -141,6 +141,7 @@ MonoBehaviour:
   currentLifeSpan: 0
   animator: {fileID: 7062417286461328245}
   healingPopupPrefab: {fileID: 5991670611894702333, guid: a100071762996854a9f0ecc012741fe3, type: 3}
+  isColliding: 0
 --- !u!95 &7062417286461328245
 Animator:
   serializedVersion: 3

@@ -291,6 +291,7 @@ MonoBehaviour:
   controller: {fileID: 4092356082363815205}
   animator: {fileID: 4092356082363815208}
   runSpeed: 44
+  horizontalMove: 0
 --- !u!95 &4092356082363815208
 Animator:
   serializedVersion: 3
@@ -332,7 +333,7 @@ MonoBehaviour:
   currAttackCooldown: 0
   isAbilityReady: 0
   abilityActivated: 0
-  maxAbilityCooldown: 10
+  maxAbilityCooldown: 20
   currAbilityCooldown: 0
   isUltUnlocked: 1
   isUltReady: 0
@@ -366,6 +367,7 @@ MonoBehaviour:
   playerZeal: {fileID: 0}
   ultPoint2: {fileID: 0}
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
+  healingPopupPrefab: {fileID: 5991670611894702333, guid: a100071762996854a9f0ecc012741fe3, type: 3}
 --- !u!1 &4092356082818394142
 GameObject:
   m_ObjectHideFlags: 0

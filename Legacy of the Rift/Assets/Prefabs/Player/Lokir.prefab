@@ -455,6 +455,7 @@ MonoBehaviour:
   controller: {fileID: 5807222352677156466}
   animator: {fileID: 5807222352677156467}
   runSpeed: 47
+  horizontalMove: 0
 --- !u!95 &5807222352677156467
 Animator:
   serializedVersion: 3
@@ -517,6 +518,7 @@ MonoBehaviour:
   lokirUltPrefab: {fileID: 7381604623743189407, guid: f8865192a3c354e438cb2f7b4fbf9730, type: 3}
   halvarUltPrefab: {fileID: 8027434218581657759, guid: 38f9a9ad9e295f44594e71d46b525279, type: 3}
   ursaUltPrefab: {fileID: 2942944832457428792, guid: 99d406458e0d4594a8dea1f9692f9dda, type: 3}
+  dontMove: 0
   minAttackDamage: 20
   maxAttackDamage: 25
   damageDone: 0
@@ -531,6 +533,7 @@ MonoBehaviour:
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
   startTimeBetweenTrail: 0.1
   trail: {fileID: 7881289613514998568, guid: 1ac78dfcba3002c468075b99bf516bbd, type: 3}
+  healingPopupPrefab: {fileID: 5991670611894702333, guid: a100071762996854a9f0ecc012741fe3, type: 3}
 --- !u!222 &1633465943044077206
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currSpeed: 0
   normalSpeed: 3
-  slowedSpeed: 2
+  slowedSpeed: 1
   attackRange: 20
   delay: 1
   startTimeBtwAttacks: 2

@@ -531,12 +531,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35f2481c27e90f40b9c26faf2957989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startGasTimer: 30
-  startLightningTimer: 10
-  startSpawnTimer: 60
+  startGasTimer: 20
+  startLightningTimer: 3
+  startSpawnTimer: 30
   startLowGasTimer: 15
-  startLowLightningTimer: 5
-  startLowSpawnTimer: 30
+  startLowLightningTimer: 2
+  startLowSpawnTimer: 15
   firePoint: {fileID: 7400538795636730264}
   attackRange: 20
   lightningDamage: 10
@@ -545,8 +545,8 @@ MonoBehaviour:
   spearMarePrefab: {fileID: 1608341385869205803, guid: ff740d26780f307468bdb3157e63e9aa, type: 3}
   botchlingPrefab: {fileID: 5253987250411552431, guid: f381ba9a4ddf9cc4e9c60cbc541d9578, type: 3}
   gorewingPrefab: {fileID: 3266969331733951768, guid: 6b696be5f72f3fc409ce00ea69f8f9cc, type: 3}
-  enemiesToSpawn: 3
-  enemiesToSpawnWhenLowHealth: 6
+  enemiesToSpawn: 1
+  enemiesToSpawnWhenLowHealth: 2
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}

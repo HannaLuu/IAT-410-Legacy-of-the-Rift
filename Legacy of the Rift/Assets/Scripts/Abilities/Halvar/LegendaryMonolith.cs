@@ -38,23 +38,24 @@ public class LegendaryMonolith : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentLifeSpan -= Time.deltaTime;
-        if (currentLifeSpan <= 0)
+        if (currentHealth <= 0)
         {
             Destroy(gameObject);
         }
 
-        if(currentHealth <= 75 && currentHealth > 50)
+        currentHealth -= 1f;
+
+        if(currentHealth <= (maxHealth * 0.75) && currentHealth > (maxHealth * 0.5))
         {
             animator.SetTrigger("is75");
         }
 
-        if (currentHealth <= 50 && currentHealth > 25)
+        if (currentHealth <= (maxHealth * 0.5) && currentHealth > (maxHealth * 0.25))
         {
             animator.SetTrigger("is50");
         }
 
-        if (currentHealth <= 25 && currentHealth > 0)
+        if (currentHealth <= (maxHealth * 0.25) && currentHealth > 0)
         {
             animator.SetTrigger("is25");
         }

@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class GW_Together_Drop : StateMachineBehaviour
 {
-    Transform dropPoint, centrePoint;
+    Transform dropPoint;
+    //Transform centrePoint;
 
     public GameObject legPrefab;
-    public GameObject returnPointPrefab;
+    //public GameObject returnPointPrefab;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         dropPoint = GameObject.FindGameObjectWithTag("GW_DropPoint").transform;
-        centrePoint = GameObject.FindGameObjectWithTag("GW_CP").transform;
-        Instantiate(returnPointPrefab, centrePoint.position, centrePoint.rotation);
+        //centrePoint = GameObject.FindGameObjectWithTag("GW_CP").transform;
+        //Instantiate(returnPointPrefab, centrePoint.position, centrePoint.rotation);
         animator.SetBool("isDropped", true);
     }
 

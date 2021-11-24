@@ -207,17 +207,17 @@ public class MjollAttacks : MonoBehaviour
 
                 if (lokir != null)
                 {
-                    StartCoroutine(lokir.Knockback(1f, 350f, lokir.transform.position));
+                    StartCoroutine(lokir.Knockback(1f, 2f, lokir.transform.position));
                 }
 
                 if (halvar != null)
                 {
-                    StartCoroutine(halvar.Knockback(1f, 350f, halvar.transform.position));
+                    StartCoroutine(halvar.Knockback(1f, 2f, halvar.transform.position));
                 }
 
                 if (ursa != null)
                 {
-                    StartCoroutine(ursa.Knockback(1f, 350f, ursa.transform.position));
+                    StartCoroutine(ursa.Knockback(1f, 2f, ursa.transform.position));
                 }
 
             }
@@ -262,17 +262,17 @@ public class MjollAttacks : MonoBehaviour
 
                 if (lokir != null)
                 {
-                    StartCoroutine(lokir.Knockback(1f, 100f, new Vector3(-lokir.transform.position.x, lokir.transform.position.y, lokir.transform.position.z)));
+                    StartCoroutine(lokir.Knockback(1f, 2f, new Vector3(-lokir.transform.position.x, lokir.transform.position.y, lokir.transform.position.z)));
                 }
 
                 if (halvar != null)
                 {
-                    StartCoroutine(halvar.Knockback(1f, 100f, new Vector3(-halvar.transform.position.x, halvar.transform.position.y, halvar.transform.position.z)));
+                    StartCoroutine(halvar.Knockback(1f, 2f, new Vector3(-halvar.transform.position.x, halvar.transform.position.y, halvar.transform.position.z)));
                 }
 
                 if (ursa != null)
                 {
-                    StartCoroutine(ursa.Knockback(1f, 100f, new Vector3(-ursa.transform.position.x, ursa.transform.position.y, ursa.transform.position.z)));
+                    StartCoroutine(ursa.Knockback(1f, 2f, new Vector3(-ursa.transform.position.x, ursa.transform.position.y, ursa.transform.position.z)));
                 }
 
             }
@@ -321,17 +321,17 @@ public class MjollAttacks : MonoBehaviour
 
                 if (lokir != null)
                 {
-                    StartCoroutine(lokir.Knockback(1f, 250f, lokir.transform.position));
+                    StartCoroutine(lokir.Knockback(1f, 1f, lokir.transform.position));
                 }
 
                 if (halvar != null)
                 {
-                    StartCoroutine(halvar.Knockback(1f, 250f, halvar.transform.position));
+                    StartCoroutine(halvar.Knockback(1f, 1f, halvar.transform.position));
                 }
 
                 if (ursa != null)
                 {
-                    StartCoroutine(ursa.Knockback(1f, 250f, ursa.transform.position));
+                    StartCoroutine(ursa.Knockback(1f, 1f, ursa.transform.position));
                 }
 
             }
@@ -377,17 +377,17 @@ public class MjollAttacks : MonoBehaviour
 
                 if (lokir != null)
                 {
-                    StartCoroutine(lokir.Knockback(1f, 50f, new Vector3(-lokir.transform.position.x, lokir.transform.position.y, lokir.transform.position.z)));
+                    StartCoroutine(lokir.Knockback(1f, 1f, new Vector3(-lokir.transform.position.x, lokir.transform.position.y, lokir.transform.position.z)));
                 }
 
                 if (halvar != null)
                 {
-                    StartCoroutine(halvar.Knockback(1f, 50f, new Vector3(-halvar.transform.position.x, halvar.transform.position.y, halvar.transform.position.z)));
+                    StartCoroutine(halvar.Knockback(1f, 1f, new Vector3(-halvar.transform.position.x, halvar.transform.position.y, halvar.transform.position.z)));
                 }
 
                 if (ursa != null)
                 {
-                    StartCoroutine(ursa.Knockback(1f, 50f, new Vector3(-ursa.transform.position.x, ursa.transform.position.y, ursa.transform.position.z)));
+                    StartCoroutine(ursa.Knockback(1f, 1f, new Vector3(-ursa.transform.position.x, ursa.transform.position.y, ursa.transform.position.z)));
                 }
 
             }

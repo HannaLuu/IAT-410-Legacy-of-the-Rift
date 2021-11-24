@@ -37,6 +37,8 @@ public class LokirAttacks : AttackBaseClass
 
     public GameObject trail;
 
+    public GameObject healingPopupPrefab;
+
     //old ult code
     //public int ultClones = 3;
     //private int clonesSpawned = 0;
@@ -94,7 +96,7 @@ public class LokirAttacks : AttackBaseClass
 
         if (isAbilityReady)
         {
-            if (Input.GetButtonDown("Fire2") && spectralWarlock == null)
+            if (Input.GetButtonDown("Fire2") && spectralWarlock == null && dontMove == false)
             {
 
                 playerZeal.SpendZeal(abilityZealCost);
@@ -122,7 +124,7 @@ public class LokirAttacks : AttackBaseClass
             if (playerZeal.fullyZealous == true)
             {
                 ultReadyGlow.SetActive(true);
-                if (Input.GetButtonDown("Fire3"))
+                if (Input.GetButtonDown("Fire3") && dontMove == false)
                 {
                     playerZeal.SpendZeal(100);
                     playerZeal.SpendOverzeal(ultZealCost);
@@ -186,6 +188,11 @@ public class LokirAttacks : AttackBaseClass
         {
             Instantiate(impactEffect, attackPoint.position, attackPoint.rotation);
             enemyColInfo.GetComponentInParent<Enemy>().TakeDamage(damageDone);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, enemyColInfo.transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(damageDone);
         }
     }
 
@@ -203,6 +210,7 @@ public class LokirAttacks : AttackBaseClass
         ultActivated = true;
         rb.velocity = new Vector2(0,0);
         Instantiate(lokirUltPrefab, lokirUltPoint.position, lokirUltPoint.rotation);
+        FindObjectOfType<PlayerHealth>().Heal(100);
     }
 
     public void HalvarUlt()
@@ -210,6 +218,7 @@ public class LokirAttacks : AttackBaseClass
         rb.velocity = new Vector2(0, 0);
         Instantiate(halvarUltPrefab, halvarUltPointL.position, halvarUltPointL.rotation);
         Instantiate(halvarUltPrefab, halvarUltPointR.position, halvarUltPointR.rotation);
+        FindObjectOfType<PlayerHealth>().Heal(100);
     }
 
     public void UrsaUlt()

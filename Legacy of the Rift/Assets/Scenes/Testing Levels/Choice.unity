@@ -3697,7 +3697,7 @@ MonoBehaviour:
   waitUntilFinished: 1
 --- !u!114 &1956255639
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3850,7 +3850,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1956255643}
   selectedCommands:
-  - {fileID: 1956255639}
+  - {fileID: 1956255648}
   variables: []
   description: 
   stepPause: 0
@@ -3905,7 +3905,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &1956255647
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3936,7 +3936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  text: Gas Light Gate Keeping Girl Boos
+  text: Gas Light Gate Keeping Girl Boss
   description: Pick Mjoll
   targetBlock: {fileID: 1956255649}
   hideIfVisited: 0
@@ -3976,7 +3976,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &1956255650
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

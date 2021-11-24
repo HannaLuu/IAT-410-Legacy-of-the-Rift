@@ -13,7 +13,7 @@ public class GW_Top_Move : StateMachineBehaviour
     Transform player;
     Rigidbody2D rb;
     Enemy enemyScript;
-    Transform returnToPos;
+    //Transform returnToPos;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -21,7 +21,7 @@ public class GW_Top_Move : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         enemyScript = animator.GetComponent<Enemy>();
-        returnToPos = GameObject.FindGameObjectWithTag("GW_ReturnPoint").transform;
+        //returnToPos = GameObject.FindGameObjectWithTag("GW_ReturnPoint").transform;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -29,20 +29,12 @@ public class GW_Top_Move : StateMachineBehaviour
     {
         enemyScript.LookAtPlayer();
 
-        if (Vector2.Distance(player.position, rb.position) <= chaseRange)
+        Vector2 target = new Vector2(player.position.x, player.position.y);
+        Vector2 newPos = Vector2.MoveTowards(rb.position, target, currSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(newPos);
+        if (Vector2.Distance(player.position, rb.position) <= attackRange)
         {
-            Vector2 target = new Vector2(player.position.x, player.position.y);
-            Vector2 newPos = Vector2.MoveTowards(rb.position, target, currSpeed * Time.fixedDeltaTime);
-            rb.MovePosition(newPos);
-            if (Vector2.Distance(player.position, rb.position) <= attackRange)
-            {
-                animator.SetTrigger("Attack");
-            }
-        } else
-        {
-            Vector2 target = new Vector2(returnToPos.position.x, returnToPos.position.y);
-            Vector2 newPos = Vector2.MoveTowards(rb.position, target, currSpeed * Time.fixedDeltaTime);
-            rb.MovePosition(newPos);
+            animator.SetTrigger("Attack");
         }
 
         if (enemyScript.isSlowed == true)

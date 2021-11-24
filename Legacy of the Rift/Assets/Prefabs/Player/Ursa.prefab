@@ -407,6 +407,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   m_GroundCheck: {fileID: 6510522072655516039}
+  playerSwitchingScript: {fileID: 0}
+  lokir: {fileID: 0}
+  halvar: {fileID: 0}
+  ursa: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -488,6 +492,7 @@ MonoBehaviour:
   controller: {fileID: 6510522073437167067}
   animator: {fileID: 6510522073437167068}
   runSpeed: 46
+  horizontalMove: 0
 --- !u!95 &6510522073437167068
 Animator:
   serializedVersion: 3
@@ -550,10 +555,11 @@ MonoBehaviour:
   lokirUltPrefab: {fileID: 7381604623743189407, guid: f8865192a3c354e438cb2f7b4fbf9730, type: 3}
   halvarUltPrefab: {fileID: 8027434218581657759, guid: 38f9a9ad9e295f44594e71d46b525279, type: 3}
   ursaUltPrefab: {fileID: 2942944832457428792, guid: 99d406458e0d4594a8dea1f9692f9dda, type: 3}
+  dontMove: 0
   playerZeal: {fileID: 0}
   overzealRegenAmount: 5
   abilityZealCost: 25
-  rb: {fileID: 6510522073437167064}
+  healingPopupPrefab: {fileID: 5991670611894702333, guid: a100071762996854a9f0ecc012741fe3, type: 3}
 --- !u!1 &6510522073740800956
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerSwitching : MonoBehaviour
 {
@@ -77,6 +78,11 @@ public class PlayerSwitching : MonoBehaviour
         if (Input.GetKey("escape"))
         {
             Application.Quit();
+        }
+
+        if (Input.GetKey(KeyCode.P))
+        {
+            SceneManager.LoadScene("Choice");
         }
 
         Player.transform.position = GetCurrentHeroObj().transform.position;

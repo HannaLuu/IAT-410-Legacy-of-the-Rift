@@ -4520,7 +4520,7 @@ MonoBehaviour:
   fullyZealous: 0
   canSpendZeal: 0
   canSpendOverzeal: 0
-  overzealCheat: 1
+  overzealCheat: 0
   zealBar: {fileID: 1898871747}
   overzealBar: {fileID: 1898871737}
   ultReadyIndicator: {fileID: 1898871736}
