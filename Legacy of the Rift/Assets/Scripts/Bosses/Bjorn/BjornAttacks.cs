@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BjornAttacks : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class BjornAttacks : MonoBehaviour
     private float angle;
 
     public Transform player;
+
+    private Enemy enemyScript;
 
     public void basicAttack()
     {
@@ -60,6 +63,8 @@ public class BjornAttacks : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
 
+        enemyScript = GetComponent<Enemy>();
+
         //rbBasic = GetComponent<Rigidbody2D>();
 
         InvokeRepeating("Teleport", 0, 10); //calls ChangePosition() every 10 secs
@@ -70,7 +75,10 @@ public class BjornAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // LookAtPlayer();
+        if(enemyScript.currentHealth <= 40)
+        {
+            SceneManager.LoadScene("Credits");
+        }
     }
 
     void Teleport()

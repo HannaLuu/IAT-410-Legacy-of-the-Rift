@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MjollAttacks : MonoBehaviour
 {
@@ -61,6 +62,11 @@ public class MjollAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (enemyScript.currentHealth <= 40)
+        {
+            SceneManager.LoadScene("Credits");
+        }
+
         if (enemyScript.currentHealth > lowHealthPoint)
         {
             if (gasTimer <= 0)
