@@ -83,7 +83,6 @@ public class MjollAttacks : MonoBehaviour
 
             if (lightningTimer <= 0 && Vector2.Distance(player.transform.position, transform.position) <= attackRange)
             {
-                animator.SetBool("Avoid", false);
                 animator.SetBool("Shoot", true);
                 lightningTimer = startLightningTimer;
             }
@@ -115,7 +114,6 @@ public class MjollAttacks : MonoBehaviour
 
             if (lightningTimer <= 0 && Vector2.Distance(player.transform.position, transform.position) <= attackRange)
             {
-                animator.SetBool("Avoid", false);
                 animator.SetBool("Shoot", true);
                 lightningTimer = startLowLightningTimer;
             }
@@ -123,6 +121,18 @@ public class MjollAttacks : MonoBehaviour
             {
                 lightningTimer -= Time.deltaTime;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("LeftWall"))
+        {
+            animator.SetBool("avoidLeftWall", true);
+        }
+        if (collision.gameObject.CompareTag("RightWall"))
+        {
+            animator.SetBool("avoidRightWall", true);
         }
     }
 

@@ -59,10 +59,14 @@ public class Gas : MonoBehaviour
         {
             if (damageTimer <= 0)
             {
+                damageTimer = startDamageTimer;
                 GameObject damagePopup = Instantiate(damagePopupPrefab, collision.transform.position, Quaternion.identity);
                 DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
                 damagePopupScript.Setup(damage);
                 FindObjectOfType<PlayerHealth>().TakeDamage(damage);
+            } else
+            {
+                damageTimer -= Time.deltaTime;
             }
         }
     }

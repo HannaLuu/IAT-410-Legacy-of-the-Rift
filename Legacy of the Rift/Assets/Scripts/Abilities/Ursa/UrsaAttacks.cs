@@ -44,7 +44,7 @@ public class UrsaAttacks : AttackBaseClass
             {
                 attackActivated = true;
                 dontMove = true;
-                rb.velocity = new Vector2(0, 0);
+                rb.velocity = new Vector2(0, rb.velocity.y);
                 animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }

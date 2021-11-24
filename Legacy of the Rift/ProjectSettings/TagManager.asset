@@ -20,6 +20,8 @@ TagManager:
   - Lightning
   - BjornBalls
   - Teleport_Point
+  - LeftWall
+  - RightWall
   layers:
   - Default
   - TransparentFX
@@ -33,7 +35,7 @@ TagManager:
   - Monolith
   - DashTrigger
   - HalvarUlt
-  - 
+  - BjornBalls
   - 
   - 
   - 

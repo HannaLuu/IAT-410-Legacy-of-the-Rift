@@ -117,7 +117,6 @@ public class LokirAttacks : AttackBaseClass
         }
 
 
-        Debug.Log(isUltReady);
         if (isUltReady && isUltUnlocked)
         {
             if (playerZeal.fullyZealous == true)

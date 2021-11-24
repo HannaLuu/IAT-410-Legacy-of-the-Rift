@@ -302,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6359789920254269644}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.748, y: 0.142, z: 0}
+  m_LocalPosition: {x: 0.944, y: 0.036, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 6359789920620312147}
@@ -365,7 +365,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -386,7 +386,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1002721484818444686, guid: 4f68f06e2068fa748a367e23b222bb41, type: 3}
+  m_Sprite: {fileID: -6701211638856049335, guid: f5cb1b9e4574a5c4bae97a04f409a8df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -450,18 +450,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014287829, y: 0}
+  m_Offset: {x: 0, y: -0.13801134}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2, y: 1.2}
+    oldSize: {x: 0.92, y: 1.5}
     newSize: {x: 1.2, y: 1.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5808594, y: 1.2}
+  m_Size: {x: 0.7333369, y: 1.1742377}
   m_EdgeRadius: 0
 --- !u!114 &6359789920620312151
 MonoBehaviour:
@@ -485,7 +485,8 @@ MonoBehaviour:
   basicAttackPrefab: {fileID: 7157310117782789744, guid: 0e0c38e1f0ad442449b9623f399ccd03, type: 3}
   homingAttackDamage: 30
   homingAttackPrefab: {fileID: 4674947020309983179, guid: 28be05391ee5593408b8154591903e65, type: 3}
-  asteroidSpawnPoints: {fileID: 0}
+  asteroidSpawnPoints:
+  - {fileID: 0}
   asteroidAttackPrefab: {fileID: 116554844309713350, guid: ee93fac5c8f74c74ba7f33b7500bbed7, type: 3}
   player: {fileID: 0}
 --- !u!114 &8549960078538416721

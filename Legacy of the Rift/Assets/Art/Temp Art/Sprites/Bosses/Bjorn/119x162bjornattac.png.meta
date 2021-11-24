@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: f4f6435c5340dcc43be67ee76929e2b0
+guid: a740d37002d9d9a4f8ea569a1c4661bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 595652075108135232
-    second: F-Key_0
+      213: -4516324263056166625
+    second: 119x162bjornattac_0
   - first:
-      213: 6678431997179020823
-    second: F-Key_1
+      213: 5731307203174756487
+    second: 119x162bjornattac_1
+  - first:
+      213: 8506328085454428032
+    second: 119x162bjornattac_2
+  - first:
+      213: -9029239053298501419
+    second: 119x162bjornattac_3
+  - first:
+      213: -4913791246001229243
+    second: 119x162bjornattac_4
+  - first:
+      213: -3376939384869689868
+    second: 119x162bjornattac_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -71,7 +83,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -83,7 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -95,7 +107,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -109,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: F-Key_0
+      name: 119x162bjornattac_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 119
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0417b8a086e244800800000000000000
-      internalID: 595652075108135232
+      spriteID: f113f02e20bc251c0800000000000000
+      internalID: -4516324263056166625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: F-Key_1
+      name: 119x162bjornattac_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 119
         y: 0
-        width: 32
-        height: 32
+        width: 119
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,8 +156,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7164570848e8eac50800000000000000
-      internalID: 6678431997179020823
+      spriteID: 7807ed71981b98f40800000000000000
+      internalID: 5731307203174756487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 119x162bjornattac_2
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 119
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0879074435c8c0670800000000000000
+      internalID: 8506328085454428032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 119x162bjornattac_3
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 0
+        width: 119
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8fe048be2b1b280800000000000000
+      internalID: -9029239053298501419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 119x162bjornattac_4
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 119
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5423ca965e4becbb0800000000000000
+      internalID: -4913791246001229243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 119x162bjornattac_5
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 0
+        width: 119
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5e0d07583b221d0800000000000000
+      internalID: -3376939384869689868
       vertices: []
       indices: 
       edges: []

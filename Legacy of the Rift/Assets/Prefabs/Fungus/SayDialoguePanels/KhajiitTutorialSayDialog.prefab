@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4782cf42f2644447b9631f6e522160b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volume: 0.5
+  volume: 0.1
   loop: 1
   targetAudioSource: {fileID: 0}
   audioMode: 1
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3591991633476250695, guid: 5c69dfeb1df7a9a45b2a4601624bc7c4, type: 3}
+  m_Sprite: {fileID: 595652075108135232, guid: f4f6435c5340dcc43be67ee76929e2b0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -604,7 +604,7 @@ Animator:
   m_GameObject: {fileID: 7313151525131619471}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 66174816690e77749afb00dcc0ccc778, type: 2}
+  m_Controller: {fileID: 9100000, guid: a73b1b7c2c19adf48837c02ef3ae8446, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

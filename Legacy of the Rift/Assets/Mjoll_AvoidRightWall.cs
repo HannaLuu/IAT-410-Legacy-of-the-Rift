@@ -2,36 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mjoll_Idle : StateMachineBehaviour
+public class Mjoll_AvoidRightWall : StateMachineBehaviour
 {
-    Enemy enemy;
-
-    public float avoidRange = 3f;
+    GameObject rightWall;
+    Rigidbody2D rb;
+    Enemy enemyScript;
 
     Transform player;
-    Rigidbody2D rb;
+
+    public float speed = 5f;
+    public float wallSpace = 10f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        enemy = animator.GetComponent<Enemy>();
+        rightWall = GameObject.FindGameObjectWithTag("RightWall");
+        enemyScript = animator.GetComponent<Enemy>();
         rb = animator.GetComponent<Rigidbody2D>();
+
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemy.LookAtPlayer();
-        rb.velocity = new Vector2(0, rb.velocity.y);
-
-        if (Vector2.Distance(player.position, animator.GetComponent<Transform>().transform.position) <= avoidRange)
+        if (player.position.x > rb.position.x)
         {
-            animator.SetBool("Avoid", true);
+            enemyScript.LookAtPlayer();
         }
-        if (enemy.currentHealth <= 300)
+        else
         {
-            animator.SetBool("isLowHealth", true);
+            enemyScript.LookOppositePlayer();
+        }
+
+        if (Vector2.Distance(rb.position, rightWall.transform.position) <= wallSpace)
+        {
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+        }
+        else
+        {
+            animator.SetBool("avoidRightWall", false);
         }
     }
 

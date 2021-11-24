@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: f4f6435c5340dcc43be67ee76929e2b0
+guid: 397f65fab170fa441a95cf5bc9119429
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 595652075108135232
-    second: F-Key_0
+      213: -2059243248335373337
+    second: 107x146mjoll-hit_0
   - first:
-      213: 6678431997179020823
-    second: F-Key_1
+      213: -6710591266834779196
+    second: 107x146mjoll-hit_1
+  - first:
+      213: 4966603426783263255
+    second: 107x146mjoll-hit_2
+  - first:
+      213: -5701430596193725198
+    second: 107x146mjoll-hit_3
+  - first:
+      213: -6125383090509168500
+    second: 107x146mjoll-hit_4
+  - first:
+      213: 515652082819227841
+    second: 107x146mjoll-hit_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -71,7 +83,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -83,7 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -95,7 +107,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -109,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: F-Key_0
+      name: 107x146mjoll-hit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 107
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0417b8a086e244800800000000000000
-      internalID: 595652075108135232
+      spriteID: 7eb39dc0d291c63e0800000000000000
+      internalID: -2059243248335373337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: F-Key_1
+      name: 107x146mjoll-hit_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 107
         y: 0
-        width: 32
-        height: 32
+        width: 107
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,8 +156,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7164570848e8eac50800000000000000
-      internalID: 6678431997179020823
+      spriteID: 4c3797b0cc03fd2a0800000000000000
+      internalID: -6710591266834779196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 107x146mjoll-hit_2
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 107
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a77a1a08bece440800000000000000
+      internalID: 4966603426783263255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 107x146mjoll-hit_3
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 0
+        width: 107
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4545a841370e0b0800000000000000
+      internalID: -5701430596193725198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 107x146mjoll-hit_4
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 0
+        width: 107
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80440968844efaa0800000000000000
+      internalID: -6125383090509168500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 107x146mjoll-hit_5
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 0
+        width: 107
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0612856d6f72700800000000000000
+      internalID: 515652082819227841
       vertices: []
       indices: 
       edges: []

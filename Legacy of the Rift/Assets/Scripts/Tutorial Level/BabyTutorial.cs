@@ -5,58 +5,50 @@ using Fungus;
 
 public class BabyTutorial : MonoBehaviour
 {
-    public bool pickupAllowed = false;
-    public bool fuck = false;
-
     public GameObject pickUpKey;
 
     public Flowchart flowchart;
 
-    public CMTutorialSwitcher cmSwitcher;
+    private bool nextToKids = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
         pickUpKey.SetActive(false);
-        fuck = false;
+        nextToKids = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(pickupAllowed && Input.GetKeyDown(KeyCode.F) && fuck)
+        if(Input.GetKeyDown(KeyCode.F) && nextToKids)
         {
-            Pickup();
+            flowchart.SetBooleanVariable("canTalktoKids", true);
+            flowchart.ExecuteBlock("Kids Give Hint");
         }
     }
     private void OnTriggerEnter2D(Collider2D player)
     {
-        Debug.Log("BABY COLLISION DETECTED");
-        if(player.tag == "Lokir" && fuck == true)
+        if(player.tag == "Lokir" || player.tag == "Halvar" || player.tag == "Ursa")
         {
             pickUpKey.SetActive(true);
-            pickupAllowed = true;
+            nextToKids = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D player)
     {
-        if (player.tag == "Lokir")
+        if (player.tag == "Lokir" || player.tag == "Halvar" || player.tag == "Ursa")
         {
             pickUpKey.SetActive(false);
-            pickupAllowed = false;
+            nextToKids = false;
+            flowchart.SetBooleanVariable("canTalktoKids", false);
         }
     }
 
-    public void AllowPickup()
+    public void DestroyKids()
     {
-        fuck = true;
-    }
-
-    public void Pickup()
-    {
-        flowchart.SetBooleanVariable("pickedUpBabies", true);
-        Fungus.Flowchart.BroadcastFungusMessage("PickedUpBabies");
-        this.gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

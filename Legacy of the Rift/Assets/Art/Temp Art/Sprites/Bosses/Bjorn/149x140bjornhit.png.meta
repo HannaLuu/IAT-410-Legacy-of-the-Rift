@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: f4f6435c5340dcc43be67ee76929e2b0
+guid: d96fd0f568febff4ead00bd005653557
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 595652075108135232
-    second: F-Key_0
+      213: 2073942264026812916
+    second: 149x140bjornhit_0
   - first:
-      213: 6678431997179020823
-    second: F-Key_1
+      213: 4132304467521704474
+    second: 149x140bjornhit_1
+  - first:
+      213: -2999720596527206047
+    second: 149x140bjornhit_2
+  - first:
+      213: 6286583679666176296
+    second: 149x140bjornhit_3
+  - first:
+      213: -991219569044796054
+    second: 149x140bjornhit_4
+  - first:
+      213: 4203291267281469641
+    second: 149x140bjornhit_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -71,7 +83,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -83,7 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -95,7 +107,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -109,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: F-Key_0
+      name: 149x140bjornhit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 149
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0417b8a086e244800800000000000000
-      internalID: 595652075108135232
+      spriteID: 4f1dcfb308f18cc10800000000000000
+      internalID: 2073942264026812916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: F-Key_1
+      name: 149x140bjornhit_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 149
         y: 0
-        width: 32
-        height: 32
+        width: 149
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,8 +156,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7164570848e8eac50800000000000000
-      internalID: 6678431997179020823
+      spriteID: a121462f405e85930800000000000000
+      internalID: 4132304467521704474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 149x140bjornhit_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 0
+        width: 149
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161b29ab20ade56d0800000000000000
+      internalID: -2999720596527206047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 149x140bjornhit_3
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 0
+        width: 149
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82145458c8e6e3750800000000000000
+      internalID: 6286583679666176296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 149x140bjornhit_4
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 0
+        width: 149
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d4bacbd0b7e32f0800000000000000
+      internalID: -991219569044796054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 149x140bjornhit_5
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 0
+        width: 149
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c040d93327155a30800000000000000
+      internalID: 4203291267281469641
       vertices: []
       indices: 
       edges: []
