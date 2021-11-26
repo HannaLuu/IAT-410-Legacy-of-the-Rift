@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HomingBall : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = 30f;
     public int damage = 100;
 
     public GameObject impactEffect;
@@ -105,4 +105,6 @@ public class HomingBall : MonoBehaviour
         enabled = false;
         Destroy(gameObject);
     }
+
+
 }

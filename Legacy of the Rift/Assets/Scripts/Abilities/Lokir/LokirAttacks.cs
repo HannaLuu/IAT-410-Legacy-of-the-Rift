@@ -208,7 +208,7 @@ public class LokirAttacks : AttackBaseClass
     public void SpectralBarrage()
     {
         ultActivated = true;
-        rb.velocity = new Vector2(0,0);
+        rb.velocity = new Vector2(0, 0);
         Instantiate(lokirUltPrefab, lokirUltPoint.position, lokirUltPoint.rotation);
         FindObjectOfType<PlayerHealth>().Heal(100);
     }
@@ -269,7 +269,7 @@ public class LokirAttacks : AttackBaseClass
 
         ignoreEnemyCollision = false;
         Physics2D.IgnoreLayerCollision(7, 6, false);
-        Physics2D.IgnoreLayerCollision(7, 12, true);
+        Physics2D.IgnoreLayerCollision(7, 12, false);
 
     }
 
