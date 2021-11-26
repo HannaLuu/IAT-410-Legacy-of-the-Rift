@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : MonoBehaviour {
+    public static event EventHandler OnDeath;
+    
     public float maxHealth = 100;
     public float currentHealth;
 
@@ -54,6 +56,7 @@ public class Enemy : MonoBehaviour
     {
         //EnemyCounter.enemiesKilled = EnemyCounter.enemiesKilled += 1;
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
+        OnDeath?.Invoke(this, EventArgs.Empty);
         Destroy(gameObject);
     }
 

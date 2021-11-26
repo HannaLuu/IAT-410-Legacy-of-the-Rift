@@ -1,10 +1,14 @@
+using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
-public class WaveSpawner : MonoBehaviour
-{
+public class WaveSpawner : MonoBehaviour {
+    public SuperTextSuperSeks waveText;
+    public SuperTextSuperSeks enemiesText;
 
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
@@ -34,9 +38,11 @@ public class WaveSpawner : MonoBehaviour
     private float searchCountdown = 1f;
 
     public SpawnState state = SpawnState.COUNTING;
+    public int enemyCount;
 
-    void Start()
-    {
+    void Start() {
+        Enemy.OnDeath += DecrementEnemyCount;
+        
         if (spawnPoints.Length == 0)
         {
             Debug.LogError("No spawn points referenced.");
@@ -47,8 +53,15 @@ public class WaveSpawner : MonoBehaviour
         //clones = GameObject.FindGameObjectWithTag("SBClone").transform;
     }
 
+    private void DecrementEnemyCount(object sender, EventArgs e) {
+        enemyCount--;
+        enemiesText.SetText("Enemies Right: " + enemyCount);
+    }
+
     void Update()
     {
+        waveText.SetText("Dave: " + (1+nextWave) + "/" + waves.Length);
+        
         if (state == SpawnState.WAITING)
         {
             if (!EnemyIsAlive())
@@ -71,6 +84,7 @@ public class WaveSpawner : MonoBehaviour
         }
         else
         {
+            enemiesText.SetText("Next dave in: " + Mathf.RoundToInt(waveCountdown) + "s");
             waveCountdown -= Time.deltaTime;
         }
     }
@@ -139,8 +153,10 @@ public class WaveSpawner : MonoBehaviour
     public void SpawnEnemy()
     {
         int randomEnemy = Random.Range(0, enemy.Length); //Selecing a random enemy
-        Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)]; 
         Instantiate(enemy[randomEnemy], _sp.position, _sp.rotation);
+        enemyCount++;
+        enemiesText.SetText("Enemies Right: " + enemyCount);
     }
 
 }

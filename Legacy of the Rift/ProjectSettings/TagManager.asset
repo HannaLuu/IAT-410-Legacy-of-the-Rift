@@ -36,7 +36,7 @@ TagManager:
   - DashTrigger
   - HalvarUlt
   - BjornBalls
-  - 
+  - Minimap
   - 
   - 
   - 
@@ -56,6 +56,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Minimap
+    uniqueID: 3692210311
+    locked: 0
   - name: Background
     uniqueID: 1260592013
     locked: 0
