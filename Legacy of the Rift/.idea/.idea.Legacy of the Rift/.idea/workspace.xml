@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61143bc3-dbe6-42b2-9399-a83ae1faa321" name="Default Changelist" comment="" />
+    <list default="true" id="61143bc3-dbe6-42b2-9399-a83ae1faa321" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +30,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/MinimapCamera.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -37,6 +43,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/LokirAttacks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy_Run.cs" />
+        <option value="$PROJECT_DIR$/Assets/MinimapSprite.cs" />
       </list>
     </option>
   </component>
@@ -65,9 +72,8 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
@@ -75,9 +81,8 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
@@ -95,6 +100,7 @@
       <workItem from="1637226943188" duration="1481000" />
       <workItem from="1637229244015" duration="881000" />
       <workItem from="1637874319192" duration="170000" />
+      <workItem from="1637918945300" duration="463000" />
     </task>
     <servers />
   </component>
