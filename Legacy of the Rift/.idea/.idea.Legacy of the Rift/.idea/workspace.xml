@@ -21,17 +21,53 @@
   <component name="ChangeListManager">
     <list default="true" id="61143bc3-dbe6-42b2-9399-a83ae1faa321" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinimapCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinimapCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MinimapSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinimapSprite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/DeadBabyMonster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/DeadBabyMonster.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Gorewings/GW_Legs.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Gorewings/GW_Legs.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Gorewings/Gorewings.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Gorewings/Gorewings.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Spear Mare/SpearMare.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Spear Mare/SpearMare.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Dickon .prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Dickon .prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Eerika Ironhand.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Eerika Ironhand.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Halvar Ironhand.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Halvar Ironhand.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Hjallna Ironhand.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Hjallna Ironhand.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Khajiit D'Amelio.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Khajiit D'Amelio.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Lokir Ironhand.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Lokir Ironhand.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Morkvar Ironhand.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Morkvar Ironhand.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Scourged.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Scourged.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Ursa Ironhand.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/CharacterHeadshots/Ursa Ironhand.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Eerika (In-Level).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Eerika (In-Level).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Halvar (In-Level).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Halvar (In-Level).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Hjallna (In-Level).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Hjallna (In-Level).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Khajiit D'Amelio (In-Level).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Khajiit D'Amelio (In-Level).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Lokir (In-Level).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Lokir (In-Level).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Morkvar (In-Level).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Morkvar (In-Level).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Ursa (In-Level).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/In-Level Characters/Ursa (In-Level).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/SayDialoguePanels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/SayDialoguePanels/BasicSayDialog.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/SayDialoguePanels/BasicSayDialog.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/SayDialoguePanels/KhajiitTutorialSayDialog.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/SayDialoguePanels/KhajiitTutorialSayDialog.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/Stage.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fungus/Stage.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Forest_Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Forest_Level.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Shore_Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Shore_Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wave System/WaveSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Wave System/WaveSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +89,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/LokirAttacks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy_Run.cs" />
-        <option value="$PROJECT_DIR$/Assets/MinimapSprite.cs" />
         <option value="$PROJECT_DIR$/Assets/SuperTextSuperSeks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/MinimapCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Wave System/WaveSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/MinimapSprite.cs" />
       </list>
     </option>
   </component>
@@ -115,6 +151,7 @@
       <workItem from="1637229244015" duration="881000" />
       <workItem from="1637874319192" duration="170000" />
       <workItem from="1637918945300" duration="463000" />
+      <workItem from="1638090974879" duration="379000" />
     </task>
     <servers />
   </component>

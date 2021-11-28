@@ -8,6 +8,6 @@ public class MinimapSprite : MonoBehaviour
 
     void Update() {
         var parentPos = parent.transform.position;
-        transform.position = new Vector3(parentPos.x, parentPos.y, 10);
+        transform.position = new Vector3(parentPos.x, parentPos.y + 3, 10);
     }
 }
