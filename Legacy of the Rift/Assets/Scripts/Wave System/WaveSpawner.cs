@@ -150,13 +150,26 @@ public class WaveSpawner : MonoBehaviour {
     //     Instantiate(_enemy, _sp.position, _sp.rotation);
     // }
 
-    public void SpawnEnemy()
-    {
-        int randomEnemy = Random.Range(0, enemy.Length); //Selecing a random enemy
-        Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)]; 
-        Instantiate(enemy[randomEnemy], _sp.position, _sp.rotation);
-        enemyCount++;
-        enemiesText.SetText("Enemies Right: " + enemyCount);
+    public void SpawnEnemy() {
+        StartCoroutine(AttemptSpawning());
     }
 
+    private IEnumerator AttemptSpawning() {
+        int randomEnemy = Random.Range(0, enemy.Length); //Selecing a random enemy
+        Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        var playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+
+        while (Vector2.Distance(_sp.position, playerPos) < 20) {
+            _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            yield return null;
+        }
+        Instantiate(enemy[randomEnemy], _sp.position, _sp.rotation);
+        IncrementEnemyCount();
+    }
+
+    public void IncrementEnemyCount() {
+        enemyCount++;
+        enemiesText.SetText("Enemies Right: " + enemyCount);
+        
+    }
 }

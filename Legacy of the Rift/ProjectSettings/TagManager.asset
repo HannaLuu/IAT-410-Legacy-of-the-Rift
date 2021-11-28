@@ -22,6 +22,7 @@ TagManager:
   - Teleport_Point
   - LeftWall
   - RightWall
+  - WaveManager
   layers:
   - Default
   - TransparentFX

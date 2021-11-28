@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GW_Together_Drop : StateMachineBehaviour
 {
-    Transform dropPoint;
     //Transform centrePoint;
 
     public GameObject legPrefab;
@@ -13,7 +12,6 @@ public class GW_Together_Drop : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        dropPoint = GameObject.FindGameObjectWithTag("GW_DropPoint").transform;
         //centrePoint = GameObject.FindGameObjectWithTag("GW_CP").transform;
         //Instantiate(returnPointPrefab, centrePoint.position, centrePoint.rotation);
         animator.SetBool("isDropped", true);
@@ -26,9 +24,10 @@ public class GW_Together_Drop : StateMachineBehaviour
     //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        Instantiate(legPrefab, dropPoint.position, dropPoint.rotation);
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        Instantiate(legPrefab, animator.gameObject.transform.position, Quaternion.identity);
+        WaveSpawner waveSpawner = GameObject.FindGameObjectWithTag("WaveManager").GetComponent<WaveSpawner>();
+        waveSpawner.IncrementEnemyCount();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
