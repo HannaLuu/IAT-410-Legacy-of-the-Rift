@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Morkvar
-  nameColor: {r: 0.24705882, g: 0.24705882, b: 0.24705882, a: 1}
+  nameColor: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
   portraitsFace: 0

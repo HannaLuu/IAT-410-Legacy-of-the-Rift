@@ -308,13 +308,14 @@ GameObject:
   - component: {fileID: 6510522073437167071}
   - component: {fileID: 6510522073437167068}
   - component: {fileID: 6510522073437167044}
+  - component: {fileID: 1177002404}
   m_Layer: 7
   m_Name: Ursa
   m_TagString: Ursa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6510522073437167045
 Transform:
   m_ObjectHideFlags: 0
@@ -322,7 +323,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6510522073437167069}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 0.01, z: -0.01}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
@@ -527,7 +528,7 @@ MonoBehaviour:
   enemyCollided: 0
   rb: {fileID: 0}
   ultReadyGlow: {fileID: 5435820452094613908}
-  damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
+  damagePopupPrefab: {fileID: 1915879397188700219, guid: 9ae1882a4c8af304f9ba8d9bde5444f0, type: 3}
   isAttackReady: 0
   attackActivated: 0
   maxAttackCooldown: 1
@@ -560,6 +561,25 @@ MonoBehaviour:
   overzealRegenAmount: 5
   abilityZealCost: 25
   healingPopupPrefab: {fileID: 5991670611894702333, guid: a100071762996854a9f0ecc012741fe3, type: 3}
+--- !u!114 &1177002404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6510522073437167069}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7b6c351cb9012418e079b84e5740bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 0}
+  ursaBasicGlow: {fileID: 0}
+  ursaUltGlow: {fileID: 0}
+  phase3Enemy: {fileID: 0}
+  dialogueShit: {fileID: 0}
+  playerZeal: {fileID: 0}
+  cmSwitcher: {fileID: 0}
 --- !u!1 &6510522073740800956
 GameObject:
   m_ObjectHideFlags: 0

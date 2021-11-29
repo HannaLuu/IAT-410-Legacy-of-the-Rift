@@ -38,7 +38,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -619.33, y: 48}
+  m_AnchoredPosition: {x: -593, y: 40}
   m_SizeDelta: {x: 1238.663, y: 335}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &551193719903798090
@@ -147,15 +147,15 @@ RectTransform:
   m_GameObject: {fileID: 551193720025659682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.98343, y: 0.98343, z: 0.98343}
   m_Children: []
   m_Father: {fileID: 551193719903798093}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 619.29224, y: -46}
-  m_SizeDelta: {x: 1161.184, y: 71}
+  m_AnchoredPosition: {x: 620, y: -63}
+  m_SizeDelta: {x: 1095.5, y: 71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &551193720025659687
 CanvasRenderer:
@@ -186,11 +186,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: bb145366ce7024469a5758b08d31802c, type: 3}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 2bfcd645f65eb064493392a2d8136451, type: 3}
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -522,7 +522,7 @@ RectTransform:
   m_GameObject: {fileID: 551193720636297954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.98343, y: 0.98343, z: 0.98343}
   m_Children:
   - {fileID: 551193721324032645}
   m_Father: {fileID: 551193719903798093}
@@ -530,8 +530,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.78700006}
-  m_AnchoredPosition: {x: -0.03942871, y: 8}
-  m_SizeDelta: {x: -77.479, y: -63}
+  m_AnchoredPosition: {x: 9, y: 16}
+  m_SizeDelta: {x: -124.71, y: -67.7338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &551193720636297958
 CanvasRenderer:
@@ -562,19 +562,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 79197ecfbc3a4294a89ce589dac02cf2, type: 3}
-    m_FontSize: 45
+    m_Font: {fileID: 12800000, guid: 1717c2273bbb9df40b2a693d6e0bdd83, type: 3}
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 56
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Story text
+    m_LineSpacing: 0.8
+  m_Text: The Scourge of the Gifted is a virus that eradicated the entirety of Wulfgard,
+    killing young and old Gifted alike. The Scourge of the Gifted is a virus that
+    eradicated the entirety of Wulfgard, killing young and old Gifted alike.
 --- !u!114 &551193720636297956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,8 +631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -5.6679993}
+  m_SizeDelta: {x: 0, y: -11.337}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &551193720756681837
 CanvasRenderer:
@@ -710,8 +712,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -69.629, y: 34.814}
-  m_SizeDelta: {x: 139.259, y: 69.629}
+  m_AnchoredPosition: {x: -32.130005, y: 33.729996}
+  m_SizeDelta: {x: 60.72, y: 60.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &551193721324032646
 CanvasRenderer:

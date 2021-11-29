@@ -107,13 +107,14 @@ GameObject:
   - component: {fileID: 4092356082363815209}
   - component: {fileID: 4092356082363815208}
   - component: {fileID: 4539396504465934491}
+  - component: {fileID: 895517101}
   m_Layer: 7
   m_Name: Halvar
   m_TagString: Halvar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4092356082363815203
 Transform:
   m_ObjectHideFlags: 0
@@ -121,7 +122,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4092356082363815211}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 0.01, z: -0.01}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
@@ -326,7 +327,7 @@ MonoBehaviour:
   enemyCollided: 0
   rb: {fileID: 0}
   ultReadyGlow: {fileID: 8934115261895357847}
-  damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
+  damagePopupPrefab: {fileID: 1915879397188700219, guid: 9ae1882a4c8af304f9ba8d9bde5444f0, type: 3}
   isAttackReady: 0
   attackActivated: 0
   maxAttackCooldown: 1
@@ -368,6 +369,24 @@ MonoBehaviour:
   ultPoint2: {fileID: 0}
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
   healingPopupPrefab: {fileID: 5991670611894702333, guid: a100071762996854a9f0ecc012741fe3, type: 3}
+--- !u!114 &895517101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092356082363815211}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d883769f9a0ea47839e8761f8f2f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 0}
+  halvarBasicGlow: {fileID: 0}
+  halvarUltGlow: {fileID: 0}
+  ursaBasicGlow: {fileID: 0}
+  phase2Enemy: {fileID: 0}
+  playerZeal: {fileID: 0}
 --- !u!1 &4092356082818394142
 GameObject:
   m_ObjectHideFlags: 0

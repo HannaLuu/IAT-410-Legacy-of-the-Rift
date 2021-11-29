@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Khajiit D'Amelio
-  nameColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+  nameColor: {r: 0.972549, g: 0.972549, b: 0.972549, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
   portraitsFace: 0
