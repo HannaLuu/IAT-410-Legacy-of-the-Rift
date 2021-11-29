@@ -10,6 +10,8 @@ public class LegendaryMonolith : MonoBehaviour
     public float maxLifeSpan = 8f;
     public float currentLifeSpan;
 
+    public float lostHealthOverTime = 0.5f;
+
     public Animator animator;
 
     // Start is called before the first frame update
@@ -43,7 +45,7 @@ public class LegendaryMonolith : MonoBehaviour
             Destroy(gameObject);
         }
 
-        currentHealth -= 1f;
+        currentHealth -= lostHealthOverTime;
 
         if(currentHealth <= (maxHealth * 0.75) && currentHealth > (maxHealth * 0.5))
         {
