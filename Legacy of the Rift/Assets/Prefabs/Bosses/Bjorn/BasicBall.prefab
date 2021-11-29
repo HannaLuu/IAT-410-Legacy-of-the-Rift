@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7157310117782789748}
   - component: {fileID: 7157310117782789749}
   - component: {fileID: 7157310117782789751}
+  - component: {fileID: 8588837575415659535}
   m_Layer: 12
   m_Name: BasicBall
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7121448532257522777, guid: 24d100d1fbf7a794a89c4243a13fae64, type: 3}
+  m_Sprite: {fileID: -5522187912398578466, guid: 3b6021eb37a229a4abe4cfadc76f6876, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -139,3 +140,22 @@ MonoBehaviour:
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
   damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
   target: {fileID: 0}
+--- !u!95 &8588837575415659535
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157310117782789744}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3cd97c170fea104ab092c1e168eaafc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
