@@ -33,7 +33,7 @@ public class Bjorn_Idle : StateMachineBehaviour
     {
         enemy.LookAtPlayer();
 
-        if (attackTimer <= 0)
+        if (attackTimer <= 0 && animator.GetComponent<BjornAttacks>().bjorn == BjornAttacks.BjornState.APPEARING)
         {
             TriggerRandomAttack(animator);
             attackTimer = Random.Range(minAttackTime, maxAttackTime);

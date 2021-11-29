@@ -8,6 +8,11 @@ public class BjornAttacks : MonoBehaviour
     // public int health;
 
     public Transform[] tpPoints;
+
+    // 
+    float maxRadius = 3;
+    float minRadius = 1;
+
     public Rigidbody2D rb;
 
     // Basic Attack
@@ -24,16 +29,41 @@ public class BjornAttacks : MonoBehaviour
     public GameObject asteroidAttackPrefab;
 
     private float angle;
-
     public Transform player;
-
     private Enemy enemyScript;
+
+    // Bjorn State
+    public enum BjornState { DISAPPEARING, APPEARING };
+    public BjornState bjorn = BjornState.APPEARING;
+
+    bool disappearing = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
+        rb = GetComponent<Rigidbody2D>();
+
+        enemyScript = GetComponent<Enemy>();
+
+        StartCoroutine(Teleport());
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (enemyScript.currentHealth <= 40)
+        {
+            SceneManager.LoadScene("Credits");
+        }
+    }
 
     public void basicAttack()
     {
         float angleIncrease = 15;
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
 
             float tempRot = 5 + angleIncrease * i;
@@ -44,6 +74,7 @@ public class BjornAttacks : MonoBehaviour
 
     public void homingAttack()
     {
+
         Instantiate(homingAttackPrefab, attackPoint.position, attackPoint.rotation);
     }
 
@@ -56,49 +87,35 @@ public class BjornAttacks : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
-    void Start()
+    IEnumerator Teleport()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        // Vector3 teleNearPlayer = Random.insideUnitCircle * (maxRadius - minRadius);
+        float randX = Random.Range(-8, 8);
+        float randY = Random.Range(4, 5);
 
-        rb = GetComponent<Rigidbody2D>();
-
-        enemyScript = GetComponent<Enemy>();
-
-        //rbBasic = GetComponent<Rigidbody2D>();
-
-        InvokeRepeating("Teleport", 0, 10); //calls ChangePosition() every 10 secs
-        //Physics2D.IgnoreLayerCollision(7, 6, true);
-        // currentHealth = maxHealth;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(enemyScript.currentHealth <= 40)
+        while (true)
         {
-            SceneManager.LoadScene("Credits");
+            // Teleport rate
+            yield return new WaitForSeconds(8f);
+
+            GetComponent<Renderer>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
+            bjorn = BjornState.DISAPPEARING;
+
+            // Disappear for x seconds then appear near the player
+            yield return new WaitForSeconds(2f);
+
+            GetComponent<Renderer>().enabled = true;
+            GetComponent<BoxCollider2D>().enabled = true;
+            bjorn = BjornState.APPEARING;
+
+            // transform.position = player.transform.position + teleNearPlayer.normalized * minRadius + teleNearPlayer;
+            transform.position = new Vector2(player.transform.position.x + randX, player.transform.position.y + randY);
         }
+        /// Transform _sp = tpPoints[Random.Range(0, tpPoints.Length)];
+        // Vector2 target = new Vector2(_sp.position.x, _sp.position.y);
+        // Vector2 newPos = Vector2.MoveTowards(_sp.position, target, Time.deltaTime);
+        // StartCoroutine(Intangible());
+        // rb.MovePosition(newPos);
     }
-
-    void Teleport()
-    {
-        Transform _sp = tpPoints[Random.Range(0, tpPoints.Length)];
-
-        Vector2 target = new Vector2(_sp.position.x, _sp.position.y);
-
-        Vector2 newPos = Vector2.MoveTowards(_sp.position, target, Time.deltaTime);
-
-        StartCoroutine(Intangible());
-        rb.MovePosition(newPos);
-    }
-
-    IEnumerator Intangible()
-    {
-        Physics2D.IgnoreLayerCollision(7, 6, true); // Ignore cols with player while teleporting
-        yield return new WaitForSeconds(0.4f);
-        Physics2D.IgnoreLayerCollision(7, 6, false);
-    }
-
-
 }
