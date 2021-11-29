@@ -66,12 +66,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
-    uniqueID: 1606759313
+  - name: VFX
+    uniqueID: 2611949323
     locked: 0
   - name: Player
     uniqueID: 2052787381
     locked: 0
-  - name: VFX
-    uniqueID: 2611949323
+  - name: UI
+    uniqueID: 1606759313
     locked: 0
