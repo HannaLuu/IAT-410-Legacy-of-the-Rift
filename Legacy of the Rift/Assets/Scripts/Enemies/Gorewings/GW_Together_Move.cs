@@ -56,7 +56,15 @@ public class GW_Together_Move : StateMachineBehaviour
 
         if (Vector2.Distance(player.position, rb.position) <= dropRange)
         {
-            animator.SetBool("drop", true);
+            var pos = animator.gameObject.transform.position;
+            var dropHeight = 6;
+            if (pos.y < dropHeight) {
+                Vector2 newPos = Vector2.MoveTowards(pos, new Vector2(player.position.x, dropHeight), 15 * Time.fixedDeltaTime);
+                animator.gameObject.GetComponent<Rigidbody2D>().MovePosition(newPos);
+            }
+            else {
+                animator.SetBool("drop", true);
+            }
         }
 
         if (enemyScript.isSlowed == true)

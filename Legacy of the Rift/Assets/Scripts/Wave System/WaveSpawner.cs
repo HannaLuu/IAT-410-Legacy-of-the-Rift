@@ -41,8 +41,6 @@ public class WaveSpawner : MonoBehaviour {
     public int enemyCount;
 
     void Start() {
-        Enemy.OnDeath += DecrementEnemyCount;
-        
         if (spawnPoints.Length == 0)
         {
             Debug.LogError("No spawn points referenced.");
@@ -53,7 +51,7 @@ public class WaveSpawner : MonoBehaviour {
         //clones = GameObject.FindGameObjectWithTag("SBClone").transform;
     }
 
-    private void DecrementEnemyCount(object sender, EventArgs e) {
+    public void DecrementEnemyCount() {
         enemyCount--;
         enemiesText.SetText("Enemies Right: " + enemyCount);
     }

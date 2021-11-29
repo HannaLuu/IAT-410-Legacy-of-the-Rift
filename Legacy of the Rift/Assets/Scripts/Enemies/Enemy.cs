@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
-    public static event EventHandler OnDeath;
-    
     public float maxHealth = 100;
     public float currentHealth;
 
@@ -19,6 +17,7 @@ public class Enemy : MonoBehaviour {
     public bool isFlipped = false;
 
     public bool isSlowed = false;
+    public bool isDead;
 
     public Animator animator;
 
@@ -41,7 +40,7 @@ public class Enemy : MonoBehaviour {
 
         animator.SetTrigger("Hit");
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
             Die();
         }
@@ -52,11 +51,13 @@ public class Enemy : MonoBehaviour {
         StartCoroutine(Slowed());
     }
 
-    public void Die()
-    {
+    public void Die() {
+        isDead = true;
         //EnemyCounter.enemiesKilled = EnemyCounter.enemiesKilled += 1;
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
-        OnDeath?.Invoke(this, EventArgs.Empty);
+        WaveSpawner waveSpawner = GameObject.FindGameObjectWithTag("WaveManager").GetComponent<WaveSpawner>();
+        waveSpawner.DecrementEnemyCount();
+        Debug.Log(gameObject.name + "DIED! " + waveSpawner.enemyCount);
         Destroy(gameObject);
     }
 
