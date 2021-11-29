@@ -22,7 +22,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61143bc3-dbe6-42b2-9399-a83ae1faa321" name="Default Changelist" comment="" />
+    <list default="true" id="61143bc3-dbe6-42b2-9399-a83ae1faa321" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Fonts/romulus/Romulus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fungus/Fonts/romulus/Romulus SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/DeadBabyMonster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/DeadBabyMonster.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Gorewings/GW_Legs.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Gorewings/GW_Legs.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Gorewings/Gorewings.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Gorewings/Gorewings.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Spear Mare/SpearMare.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Spear Mare/SpearMare.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,6 +119,7 @@
       <workItem from="1637918945300" duration="463000" />
       <workItem from="1638090974879" duration="1643000" />
       <workItem from="1638150849935" duration="595000" />
+      <workItem from="1638176724931" duration="158000" />
     </task>
     <servers />
   </component>

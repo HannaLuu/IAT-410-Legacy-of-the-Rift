@@ -77,6 +77,7 @@ public class Enemy : MonoBehaviour {
             transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
         }
+        healthBar.gameObject.transform.rotation = Quaternion.identity;
     }
 
     public void Flip()
