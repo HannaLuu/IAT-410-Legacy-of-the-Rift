@@ -23,13 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61143bc3-dbe6-42b2-9399-a83ae1faa321" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Spear Mare/SpearMare.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Spear Mare/SpearMare.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Gorewings/GW_Together_Drop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Gorewings/GW_Together_Drop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Gorewings/GW_Together_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Gorewings/GW_Together_Move.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wave System/WaveSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Wave System/WaveSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Halvar/HalvarAttacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/Halvar/HalvarAttacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/LokirAttacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/LokirAttacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Ursa/UrsaAttacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/Ursa/UrsaAttacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSwitching.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSwitching.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerZeal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerZeal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +47,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Halvar/HalvarAttacks.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Ursa/UrsaAttacks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/AttackBaseClass.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/LokirAttacks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/SuperTextSuperSeks.cs" />
         <option value="$PROJECT_DIR$/Assets/MinimapCamera.cs" />
@@ -59,6 +58,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy_Run.cs" />
         <option value="$PROJECT_DIR$/Assets/SpearMare_Run.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSwitching.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerZeal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Halvar/HalvarAttacks.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Ursa/UrsaAttacks.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/LokirAttacks.cs" />
       </list>
     </option>
   </component>
@@ -123,7 +127,7 @@
       <workItem from="1638090974879" duration="1643000" />
       <workItem from="1638150849935" duration="595000" />
       <workItem from="1638176724931" duration="158000" />
-      <workItem from="1638178464891" duration="2293000" />
+      <workItem from="1638178464891" duration="3727000" />
     </task>
     <servers />
   </component>

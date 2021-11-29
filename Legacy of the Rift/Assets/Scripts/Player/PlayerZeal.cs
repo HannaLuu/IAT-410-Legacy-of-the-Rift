@@ -47,6 +47,11 @@ public class PlayerZeal : MonoBehaviour
             canSpendZeal = false;
         }
     }
+
+    public void CheckEnoughZeal(int zealCost) {
+        canSpendZeal = currentZeal >= zealCost;
+    }
+    
     public void SpendOverzeal(int zealCost)
     {
         if (currentOverzeal >= zealCost)

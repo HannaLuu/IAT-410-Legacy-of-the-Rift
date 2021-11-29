@@ -99,7 +99,7 @@ public class LokirAttacks : AttackBaseClass
             if (Input.GetButtonDown("Fire2") && spectralWarlock == null && dontMove == false)
             {
 
-                playerZeal.SpendZeal(abilityZealCost);
+                playerZeal.CheckEnoughZeal(abilityZealCost);
                 if (playerZeal.canSpendZeal == true)
                 {
                     ActivateAbility();
@@ -200,6 +200,7 @@ public class LokirAttacks : AttackBaseClass
     public override void ActivateAbility()
     {
         abilityActivated = true;
+        playerZeal.SpendZeal(abilityZealCost);
         spectralWarlock = Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation) as GameObject;
     }
 

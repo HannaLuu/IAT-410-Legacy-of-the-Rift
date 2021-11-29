@@ -69,7 +69,7 @@ public class HalvarAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2") && dontMove == false)
             {
-                playerZeal.SpendZeal(abilityZealCost);
+                playerZeal.CheckEnoughZeal(abilityZealCost);
                 if (playerZeal.canSpendZeal == true)
                 {
                     dontMove = true;
@@ -149,6 +149,7 @@ public class HalvarAttacks : AttackBaseClass
     {
         abilityActivated = true;
         rb.velocity = new Vector2(0, 0);
+        playerZeal.SpendZeal(abilityZealCost);
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 

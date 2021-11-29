@@ -58,7 +58,7 @@ public class UrsaAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire2") && dontMove == false)
             {
-                playerZeal.SpendZeal(abilityZealCost);
+                playerZeal.CheckEnoughZeal(abilityZealCost);
                 if (playerZeal.canSpendZeal == true)
                 {
                     abilityActivated = true;
@@ -117,6 +117,7 @@ public class UrsaAttacks : AttackBaseClass
     // Harbinger of Life
     public override void ActivateAbility()
     {
+        playerZeal.SpendZeal(abilityZealCost);
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 

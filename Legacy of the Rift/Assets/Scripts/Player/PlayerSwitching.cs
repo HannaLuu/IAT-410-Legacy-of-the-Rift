@@ -31,17 +31,17 @@ public class PlayerSwitching : MonoBehaviour
         {
             currHero = Hero.Halvar;
             Player.transform.position = Halvar.transform.position;
-            Lokir.SetActive(false);
             Halvar.SetActive(true);
+            Lokir.SetActive(false);
             Ursa.SetActive(false);
         }
         if (Ursa.activeInHierarchy)
         {
             currHero = Hero.Ursa;
             Player.transform.position = Ursa.transform.position;
+            Ursa.SetActive(true);
             Lokir.SetActive(false);
             Halvar.SetActive(false);
-            Ursa.SetActive(true);
         }
         isSwitch = false;
     }
@@ -99,16 +99,19 @@ public class PlayerSwitching : MonoBehaviour
         {
             case Hero.Halvar:
                 Halvar.SetActive(true);
+                Halvar.GetComponent<HalvarAttacks>().dontMove = false;
                 Halvar.transform.position = currHeroPosition;
                 break;
 
             case Hero.Ursa:
                 Ursa.SetActive(true);
+                Ursa.GetComponent<UrsaAttacks>().dontMove = false;
                 Ursa.transform.position = currHeroPosition;
                 break;
 
             case Hero.Lokir:
                 Lokir.SetActive(true);
+                Lokir.GetComponent<LokirAttacks>().dontMove = false;
                 Lokir.transform.position = currHeroPosition;
                 break;
         }
