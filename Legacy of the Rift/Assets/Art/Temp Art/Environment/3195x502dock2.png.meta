@@ -1,25 +1,40 @@
 fileFormatVersion: 2
-guid: e170483b7e3505240ba55dd01b651cf3
+guid: 3d58d8264be45724eaeefe7b37e6e0a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3146917572314369136
-    second: 36x83baby2_0
+      213: 3386491999612936294
+    second: 3195x502dock2_0
   - first:
-      213: 4723687353797950252
-    second: 36x83baby2_1
+      213: -2417224914011223397
+    second: 3195x502dock2_1
   - first:
-      213: -7963319070837464840
-    second: 36x83baby2_2
+      213: -7650230071157174079
+    second: 3195x502dock2_2
   - first:
-      213: -6319221978343488740
-    second: 36x83baby2_3
+      213: -4744791027973331699
+    second: 3195x502dock2_3
   - first:
-      213: 6030004230460562871
-    second: 36x83baby2_4
+      213: 4520847617472038114
+    second: 3195x502dock2_4
   - first:
-      213: -663668007769085344
-    second: 36x83baby2_5
+      213: -3281298304049088757
+    second: 3195x502dock2_5
+  - first:
+      213: 9181855574922002840
+    second: 3195x502dock2_6
+  - first:
+      213: -8287316382666952406
+    second: 3195x502dock2_7
+  - first:
+      213: 5425219755986292187
+    second: 3195x502dock2_8
+  - first:
+      213: -9020750154253446545
+    second: 3195x502dock2_9
+  - first:
+      213: -2626162242330598116
+    second: 3195x502dock2_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,7 +121,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
+    buildTarget: WebGL
     maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
@@ -118,7 +133,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Windows Store Apps
     maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
@@ -133,127 +148,232 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 36x83baby2_0
+      name: 3195x502dock2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5020
+        width: 3195
+        height: 502
+      alignment: 9
+      pivot: {x: 0.36, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660a1aff78c3ffe20800000000000000
+      internalID: 3386491999612936294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3195x502dock2_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4518
+        width: 3195
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a032a6fba447ed0800000000000000
+      internalID: -2417224914011223397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3195x502dock2_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4016
+        width: 3195
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c05aae684ce4d590800000000000000
+      internalID: -7650230071157174079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3195x502dock2_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3514
+        width: 3195
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d056034f2bd172eb0800000000000000
+      internalID: -4744791027973331699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3195x502dock2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3012
+        width: 3195
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e48713a4f64dbe30800000000000000
+      internalID: 4520847617472038114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3195x502dock2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2510
+        width: 3195
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07ff09d39c7672d0800000000000000
+      internalID: -3281298304049088757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3195x502dock2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2008
+        width: 3195
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8918a227ff08c6f70800000000000000
+      internalID: 9181855574922002840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3195x502dock2_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1506
+        width: 3195
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a217cd578a98dfc80800000000000000
+      internalID: -8287316382666952406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3195x502dock2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1004
+        width: 3195
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd8effbf904a4b40800000000000000
+      internalID: 5425219755986292187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3195x502dock2_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 502
+        width: 3195
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f625c28578bdfc280800000000000000
+      internalID: -9020750154253446545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3195x502dock2_10
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 36
-        height: 83
+        width: 3195
+        height: 502
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07c8b33ebd81cab20800000000000000
-      internalID: 3146917572314369136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 36x83baby2_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 0
-        width: 36
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2bb1210f98ed8140800000000000000
-      internalID: 4723687353797950252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 36x83baby2_2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 36
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f0a3ad1f7b9c7190800000000000000
-      internalID: -7963319070837464840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 36x83baby2_3
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 0
-        width: 36
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c13cef3671d9d48a0800000000000000
-      internalID: -6319221978343488740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 36x83baby2_4
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 36
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bd54b636e0eea350800000000000000
-      internalID: 6030004230460562871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 36x83baby2_5
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 0
-        width: 36
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06ae124967d2ac6f0800000000000000
-      internalID: -663668007769085344
+      spriteID: c156757ca5ffd8bd0800000000000000
+      internalID: -2626162242330598116
       vertices: []
       indices: 
       edges: []

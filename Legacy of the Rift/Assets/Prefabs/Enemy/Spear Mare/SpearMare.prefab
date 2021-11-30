@@ -183,8 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  attackDamage: 10
-  attackRange: 0.5
+  attackDamage: 5
+  attackRange: 3
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
