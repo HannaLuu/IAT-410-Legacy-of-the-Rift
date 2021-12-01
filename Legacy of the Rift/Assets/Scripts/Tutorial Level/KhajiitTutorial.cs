@@ -24,7 +24,7 @@ public class KhajiitTutorial : MonoBehaviour
 
     private bool canInteract = false;
 
-    private bool once, stinkey, omg;
+    private bool once, stinkey, omg, zzz;
 
     private bool firstEnemyKilled = false;
 
@@ -42,6 +42,7 @@ public class KhajiitTutorial : MonoBehaviour
         firstEnemyKilled = false;
         stinkey = false;
         omg = false;
+        zzz = false;
     }
     // Update is called once per frame
     void Update()
@@ -54,13 +55,21 @@ public class KhajiitTutorial : MonoBehaviour
         // Player Skips Tutorial
         if (flowchart.GetBooleanVariable("Tutorial") == false && flowchart.GetBooleanVariable("lol") == true)
         {
-            LookOppositePlayer();
+            if (zzz == false)
+            {
+                LookOppositePlayer();
+            }
+            if (zzz == true)
+            {
+                LookAtPlayer();
+            }
             Vector2 target = new Vector2(97.16f, rb.transform.position.y);
             Vector2 newPos = Vector2.MoveTowards(rb.transform.position, target, 6 * Time.fixedDeltaTime);
             rb.MovePosition(newPos);
             animator.SetBool("isRun", true);
             if (Vector2.Distance(rb.position, target) <= 0)
             {
+                zzz = true;
                 animator.SetBool("isRun", false);
             }
 
