@@ -303,8 +303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df009df906ed7a41abda74566d86eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minAttackTime: 0.8
-  maxAttackTime: 2
+  minAttackTime: 1
+  maxAttackTime: 1.5
 --- !u!1101 &-3566587813749159470
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -759,8 +759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df009df906ed7a41abda74566d86eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minAttackTime: 0.3
-  maxAttackTime: 1.2
+  minAttackTime: 0.5
+  maxAttackTime: 1
 --- !u!1101 &5010265854434896325
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
