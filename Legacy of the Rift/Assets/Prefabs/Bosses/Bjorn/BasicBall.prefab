@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0af17e47c56464eb828f7434997c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
-  damage: 10
+  speed: 12
+  damage: 2
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
   damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
   target: {fileID: 0}

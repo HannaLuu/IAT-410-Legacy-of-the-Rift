@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 116554844309713345}
   - component: {fileID: 116554844309713373}
   - component: {fileID: 116554844309713346}
+  - component: {fileID: -2900693896968144229}
   m_Layer: 12
   m_Name: BjornAsteroid
   m_TagString: Untagged
@@ -53,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,9 +135,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1127f446fbb27d248a44634477dd555e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 2
-  maxSpeed: 8
-  damage: 30
+  minSpeed: 7
+  maxSpeed: 12
+  damage: 25
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
   damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
   target: {fileID: 0}
+--- !u!95 &-2900693896968144229
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116554844309713350}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3cd97c170fea104ab092c1e168eaafc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
