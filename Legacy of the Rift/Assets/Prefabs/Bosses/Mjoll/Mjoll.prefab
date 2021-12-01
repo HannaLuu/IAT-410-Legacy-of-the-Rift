@@ -533,10 +533,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startGasTimer: 20
-  startLightningTimer: 3
+  startLightningTimer: 2
   startSpawnTimer: 30
   startLowGasTimer: 15
-  startLowLightningTimer: 2
+  startLowLightningTimer: 1
   startLowSpawnTimer: 15
   firePoint: {fileID: 7400538795636730264}
   attackRange: 20
@@ -662,7 +662,7 @@ PrefabInstance:
     - target: {fileID: 7433838728058765470, guid: 202634211e8c1e342bb8a35cd607bf89, type: 3}
       propertyPath: parent
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7400538796462971215}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 202634211e8c1e342bb8a35cd607bf89, type: 3}
 --- !u!4 &2934747454050144843 stripped

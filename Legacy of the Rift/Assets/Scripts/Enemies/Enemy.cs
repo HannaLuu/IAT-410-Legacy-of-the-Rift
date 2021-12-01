@@ -55,9 +55,11 @@ public class Enemy : MonoBehaviour {
         isDead = true;
         //EnemyCounter.enemiesKilled = EnemyCounter.enemiesKilled += 1;
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
-        WaveSpawner waveSpawner = GameObject.FindGameObjectWithTag("WaveManager").GetComponent<WaveSpawner>();
-        waveSpawner.DecrementEnemyCount();
-        Debug.Log(gameObject.name + "DIED! " + waveSpawner.enemyCount);
+        GameObject waveSpawner = GameObject.FindGameObjectWithTag("WaveManager");
+        if (waveSpawner != null)
+        {
+            waveSpawner.GetComponent<WaveSpawner>().DecrementEnemyCount();
+        }
         Destroy(gameObject);
     }
 
