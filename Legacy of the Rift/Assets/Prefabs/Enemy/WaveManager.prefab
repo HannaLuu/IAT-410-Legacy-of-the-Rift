@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7825555273368544809}
   m_Layer: 0
   m_Name: WaveManager
-  m_TagString: Untagged
+  m_TagString: WaveManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac8c8bc3530f4104f98fe52b3e20e814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveText: {fileID: 0}
+  enemiesText: {fileID: 0}
   endOfWave:
     m_PersistentCalls:
       m_Calls:
@@ -76,3 +78,4 @@ MonoBehaviour:
   timeBetweenWaves: 5
   waveCountdown: 0
   state: 2
+  enemyCount: 0

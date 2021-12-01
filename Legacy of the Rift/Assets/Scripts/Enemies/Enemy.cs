@@ -81,26 +81,6 @@ public class Enemy : MonoBehaviour {
         healthBar.gameObject.transform.rotation = Quaternion.identity;
     }
 
-    public void Flip()
-    {
-        Vector3 flipped = transform.localScale;
-        flipped.z *= -1f;
-
-        if (!isFlipped)
-        {
-            transform.localScale = flipped;
-            transform.Rotate(0f, 180f, 0f);
-            isFlipped = true;
-        }
-
-        if (isFlipped)
-        {
-            transform.localScale = flipped;
-            transform.Rotate(0f, 180f, 0f);
-            isFlipped = false;
-        }
-    }
-
     public void LookOppositePlayer()
     {
         Vector3 flipped = transform.localScale;

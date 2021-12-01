@@ -10,6 +10,8 @@ public class WaveSpawner : MonoBehaviour {
     public SuperTextSuperSeks waveText;
     public SuperTextSuperSeks enemiesText;
 
+    public bool tutorial = false;
+
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
     [SerializeField] UnityEvent endOfWave;
@@ -28,7 +30,7 @@ public class WaveSpawner : MonoBehaviour {
 
 
     public Wave[] waves;
-    private int nextWave = 0;
+    public int nextWave = 0;
 
     public Transform[] spawnPoints;
 
@@ -94,7 +96,14 @@ public class WaveSpawner : MonoBehaviour {
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
 
-        if (nextWave + 1 > waves.Length - 1)
+        if (nextWave + 1 > waves.Length - 1 && tutorial == true)
+        {
+            // nextWave = 0;
+            // Debug.Log("ALL WAVES COMPLETE! Looping...");
+
+            // disable this object
+            gameObject.SetActive(false);
+        } else if (nextWave + 1 > waves.Length - 1 && tutorial == false)
         {
             // nextWave = 0;
             // Debug.Log("ALL WAVES COMPLETE! Looping...");
