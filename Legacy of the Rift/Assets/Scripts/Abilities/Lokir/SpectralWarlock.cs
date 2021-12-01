@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,22 +14,38 @@ public class SpectralWarlock : MonoBehaviour
     public GameObject attackPrefab;
     public Transform attackPoint;
     public Animator animator;
+    public SpriteRenderer sr;
 
     public Transform nearestEnemy;
+    public ParticleSystem pSystem;
 
     private List<Transform> enemies = new List<Transform>();
 
     Vector2 vectorToEnemy;
 
     private Vector2 offsetPosition;
+    private LokirAttacks _lokirAttacks;
 
 
     public bool isFlipped = false;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
+        _lokirAttacks = GameObject.FindGameObjectWithTag("Lokir").GetComponent<LokirAttacks>();
         currentLifeSpan = maxLifeSpan;
+        _lokirAttacks.OnTeleport += SelfDestructSubscriber;
+    }
+
+    public void SelfDestructSubscriber(object sender, EventArgs e) {
+        StartCoroutine(SelfDestruct());
+    }
+
+    private IEnumerator SelfDestruct() {
+        pSystem.Play();
+        sr.color = new Color(0, 0, 0, 0);
+        yield return new WaitForSeconds(pSystem.main.duration);
+        if (_lokirAttacks.OnTeleport != null) _lokirAttacks.OnTeleport -= SelfDestructSubscriber;
+        Destroy(gameObject);
     }
 
     // Update is called once per frame

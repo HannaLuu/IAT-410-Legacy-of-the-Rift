@@ -36,6 +36,7 @@ public class LokirAttacks : AttackBaseClass
     public float startTimeBetweenTrail;
 
     public GameObject trail;
+    public EventHandler OnTeleport;
 
     public GameObject healingPopupPrefab;
 
@@ -111,7 +112,7 @@ public class LokirAttacks : AttackBaseClass
 
             }
         }
-        else if (Input.GetButtonDown("Fire2") && spectralWarlock != null)
+        else if (Input.GetButtonDown("Fire2") && spectralWarlock != null && !teleported)
         {
             teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
             Teleport();
@@ -200,6 +201,7 @@ public class LokirAttacks : AttackBaseClass
     public override void ActivateAbility()
     {
         abilityActivated = true;
+        teleported = false;
         playerZeal.SpendZeal(abilityZealCost);
         spectralWarlock = Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation) as GameObject;
     }
@@ -241,7 +243,7 @@ public class LokirAttacks : AttackBaseClass
     void Teleport()
     {
         transform.position = teleportPos;
-        Destroy(spectralWarlock);
+        OnTeleport?.Invoke(this, EventArgs.Empty);
     }
 
     IEnumerator Dash(Vector2 moveDirection)

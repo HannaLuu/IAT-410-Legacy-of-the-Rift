@@ -24,14 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="61143bc3-dbe6-42b2-9399-a83ae1faa321" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Legacy of the Rift/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Spear Mare/SpearMare.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Spear Mare/SpearMare.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Halvar/HalvarAttacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/Halvar/HalvarAttacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Abilities/SpectralWarlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Abilities/SpectralWarlock.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/LokirAttacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/LokirAttacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Ursa/UrsaAttacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/Ursa/UrsaAttacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSwitching.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSwitching.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerZeal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerZeal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/SpectralWarlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/SpectralWarlock.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +58,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Halvar/HalvarAttacks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Ursa/UrsaAttacks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/LokirAttacks.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Lokir/SpectralWarlock.cs" />
       </list>
     </option>
   </component>
@@ -128,6 +124,7 @@
       <workItem from="1638150849935" duration="595000" />
       <workItem from="1638176724931" duration="158000" />
       <workItem from="1638178464891" duration="3727000" />
+      <workItem from="1638346998792" duration="927000" />
     </task>
     <servers />
   </component>
