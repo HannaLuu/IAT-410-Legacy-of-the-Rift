@@ -54,7 +54,7 @@ public class Spear : MonoBehaviour
 
     public static Quaternion LookAtTarget(Vector2 rotation)
     {
-        return Quaternion.Euler(0, 0, Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg);
+        return Quaternion.Euler(0,0, Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg);
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
@@ -71,8 +71,12 @@ public class Spear : MonoBehaviour
 
             Destroy(gameObject);
         }
-        enabled = false;
-        Destroy(gameObject);
+
+        if (hitInfo.gameObject.CompareTag("Ground"))
+        {
+            enabled = false;
+            Destroy(gameObject);
+        }
     }
 
     void OnBecameInvisible()
