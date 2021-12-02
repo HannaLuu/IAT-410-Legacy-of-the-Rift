@@ -42,6 +42,8 @@ public class WaveSpawner : MonoBehaviour {
     public SpawnState state = SpawnState.COUNTING;
     public int enemyCount;
 
+    public bool allWavesCompleted;
+
     void Start() {
         if (spawnPoints.Length == 0)
         {
@@ -55,12 +57,12 @@ public class WaveSpawner : MonoBehaviour {
 
     public void DecrementEnemyCount() {
         enemyCount--;
-        enemiesText.SetText("Enemies Right: " + enemyCount);
+        enemiesText.SetText("Enemies Left: " + enemyCount);
     }
 
     void Update()
     {
-        waveText.SetText("Dave: " + (1+nextWave) + "/" + waves.Length);
+        waveText.SetText("Wave: " + (1+nextWave) + "/" + waves.Length);
         
         if (state == SpawnState.WAITING)
         {
@@ -84,7 +86,7 @@ public class WaveSpawner : MonoBehaviour {
         }
         else
         {
-            enemiesText.SetText("Next dave in: " + Mathf.RoundToInt(waveCountdown) + "s");
+            enemiesText.SetText("Next wave in: " + Mathf.RoundToInt(waveCountdown) + "s");
             waveCountdown -= Time.deltaTime;
         }
     }
@@ -102,6 +104,7 @@ public class WaveSpawner : MonoBehaviour {
             // Debug.Log("ALL WAVES COMPLETE! Looping...");
 
             // disable this object
+            allWavesCompleted = true;
             gameObject.SetActive(false);
         } else if (nextWave + 1 > waves.Length - 1 && tutorial == false)
         {
@@ -114,6 +117,7 @@ public class WaveSpawner : MonoBehaviour {
         }
         else
         {
+            allWavesCompleted = false;
             nextWave++;
         }
     }

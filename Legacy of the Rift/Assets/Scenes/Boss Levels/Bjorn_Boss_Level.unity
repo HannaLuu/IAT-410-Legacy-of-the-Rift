@@ -2355,7 +2355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.24575281
+      value: 2.704001
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6007,11 +6007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9193589512551265415, guid: ecf2ec5ce53286b4f925bd3d8ec7ffba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -3.67
       objectReference: {fileID: 0}
     - target: {fileID: 9193589512551265415, guid: ecf2ec5ce53286b4f925bd3d8ec7ffba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7559991
+      value: 2.704001
       objectReference: {fileID: 0}
     - target: {fileID: 9193589512551265415, guid: ecf2ec5ce53286b4f925bd3d8ec7ffba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6945,6 +6945,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1159956230}
+    - target: {fileID: 6666367408620375293, guid: e432d149e027f2d47b330d97bb8a63e0, type: 3}
+      propertyPath: orthographic size
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6666367408620375294, guid: e432d149e027f2d47b330d97bb8a63e0, type: 3}
       propertyPath: m_Name
       value: Minimap Camera

@@ -102,6 +102,7 @@ MonoBehaviour:
   currentHealth: 0
   maxLifeSpan: 8
   currentLifeSpan: 0
+  lostHealthOverTime: 0.75
   animator: {fileID: -8570572416103887785}
 --- !u!61 &2162288540220380525
 BoxCollider2D:

@@ -8,7 +8,7 @@ public class KhajiitDockTutorial : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
     public Flowchart flowchart;
-    public PlayerSwitching playerSwitching;
+    //public PlayerSwitching playerSwitching;
 
     public GameObject interactKey;
     public GameObject textPanel;
@@ -28,15 +28,15 @@ public class KhajiitDockTutorial : MonoBehaviour
 
     private bool firstEnemyKilled = false;
 
-    public GameObject kids;
-
     void Start()
     {
         interactKey.SetActive(false);
+        waveManager.SetActive(false);
+        waveSpawnPoints.SetActive(false);
         animator = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        playerSwitching = GameObject.FindGameObjectWithTag("PlayerHandler").GetComponent<PlayerSwitching>();
+        //playerSwitching = GameObject.FindGameObjectWithTag("PlayerHandler").GetComponent<PlayerSwitching>();
         canInteract = false;
         once = false;
         firstEnemyKilled = false;
@@ -63,91 +63,37 @@ public class KhajiitDockTutorial : MonoBehaviour
             {
                 animator.SetBool("isRun", false);
             }
+            if (once == false)
+            {
+                waveSpawnPoints.SetActive(true);
+                waveManager.SetActive(true);
+                waveManager.GetComponent<WaveSpawner>().tutorial = true;
+                once = true;
+            }
         }
 
         //Player Wants Tutorial
         if (flowchart.GetBooleanVariable("Tutorial") == true)
         {
-            LookAtPlayer();
-            Vector2 target = new Vector2(-21.99f, rb.transform.position.y);
+            LookOppositePlayer();
+            Vector2 target = new Vector2(-79.93f, rb.transform.position.y);
             Vector2 newPos = Vector2.MoveTowards(rb.transform.position, target, 7 * Time.fixedDeltaTime);
             rb.MovePosition(newPos);
             animator.SetBool("isRun", true);
             if (Vector2.Distance(rb.position, target) <= 0)
             {
                 animator.SetBool("isRun", false);
-                if (playerSwitching.currHero == PlayerSwitching.Hero.Lokir)
-                {
-                    flowchart.ExecuteBlock("Lokir Hint 2");
-                }
-
-                if (flowchart.GetBooleanVariable("SpawnTutorialEnemy") == true && once == false)
-                {
-                    waveSpawnPoints.SetActive(true);
-                    waveManager.SetActive(true);
-                    waveManager.GetComponent<WaveSpawner>().tutorial = true;
-                    once = true;
-                }
-                if (waveManager.GetComponent<WaveSpawner>().nextWave == 1 && waveManager.GetComponent<WaveSpawner>().EnemyIsAlive() == false)
-                {
-                    waveManager.SetActive(false);
-                    firstEnemyKilled = true;
-                }
-                if (firstEnemyKilled == true && playerSwitching.currHero != PlayerSwitching.Hero.Ursa)
-                {
-                    flowchart.ExecuteBlock("Hint 3");
-                }
             }
-
-            if (flowchart.GetBooleanVariable("Section3") == true)
+            if (stinkey == false)
             {
-                Vector2 target2 = new Vector2(1.2f, rb.transform.position.y);
-                Vector2 newPos2 = Vector2.MoveTowards(rb.transform.position, target2, 7 * Time.fixedDeltaTime);
-                rb.MovePosition(newPos2);
-                animator.SetBool("isRun", true);
-                if (Vector2.Distance(rb.position, target2) <= 0)
-                {
-                    animator.SetBool("isRun", false);
-                    if (!stinkey)
-                    {
-                        waveManager.SetActive(true);
-                        flowchart.ExecuteBlock("Hint 4");
-                        stinkey = true;
-                    }
-                    if (stinkey && waveManager.activeSelf == false && omg == false)
-                    {
-                        flowchart.ExecuteBlock("Hint 5");
-                        kids.SetActive(true);
-                        omg = true;
-                    }
-                }
-            }
-
-            if (flowchart.GetBooleanVariable("WaitByDoor") == true)
-            {
-                Vector2 target2 = new Vector2(97.16f, rb.transform.position.y);
-                Vector2 newPos2 = Vector2.MoveTowards(rb.transform.position, target2, 8 * Time.fixedDeltaTime);
-                rb.MovePosition(newPos2);
-                animator.SetBool("isRun", true);
-                if (Vector2.Distance(rb.position, target2) <= 0)
-                {
-                    animator.SetBool("isRun", false);
-                }
-                if (kids.activeSelf == true)
-                {
-                    flowchart.SetBooleanVariable("pickedUpKids", false);
-                }
-                if (kids.activeSelf == false)
-                {
-                    flowchart.SetBooleanVariable("pickedUpKids", true);
-                }
-                if (Input.GetKeyDown(KeyCode.F) && canInteract)
-                {
-                    flowchart.ExecuteBlock("F On Door to Proceed");
-                }
+                waveSpawnPoints.SetActive(true);
+                waveManager.SetActive(true);
+                waveManager.GetComponent<WaveSpawner>().tutorial = true;
+                stinkey = true;
             }
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D player)
     {

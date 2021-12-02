@@ -179,7 +179,7 @@ MonoBehaviour:
   normalSpeed: 3
   slowedSpeed: 1
   attackRange: 20
-  meleeAttackRange: 5
+  meleeAttackRange: 6
   startTimeBtwAttacks: 2
 --- !u!1102 &3695413026232459394
 AnimatorState:

@@ -409,7 +409,7 @@ MonoBehaviour:
   normalSpeed: 6
   slowedSpeed: 1
   chaseRange: 15
-  attackRange: 3
+  attackRange: 4
 --- !u!1101 &8939154072278002799
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

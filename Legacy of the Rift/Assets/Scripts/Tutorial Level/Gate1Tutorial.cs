@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Gate1Tutorial : MonoBehaviour
 {
-    public KhajiitTutorial khajiit;
-
     public bool pastGate1 = false;
+
     // Start is called before the first frame update
     void Start()
     {

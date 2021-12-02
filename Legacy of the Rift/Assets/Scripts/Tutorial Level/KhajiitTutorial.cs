@@ -33,6 +33,8 @@ public class KhajiitTutorial : MonoBehaviour
     void Start()
     {
         interactKey.SetActive(false);
+        waveManager.SetActive(false);
+        waveSpawnPoints.SetActive(false);
         animator = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();

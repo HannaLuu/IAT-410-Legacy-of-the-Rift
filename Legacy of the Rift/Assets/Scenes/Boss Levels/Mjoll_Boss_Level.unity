@@ -8996,6 +8996,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 186239768}
+    - target: {fileID: 6666367408620375293, guid: e432d149e027f2d47b330d97bb8a63e0, type: 3}
+      propertyPath: orthographic size
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6666367408620375294, guid: e432d149e027f2d47b330d97bb8a63e0, type: 3}
       propertyPath: m_Name
       value: Minimap Camera

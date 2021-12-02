@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 4092356082363815209}
   - component: {fileID: 4092356082363815208}
   - component: {fileID: 4539396504465934491}
-  - component: {fileID: 895517101}
   m_Layer: 7
   m_Name: Halvar
   m_TagString: Halvar
@@ -369,24 +368,6 @@ MonoBehaviour:
   ultPoint2: {fileID: 0}
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
   healingPopupPrefab: {fileID: 5991670611894702333, guid: a100071762996854a9f0ecc012741fe3, type: 3}
---- !u!114 &895517101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4092356082363815211}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d883769f9a0ea47839e8761f8f2f27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flowchart: {fileID: 0}
-  halvarBasicGlow: {fileID: 0}
-  halvarUltGlow: {fileID: 0}
-  ursaBasicGlow: {fileID: 0}
-  phase2Enemy: {fileID: 0}
-  playerZeal: {fileID: 0}
 --- !u!1 &4092356082818394142
 GameObject:
   m_ObjectHideFlags: 0

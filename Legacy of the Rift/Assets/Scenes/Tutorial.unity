@@ -2927,8 +2927,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 796375095}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 796375077}
@@ -4865,7 +4864,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &796375118
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4893,7 +4892,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &796375119
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4908,7 +4907,7 @@ MonoBehaviour:
   value: 0
 --- !u!114 &796375120
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4935,7 +4934,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &796375121
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4949,7 +4948,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &796375122
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5192,7 +5191,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &796375123
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5220,7 +5219,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &796375124
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5234,7 +5233,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &796375125
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -7607,6 +7606,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1058095851}
+    - target: {fileID: 6666367408620375293, guid: e432d149e027f2d47b330d97bb8a63e0, type: 3}
+      propertyPath: orthographic size
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6666367408620375294, guid: e432d149e027f2d47b330d97bb8a63e0, type: 3}
       propertyPath: m_Name
       value: Minimap Camera
@@ -8383,7 +8386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96da8de8a8a43b142a389ab59b09aae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  khajiit: {fileID: 1008445025}
   pastGate1: 0
 --- !u!61 &1805123737
 BoxCollider2D:

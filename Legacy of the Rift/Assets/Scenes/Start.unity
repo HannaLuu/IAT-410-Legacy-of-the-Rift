@@ -571,7 +571,7 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &910424887
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -589,7 +589,7 @@ MonoBehaviour:
   fadeDuration: 1
 --- !u!114 &910424888
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -635,7 +635,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 67
     y: 70
-    width: 60
+    width: 82
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -673,8 +673,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 910424890}
-  selectedCommands:
-  - {fileID: 910424887}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
