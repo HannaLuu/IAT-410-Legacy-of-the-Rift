@@ -18,14 +18,15 @@ public class MjollAttacks : MonoBehaviour
     public GameObject gasPrefab;
 
     public GameObject smPrefab, spearMarePrefab, botchlingPrefab, gorewingPrefab;
-    /// 100 - 70 = 30%
-    private int smSpawnRate = 70;
-    /// 70 - 30 = 40%
-    private int spearMareSpawnRate = 30;
-    /// 30 - 10 = 20%
-    private int botchlingSpawnRate = 10;
-    /// 10 - 0 = 10%
+    /// 100 - 97 = 3%
+    private int smSpawnRate = 97;
+    /// 97 - 95 = 2% 
+    private int spearMareSpawnRate = 95;
+    /// 95 - 1 = 94%
+    private int botchlingSpawnRate = 1;
+    /// 1 - 0 = 1% 
     private int gorewingSpawnRate = 0;
+
     public int enemiesToSpawn;
     public int enemiesToSpawnWhenLowHealth;
     private int enemiesSpawned = 0;
@@ -71,6 +72,7 @@ public class MjollAttacks : MonoBehaviour
         {
             if (gasTimer <= 0)
             {
+                gasTimer = startGasTimer;
                 animator.SetTrigger("Gas");
             }
             else
@@ -79,6 +81,7 @@ public class MjollAttacks : MonoBehaviour
             }
             if (spawnTimer <= 0)
             {
+                spawnTimer = startSpawnTimer;
                 animator.SetTrigger("Spawn");
                 enemiesSpawned = 0;
             }
@@ -102,6 +105,7 @@ public class MjollAttacks : MonoBehaviour
         {
             if (gasTimer <= 0)
             {
+                gasTimer = startLowGasTimer;
                 animator.SetTrigger("Gas");
             }
             else
@@ -110,6 +114,7 @@ public class MjollAttacks : MonoBehaviour
             }
             if (spawnTimer <= 0)
             {
+                spawnTimer = startLowSpawnTimer;
                 animator.SetTrigger("Spawn");
                 enemiesSpawned = 0;
             }
@@ -144,13 +149,11 @@ public class MjollAttacks : MonoBehaviour
 
     void Gas()
     {
-        gasTimer = startGasTimer;
         Instantiate(gasPrefab, player.transform.position, player.transform.rotation);
     }
 
     void LowGas()
     {
-        gasTimer = startLowGasTimer;
         Instantiate(gasPrefab, player.transform.position, player.transform.rotation);
     }
 
@@ -161,7 +164,6 @@ public class MjollAttacks : MonoBehaviour
             enemiesSpawned += 1;
             Instantiate(SpawnRandomEnemy(), RandomSpawnPoint().position, Quaternion.identity);
         }
-        spawnTimer = startSpawnTimer;
     }
 
     void LowSpawn()
@@ -171,7 +173,6 @@ public class MjollAttacks : MonoBehaviour
             enemiesSpawned += 1;
             Instantiate(SpawnRandomEnemy(), RandomSpawnPoint().position, Quaternion.identity);
         }
-        spawnTimer = startLowSpawnTimer;
         enemiesSpawned = 0;
     }
 

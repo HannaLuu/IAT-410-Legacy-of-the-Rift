@@ -532,10 +532,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35f2481c27e90f40b9c26faf2957989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startGasTimer: 20
+  startGasTimer: 15
   startLightningTimer: 2
-  startSpawnTimer: 30
-  startLowGasTimer: 15
+  startSpawnTimer: 20
+  startLowGasTimer: 11
   startLowLightningTimer: 1
   startLowSpawnTimer: 15
   firePoint: {fileID: 7400538795636730264}

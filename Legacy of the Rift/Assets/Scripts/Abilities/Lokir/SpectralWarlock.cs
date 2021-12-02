@@ -30,21 +30,20 @@ public class SpectralWarlock : MonoBehaviour
     public bool isFlipped = false;
 
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
         _lokirAttacks = GameObject.FindGameObjectWithTag("Lokir").GetComponentInParent<LokirAttacks>();
         currentLifeSpan = maxLifeSpan;
-        //_lokirAttacks.OnTeleport += SelfDestructSubscriber;
-        if(_lokirAttacks == null)
-        {
-            Debug.Log("FUCK ME ARSEHOLE");
-        }
+        _lokirAttacks.OnTeleport += SelfDestructSubscriber;
     }
 
-    public void SelfDestructSubscriber(object sender, EventArgs e) {
+    public void SelfDestructSubscriber(object sender, EventArgs e)
+    {
         StartCoroutine(SelfDestruct());
     }
 
-    private IEnumerator SelfDestruct() {
+    private IEnumerator SelfDestruct()
+    {
         pSystem.Play();
         sr.color = new Color(0, 0, 0, 0);
         yield return new WaitForSeconds(pSystem.main.duration);

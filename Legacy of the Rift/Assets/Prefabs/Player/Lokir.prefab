@@ -493,7 +493,7 @@ MonoBehaviour:
   damagePopupPrefab: {fileID: 1915879397188700219, guid: 9ae1882a4c8af304f9ba8d9bde5444f0, type: 3}
   isAttackReady: 0
   attackActivated: 0
-  maxAttackCooldown: 1
+  maxAttackCooldown: 0.5
   currAttackCooldown: 0
   isAbilityReady: 0
   abilityActivated: 0

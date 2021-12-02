@@ -129,6 +129,7 @@ public class LokirAttacks : AttackBaseClass
                 {
                     playerZeal.SpendZeal(100);
                     playerZeal.SpendOverzeal(ultZealCost);
+                    FindObjectOfType<PlayerHealth>().Heal(100);
                     if (playerZeal.canSpendZeal == true)
                     {
                         dontMove = true;

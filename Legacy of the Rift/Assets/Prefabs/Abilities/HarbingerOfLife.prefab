@@ -64,6 +64,7 @@ Transform:
   m_Children:
   - {fileID: 3170107515239913622}
   - {fileID: 1200731537004739256}
+  - {fileID: 5579486657191624773}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -290,3 +291,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &7274359200154097993
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3170107516403426135}
+    m_Modifications:
+    - target: {fileID: 519979702686679268, guid: 7220793fe8ad12f4f9f33bb319f3efe1, type: 3}
+      propertyPath: m_Name
+      value: Minimap Wolf Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998806549469059340, guid: 7220793fe8ad12f4f9f33bb319f3efe1, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998806549469059340, guid: 7220793fe8ad12f4f9f33bb319f3efe1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998806549469059340, guid: 7220793fe8ad12f4f9f33bb319f3efe1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998806549469059340, guid: 7220793fe8ad12f4f9f33bb319f3efe1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897956136001280729, guid: 7220793fe8ad12f4f9f33bb319f3efe1, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 3170107516403426130}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7220793fe8ad12f4f9f33bb319f3efe1, type: 3}
+--- !u!4 &5579486657191624773 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2998806549469059340, guid: 7220793fe8ad12f4f9f33bb319f3efe1, type: 3}
+  m_PrefabInstance: {fileID: 7274359200154097993}
+  m_PrefabAsset: {fileID: 0}
