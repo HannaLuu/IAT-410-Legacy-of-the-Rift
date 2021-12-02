@@ -75,11 +75,6 @@ public class PlayerSwitching : MonoBehaviour
             Physics2D.IgnoreLayerCollision(7, 12, false);
         }
 
-        if (Input.GetKey("escape"))
-        {
-            Application.Quit();
-        }
-
         if (Input.GetKey(KeyCode.P))
         {
             SceneManager.LoadScene("Choice");
