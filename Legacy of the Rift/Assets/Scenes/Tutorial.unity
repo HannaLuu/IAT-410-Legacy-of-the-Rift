@@ -2927,8 +2927,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 796375095}
+  selectedCommands:
+  - {fileID: 796375088}
   variables:
   - {fileID: 796375077}
   - {fileID: 796375098}
@@ -3504,8 +3506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 20
   indentLevel: 0
-  storyText: We must meet Sir Dickon Seamenson at the dock. I will make sure the
-    Scourged don't come in through the back door!
+  storyText: We must meet Sir Dickon Seamenson at the dock. I will wait for you!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
