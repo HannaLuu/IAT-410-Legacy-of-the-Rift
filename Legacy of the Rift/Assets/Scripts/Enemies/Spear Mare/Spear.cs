@@ -54,7 +54,7 @@ public class Spear : MonoBehaviour
 
     public static Quaternion LookAtTarget(Vector2 rotation)
     {
-        return Quaternion.Euler(0,0, Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg);
+        return Quaternion.Euler(0, 0, Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg);
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
@@ -71,25 +71,8 @@ public class Spear : MonoBehaviour
 
             Destroy(gameObject);
         }
-
-        if (hitInfo.gameObject.CompareTag("Monolith"))
-        {
-            FindObjectOfType<LegendaryMonolith>().TakeDamage(damage);
-            Instantiate(impactEffect, transform.position, transform.rotation);
-
-            //damage popup
-            GameObject damagePopup = Instantiate(damagePopupPrefab, transform.position, Quaternion.identity);
-            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
-            damagePopupScript.Setup(damage);
-
-            Destroy(gameObject);
-        }
-
-        if (hitInfo.gameObject.CompareTag("Ground"))
-        {
-            enabled = false;
-            Destroy(gameObject);
-        }
+        enabled = false;
+        Destroy(gameObject);
     }
 
     void OnBecameInvisible()
