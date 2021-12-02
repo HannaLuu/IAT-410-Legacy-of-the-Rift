@@ -98,11 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07df32055555b3243a67179a2e351862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 200
   currentHealth: 0
   maxLifeSpan: 8
   currentLifeSpan: 0
-  lostHealthOverTime: 0.75
+  startLostHealthOverTimer: 1
+  lostHealthOverTime: 20
   animator: {fileID: -8570572416103887785}
 --- !u!61 &2162288540220380525
 BoxCollider2D:

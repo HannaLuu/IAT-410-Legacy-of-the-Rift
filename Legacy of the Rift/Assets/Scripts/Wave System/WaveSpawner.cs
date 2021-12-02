@@ -180,7 +180,7 @@ public class WaveSpawner : MonoBehaviour {
 
     public void IncrementEnemyCount() {
         enemyCount++;
-        enemiesText.SetText("Enemies Right: " + enemyCount);
+        enemiesText.SetText("Enemies Left: " + enemyCount);
         
     }
 }

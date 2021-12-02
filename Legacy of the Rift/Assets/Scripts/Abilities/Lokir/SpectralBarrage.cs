@@ -35,20 +35,6 @@ public class SpectralBarrage : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
-        if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
-        {
-            FindNearestEnemy();
-        }
-        if (waveSpawner == null)
-        {
-            Enemy enemy = GameObject.FindObjectOfType<Enemy>();
-            if (enemy != null)
-            {
-                FindNearestEnemy();
-            }
-        }
     }
 
     public void Attack()

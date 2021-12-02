@@ -31,9 +31,13 @@ public class SpectralWarlock : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        _lokirAttacks = GameObject.FindGameObjectWithTag("Lokir").GetComponent<LokirAttacks>();
+        _lokirAttacks = GameObject.FindGameObjectWithTag("Lokir").GetComponentInParent<LokirAttacks>();
         currentLifeSpan = maxLifeSpan;
-        _lokirAttacks.OnTeleport += SelfDestructSubscriber;
+        //_lokirAttacks.OnTeleport += SelfDestructSubscriber;
+        if(_lokirAttacks == null)
+        {
+            Debug.Log("FUCK ME ARSEHOLE");
+        }
     }
 
     public void SelfDestructSubscriber(object sender, EventArgs e) {
@@ -56,22 +60,6 @@ public class SpectralWarlock : MonoBehaviour
         if (currentLifeSpan <= 0)
         {
             Destroy(gameObject);
-        }
-
-        // LookAtEnemy();
-
-        WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
-        if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
-        {
-            FindNearestEnemy();
-        }
-        if (waveSpawner == null)
-        {
-            Enemy enemy = GameObject.FindObjectOfType<Enemy>();
-            if (enemy != null)
-            {
-                FindNearestEnemy();
-            }
         }
     }
     public void AttackEnemy()

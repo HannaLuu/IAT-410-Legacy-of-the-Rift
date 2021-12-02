@@ -10,7 +10,9 @@ public class LegendaryMonolith : MonoBehaviour
     public float maxLifeSpan = 8f;
     public float currentLifeSpan;
 
-    public float lostHealthOverTime = 0.5f;
+    public float startLostHealthOverTimer;
+    private float lostHealthOverTimer;
+    public int lostHealthOverTime = 20;
 
     public Animator animator;
 
@@ -45,9 +47,17 @@ public class LegendaryMonolith : MonoBehaviour
             Destroy(gameObject);
         }
 
-        currentHealth -= lostHealthOverTime;
+        if (lostHealthOverTimer <= 0)
+        {
+            lostHealthOverTimer = startLostHealthOverTimer;
+            currentHealth -= lostHealthOverTime;
+        }
+        else
+        {
+            lostHealthOverTimer -= Time.deltaTime;
+        }
 
-        if(currentHealth <= (maxHealth * 0.75) && currentHealth > (maxHealth * 0.5))
+        if (currentHealth <= (maxHealth * 0.75) && currentHealth > (maxHealth * 0.5))
         {
             animator.SetTrigger("is75");
         }

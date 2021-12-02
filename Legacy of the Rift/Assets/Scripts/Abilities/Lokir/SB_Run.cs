@@ -21,7 +21,9 @@ public class SB_Run : StateMachineBehaviour
         WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
         if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
         {
+            spectralBarrage.FindNearestEnemy();
             enemy = spectralBarrage.nearestEnemy;
+            spectralBarrage.LookAtEnemies();
         }
         rb = animator.GetComponent<Rigidbody2D>();
     }
@@ -36,6 +38,7 @@ public class SB_Run : StateMachineBehaviour
         }
         if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
         {
+            spectralBarrage.FindNearestEnemy();
             enemy = spectralBarrage.nearestEnemy;
             spectralBarrage.LookAtEnemies();
 
@@ -63,6 +66,7 @@ public class SB_Run : StateMachineBehaviour
             }
             if (enemyObj != null)
             {
+                spectralBarrage.FindNearestEnemy();
                 enemy = spectralBarrage.nearestEnemy;
                 spectralBarrage.LookAtEnemies();
 

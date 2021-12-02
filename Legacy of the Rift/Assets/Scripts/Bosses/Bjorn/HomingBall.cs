@@ -74,6 +74,19 @@ public class HomingBall : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (hitInfo.gameObject.CompareTag("Monolith"))
+        {
+            FindObjectOfType<LegendaryMonolith>().TakeDamage(damage);
+            Instantiate(impactEffect, transform.position, transform.rotation);
+
+            //damage popup
+            GameObject damagePopup = Instantiate(damagePopupPrefab, transform.position, Quaternion.identity);
+            DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
+            damagePopupScript.Setup(damage);
+
+            Destroy(gameObject);
+        }
+
         if (hitInfo.gameObject.CompareTag("Ground"))
         {
             enabled = false;
