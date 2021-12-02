@@ -107,7 +107,7 @@ public class HalvarAttacks : AttackBaseClass
 
         }
 
-        if (!isUltReady)
+        if (playerZeal.fullyZealous == false)
         {
             ultReadyGlow.SetActive(false);
         }

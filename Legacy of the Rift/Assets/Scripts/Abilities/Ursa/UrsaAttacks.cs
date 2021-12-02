@@ -102,7 +102,7 @@ public class UrsaAttacks : AttackBaseClass
             }
         }
 
-        if (!isUltReady)
+        if (playerZeal.fullyZealous == false)
         {
             ultReadyGlow.SetActive(false);
         }

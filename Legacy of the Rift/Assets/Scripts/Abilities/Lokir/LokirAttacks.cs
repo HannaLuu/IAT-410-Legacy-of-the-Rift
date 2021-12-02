@@ -147,7 +147,7 @@ public class LokirAttacks : AttackBaseClass
 
         }
 
-        if (!isUltReady)
+        if (playerZeal.fullyZealous == false)
         {
             ultReadyGlow.SetActive(false);
         }
