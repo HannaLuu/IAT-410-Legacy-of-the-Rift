@@ -32,6 +32,9 @@ public class BjornAttacks : MonoBehaviour
     public Transform player;
     private Enemy enemyScript;
 
+    //particles
+    public GameObject teleportParticles;
+
     // Bjorn State
     public enum BjornState { DISAPPEARING, APPEARING };
     public BjornState bjorn = BjornState.APPEARING;
@@ -98,6 +101,7 @@ public class BjornAttacks : MonoBehaviour
             // Teleport rate
             yield return new WaitForSeconds(8f);
 
+            Instantiate(teleportParticles, transform.position, transform.rotation);
             GetComponent<Renderer>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
             bjorn = BjornState.DISAPPEARING;
@@ -111,6 +115,7 @@ public class BjornAttacks : MonoBehaviour
 
             // transform.position = player.transform.position + teleNearPlayer.normalized * minRadius + teleNearPlayer;
             transform.position = new Vector2(player.transform.position.x + randX, player.transform.position.y + randY);
+            Instantiate(teleportParticles, transform.position, transform.rotation);
         }
         /// Transform _sp = tpPoints[Random.Range(0, tpPoints.Length)];
         // Vector2 target = new Vector2(_sp.position.x, _sp.position.y);
