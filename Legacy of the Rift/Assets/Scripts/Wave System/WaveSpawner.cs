@@ -6,13 +6,16 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
-public class WaveSpawner : MonoBehaviour {
+public class WaveSpawner : MonoBehaviour
+{
     public SuperTextSuperSeks waveText;
     public SuperTextSuperSeks enemiesText;
 
     public bool tutorial = false;
 
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
+
+    public GameObject spawnParticle;
 
     [SerializeField] UnityEvent endOfWave;
 
@@ -44,7 +47,8 @@ public class WaveSpawner : MonoBehaviour {
 
     public bool allWavesCompleted;
 
-    void Start() {
+    void Start()
+    {
         if (spawnPoints.Length == 0)
         {
             Debug.LogError("No spawn points referenced.");
@@ -55,15 +59,16 @@ public class WaveSpawner : MonoBehaviour {
         //clones = GameObject.FindGameObjectWithTag("SBClone").transform;
     }
 
-    public void DecrementEnemyCount() {
+    public void DecrementEnemyCount()
+    {
         enemyCount--;
         enemiesText.SetText("Enemies Left: " + enemyCount);
     }
 
     void Update()
     {
-        waveText.SetText("Wave: " + (1+nextWave) + "/" + waves.Length);
-        
+        waveText.SetText("Wave: " + (1 + nextWave) + "/" + waves.Length);
+
         if (state == SpawnState.WAITING)
         {
             if (!EnemyIsAlive())
@@ -106,7 +111,8 @@ public class WaveSpawner : MonoBehaviour {
             // disable this object
             allWavesCompleted = true;
             gameObject.SetActive(false);
-        } else if (nextWave + 1 > waves.Length - 1 && tutorial == false)
+        }
+        else if (nextWave + 1 > waves.Length - 1 && tutorial == false)
         {
             // nextWave = 0;
             // Debug.Log("ALL WAVES COMPLETE! Looping...");
@@ -161,26 +167,33 @@ public class WaveSpawner : MonoBehaviour {
     //     Instantiate(_enemy, _sp.position, _sp.rotation);
     // }
 
-    public void SpawnEnemy() {
+    public void SpawnEnemy()
+    {
         StartCoroutine(AttemptSpawning());
     }
 
-    private IEnumerator AttemptSpawning() {
+    private IEnumerator AttemptSpawning()
+    {
         int randomEnemy = Random.Range(0, enemy.Length); //Selecing a random enemy
         Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
         var playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
 
-        while (Vector2.Distance(_sp.position, playerPos) < 20) {
+        while (Vector2.Distance(_sp.position, playerPos) < 20)
+        {
             _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
             yield return null;
         }
+        Instantiate(spawnParticle, _sp.position, _sp.rotation);
+        yield return new WaitForSeconds(1f);
         Instantiate(enemy[randomEnemy], _sp.position, _sp.rotation);
         IncrementEnemyCount();
     }
 
-    public void IncrementEnemyCount() {
+
+    public void IncrementEnemyCount()
+    {
         enemyCount++;
         enemiesText.SetText("Enemies Left: " + enemyCount);
-        
+
     }
 }

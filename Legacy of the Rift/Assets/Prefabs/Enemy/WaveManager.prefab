@@ -45,6 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveText: {fileID: 0}
   enemiesText: {fileID: 0}
+  tutorial: 0
+  spawnParticle: {fileID: 3394502652288646303, guid: 7fbadb6f9b3c7c24482990dbd051b772, type: 3}
   endOfWave:
     m_PersistentCalls:
       m_Calls:
@@ -71,6 +73,7 @@ MonoBehaviour:
   - name: Wave 3
     count: 4
     rate: 1
+  nextWave: 0
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -79,3 +82,4 @@ MonoBehaviour:
   waveCountdown: 0
   state: 2
   enemyCount: 0
+  allWavesCompleted: 0

@@ -1773,6 +1773,7 @@ MonoBehaviour:
   zealBar: {fileID: 275908536}
   overzealBar: {fileID: 275908535}
   ultReadyIndicator: {fileID: 275908523}
+  ultBarAnimator: {fileID: 0}
 --- !u!1 &1673253245
 GameObject:
   m_ObjectHideFlags: 0
@@ -2491,7 +2492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6359789920620312145, guid: 3c3775bd5d392544db47c974827fd5de, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6359789920620312146, guid: 3c3775bd5d392544db47c974827fd5de, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
