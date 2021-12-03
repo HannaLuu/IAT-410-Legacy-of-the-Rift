@@ -105,7 +105,7 @@ public class LokirAttacks : AttackBaseClass
                 lokirAbilityBarAnimator.SetBool("abilityReady", true);
                 if (Input.GetButtonDown("Fire2") && spectralWarlock == null && dontMove == false)
                 {
-                    ActivateAbility();
+                    animator.SetTrigger("Summon");
 
                 }
             } else
