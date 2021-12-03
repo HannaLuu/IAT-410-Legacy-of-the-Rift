@@ -6656,7 +6656,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  fill: {fileID: 0}
+  fill: {fileID: 159752092}
 --- !u!114 &1346062164
 MonoBehaviour:
   m_ObjectHideFlags: 0
