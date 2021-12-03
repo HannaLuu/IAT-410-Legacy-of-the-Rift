@@ -46,7 +46,7 @@ MonoBehaviour:
   waveText: {fileID: 0}
   enemiesText: {fileID: 0}
   tutorial: 0
-  spawnParticle: {fileID: 3394502652288646303, guid: 7fbadb6f9b3c7c24482990dbd051b772, type: 3}
+  spawnParticle: {fileID: 4548526416414539197, guid: 8b40074711491a345b408e0a39ddc637, type: 3}
   endOfWave:
     m_PersistentCalls:
       m_Calls:

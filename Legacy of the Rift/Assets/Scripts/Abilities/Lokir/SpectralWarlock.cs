@@ -51,6 +51,11 @@ public class SpectralWarlock : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnDestroy()
+    {
+        _lokirAttacks.OnTeleport -= SelfDestructSubscriber;
+    }
+
     // Update is called once per frame
     void Update()
     {

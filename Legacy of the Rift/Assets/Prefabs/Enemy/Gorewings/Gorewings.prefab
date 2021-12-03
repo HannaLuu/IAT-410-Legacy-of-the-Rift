@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4476990809877278662, guid: 3231c9afb433796428198603559e0646, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -177,6 +177,7 @@ MonoBehaviour:
   player: {fileID: 0}
   isFlipped: 0
   isSlowed: 0
+  isDead: 0
   animator: {fileID: 3266969331733951974}
 --- !u!114 &2650055557627104996
 MonoBehaviour:
