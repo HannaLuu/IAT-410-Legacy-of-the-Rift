@@ -26,7 +26,10 @@ public class StartShoreLevel : MonoBehaviour
                 flowchart.SetBooleanVariable("canTalktoKids", false);
                 waveSpawnPoints.SetActive(true);
                 waveManager.SetActive(true);
-                kids.GetComponent<BabyTutorial>().DestroyKids();
+                if (kids != null)
+                {
+                    kids.GetComponent<BabyTutorial>().DestroyKids();
+                }
             }
         }
     }

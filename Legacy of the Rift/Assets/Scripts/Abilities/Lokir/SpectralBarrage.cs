@@ -22,9 +22,12 @@ public class SpectralBarrage : MonoBehaviour
     public GameObject impactEffect;
     public GameObject damagePopupPrefab;
 
+    public GameObject smokeParticle;
+
     void Start()
     {
         currentLifeSpan = maxLifeSpan;
+        Instantiate(smokeParticle, transform.position, transform.rotation);
         //Physics2D.IgnoreLayerCollision(8, 8, true);
     }
 
@@ -33,7 +36,7 @@ public class SpectralBarrage : MonoBehaviour
         currentLifeSpan -= Time.deltaTime;
         if (currentLifeSpan <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 
@@ -64,9 +67,12 @@ public class SpectralBarrage : MonoBehaviour
 
     void Die()
     {
-        //EnemyCounter.enemiesKilled = EnemyCounter.enemiesKilled += 1;
-        //Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(smokeParticle, transform.position, transform.rotation);
     }
 
     public void LookAtEnemies()

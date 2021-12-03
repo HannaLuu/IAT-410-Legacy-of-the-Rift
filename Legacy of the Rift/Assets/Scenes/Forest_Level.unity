@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: abilityCooldownBar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6510522073437167044, guid: 74c81666b0de9434da977b9130b7386b, type: 3}
+      propertyPath: ursaAbilityBarAnimator
+      value: 
+      objectReference: {fileID: 1898871750}
     - target: {fileID: 6510522073437167045, guid: 74c81666b0de9434da977b9130b7386b, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -5208,7 +5212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5034084
+      value: 4.520838
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5721,6 +5725,7 @@ MonoBehaviour:
   zealBar: {fileID: 1898871747}
   overzealBar: {fileID: 1898871737}
   ultReadyIndicator: {fileID: 1898871736}
+  ultBarAnimator: {fileID: 1898871749}
 --- !u!1 &1426495540
 GameObject:
   m_ObjectHideFlags: 0
@@ -6207,6 +6212,10 @@ PrefabInstance:
       propertyPath: abilityCooldownBar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4539396504465934491, guid: bcc9e13a83d6cd74389edf7df0010d03, type: 3}
+      propertyPath: halvarAbilityBarAnimator
+      value: 
+      objectReference: {fileID: 1898871751}
     - target: {fileID: 5946435605866523776, guid: bcc9e13a83d6cd74389edf7df0010d03, type: 3}
       propertyPath: m_SizeDelta.x
       value: -1919.6
@@ -7190,6 +7199,10 @@ PrefabInstance:
       propertyPath: abilityCooldownBar
       value: 
       objectReference: {fileID: 1898871746}
+    - target: {fileID: 3940783632309258382, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
+      propertyPath: lokirAbilityBarAnimator
+      value: 
+      objectReference: {fileID: 1898871752}
     - target: {fileID: 5372551366767340604, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8251,6 +8264,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41b14bb9694f454d8514513da946b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1898871749 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1396956485460391780, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 1898871734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1898871750 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5190130349306515732, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 1898871734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1898871751 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7002806387108454854, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 1898871734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1898871752 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8422197465699237368, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 1898871734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1899056696
 GameObject:
   m_ObjectHideFlags: 0

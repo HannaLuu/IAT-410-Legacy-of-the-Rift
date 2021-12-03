@@ -210,6 +210,14 @@ MonoBehaviour:
   lokir: {fileID: 0}
   halvar: {fileID: 0}
   ursa: {fileID: 0}
+  knockbackX: 30
+  knockbackY: 5
+  bigKnockX: 50
+  bigKnockY: 10
+  knockbackLength: 0.2
+  knockbackCount: 0
+  knockFromRight: 0
+  bigKnock: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []

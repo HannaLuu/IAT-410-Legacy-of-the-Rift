@@ -15,6 +15,8 @@ public class UrsaAttacks : AttackBaseClass
 
     public GameObject healingPopupPrefab;
 
+    public Animator ursaAbilityBarAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,10 +58,11 @@ public class UrsaAttacks : AttackBaseClass
 
         if (isAbilityReady)
         {
-            if (Input.GetButtonDown("Fire2") && dontMove == false)
+            playerZeal.CheckEnoughZeal(abilityZealCost);
+            if (playerZeal.canSpendZeal == true)
             {
-                playerZeal.CheckEnoughZeal(abilityZealCost);
-                if (playerZeal.canSpendZeal == true)
+                ursaAbilityBarAnimator.SetBool("abilityReady", true);
+                if (Input.GetButtonDown("Fire2") && dontMove == false)
                 {
                     abilityActivated = true;
                     dontMove = true;
@@ -68,12 +71,13 @@ public class UrsaAttacks : AttackBaseClass
                     //animator.SetTrigger("Attack");
                     //FindObjectOfType<AudioManager>().Play("PlayerAttack");
                 }
-                else
-                {
-                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                }
-
+            } else
+            {
+                ursaAbilityBarAnimator.SetBool("abilityReady", false);
             }
+        } else
+        {
+            ursaAbilityBarAnimator.SetBool("abilityReady", false);
         }
 
         if (isUltReady && isUltUnlocked)

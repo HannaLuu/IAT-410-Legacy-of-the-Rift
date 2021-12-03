@@ -13,6 +13,7 @@ public class HeraldOfRuin : MonoBehaviour
     private bool debuffApplied;
 
     public GameObject impactEffect;
+    public GameObject explosionEffect, explosionParticle;
     public GameObject damagePopupPrefab;
 
     public void Explode()
@@ -57,7 +58,6 @@ public class HeraldOfRuin : MonoBehaviour
                     }
                 }
             }
-            Instantiate(impactEffect, transform.position, transform.rotation);
             //destroy itself after explosion done
             Destroy(gameObject);
 
@@ -68,7 +68,6 @@ public class HeraldOfRuin : MonoBehaviour
             Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, collisionRange, enemyLayer);
             if (colInfo.gameObject.CompareTag("Enemy"))
             {
-                Instantiate(impactEffect, transform.position, transform.rotation);
                 colInfo.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
 
                 //damage popup
@@ -77,6 +76,13 @@ public class HeraldOfRuin : MonoBehaviour
                 damagePopupScript.Setup(attackDamage);
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(impactEffect, transform.position, transform.rotation);
+        Instantiate(explosionEffect, transform.position, transform.rotation);
+        Instantiate(explosionParticle, transform.position, transform.rotation);
     }
 
     //old ult code

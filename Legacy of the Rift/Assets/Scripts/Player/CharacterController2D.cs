@@ -19,6 +19,8 @@ public class CharacterController2D : MonoBehaviour
     public LokirAttacks lokir;
     public HalvarAttacks halvar;
     public UrsaAttacks ursa;
+    public float knockbackX, knockbackY, bigKnockX, bigKnockY, knockbackLength, knockbackCount;
+    public bool knockFromRight, bigKnock;
 
     [Header("Events")]
     [Space]
@@ -59,13 +61,13 @@ public class CharacterController2D : MonoBehaviour
 
     public void Move(float move, bool crouch, bool jump)
     {
-        if(playerSwitchingScript.currHero == PlayerSwitching.Hero.Lokir)
+        if (playerSwitchingScript.currHero == PlayerSwitching.Hero.Lokir)
         {
             lokir = GameObject.FindObjectOfType<LokirAttacks>();
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
             {
-                if (lokir.dontMove == false)
+                if (lokir.dontMove == false && knockbackCount <= 0)
                 {
                     // Move the character by finding the target velocity
                     Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
@@ -83,6 +85,33 @@ public class CharacterController2D : MonoBehaviour
                     {
                         // ... flip the player.
                         Flip();
+                    }
+                }
+                else if (knockbackCount > 0)
+                {
+                    if (!bigKnock)
+                    {
+                        if (knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(-knockbackX, knockbackY);
+                        }
+                        if (!knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(knockbackX, knockbackY);
+                        }
+                        knockbackCount -= Time.deltaTime;
+                    }
+                    if (bigKnock)
+                    {
+                        if (knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(-bigKnockX, bigKnockY);
+                        }
+                        if (!knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(bigKnockX, bigKnockY);
+                        }
+                        knockbackCount -= Time.deltaTime;
                     }
                 }
             }
@@ -102,7 +131,7 @@ public class CharacterController2D : MonoBehaviour
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
             {
-                if (halvar.dontMove == false)
+                if (halvar.dontMove == false && knockbackCount <= 0)
                 {
                     // Move the character by finding the target velocity
                     Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
@@ -122,6 +151,33 @@ public class CharacterController2D : MonoBehaviour
                         Flip();
                     }
                 }
+                else if (knockbackCount > 0)
+                {
+                    if (!bigKnock)
+                    {
+                        if (knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(-knockbackX, knockbackY);
+                        }
+                        if (!knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(knockbackX, knockbackY);
+                        }
+                        knockbackCount -= Time.deltaTime;
+                    }
+                    if (bigKnock)
+                    {
+                        if (knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(-bigKnockX, bigKnockY);
+                        }
+                        if (!knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(bigKnockX, bigKnockY);
+                        }
+                        knockbackCount -= Time.deltaTime;
+                    }
+                }
             }
 
             // If the player should jump...
@@ -139,7 +195,7 @@ public class CharacterController2D : MonoBehaviour
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
             {
-                if (ursa.dontMove == false)
+                if (ursa.dontMove == false && knockbackCount <= 0)
                 {
                     // Move the character by finding the target velocity
                     Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
@@ -157,6 +213,33 @@ public class CharacterController2D : MonoBehaviour
                     {
                         // ... flip the player.
                         Flip();
+                    }
+                }
+                else if (knockbackCount > 0)
+                {
+                    if (!bigKnock)
+                    {
+                        if (knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(-knockbackX, knockbackY);
+                        }
+                        if (!knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(knockbackX, knockbackY);
+                        }
+                        knockbackCount -= Time.deltaTime;
+                    }
+                    if (bigKnock)
+                    {
+                        if (knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(-bigKnockX, bigKnockY);
+                        }
+                        if (!knockFromRight)
+                        {
+                            m_Rigidbody2D.velocity = new Vector2(bigKnockX, bigKnockY);
+                        }
+                        knockbackCount -= Time.deltaTime;
                     }
                 }
             }

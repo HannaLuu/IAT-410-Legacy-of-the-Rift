@@ -143,6 +143,7 @@ MonoBehaviour:
   animator: {fileID: 7062417286461328245}
   healingPopupPrefab: {fileID: 5991670611894702333, guid: a100071762996854a9f0ecc012741fe3, type: 3}
   isColliding: 0
+  smokeParticle: {fileID: 3394502652288646303, guid: 7fbadb6f9b3c7c24482990dbd051b772, type: 3}
 --- !u!95 &7062417286461328245
 Animator:
   serializedVersion: 3

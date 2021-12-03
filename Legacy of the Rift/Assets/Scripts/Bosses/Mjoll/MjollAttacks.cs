@@ -193,6 +193,18 @@ public class MjollAttacks : MonoBehaviour
                 if (lokir != null || halvar != null || ursa != null)
                 {
                     playerHandler.GetComponent<PlayerHealth>().TakeDamage(lightningDamage);
+                    var player = hitInfo.transform.GetComponentInParent<CharacterController2D>();
+                    player.bigKnock = true;
+                    player.knockbackCount = player.knockbackLength;
+
+                    if (hitInfo.transform.position.x < transform.position.x)
+                    {
+                        player.knockFromRight = true;
+                    }
+                    else
+                    {
+                        player.knockFromRight = false;
+                    }
                 }
 
                 Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
@@ -208,17 +220,17 @@ public class MjollAttacks : MonoBehaviour
 
                 if (lokir != null)
                 {
-                    StartCoroutine(lokir.Knockback(1f, 2f, lokir.transform.position));
+                    //StartCoroutine(lokir.Knockback(1f, 2f, lokir.transform.position));
                 }
 
                 if (halvar != null)
                 {
-                    StartCoroutine(halvar.Knockback(1f, 2f, halvar.transform.position));
+                    //StartCoroutine(halvar.Knockback(1f, 2f, halvar.transform.position));
                 }
 
                 if (ursa != null)
                 {
-                    StartCoroutine(ursa.Knockback(1f, 2f, ursa.transform.position));
+                    //StartCoroutine(ursa.Knockback(1f, 2f, ursa.transform.position));
                 }
 
             }
@@ -248,6 +260,18 @@ public class MjollAttacks : MonoBehaviour
                 if (lokir != null || halvar != null || ursa != null)
                 {
                     playerHandler.GetComponent<PlayerHealth>().TakeDamage(lightningDamage);
+                    var player = hitInfo.transform.GetComponentInParent<CharacterController2D>();
+                    player.bigKnock = true;
+                    player.knockbackCount = player.knockbackLength;
+
+                    if (hitInfo.transform.position.x < transform.position.x)
+                    {
+                        player.knockFromRight = true;
+                    }
+                    else
+                    {
+                        player.knockFromRight = false;
+                    }
                 }
 
                 Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
@@ -263,17 +287,17 @@ public class MjollAttacks : MonoBehaviour
 
                 if (lokir != null)
                 {
-                    StartCoroutine(lokir.Knockback(1f, 2f, new Vector3(-lokir.transform.position.x, lokir.transform.position.y, lokir.transform.position.z)));
+                    //StartCoroutine(lokir.Knockback(1f, 2f, new Vector3(-lokir.transform.position.x, lokir.transform.position.y, lokir.transform.position.z)));
                 }
 
                 if (halvar != null)
                 {
-                    StartCoroutine(halvar.Knockback(1f, 2f, new Vector3(-halvar.transform.position.x, halvar.transform.position.y, halvar.transform.position.z)));
+                    //StartCoroutine(halvar.Knockback(1f, 2f, new Vector3(-halvar.transform.position.x, halvar.transform.position.y, halvar.transform.position.z)));
                 }
 
                 if (ursa != null)
                 {
-                    StartCoroutine(ursa.Knockback(1f, 2f, new Vector3(-ursa.transform.position.x, ursa.transform.position.y, ursa.transform.position.z)));
+                    //StartCoroutine(ursa.Knockback(1f, 2f, new Vector3(-ursa.transform.position.x, ursa.transform.position.y, ursa.transform.position.z)));
                 }
 
             }
@@ -307,6 +331,17 @@ public class MjollAttacks : MonoBehaviour
                 if (lokir != null || halvar != null || ursa != null)
                 {
                     playerHandler.GetComponent<PlayerHealth>().TakeDamage(lightningDamage);
+                    var player = hitInfo.transform.GetComponentInParent<CharacterController2D>();
+                    player.bigKnock = false;
+                    player.knockbackCount = player.knockbackLength;
+
+                    if(hitInfo.transform.position.x < transform.position.x)
+                    {
+                        player.knockFromRight = true;
+                    } else
+                    {
+                        player.knockFromRight = false;
+                    }
                 }
 
                 Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
@@ -322,17 +357,17 @@ public class MjollAttacks : MonoBehaviour
 
                 if (lokir != null)
                 {
-                    StartCoroutine(lokir.Knockback(1f, 1f, lokir.transform.position));
+                    //StartCoroutine(lokir.Knockback(1f, 1f, lokir.transform.position));
                 }
 
                 if (halvar != null)
                 {
-                    StartCoroutine(halvar.Knockback(1f, 1f, halvar.transform.position));
+                    //StartCoroutine(halvar.Knockback(1f, 1f, halvar.transform.position));
                 }
 
                 if (ursa != null)
                 {
-                    StartCoroutine(ursa.Knockback(1f, 1f, ursa.transform.position));
+                    //StartCoroutine(ursa.Knockback(1f, 1f, ursa.transform.position));
                 }
 
             }
@@ -363,6 +398,18 @@ public class MjollAttacks : MonoBehaviour
                 if (lokir != null || halvar != null || ursa != null)
                 {
                     playerHandler.GetComponent<PlayerHealth>().TakeDamage(lightningDamage);
+                    var player = hitInfo.transform.GetComponentInParent<CharacterController2D>();
+                    player.bigKnock = false;
+                    player.knockbackCount = player.knockbackLength;
+
+                    if (hitInfo.transform.position.x < transform.position.x)
+                    {
+                        player.knockFromRight = true;
+                    }
+                    else
+                    {
+                        player.knockFromRight = false;
+                    }
                 }
 
                 Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
@@ -378,17 +425,17 @@ public class MjollAttacks : MonoBehaviour
 
                 if (lokir != null)
                 {
-                    StartCoroutine(lokir.Knockback(1f, 1f, new Vector3(-lokir.transform.position.x, lokir.transform.position.y, lokir.transform.position.z)));
+                    //StartCoroutine(lokir.Knockback(1f, 1f, new Vector3(-lokir.transform.position.x, lokir.transform.position.y, lokir.transform.position.z)));
                 }
 
                 if (halvar != null)
                 {
-                    StartCoroutine(halvar.Knockback(1f, 1f, new Vector3(-halvar.transform.position.x, halvar.transform.position.y, halvar.transform.position.z)));
+                    //StartCoroutine(halvar.Knockback(1f, 1f, new Vector3(-halvar.transform.position.x, halvar.transform.position.y, halvar.transform.position.z)));
                 }
 
                 if (ursa != null)
                 {
-                    StartCoroutine(ursa.Knockback(1f, 1f, new Vector3(-ursa.transform.position.x, ursa.transform.position.y, ursa.transform.position.z)));
+                    //StartCoroutine(ursa.Knockback(1f, 1f, new Vector3(-ursa.transform.position.x, ursa.transform.position.y, ursa.transform.position.z)));
                 }
 
             }

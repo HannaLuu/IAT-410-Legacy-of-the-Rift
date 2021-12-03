@@ -23,12 +23,15 @@ public class HarbingerOfLife : MonoBehaviour
 
     private Transform collisionPos;
 
+    public GameObject smokeParticle;
+
     void Start()
     {
         currentLifeSpan = maxLifeSpan;
         healTimer = startHealTimer;
         isColliding = false;
         animator = gameObject.GetComponent<Animator>();
+        Instantiate(smokeParticle, transform.position, transform.rotation);
     }
 
     void Update()
@@ -52,6 +55,11 @@ public class HarbingerOfLife : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(smokeParticle, transform.position, transform.rotation);
     }
 
     public void checkPlayerCollision()

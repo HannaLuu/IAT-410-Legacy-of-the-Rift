@@ -226,6 +226,7 @@ MonoBehaviour:
   nearestEnemy: {fileID: 0}
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
   damagePopupPrefab: {fileID: 2698869152092835109, guid: 79f5d2413ff7a6c4e9d1caa20ce8b157, type: 3}
+  smokeParticle: {fileID: 4168515714934182951, guid: 4552d66afc726484f935864ee55ddb1b, type: 3}
 --- !u!1001 &7102682719313544827
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -183,7 +183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.022003174, y: 0.92299986}
+  m_AnchoredPosition: {x: 0.021972656, y: 0.92299986}
   m_SizeDelta: {x: -2.046, y: -5.915}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &466780205
@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 777926201}
   - component: {fileID: 777926203}
   - component: {fileID: 777926202}
+  - component: {fileID: 1396956485460391780}
   m_Layer: 5
   m_Name: OverzealBar
   m_TagString: Untagged
@@ -329,6 +330,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 777926203}
+--- !u!95 &1396956485460391780
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777926200}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ac2e6249ce77d1c4f828b980a9dd07da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1229974814
 GameObject:
   m_ObjectHideFlags: 0
@@ -4563,6 +4583,7 @@ GameObject:
   - component: {fileID: 7675522638518358963}
   - component: {fileID: 5316319302458080970}
   - component: {fileID: 4800992901061466359}
+  - component: {fileID: 2170082878166394099}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4686,6 +4707,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &2170082878166394099
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4573156486741627509}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ac56e04dbd5be943b8faebca8d54173, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4580921910504202007
 GameObject:
   m_ObjectHideFlags: 0
@@ -5580,14 +5620,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.7058824}
+  m_Color: {r: 0, g: 0.6862745, b: 0, a: 0.7058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6329551654058586660, guid: f2c4cd7353cfb514fb9955f02af8973e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6260,6 +6300,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 5724404877429229176}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.78431374, g: 0, b: 0, a: 1}
+    key1: {r: 0, g: 0.6862745, b: 0, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 22937
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  fill: {fileID: 5724404876855053444}
 --- !u!1 &5724404877507941861
 GameObject:
   m_ObjectHideFlags: 0
@@ -7662,6 +7732,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5724404878924620308}
+  - component: {fileID: 8422197465699237368}
   m_Layer: 5
   m_Name: Ability
   m_TagString: Untagged
@@ -7692,6 +7763,25 @@ RectTransform:
   m_AnchoredPosition: {x: 26.295044, y: 12.399979}
   m_SizeDelta: {x: -52.06, y: -25.24}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &8422197465699237368
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724404878924620309}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a128ee425da51ed4a87e6ee1ce8415d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5806187463362360989
 GameObject:
   m_ObjectHideFlags: 0
@@ -7985,6 +8075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 207652517137579107}
+  - component: {fileID: 7002806387108454854}
   m_Layer: 5
   m_Name: Ability
   m_TagString: Untagged
@@ -8015,6 +8106,25 @@ RectTransform:
   m_AnchoredPosition: {x: 26.295044, y: 12.399979}
   m_SizeDelta: {x: -52.06, y: -25.24}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &7002806387108454854
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6225361321903975137}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5de9aa282647d0245af583102bb48a78, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6770884097051471540
 GameObject:
   m_ObjectHideFlags: 0
@@ -8816,6 +8926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6382770047174626351}
+  - component: {fileID: 5190130349306515732}
   m_Layer: 5
   m_Name: Ability
   m_TagString: Untagged
@@ -8846,6 +8957,25 @@ RectTransform:
   m_AnchoredPosition: {x: 26.295044, y: 12.399979}
   m_SizeDelta: {x: -52.06, y: -25.24}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &5190130349306515732
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867826293789225165}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dbbdb6ced6db88c4c80e5f07d53d91a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8002101341291170131
 GameObject:
   m_ObjectHideFlags: 0

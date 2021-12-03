@@ -40,6 +40,8 @@ public class LokirAttacks : AttackBaseClass
 
     public GameObject healingPopupPrefab;
 
+    public Animator lokirAbilityBarAnimator;
+
     //old ult code
     //public int ultClones = 3;
     //private int clonesSpawned = 0;
@@ -97,26 +99,28 @@ public class LokirAttacks : AttackBaseClass
 
         if (isAbilityReady)
         {
-            if (Input.GetButtonDown("Fire2") && spectralWarlock == null && dontMove == false)
+            playerZeal.CheckEnoughZeal(abilityZealCost);
+            if (playerZeal.canSpendZeal == true)
             {
-
-                playerZeal.CheckEnoughZeal(abilityZealCost);
-                if (playerZeal.canSpendZeal == true)
+                lokirAbilityBarAnimator.SetBool("abilityReady", true);
+                if (Input.GetButtonDown("Fire2") && spectralWarlock == null && dontMove == false)
                 {
                     ActivateAbility();
-                }
-                else
-                {
-                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                }
 
+                }
+            } else
+            {
+                lokirAbilityBarAnimator.SetBool("abilityReady", false);
             }
-        }
+        } 
         else if (Input.GetButtonDown("Fire2") && spectralWarlock != null && !teleported)
         {
             teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
             Teleport();
             teleported = true;
+        } else
+        {
+            lokirAbilityBarAnimator.SetBool("abilityReady", false);
         }
 
 
@@ -204,7 +208,7 @@ public class LokirAttacks : AttackBaseClass
         abilityActivated = true;
         teleported = false;
         playerZeal.SpendZeal(abilityZealCost);
-        spectralWarlock = Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation) as GameObject;
+        spectralWarlock = Instantiate(abilityPrefab, abilityPoint.position, Quaternion.identity) as GameObject;
     }
 
     // Spectral Barrage
@@ -213,7 +217,7 @@ public class LokirAttacks : AttackBaseClass
     {
         ultActivated = true;
         rb.velocity = new Vector2(0, 0);
-        Instantiate(lokirUltPrefab, lokirUltPoint.position, lokirUltPoint.rotation);
+        Instantiate(lokirUltPrefab, lokirUltPoint.position, Quaternion.identity);
         FindObjectOfType<PlayerHealth>().Heal(100);
     }
 

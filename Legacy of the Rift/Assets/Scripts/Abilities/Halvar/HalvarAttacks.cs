@@ -26,6 +26,8 @@ public class HalvarAttacks : AttackBaseClass
 
     public GameObject healingPopupPrefab;
 
+    public Animator halvarAbilityBarAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,21 +69,22 @@ public class HalvarAttacks : AttackBaseClass
 
         if (isAbilityReady)
         {
-            if (Input.GetButtonDown("Fire2") && dontMove == false)
+            playerZeal.CheckEnoughZeal(abilityZealCost);
+            if (playerZeal.canSpendZeal == true)
             {
-                playerZeal.CheckEnoughZeal(abilityZealCost);
-                if (playerZeal.canSpendZeal == true)
+                halvarAbilityBarAnimator.SetBool("abilityReady", true);
+                if (Input.GetButtonDown("Fire2") && dontMove == false)
                 {
                     dontMove = true;
                     animator.SetTrigger("Ability");
                 }
-                else
-                {
-                    Debug.Log("You've Run Out of Zeal! Wait to Regen!");
-                }
-
-                //FindObjectOfType<AudioManager>().Play("PlayerAttack");
+            } else
+            {
+                halvarAbilityBarAnimator.SetBool("abilityReady", false);
             }
+        } else
+        {
+            halvarAbilityBarAnimator.SetBool("abilityReady", true);
         }
 
         if (isUltReady && isUltUnlocked)
@@ -158,7 +161,7 @@ public class HalvarAttacks : AttackBaseClass
     {
         ultActivated = true;
         rb.velocity = new Vector2(0, 0);
-        Instantiate(lokirUltPrefab, lokirUltPoint.position, lokirUltPoint.rotation);
+        Instantiate(lokirUltPrefab, lokirUltPoint.position, Quaternion.identity);
         FindObjectOfType<PlayerHealth>().Heal(100);
     }
 

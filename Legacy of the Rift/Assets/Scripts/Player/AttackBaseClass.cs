@@ -116,18 +116,18 @@ public abstract class AttackBaseClass : MonoBehaviour
         }
     }
 
-    public IEnumerator Knockback(float knockDur, float knockPwr, Vector3 knockDir)
-    {
-        float timer = 0;
+    //public IEnumerator Knockback(float knockDur, float knockPwr, Vector3 knockDir)
+    //{
+    //    float timer = 0;
 
-        while (knockDur > timer)
-        {
-            timer += Time.deltaTime;
-            rb.AddForce(new Vector3(knockDir.x * -100, knockDir.y * knockPwr, transform.position.z));
-        }
+    //    while (knockDur > timer)
+    //    {
+    //        timer += Time.deltaTime;
+    //        rb.AddForce(new Vector3(knockDir.x * -100, knockDir.y * knockPwr, transform.position.z));
+    //    }
 
-        yield return 0;
-    }
+    //    yield return 0;
+    //}
 
     public void MoveAgain()
     {

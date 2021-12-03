@@ -18,6 +18,7 @@ public class PlayerZeal : MonoBehaviour
     public ZealBar2 zealBar;
     public OverzealBar overzealBar;
     public GameObject ultReadyIndicator;
+    public Animator ultBarAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -107,11 +108,13 @@ public class PlayerZeal : MonoBehaviour
         if (currentOverzeal >= maxOverzeal)
         {
             fullyZealous = true;
+            ultBarAnimator.SetBool("ultFull", true);
             ultReadyIndicator.SetActive(true);
         }
         else
         {
             fullyZealous = false;
+            ultBarAnimator.SetBool("ultFull", false);
             ultReadyIndicator.SetActive(false);
         }
     }
