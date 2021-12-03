@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &20788805 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 72094058, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 275908522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb331e014f4537b408d8af2c81de992d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &25227498 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1438157440, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 275908522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb331e014f4537b408d8af2c81de992d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &104715059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,7 +2007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1730784711
 Transform:
   m_ObjectHideFlags: 0
@@ -2060,8 +2082,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7825555273368544808, guid: 4c2321b1b821e9149bc58b9247ed98fa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7825555273368544809, guid: 4c2321b1b821e9149bc58b9247ed98fa, type: 3}
+      propertyPath: waveText
+      value: 
+      objectReference: {fileID: 20788805}
+    - target: {fileID: 7825555273368544809, guid: 4c2321b1b821e9149bc58b9247ed98fa, type: 3}
+      propertyPath: enemiesText
+      value: 
+      objectReference: {fileID: 25227498}
     - target: {fileID: 7825555273368544809, guid: 4c2321b1b821e9149bc58b9247ed98fa, type: 3}
       propertyPath: enemy.Array.size
       value: 1
