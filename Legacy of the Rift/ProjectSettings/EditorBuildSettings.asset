@@ -62,4 +62,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 1612924e2887b9b428c0bd75f1e3fe3f
+  - enabled: 1
+    path: Assets/Scenes/MeetMjollOrBjorn.unity
+    guid: 3d501250527cddf45927d932dd66ad81
+  - enabled: 1
+    path: Assets/Scenes/MeetBjorn.unity
+    guid: 4962e9eaa6afd874e9857e1b280f4941
+  - enabled: 1
+    path: Assets/Scenes/ShoreSpiritScene.unity
+    guid: 0baf920daf2b8d947889266fc51113fc
+  - enabled: 1
+    path: Assets/Scenes/ForestSpiritScene.unity
+    guid: 7002a4b26014e9745996c1be90a15650
+  - enabled: 1
+    path: Assets/Scenes/MjollDefeated.unity
+    guid: 11af335df9aaec540b0cf2aa118e9fd0
+  - enabled: 1
+    path: Assets/Scenes/BjornDefeated.unity
+    guid: fdfd112b4a261744d9dee9ae33fa6e4e
   m_configObjects: {}

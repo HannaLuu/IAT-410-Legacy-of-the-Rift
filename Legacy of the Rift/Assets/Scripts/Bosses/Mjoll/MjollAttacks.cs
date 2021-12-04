@@ -65,7 +65,7 @@ public class MjollAttacks : MonoBehaviour
     {
         if (enemyScript.currentHealth <= 40)
         {
-            SceneManager.LoadScene("Credits");
+            SceneManager.LoadScene("MjollDefeated");
         }
 
         if (enemyScript.currentHealth > lowHealthPoint)
@@ -100,7 +100,7 @@ public class MjollAttacks : MonoBehaviour
                 lightningTimer -= Time.deltaTime;
             }
         }
-        
+
         if (enemyScript.currentHealth <= lowHealthPoint)
         {
             if (gasTimer <= 0)
@@ -137,7 +137,7 @@ public class MjollAttacks : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("LeftWall"))
+        if (collision.gameObject.CompareTag("LeftWall"))
         {
             animator.SetBool("avoidLeftWall", true);
         }
@@ -316,7 +316,7 @@ public class MjollAttacks : MonoBehaviour
 
     void Shoot()
     {
-        if(enemyScript.isFlipped == false)
+        if (enemyScript.isFlipped == false)
         {
             RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, new Vector2(-1, 0));
 
@@ -335,10 +335,11 @@ public class MjollAttacks : MonoBehaviour
                     player.bigKnock = false;
                     player.knockbackCount = player.knockbackLength;
 
-                    if(hitInfo.transform.position.x < transform.position.x)
+                    if (hitInfo.transform.position.x < transform.position.x)
                     {
                         player.knockFromRight = true;
-                    } else
+                    }
+                    else
                     {
                         player.knockFromRight = false;
                     }

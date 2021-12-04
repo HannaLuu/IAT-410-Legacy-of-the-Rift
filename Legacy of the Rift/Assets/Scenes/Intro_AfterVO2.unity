@@ -731,6 +731,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5724404877574238912, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -14
+      objectReference: {fileID: 0}
     - target: {fileID: 5724404877769385058, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1889,7 +1893,6 @@ GameObject:
   - component: {fileID: 1092715891}
   - component: {fileID: 1092715890}
   - component: {fileID: 1092715889}
-  - component: {fileID: 1092715894}
   - component: {fileID: 1092715893}
   - component: {fileID: 1092715892}
   m_Layer: 0
@@ -1947,7 +1950,6 @@ MonoBehaviour:
   - {fileID: 1092715880}
   - {fileID: 1092715889}
   - {fileID: 1092715881}
-  - {fileID: 1092715894}
   - {fileID: 1092715882}
   - {fileID: 1092715893}
   - {fileID: 1092715883}
@@ -1983,7 +1985,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1092715876}
   selectedCommands:
-  - {fileID: 1092715892}
+  - {fileID: 1092715880}
   variables: []
   description: 
   stepPause: 0
@@ -2051,9 +2053,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: "We already know what to do. We have to find mama and papa AND that
-    cure. They\u2019ve been gone for three months...something just doesn\u2019t add
-    up."
+  storyText: We already know what to do. We have to find mama and papa AND that cure.
+    For them to be gone for three months? Something doesn't add up-
   description: 
   character: {fileID: 1972623238}
   portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
@@ -2109,8 +2110,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "MAKER\u2019S BREAST--"
   description: 
-  character: {fileID: 450716663}
-  portrait: {fileID: 21300000, guid: 0535c9c3ccfab544ea565b64ec38170e, type: 3}
+  character: {fileID: 1972623238}
+  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2134,10 +2135,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: SHIT - DAMN IT KHAJIIT!!! I told you NEVER to sneak up on us like that!!!
+  storyText: DAMN IT, RABBIT!!! I told you NEVER to sneak up on us like that!!!
   description: 
-  character: {fileID: 160474199}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  character: {fileID: 450716663}
+  portrait: {fileID: 21300000, guid: 0535c9c3ccfab544ea565b64ec38170e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2161,8 +2162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: 'Hehehe...sorry. Old habits die hard. Anyways, Dickon is just adding
-    some finishing touches to the Rift Piercer. '
+  storyText: 'Rab--?? Anyways, sorry...hehe. Old habits die hard. Ser Dickon is just
+    adding some finishing touches to the Rift Piercer. '
   description: 
   character: {fileID: 348426355}
   portrait: {fileID: 21300000, guid: 2d4b257546cedd14d8ea1f32c48bbccf, type: 3}
@@ -2189,8 +2190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: "Good. Pack up - we\u2019ll need to be ready as soon as the sun rises
-    tomorrow."
+  storyText: Good. Pack up - we leave for the island of Shadow's End tomorrow morning
+    to find mama and papa.
   description: 
   character: {fileID: 1972623238}
   portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
@@ -2412,36 +2413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 16
-  indentLevel: 0
-  display: 3
-  stage: {fileID: 0}
-  character: {fileID: 160474199}
-  replacedCharacter: {fileID: 450716663}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 0}
-  facing: 2
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
---- !u!114 &1092715894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092715874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 15
   indentLevel: 0
   display: 3
   stage: {fileID: 0}
