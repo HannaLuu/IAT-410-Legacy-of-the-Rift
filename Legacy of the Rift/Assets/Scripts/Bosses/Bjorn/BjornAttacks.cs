@@ -58,7 +58,7 @@ public class BjornAttacks : MonoBehaviour
     {
         if (enemyScript.currentHealth <= 40)
         {
-            SceneManager.LoadScene("Credits");
+            SceneManager.LoadScene("BjornDefeated");
         }
     }
 
