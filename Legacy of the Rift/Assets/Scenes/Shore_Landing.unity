@@ -2874,7 +2874,7 @@ MonoBehaviour:
   itemId: 38
   indentLevel: 0
   duration: 2
-  targetAlpha: 1
+  targetAlpha: 0
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
@@ -2894,7 +2894,7 @@ MonoBehaviour:
   itemId: 39
   indentLevel: 0
   duration: 2
-  targetAlpha: 0
+  targetAlpha: 1
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
