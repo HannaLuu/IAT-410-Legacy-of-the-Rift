@@ -1514,6 +1514,11 @@ GameObject:
   - component: {fileID: 596558304}
   - component: {fileID: 596558303}
   - component: {fileID: 596558302}
+  - component: {fileID: 596558305}
+  - component: {fileID: 596558306}
+  - component: {fileID: 596558307}
+  - component: {fileID: 596558308}
+  - component: {fileID: 596558309}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2089,6 +2094,7 @@ MonoBehaviour:
   - {fileID: 596558299}
   - {fileID: 596558251}
   - {fileID: 596558301}
+  - {fileID: 596558306}
   - {fileID: 596558235}
   suppressAllAutoSelections: 0
 --- !u!114 &596558253
@@ -3122,14 +3128,16 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 120
+  itemId: 213
   blockName: NEXT SCENE BAD
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 596558305}
   - {fileID: 596558300}
   - {fileID: 596558276}
   - {fileID: 596558302}
+  - {fileID: 596558309}
   - {fileID: 596558275}
   suppressAllAutoSelections: 0
 --- !u!114 &596558278
@@ -3492,7 +3500,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 596558277}
   selectedCommands:
-  - {fileID: 596558302}
+  - {fileID: 596558309}
   variables:
   - {fileID: 596558247}
   description: 
@@ -3566,7 +3574,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 120
+  itemId: 212
   blockName: NEXT SCENE OKAY
   description: 
   eventHandler: {fileID: 0}
@@ -3574,6 +3582,7 @@ MonoBehaviour:
   - {fileID: 596558297}
   - {fileID: 596558292}
   - {fileID: 596558303}
+  - {fileID: 596558308}
   - {fileID: 596558279}
   suppressAllAutoSelections: 0
 --- !u!114 &596558294
@@ -3642,7 +3651,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 120
+  itemId: 211
   blockName: NEXT SCENE GOOD
   description: 
   eventHandler: {fileID: 0}
@@ -3650,6 +3659,7 @@ MonoBehaviour:
   - {fileID: 596558298}
   - {fileID: 596558295}
   - {fileID: 596558304}
+  - {fileID: 596558307}
   - {fileID: 596558294}
   suppressAllAutoSelections: 0
 --- !u!114 &596558297
@@ -4324,6 +4334,106 @@ MonoBehaviour:
   indentLevel: 0
   key: spiritfavour
   variable: {fileID: 596558247}
+--- !u!114 &596558305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596558234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 214
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &596558306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596558234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 215
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &596558307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596558234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 216
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &596558308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596558234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 217
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &596558309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596558234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 218
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
 --- !u!1 &614762741
 GameObject:
   m_ObjectHideFlags: 0

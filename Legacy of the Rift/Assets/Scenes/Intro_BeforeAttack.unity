@@ -1647,6 +1647,8 @@ GameObject:
   - component: {fileID: 1005592368}
   - component: {fileID: 1005592367}
   - component: {fileID: 1005592371}
+  - component: {fileID: 1005592372}
+  - component: {fileID: 1005592373}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1694,6 +1696,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1005592354}
   commandList:
+  - {fileID: 1005592372}
   - {fileID: 1005592370}
   - {fileID: 1005592358}
   - {fileID: 1005592371}
@@ -1707,6 +1710,7 @@ MonoBehaviour:
   - {fileID: 1005592368}
   - {fileID: 1005592359}
   - {fileID: 1005592361}
+  - {fileID: 1005592373}
   - {fileID: 1005592366}
   suppressAllAutoSelections: 0
 --- !u!114 &1005592356
@@ -1804,7 +1808,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: UWAUHEUWHDWHUW~!~*#&$*)(EUAAUAAA!!!!!!!!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1338065410}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2066,7 +2070,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1845873293}
   replacedCharacter: {fileID: 1225674320}
-  portrait: {fileID: 21300000, guid: 2d4b257546cedd14d8ea1f32c48bbccf, type: 3}
+  portrait: {fileID: 21300000, guid: 34b74c12b0330854196390ae7d3ab163, type: 3}
   offset: 0
   fromPosition: {fileID: 816101023}
   toPosition: {fileID: 0}
@@ -2138,6 +2142,46 @@ MonoBehaviour:
   move: 1
   shiftIntoPlace: 0
   waitUntilFinished: 0
+--- !u!114 &1005592372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005592353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 15
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &1005592373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005592353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
 --- !u!1001 &1225674319
 PrefabInstance:
   m_ObjectHideFlags: 0
