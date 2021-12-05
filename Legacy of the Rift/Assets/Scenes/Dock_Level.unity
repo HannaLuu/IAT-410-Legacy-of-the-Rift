@@ -2541,11 +2541,6 @@ GameObject:
   - component: {fileID: 974722028}
   - component: {fileID: 974722031}
   - component: {fileID: 974722029}
-  - component: {fileID: 974722045}
-  - component: {fileID: 974722044}
-  - component: {fileID: 974722041}
-  - component: {fileID: 974722040}
-  - component: {fileID: 974722036}
   - component: {fileID: 974722033}
   - component: {fileID: 974722032}
   - component: {fileID: 974722035}
@@ -2556,7 +2551,6 @@ GameObject:
   - component: {fileID: 974722048}
   - component: {fileID: 974722047}
   - component: {fileID: 974722046}
-  - component: {fileID: 974722052}
   - component: {fileID: 974722063}
   - component: {fileID: 974722062}
   - component: {fileID: 974722061}
@@ -2572,10 +2566,16 @@ GameObject:
   - component: {fileID: 974722066}
   - component: {fileID: 974722070}
   - component: {fileID: 974722069}
+  - component: {fileID: 974722071}
+  - component: {fileID: 974722052}
+  - component: {fileID: 974722045}
+  - component: {fileID: 974722041}
+  - component: {fileID: 974722040}
+  - component: {fileID: 974722036}
+  - component: {fileID: 974722067}
   - component: {fileID: 974722065}
   - component: {fileID: 974722068}
-  - component: {fileID: 974722067}
-  - component: {fileID: 974722071}
+  - component: {fileID: 974722044}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2596,11 +2596,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 596.6486, y: 210.14182}
+  scrollPos: {x: 319.19662, y: 259.20767}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 522
-  zoom: 0.94000006
+  zoom: 0.8200002
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -2608,9 +2608,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 974722070}
-  selectedCommands:
-  - {fileID: 974722067}
+  - {fileID: 974722031}
+  selectedCommands: []
   variables:
   - {fileID: 974722033}
   - {fileID: 974722032}
@@ -2665,7 +2664,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -181.0859
     y: 88.45703
-    width: 65.95744
+    width: 65.85365
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2674,12 +2673,12 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 974722052}
+  - {fileID: 974722036}
   - {fileID: 974722045}
   - {fileID: 974722044}
   - {fileID: 974722041}
   - {fileID: 974722040}
-  - {fileID: 974722036}
-  - {fileID: 974722052}
   - {fileID: 974722035}
   - {fileID: 974722034}
   suppressAllAutoSelections: 0
@@ -2724,7 +2723,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -183.8363
     y: 26.391674
-    width: 72.34042
+    width: 71.95122
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3087,7 +3086,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &974722036
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3097,9 +3096,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 13
+  itemId: 50
   indentLevel: 0
-  storyText: You all must complete the rest of your journey without me.
+  storyText: You must find your parents and the cure for this wretched disease without
+    me.
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3111,7 +3111,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1832684978}
 --- !u!114 &974722037
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3126,9 +3126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -323.27277
+    x: -307.4191
     y: 60.563354
-    width: 78.723404
+    width: 76.82926
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3138,6 +3138,7 @@ MonoBehaviour:
   eventHandler: {fileID: 974722043}
   commandList:
   - {fileID: 974722042}
+  - {fileID: 974722068}
   - {fileID: 974722039}
   - {fileID: 974722038}
   - {fileID: 974722030}
@@ -3184,7 +3185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: Before you go, I must tell you kids that you are all much more powerful
+  storyText: Before you go, I must tell you all that you are all much more powerful
     than you know...
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
@@ -3200,7 +3201,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 1832684978}
 --- !u!114 &974722040
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3210,7 +3211,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 12
+  itemId: 49
+  indentLevel: 0
+  storyText: Tell your father we will meet again. GO!!!
+  description: 
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1832684978}
+--- !u!114 &974722041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 48
   indentLevel: 0
   storyText: Hjallna, Eerika, and Morkvar, you three find a way to help your older
     siblings too okay?
@@ -3225,34 +3253,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &974722041
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974722026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 11
-  indentLevel: 0
-  storyText: Remember, you all are strongest if you work together.
-  description: 
-  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1832684978}
 --- !u!114 &974722042
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3267,8 +3268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: Okay kids, we're almost at the Dock. There's not much further to go
-    now.
+  storyText: The dock is littered with those putrid bastards...
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3298,7 +3298,7 @@ MonoBehaviour:
   waitForFrames: 0
 --- !u!114 &974722044
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3308,10 +3308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 10
+  itemId: 56
   indentLevel: 0
-  storyText: You will find your parents and a cure for this wretched disease, I have
-    no doubt in my mind.
+  storyText: Always remember the strength of your combined powers.
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3323,10 +3322,10 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1832684978}
 --- !u!114 &974722045
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3336,9 +3335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 9
+  itemId: 46
   indentLevel: 0
-  storyText: Alright... It seems like you kids don't need old Khajiit anymore...
+  storyText: ...I'll hold off the rest of them.
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3350,7 +3349,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1832684978}
 --- !u!114 &974722046
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3645,7 +3644,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 1832684978}
 --- !u!114 &974722052
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3655,10 +3654,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 23
+  itemId: 45
   indentLevel: 0
-  storyText: ' I would not be able to live with myself if I left Snowspell City to
-    fend for themselves... Goodbye...'
+  storyText: Heh...you all have grown so strong. I am so proud of you.
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3670,7 +3668,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1832684978}
 --- !u!114 &974722053
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3685,7 +3683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 34
   indentLevel: 0
-  storyText: I believe in you children... Goodbye...
+  storyText: Tell your father we will meet again. GO!!!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3740,7 +3738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 0
-  storyText: Remember, you all are strongest if you work together.
+  storyText: Always remember the strength of your combined powers.
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3767,8 +3765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 35
   indentLevel: 0
-  storyText: I would not be able to live with myself if I left Snowspell City to
-    fend for themselves...
+  storyText: ...I'll hold off the rest of them.
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
@@ -3989,7 +3986,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -64.73379
     y: 38.79435
-    width: 215.95744
+    width: 209.75606
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4002,7 +3999,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &974722065
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4012,10 +4009,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 37
+  itemId: 54
   indentLevel: 0
-  storyText: '{vpunch=0.5}Y''ar! You kids! There''s still Scourged coming! We can''t
-    set sail yet!'
+  storyText: '{vpunch=0.5}KILL THOSE 7 FOOT, MUSCULAR, STINKY HORSES!!! PLEASE!!!'
   description: 
   character: {fileID: 7357101041809100376, guid: 66a720ccf640ead438d3bf099f60b5d4, type: 3}
   portrait: {fileID: 0}
@@ -4045,7 +4041,7 @@ MonoBehaviour:
   message: DickonWavesNotComplete
 --- !u!114 &974722067
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4055,9 +4051,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 42
+  itemId: 53
   indentLevel: 0
-  storyText: Alrighty, get on yur new boat! The Rift Piercer!
+  storyText: GET ON DAMN SHIP BEFORE MORE OF THOSE SMELLY HORSES COME AROUND!!!
   description: 
   character: {fileID: 7357101041809100376, guid: 66a720ccf640ead438d3bf099f60b5d4, type: 3}
   portrait: {fileID: 0}
@@ -4072,7 +4068,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 7654427586635638429}
 --- !u!114 &974722068
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4082,11 +4078,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 41
+  itemId: 55
   indentLevel: 0
-  storyText: Phew! Y'ar saved me other leg from becomin' a peg!
+  storyText: You'll have to fight your way through and get to Dickon.
   description: 
-  character: {fileID: 7357101041809100376, guid: 66a720ccf640ead438d3bf099f60b5d4, type: 3}
+  character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -4096,7 +4092,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 7654427586635638429}
+  setSayDialog: {fileID: 1832684978}
 --- !u!114 &974722069
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4128,7 +4124,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 196.4365
     y: 38.475185
-    width: 192.55318
+    width: 187.80486
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4137,7 +4133,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 974722069}
   commandList:
-  - {fileID: 974722068}
   - {fileID: 974722067}
   - {fileID: 974722071}
   suppressAllAutoSelections: 0
@@ -5734,7 +5729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.168114
+      value: -46.171783
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.y
