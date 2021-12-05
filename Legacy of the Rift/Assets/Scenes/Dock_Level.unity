@@ -2576,6 +2576,8 @@ GameObject:
   - component: {fileID: 974722065}
   - component: {fileID: 974722068}
   - component: {fileID: 974722044}
+  - component: {fileID: 974722072}
+  - component: {fileID: 974722073}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2608,8 +2610,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 974722031}
-  selectedCommands: []
+  - {fileID: 974722070}
+  selectedCommands:
+  - {fileID: 974722073}
   variables:
   - {fileID: 974722033}
   - {fileID: 974722032}
@@ -3137,6 +3140,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 974722043}
   commandList:
+  - {fileID: 974722072}
   - {fileID: 974722042}
   - {fileID: 974722068}
   - {fileID: 974722039}
@@ -4134,6 +4138,7 @@ MonoBehaviour:
   eventHandler: {fileID: 974722069}
   commandList:
   - {fileID: 974722067}
+  - {fileID: 974722073}
   - {fileID: 974722071}
   suppressAllAutoSelections: 0
 --- !u!114 &974722071
@@ -4155,6 +4160,46 @@ MonoBehaviour:
     stringVal: Shore_Landing
   loadingImage: {fileID: 0}
   sceneNameOLD: 
+--- !u!114 &974722072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 57
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &974722073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974722026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 58
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
 --- !u!4 &974722216
 Transform:
   m_ObjectHideFlags: 0

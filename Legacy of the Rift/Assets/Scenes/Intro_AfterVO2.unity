@@ -272,7 +272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109356833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.2300005, y: 0.22199988, z: 0}
+  m_LocalPosition: {x: -31.9, y: 0.031999886, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 1743195349}
@@ -1009,7 +1009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557593412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8200006, y: 0.049999952, z: 0}
+  m_LocalPosition: {x: -32.489998, y: -0.14000005, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 189124314}
@@ -1092,7 +1092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599862810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.23, y: 0.99, z: 0}
+  m_LocalPosition: {x: -31.9, y: 0.8, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1895,6 +1895,9 @@ GameObject:
   - component: {fileID: 1092715889}
   - component: {fileID: 1092715893}
   - component: {fileID: 1092715892}
+  - component: {fileID: 1092715894}
+  - component: {fileID: 1092715895}
+  - component: {fileID: 1092715896}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1942,12 +1945,14 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1092715875}
   commandList:
+  - {fileID: 1092715895}
   - {fileID: 1092715886}
   - {fileID: 1092715888}
   - {fileID: 1092715891}
   - {fileID: 1092715879}
   - {fileID: 1092715890}
   - {fileID: 1092715880}
+  - {fileID: 1092715894}
   - {fileID: 1092715889}
   - {fileID: 1092715881}
   - {fileID: 1092715882}
@@ -1956,6 +1961,7 @@ MonoBehaviour:
   - {fileID: 1092715884}
   - {fileID: 1092715892}
   - {fileID: 1092715885}
+  - {fileID: 1092715896}
   - {fileID: 1092715887}
   suppressAllAutoSelections: 0
 --- !u!114 &1092715877
@@ -1985,7 +1991,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1092715876}
   selectedCommands:
-  - {fileID: 1092715880}
+  - {fileID: 1092715896}
   variables: []
   description: 
   stepPause: 0
@@ -2053,8 +2059,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: We already know what to do. We have to find mama and papa AND that cure.
-    For them to be gone for three months? Something doesn't add up-
+  storyText: 'We already know what to do. We have to find mama and papa AND that
+    cure. '
   description: 
   character: {fileID: 1972623238}
   portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
@@ -2108,7 +2114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: "MAKER\u2019S BREAST--"
+  storyText: OH SH-
   description: 
   character: {fileID: 1972623238}
   portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
@@ -2190,8 +2196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: Good. Pack up - we leave for the island of Shadow's End tomorrow morning
-    to find mama and papa.
+  storyText: Good. Pack up - we leave for the island of Shadow's End tomorrow morning.
   description: 
   character: {fileID: 1972623238}
   portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
@@ -2298,7 +2303,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 348426355}
   replacedCharacter: {fileID: 160474199}
-  portrait: {fileID: 21300000, guid: 2d4b257546cedd14d8ea1f32c48bbccf, type: 3}
+  portrait: {fileID: 21300000, guid: 34b74c12b0330854196390ae7d3ab163, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -2430,6 +2435,73 @@ MonoBehaviour:
   move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
+--- !u!114 &1092715894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092715874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 0
+  storyText: For them to be gone for three months? Something doesn't add up-
+  description: 
+  character: {fileID: 1972623238}
+  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1092715895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092715874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &1092715896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092715874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
 --- !u!1001 &1263659579
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1929,6 +1929,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!224 &1396814732 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2980218656972453965, guid: b5ad65c3ed48fa24685db7800dd5832e, type: 3}
+  m_PrefabInstance: {fileID: 694977652}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1502096378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,6 +2108,13 @@ GameObject:
   - component: {fileID: 1584387945}
   - component: {fileID: 1584387946}
   - component: {fileID: 1584387947}
+  - component: {fileID: 1584387948}
+  - component: {fileID: 1584387949}
+  - component: {fileID: 1584387950}
+  - component: {fileID: 1584387951}
+  - component: {fileID: 1584387952}
+  - component: {fileID: 1584387953}
+  - component: {fileID: 1584387954}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2314,8 +2326,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  storyText: WHY WERE SMELLY MUSCULAR HORSES CHASING YOU TO THE SHIP??? WHAT IS GOING
-    ON-
+  storyText: '{vpunch=0.2}WHY WERE SMELLY MUSCULAR HORSES CHASING YOU TO THE SHIP???
+    WHAT IS GOING ON-'
   description: 
   character: {fileID: 2100643974}
   portrait: {fileID: 0}
@@ -2372,8 +2384,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: The dead are coming, Dickon...and they will not stop.
   description: 
-  character: {fileID: 1040363979}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  character: {fileID: 1203217750}
+  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2423,19 +2435,24 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1584387931}
   commandList:
+  - {fileID: 1584387953}
   - {fileID: 1584387922}
   - {fileID: 1584387921}
   - {fileID: 1584387927}
   - {fileID: 1584387925}
   - {fileID: 1584387926}
   - {fileID: 1584387924}
+  - {fileID: 1584387948}
   - {fileID: 1584387928}
+  - {fileID: 1584387949}
   - {fileID: 1584387930}
   - {fileID: 1584387929}
   - {fileID: 1584387947}
+  - {fileID: 1584387950}
   - {fileID: 1584387935}
   - {fileID: 1584387936}
   - {fileID: 1584387938}
+  - {fileID: 1584387951}
   - {fileID: 1584387939}
   - {fileID: 1584387940}
   - {fileID: 1584387941}
@@ -2444,7 +2461,9 @@ MonoBehaviour:
   - {fileID: 1584387937}
   - {fileID: 1584387943}
   - {fileID: 1584387945}
+  - {fileID: 1584387952}
   - {fileID: 1584387946}
+  - {fileID: 1584387954}
   - {fileID: 1584387923}
   suppressAllAutoSelections: 0
 --- !u!114 &1584387933
@@ -2474,7 +2493,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1584387932}
   selectedCommands:
-  - {fileID: 1584387947}
+  - {fileID: 1584387954}
   variables: []
   description: 
   stepPause: 0
@@ -2514,8 +2533,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 0
-  storyText: Shit. Well, in that case, we better get to Shadow's End quickly. Ursa,
-    can y-
+  storyText: Damn it...well, in that case, we better get to Shadow's End quickly.
+    Ursa, can y-
   description: 
   character: {fileID: 1701574851}
   portrait: {fileID: 21300000, guid: 0535c9c3ccfab544ea565b64ec38170e, type: 3}
@@ -2615,8 +2634,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: URSA-
   description: 
-  character: {fileID: 1040363979}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  character: {fileID: 1701574851}
+  portrait: {fileID: 21300000, guid: 0535c9c3ccfab544ea565b64ec38170e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2830,7 +2849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 0
-  storyText: So the stories are true then...the end is near...Gods save us...
+  storyText: So the stories are true then...the end is near...Gods save us all.
   description: 
   character: {fileID: 2100643974}
   portrait: {fileID: 0}
@@ -2843,6 +2862,196 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1584387948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584387920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 32
+  indentLevel: 0
+  display: 3
+  stage: {fileID: 0}
+  character: {fileID: 2100643974}
+  replacedCharacter: {fileID: 1203217750}
+  portrait: {fileID: 21300000, guid: 51863a9cd2cb2e644baf44ecce81f737, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1584387949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584387920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 33
+  indentLevel: 0
+  display: 3
+  stage: {fileID: 0}
+  character: {fileID: 1203217750}
+  replacedCharacter: {fileID: 1701574851}
+  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 1
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1584387950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584387920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 34
+  indentLevel: 0
+  display: 3
+  stage: {fileID: 0}
+  character: {fileID: 1701574851}
+  replacedCharacter: {fileID: 1040363979}
+  portrait: {fileID: 21300000, guid: 0535c9c3ccfab544ea565b64ec38170e, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 2
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1584387951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584387920}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 1040363979}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1396814732}
+  facing: 2
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1584387952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584387920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 36
+  indentLevel: 0
+  display: 3
+  stage: {fileID: 0}
+  character: {fileID: 1040363979}
+  replacedCharacter: {fileID: 2100643974}
+  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 2
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1584387953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584387920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 37
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &1584387954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584387920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
 --- !u!1 &1619027694
 GameObject:
   m_ObjectHideFlags: 0
