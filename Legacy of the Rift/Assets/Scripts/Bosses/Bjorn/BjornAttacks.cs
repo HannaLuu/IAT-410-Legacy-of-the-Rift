@@ -41,9 +41,15 @@ public class BjornAttacks : MonoBehaviour
 
     bool disappearing = false;
 
+    //Sound tingz bro
+    public RandomSound randomTPInSound, randomTPOutSound;
+    public AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
+
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
         rb = GetComponent<Rigidbody2D>();
@@ -106,6 +112,9 @@ public class BjornAttacks : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
             bjorn = BjornState.DISAPPEARING;
 
+            source.clip = randomTPOutSound.GetRandomAudioClip();
+            source.Play();
+
             // Disappear for x seconds then appear near the player
             yield return new WaitForSeconds(2f);
 
@@ -114,6 +123,8 @@ public class BjornAttacks : MonoBehaviour
             bjorn = BjornState.APPEARING;
 
             // transform.position = player.transform.position + teleNearPlayer.normalized * minRadius + teleNearPlayer;
+            source.clip = randomTPInSound.GetRandomAudioClip();
+            source.Play();
             transform.position = new Vector2(player.transform.position.x + randX, player.transform.position.y + randY);
             Instantiate(teleportParticles, transform.position, transform.rotation);
         }

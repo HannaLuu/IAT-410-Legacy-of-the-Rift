@@ -47,6 +47,11 @@ public class MjollAttacks : MonoBehaviour
     private Enemy enemyScript;
     public float lowHealthPoint;
 
+    public RandomSound randomGasSound, randomLightningSound;
+    public AudioSource source;
+
+    public GameObject spawnParticle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +59,8 @@ public class MjollAttacks : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         enemyScript = GetComponent<Enemy>();
         animator = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
+
         gasTimer = startGasTimer;
         lightningTimer = startLightningTimer;
         spawnTimer = 1;
@@ -72,6 +79,8 @@ public class MjollAttacks : MonoBehaviour
         {
             if (gasTimer <= 0)
             {
+                source.clip = randomGasSound.GetRandomAudioClip();
+                source.Play();
                 gasTimer = startGasTimer;
                 animator.SetTrigger("Gas");
             }
@@ -92,6 +101,8 @@ public class MjollAttacks : MonoBehaviour
 
             if (lightningTimer <= 0 && Vector2.Distance(player.transform.position, transform.position) <= attackRange)
             {
+                source.clip = randomLightningSound.GetRandomAudioClip();
+                source.Play();
                 animator.SetBool("Shoot", true);
                 lightningTimer = startLightningTimer;
             }
@@ -105,6 +116,8 @@ public class MjollAttacks : MonoBehaviour
         {
             if (gasTimer <= 0)
             {
+                source.clip = randomGasSound.GetRandomAudioClip();
+                source.Play();
                 gasTimer = startLowGasTimer;
                 animator.SetTrigger("Gas");
             }
@@ -125,6 +138,8 @@ public class MjollAttacks : MonoBehaviour
 
             if (lightningTimer <= 0 && Vector2.Distance(player.transform.position, transform.position) <= attackRange)
             {
+                source.clip = randomLightningSound.GetRandomAudioClip();
+                source.Play();
                 animator.SetBool("Shoot", true);
                 lightningTimer = startLowLightningTimer;
             }
@@ -157,21 +172,39 @@ public class MjollAttacks : MonoBehaviour
         Instantiate(gasPrefab, player.transform.position, player.transform.rotation);
     }
 
+    private IEnumerator AttemptSpawning()
+    {
+        Transform _sp = RandomSpawnPoint();
+        var playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+
+        while (Vector2.Distance(_sp.position, playerPos) < 20)
+        {
+            _sp = RandomSpawnPoint();
+            yield return null;
+        }
+
+        Instantiate(spawnParticle, _sp.position, _sp.rotation);
+
+        yield return new WaitForSeconds(1f);
+        Instantiate(SpawnRandomEnemy(), _sp.position, Quaternion.identity);
+    }
+
     void Spawn()
     {
         while (enemiesSpawned <= enemiesToSpawn)
         {
+            StartCoroutine(AttemptSpawning());
             enemiesSpawned += 1;
-            Instantiate(SpawnRandomEnemy(), RandomSpawnPoint().position, Quaternion.identity);
         }
+        enemiesSpawned = 0;
     }
 
     void LowSpawn()
     {
         while (enemiesSpawned <= enemiesToSpawnWhenLowHealth)
         {
+            StartCoroutine(AttemptSpawning());
             enemiesSpawned += 1;
-            Instantiate(SpawnRandomEnemy(), RandomSpawnPoint().position, Quaternion.identity);
         }
         enemiesSpawned = 0;
     }

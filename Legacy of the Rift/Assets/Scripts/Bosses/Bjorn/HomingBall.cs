@@ -15,9 +15,13 @@ public class HomingBall : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    public RandomSound randomHomingImpactSound;
+    public AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
@@ -71,6 +75,10 @@ public class HomingBall : MonoBehaviour
             DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
             damagePopupScript.Setup(damage);
 
+            //play impact sound
+            source.clip = randomHomingImpactSound.GetRandomAudioClip();
+            source.Play();
+
             Destroy(gameObject);
         }
 
@@ -84,11 +92,19 @@ public class HomingBall : MonoBehaviour
             DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
             damagePopupScript.Setup(damage);
 
+            //play impact sound
+            source.clip = randomHomingImpactSound.GetRandomAudioClip();
+            source.Play();
+
             Destroy(gameObject);
         }
 
         if (hitInfo.gameObject.CompareTag("Ground"))
         {
+            //play impact sound
+            source.clip = randomHomingImpactSound.GetRandomAudioClip();
+            source.Play();
+
             enabled = false;
             Destroy(gameObject);
         }
@@ -97,6 +113,10 @@ public class HomingBall : MonoBehaviour
     IEnumerator BallLifeTime()
     {
         yield return new WaitForSeconds(3f);
+        //play impact sound
+        source.clip = randomHomingImpactSound.GetRandomAudioClip();
+        source.Play();
+
         Destroy(gameObject);
     }
 
