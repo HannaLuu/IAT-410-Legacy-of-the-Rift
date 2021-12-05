@@ -18,12 +18,17 @@ public class SpearMare_Run : StateMachineBehaviour
     Rigidbody2D rb;
     Enemy enemyScript;
 
+    RandomSound randomScript;
+    AudioSource source;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         enemyScript = animator.GetComponent<Enemy>();
+        randomScript = animator.GetComponent<RandomSound>();
+        source = animator.GetComponent<AudioSource>();
         // Physics2D.gravity = new Vector2(0, -100f);
 
         timeBtwAttacks = startTimeBtwAttacks;
@@ -47,6 +52,8 @@ public class SpearMare_Run : StateMachineBehaviour
                 timeBtwAttacks = startTimeBtwAttacks;
             } 
             else if (distance < meleeAttackRange) {
+                source.clip = randomScript.GetRandomAudioClip();
+                source.Play();
                 animator.SetTrigger("Attack");
             }
             else if (timeBtwAttacks > 0) {
@@ -62,6 +69,8 @@ public class SpearMare_Run : StateMachineBehaviour
             timeBtwAttacks = startTimeBtwAttacks;
         } 
         else if (playerDistance < meleeAttackRange) {
+            source.clip = randomScript.GetRandomAudioClip();
+            source.Play();
             animator.SetTrigger("Attack");
         }
         else if (timeBtwAttacks > 0) {

@@ -21,6 +21,11 @@ public class Enemy : MonoBehaviour {
 
     public Animator animator;
 
+    public RandomSound randomScript;
+    public AudioSource source;
+
+    public AudioClip hitSound;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -28,10 +33,16 @@ public class Enemy : MonoBehaviour {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         animator = GetComponent<Animator>();
+        randomScript = GetComponent<RandomSound>();
+        source = GetComponent<AudioSource>();
     }
 
     public void TakeDamage(float damage)
     {
+        source.clip = hitSound;
+        source.loop = false;
+        source.Play();
+
         currentHealth -= damage * damageReceivedMultiplier;
 
         healthBar.SetHealth(currentHealth);

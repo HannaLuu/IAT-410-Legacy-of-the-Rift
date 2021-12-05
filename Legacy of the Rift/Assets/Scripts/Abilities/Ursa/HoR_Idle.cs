@@ -4,32 +4,34 @@ using UnityEngine;
 
 public class HoR_Idle : StateMachineBehaviour
 {
+    //HeraldOfRuin FUCK;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
-    //    
+    //    //FUCK = animator.GetComponent
     //}
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
+    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
 
-        //old ult code
-        //WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
-        //if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
-        //{
-        //    animator.SetBool("EnemyDetected", true);
-        //}
+    //old ult code
+    //WaveSpawner waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
+    //if (waveSpawner != null && waveSpawner.EnemyIsAlive() == true)
+    //{
+    //    animator.SetBool("EnemyDetected", true);
+    //}
 
-        //if (waveSpawner == null)
-        //{
-        //    Enemy enemy = GameObject.FindObjectOfType<Enemy>();
-        //    if (enemy != null)
-        //    {
-        //        animator.SetBool("EnemyDetected", true);
-        //    }
-        //}
-    }
+    //if (waveSpawner == null)
+    //{
+    //    Enemy enemy = GameObject.FindObjectOfType<Enemy>();
+    //    if (enemy != null)
+    //    {
+    //        animator.SetBool("EnemyDetected", true);
+    //    }
+    //}
+    //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -63,6 +63,7 @@ public class HalvarAttacks : AttackBaseClass
                 attackActivated = true;
                 //Play Attack Animation
                 rb.velocity = new Vector2(0, rb.velocity.y);
+                FindObjectOfType<AudioManager>().Play("Halvar Hammer Swing");
                 animator.SetTrigger("Attack");
             }
         }
@@ -76,6 +77,7 @@ public class HalvarAttacks : AttackBaseClass
                 if (Input.GetButtonDown("Fire2") && dontMove == false)
                 {
                     dontMove = true;
+                    FindObjectOfType<AudioManager>().Play("Halvar Rock Wall Emerge");
                     animator.SetTrigger("Ability");
                 }
             } else
@@ -165,12 +167,22 @@ public class HalvarAttacks : AttackBaseClass
         FindObjectOfType<PlayerHealth>().Heal(100);
     }
 
+    public void PlayHalvarUltSound()
+    {
+        FindObjectOfType<AudioManager>().Play("Halvar Rock Wall Emerge");
+    }
+
     public void HalvarUlt()
     {
         rb.velocity = new Vector2(0, 0);
         Instantiate(halvarUltPrefab, halvarUltPointL.position, halvarUltPointL.rotation);
         Instantiate(halvarUltPrefab, halvarUltPointR.position, halvarUltPointR.rotation);
         FindObjectOfType<PlayerHealth>().Heal(100);
+    }
+
+    public void PlayUrsaUltSound()
+    {
+        FindObjectOfType<AudioManager>().Play("Ursa Spawn Bear");
     }
 
     public void UrsaUlt()

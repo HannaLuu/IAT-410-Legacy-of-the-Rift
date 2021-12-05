@@ -83,16 +83,19 @@ public class LokirAttacks : AttackBaseClass
         {
             if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.A))
             {
+                FindObjectOfType<AudioManager>().Play("Lokir Dash");
                 LacerateLeft();
             }
 
             else if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.D))
             {
+                FindObjectOfType<AudioManager>().Play("Lokir Dash");
                 LacerateRight();
             }
 
             if (Input.GetButtonDown("Fire1"))
             {
+                FindObjectOfType<AudioManager>().Play("Lokir Dash");
                 NormalLaceration();
             }
         }
@@ -108,6 +111,13 @@ public class LokirAttacks : AttackBaseClass
                     animator.SetTrigger("Summon");
 
                 }
+                if (Input.GetButtonDown("Fire2") && spectralWarlock != null && !teleported)
+                {
+                    FindObjectOfType<AudioManager>().Play("Lokir Teleport to Clone");
+                    teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
+                    Teleport();
+                    teleported = true;
+                }
             } else
             {
                 lokirAbilityBarAnimator.SetBool("abilityReady", false);
@@ -115,6 +125,7 @@ public class LokirAttacks : AttackBaseClass
         } 
         else if (Input.GetButtonDown("Fire2") && spectralWarlock != null && !teleported)
         {
+            FindObjectOfType<AudioManager>().Play("Lokir Teleport to Clone");
             teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
             Teleport();
             teleported = true;
@@ -221,12 +232,22 @@ public class LokirAttacks : AttackBaseClass
         FindObjectOfType<PlayerHealth>().Heal(100);
     }
 
+    public void PlayHalvarUltSound()
+    {
+        FindObjectOfType<AudioManager>().Play("Halvar Rock Wall Emerge");
+    }
+
     public void HalvarUlt()
     {
         rb.velocity = new Vector2(0, 0);
         Instantiate(halvarUltPrefab, halvarUltPointL.position, halvarUltPointL.rotation);
         Instantiate(halvarUltPrefab, halvarUltPointR.position, halvarUltPointR.rotation);
         FindObjectOfType<PlayerHealth>().Heal(100);
+    }
+
+    public void PlayUrsaUltSound()
+    {
+        FindObjectOfType<AudioManager>().Play("Ursa Spawn Bear");
     }
 
     public void UrsaUlt()

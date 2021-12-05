@@ -49,6 +49,7 @@ public class UrsaAttacks : AttackBaseClass
                 attackActivated = true;
                 dontMove = true;
                 rb.velocity = new Vector2(0, rb.velocity.y);
+                FindObjectOfType<AudioManager>().Play("Ursa Shoot Arrow");
                 animator.SetTrigger("Attack");
                 //FindObjectOfType<AudioManager>().Play("PlayerAttack");
             }
@@ -139,6 +140,11 @@ public class UrsaAttacks : AttackBaseClass
         FindObjectOfType<PlayerHealth>().Heal(100);
     }
 
+    public void PlayHalvarUltSound()
+    {
+        FindObjectOfType<AudioManager>().Play("Halvar Rock Wall Emerge");
+    }
+
     public void HalvarUlt()
     {
         rb.velocity = new Vector2(0, 0);
@@ -150,6 +156,11 @@ public class UrsaAttacks : AttackBaseClass
         HealingPopup healingPopupScript = healingPopup.GetComponent<HealingPopup>();
         healingPopupScript.Setup(100);
         FindObjectOfType<PlayerHealth>().Heal(100);
+    }
+
+    public void PlayUrsaUltSound()
+    {
+        FindObjectOfType<AudioManager>().Play("Ursa Spawn Bear");
     }
 
     public void UrsaUlt()

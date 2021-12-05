@@ -48,4 +48,15 @@ public class AudioManager : MonoBehaviour
 
 		s.source.Play();
 	}
+
+	public AudioClip GetAudioClip(string sound)
+    {
+		Sound s = Array.Find(sounds, item => item.name == sound);
+		if (s == null)
+        {
+			return null;
+		}
+
+		return s.clip;
+	}
 }

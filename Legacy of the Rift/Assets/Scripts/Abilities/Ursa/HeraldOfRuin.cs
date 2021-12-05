@@ -30,8 +30,10 @@ public class HeraldOfRuin : MonoBehaviour
                 var enemy = hitCollider.GetComponentInParent<Enemy>();
                 if (enemy)
                 {
+                    Debug.Log(enemy);
                     Instantiate(impactEffect, transform.position, transform.rotation);
                     impactEffect.transform.localScale = new Vector3(4, 4, 4);
+
                     //calculate falloff distance for damage, the father the enemy is from center of explosion, the less damage it takes
                     var closestPoint = hitCollider.ClosestPoint(transform.position);
                     var distance = Vector3.Distance(closestPoint, transform.position);
@@ -75,6 +77,7 @@ public class HeraldOfRuin : MonoBehaviour
                 DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
                 damagePopupScript.Setup(attackDamage);
             }
+            Destroy(gameObject);
         }
     }
 

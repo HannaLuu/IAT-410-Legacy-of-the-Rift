@@ -181,6 +181,7 @@ MonoBehaviour:
   attackRange: 20
   meleeAttackRange: 6
   startTimeBtwAttacks: 2
+  spearThrowSound: {fileID: 8300000, guid: 9541b4ec84e2ba849837b79a4f5c45f4, type: 3}
 --- !u!1102 &3695413026232459394
 AnimatorState:
   serializedVersion: 6

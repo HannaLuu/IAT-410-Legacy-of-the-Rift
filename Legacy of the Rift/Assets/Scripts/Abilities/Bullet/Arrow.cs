@@ -26,9 +26,12 @@ public class Arrow : MonoBehaviour
     public GameObject impactEffect;
     public GameObject damagePopupPrefab;
 
+    private AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         ursaAttackScript = GameObject.FindGameObjectWithTag("Ursa").GetComponent<UrsaAttacks>();
         playerZeal = GameObject.FindGameObjectWithTag("PlayerHandler").GetComponent<PlayerZeal>();
         currentHealth = maxHealth;
@@ -47,6 +50,7 @@ public class Arrow : MonoBehaviour
     {
         if (hitInfo.gameObject.CompareTag("Enemy"))
         {
+            source.Play();
             damageDone = Random.Range(minAttackDamage, maxAttackDamage);
             hitInfo.GetComponentInParent<Enemy>().TakeDamage(damageDone);
             hitInfo.GetComponentInParent<Enemy>().SlowMe();

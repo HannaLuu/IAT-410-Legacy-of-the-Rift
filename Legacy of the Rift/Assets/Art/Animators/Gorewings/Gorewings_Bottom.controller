@@ -129,6 +129,7 @@ MonoBehaviour:
   attackRange: 5
   delay: 0
   startTimeBtwAttacks: 0
+  idleSound: {fileID: 8300000, guid: fb02c49428e8a124da5731825e823d90, type: 3}
 --- !u!1102 &4000653957084035766
 AnimatorState:
   serializedVersion: 6

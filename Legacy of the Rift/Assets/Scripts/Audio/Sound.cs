@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class Sound : MonoBehaviour
+[System.Serializable]
+public class Sound
 {
 	public string name;
 

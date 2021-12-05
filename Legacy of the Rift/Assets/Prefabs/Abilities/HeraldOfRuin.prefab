@@ -130,9 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 2942944832199538349}
-  attackDamage: 400
-  collisionRange: 4
-  explosionRange: 30
+  attackDamage: 150
+  collisionRange: 10
+  explosionRange: 25
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -169,7 +169,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 3
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}

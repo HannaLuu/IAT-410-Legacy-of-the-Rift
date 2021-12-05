@@ -18,6 +18,11 @@ public class Enemy_Run : StateMachineBehaviour
     Rigidbody2D rb;
     Enemy enemyScript;
 
+    RandomSound randomScript;
+    AudioSource source;
+
+    public AudioClip idleSound;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -25,6 +30,8 @@ public class Enemy_Run : StateMachineBehaviour
         rb = animator.GetComponent<Rigidbody2D>();
         enemyScript = animator.GetComponent<Enemy>();
         // Physics2D.gravity = new Vector2(0, -100f);
+        randomScript = animator.GetComponent<RandomSound>();
+        source = animator.GetComponent<AudioSource>();
 
         timeBtwAttacks = startTimeBtwAttacks;
     }
@@ -32,6 +39,13 @@ public class Enemy_Run : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if(source.isPlaying == false)
+        {
+            source.clip = idleSound;
+            source.loop = true;
+            source.Play();
+        }
+
         enemyScript.LookAtPlayer();
 
         if (player.position.x < rb.position.x)
@@ -48,12 +62,18 @@ public class Enemy_Run : StateMachineBehaviour
         {
             if (delay == false && Vector2.Distance(legendaryMonolithObject.transform.position, rb.position) <= attackRange)
             {
+                source.clip = randomScript.GetRandomAudioClip();
+                source.loop = false;
+                source.Play();
                 animator.SetTrigger("Attack");
             }
         }
 
         if (delay == false && Vector2.Distance(player.position, rb.position) <= attackRange)
         {
+            source.clip = randomScript.GetRandomAudioClip();
+            source.loop = false;
+            source.Play();
             animator.SetTrigger("Attack");
         }
 
