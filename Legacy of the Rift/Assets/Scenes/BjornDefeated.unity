@@ -3231,7 +3231,7 @@ MonoBehaviour:
           gameObjectVal: {fileID: 0}
         integerData:
           integerRef: {fileID: 0}
-          integerVal: 6
+          integerVal: 8
         materialData:
           materialRef: {fileID: 0}
           materialVal: {fileID: 0}
@@ -3909,7 +3909,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 920094744}
   selectedCommands:
-  - {fileID: 920094750}
+  - {fileID: 920094728}
   variables:
   - {fileID: 920094727}
   description: 

@@ -2440,7 +2440,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 195821246}
+  - {fileID: 195821300}
   selectedCommands: []
   variables:
   - {fileID: 195821229}
@@ -2627,7 +2627,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 120
+  itemId: 182
   blockName: NEXT SCENE BAD
   description: 
   eventHandler: {fileID: 0}
@@ -2719,7 +2719,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 120
+  itemId: 181
   blockName: NEXT SCENE OKAY
   description: 
   eventHandler: {fileID: 0}
@@ -2811,7 +2811,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 120
+  itemId: 180
   blockName: NEXT SCENE GOODER
   description: 
   eventHandler: {fileID: 0}

@@ -5050,7 +5050,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1800285779}
   selectedCommands:
-  - {fileID: 1800285751}
+  - {fileID: 1800285782}
   variables:
   - {fileID: 1800285783}
   description: 
@@ -5126,7 +5126,7 @@ MonoBehaviour:
           gameObjectVal: {fileID: 0}
         integerData:
           integerRef: {fileID: 0}
-          integerVal: 6
+          integerVal: 8
         materialData:
           materialRef: {fileID: 0}
           materialVal: {fileID: 0}
