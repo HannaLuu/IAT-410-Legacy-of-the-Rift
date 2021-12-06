@@ -20,17 +20,17 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -4516324263056166625, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
+      value: {fileID: -797421542077934182, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
     - time: 0.125
-      value: {fileID: 5731307203174756487, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
+      value: {fileID: -1512756977578905884, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
     - time: 0.25
-      value: {fileID: 8506328085454428032, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
+      value: {fileID: 3534610673888966650, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
     - time: 0.375
-      value: {fileID: -9029239053298501419, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
+      value: {fileID: 9021723798251153405, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
     - time: 0.5
-      value: {fileID: -4913791246001229243, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
+      value: {fileID: 5200675878380997173, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
     - time: 0.625
-      value: {fileID: -3376939384869689868, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
+      value: {fileID: 4673683114657859842, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,12 +50,12 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -4516324263056166625, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
-    - {fileID: 5731307203174756487, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
-    - {fileID: 8506328085454428032, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
-    - {fileID: -9029239053298501419, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
-    - {fileID: -4913791246001229243, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
-    - {fileID: -3376939384869689868, guid: a740d37002d9d9a4f8ea569a1c4661bc, type: 3}
+    - {fileID: -797421542077934182, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
+    - {fileID: -1512756977578905884, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
+    - {fileID: 3534610673888966650, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
+    - {fileID: 9021723798251153405, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
+    - {fileID: 5200675878380997173, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
+    - {fileID: 4673683114657859842, guid: bea71ebb15438034288505ba2246d7b1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -81,7 +81,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.5
+  - time: 0.25
     functionName: homingAttack
     data: 
     objectReferenceParameter: {fileID: 0}

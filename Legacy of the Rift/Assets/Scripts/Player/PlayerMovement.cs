@@ -23,13 +23,19 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-            //animator.SetBool("IsJumping", true);
+            StartCoroutine(FuckMe());
         }
+    }
+
+    private IEnumerator FuckMe()
+    {
+        yield return new WaitForSeconds(0.01f);
+        animator.SetBool("IsJumping", true);
     }
 
     public void OnLanding()
     {
-        //animator.SetBool("IsJumping", false);
+        animator.SetBool("IsJumping", false);
     }
 
     //Move Character

@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour {
 
     public Animator animator;
 
-    public RandomSound randomScript;
+    public RandomSound randomOuchSoundScript;
     public AudioSource source;
 
     public AudioClip hitSound;
@@ -33,15 +33,22 @@ public class Enemy : MonoBehaviour {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         animator = GetComponent<Animator>();
-        randomScript = GetComponent<RandomSound>();
         source = GetComponent<AudioSource>();
     }
 
     public void TakeDamage(float damage)
     {
-        source.clip = hitSound;
-        source.loop = false;
-        source.Play();
+        if(randomOuchSoundScript != null)
+        {
+            hitSound = randomOuchSoundScript.GetRandomAudioClip();
+        }
+
+        if (hitSound != null)
+        {
+            source.clip = hitSound;
+            source.loop = false;
+            source.Play();
+        }
 
         currentHealth -= damage * damageReceivedMultiplier;
 

@@ -10,7 +10,7 @@ public class AsteroidBall : MonoBehaviour
 
     public int damage = 100;
 
-    public GameObject impactEffect;
+    public GameObject impactEffect, impactAudio;
 
     public GameObject damagePopupPrefab;
 
@@ -18,13 +18,9 @@ public class AsteroidBall : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    public RandomSound randomAsteroidImpactSound;
-    public AudioSource source;
-
     // Start is called before the first frame update
     void Start()
     {
-        source = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         // target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
@@ -59,8 +55,7 @@ public class AsteroidBall : MonoBehaviour
             damagePopupScript.Setup(damage);
 
             //play impact sound
-            source.clip = randomAsteroidImpactSound.GetRandomAudioClip();
-            source.Play();
+            Instantiate(impactAudio, transform.position, transform.rotation);
 
             Destroy(gameObject);
         }
@@ -76,8 +71,7 @@ public class AsteroidBall : MonoBehaviour
             damagePopupScript.Setup(damage);
 
             //play impact sound
-            source.clip = randomAsteroidImpactSound.GetRandomAudioClip();
-            source.Play();
+            Instantiate(impactAudio, transform.position, transform.rotation);
 
             Destroy(gameObject);
         }
@@ -87,8 +81,7 @@ public class AsteroidBall : MonoBehaviour
             enabled = false;
 
             //play impact sound
-            source.clip = randomAsteroidImpactSound.GetRandomAudioClip();
-            source.Play();
+            Instantiate(impactAudio, transform.position, transform.rotation);
 
             Destroy(gameObject);
         }

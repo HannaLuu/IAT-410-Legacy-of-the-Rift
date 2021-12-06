@@ -16,6 +16,10 @@ public class GW_Together_Move : StateMachineBehaviour
 
     Transform waypoint1, waypoint2, currWaypoint;
 
+    AudioSource source;
+
+    public AudioClip idleSound;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -25,12 +29,21 @@ public class GW_Together_Move : StateMachineBehaviour
         rb = animator.GetComponent<Rigidbody2D>();
         enemyScript = animator.GetComponent<Enemy>();
 
+        source = animator.GetComponent<AudioSource>();
+
         currWaypoint = waypoint1;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (source.isPlaying == false)
+        {
+            source.clip = idleSound;
+            source.loop = true;
+            source.Play();
+        }
+
         enemyScript.LookAtPlayer();
 
         if (currWaypoint == waypoint1)

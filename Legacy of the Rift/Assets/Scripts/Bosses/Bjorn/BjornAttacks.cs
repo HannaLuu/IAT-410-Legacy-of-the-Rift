@@ -42,13 +42,21 @@ public class BjornAttacks : MonoBehaviour
     bool disappearing = false;
 
     //Sound tingz bro
-    public RandomSound randomTPInSound, randomTPOutSound;
+    public RandomSound randomTPInSound, randomTPOutSound, randomHighIdleSound, randomLowIdleSound;
+    public AudioClip lowHealthSound;
     public AudioSource source;
+    public int startIdleSoundTimer;
+    private float idleSoundTimer;
+
+    public Animator animator;
+    private bool once;
 
     // Start is called before the first frame update
     void Start()
     {
         source = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
+        idleSoundTimer = startIdleSoundTimer;
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
@@ -56,12 +64,43 @@ public class BjornAttacks : MonoBehaviour
 
         enemyScript = GetComponent<Enemy>();
 
+        once = false;
+
         StartCoroutine(Teleport());
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (animator.GetBool("malakai_unleashed") == false && source.isPlaying == false && idleSoundTimer <= 0)
+        {
+            //play normal idle sound
+            source.clip = randomHighIdleSound.GetRandomAudioClip();
+            source.Play();
+            idleSoundTimer = startIdleSoundTimer;
+        } else
+        {
+            idleSoundTimer -= Time.deltaTime;
+        }
+
+        if (animator.GetBool("malakai_unleashed") == true && source.isPlaying == false && idleSoundTimer <= 0)
+        {
+            //play low idle sound
+            source.clip = randomLowIdleSound.GetRandomAudioClip();
+            source.Play();
+            idleSoundTimer = startIdleSoundTimer;
+        }
+        else
+        {
+            idleSoundTimer -= Time.deltaTime;
+        }
+
+        if (animator.GetBool("malakai_unleashed") == true && once == false)
+        {
+            source.clip = lowHealthSound;
+            source.Play();
+        }
+
         if (enemyScript.currentHealth <= 40)
         {
             SceneManager.LoadScene("BjornDefeated");

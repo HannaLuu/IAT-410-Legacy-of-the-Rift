@@ -108,3 +108,30 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: -1044700769877975829, guid: 7bb8652db6a39f3468eb398fc3f3e295, type: 2}
     source: {fileID: 0}
+  - name: Halvar Out of My Way
+    clip: {fileID: 8300000, guid: 4d5cd0e3b0f48c04f9322f3a8067a8e9, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: -1044700769877975829, guid: 7bb8652db6a39f3468eb398fc3f3e295, type: 2}
+    source: {fileID: 0}
+  - name: Ursa Healing VO
+    clip: {fileID: 8300000, guid: 65e1881594ccf5d49897a9f0c6ada423, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: -1044700769877975829, guid: 7bb8652db6a39f3468eb398fc3f3e295, type: 2}
+    source: {fileID: 0}
+  - name: Ursa Invoking Spirit VO
+    clip: {fileID: 8300000, guid: a41c4562975cca94188ed723a36d871c, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    mixerGroup: {fileID: -1044700769877975829, guid: 7bb8652db6a39f3468eb398fc3f3e295, type: 2}
+    source: {fileID: 0}

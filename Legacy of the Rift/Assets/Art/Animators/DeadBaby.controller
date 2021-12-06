@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9005141421930074042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61043f310652f004abcb4f0c62f4c9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currSpeed: 0
+  normalSpeed: 6
+  slowedSpeed: 2
+  attackRange: 10
+  delay: 1
+  startTimeBtwAttacks: 1
+  attackSound: {fileID: 8300000, guid: 6278378a790672a479d7da6f2839f329, type: 3}
 --- !u!1102 &-8360468592846620331
 AnimatorState:
   serializedVersion: 6
@@ -77,24 +96,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!114 &-6584674673463900117
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7a13acb561bf1f41b7d15a9da6ec08d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currSpeed: 0
-  normalSpeed: 6
-  slowedSpeed: 2
-  attackRange: 10
-  delay: 1
-  startTimeBtwAttacks: 1
 --- !u!1107 &-6302424300951250181
 AnimatorStateMachine:
   serializedVersion: 6
@@ -204,7 +205,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: -6768914765663941513}
   m_StateMachineBehaviours:
-  - {fileID: -6584674673463900117}
+  - {fileID: -9005141421930074042}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

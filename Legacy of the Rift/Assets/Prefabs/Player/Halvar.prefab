@@ -220,7 +220,19 @@ MonoBehaviour:
   bigKnock: 0
   OnLandEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4092356082363815209}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &4092356082363815204
 Rigidbody2D:
   serializedVersion: 4
@@ -376,6 +388,9 @@ MonoBehaviour:
   ultPoint2: {fileID: 0}
   impactEffect: {fileID: 246716382896895273, guid: 9c9a522edd0572e4f9ec5424f64a1f9c, type: 3}
   healingPopupPrefab: {fileID: 5991670611894702333, guid: a100071762996854a9f0ecc012741fe3, type: 3}
+  halvarAbilityBarAnimator: {fileID: 0}
+  lokirAbilityAudio: {fileID: 0}
+  halvarUltAudio: {fileID: 0}
 --- !u!1 &4092356082818394142
 GameObject:
   m_ObjectHideFlags: 0
