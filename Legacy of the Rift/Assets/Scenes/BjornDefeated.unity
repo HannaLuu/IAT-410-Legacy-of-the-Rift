@@ -3711,7 +3711,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1369142245}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 829061726}
@@ -3959,7 +3959,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 920094744}
   selectedCommands:
-  - {fileID: 920094750}
+  - {fileID: 920094760}
   variables:
   - {fileID: 920094727}
   description: 
