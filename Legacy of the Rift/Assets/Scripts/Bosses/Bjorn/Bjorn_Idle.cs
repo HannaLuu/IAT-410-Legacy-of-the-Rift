@@ -13,7 +13,6 @@ public class Bjorn_Idle : StateMachineBehaviour
 
     Enemy enemy;
 
-
     void TriggerRandomAttack(Animator animator)
     {
         System.Random rnd = new System.Random();
@@ -47,7 +46,6 @@ public class Bjorn_Idle : StateMachineBehaviour
         if (enemy.currentHealth <= 300)
         {
             animator.SetBool("malakai_unleashed", true);
-            Debug.Log("Malakai is unleashed!");
         }
 
     }

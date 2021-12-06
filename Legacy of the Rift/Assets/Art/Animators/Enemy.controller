@@ -72,6 +72,7 @@ MonoBehaviour:
   attackRange: 6
   delay: 0
   startTimeBtwAttacks: 0
+  idleSound: {fileID: 8300000, guid: a1c38390de363ad42bef04024ee01a29, type: 3}
 --- !u!1101 &-3168719182625627215
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

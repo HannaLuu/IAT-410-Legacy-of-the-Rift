@@ -21,6 +21,8 @@ public class SpearMare_Run : StateMachineBehaviour
     RandomSound randomScript;
     AudioSource source;
 
+    public AudioClip idleSound;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -37,6 +39,13 @@ public class SpearMare_Run : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (source.isPlaying == false)
+        {
+            source.clip = idleSound;
+            source.loop = true;
+            source.Play();
+        }
+
         enemyScript.LookAtPlayer();
         currSpeed = enemyScript.isSlowed ? slowedSpeed : normalSpeed;
 
@@ -48,11 +57,15 @@ public class SpearMare_Run : StateMachineBehaviour
             var distance = Vector2.Distance(legendaryMonolithObject.transform.position, rb.position);
             if (timeBtwAttacks <= 0 && distance > meleeAttackRange && distance <= attackRange)
             {
+                source.clip = randomScript.GetRandomAudioClip();
+                source.loop = false;
+                source.Play();
                 animator.SetTrigger("Throw");
                 timeBtwAttacks = startTimeBtwAttacks;
             } 
             else if (distance < meleeAttackRange) {
                 source.clip = randomScript.GetRandomAudioClip();
+                source.loop = false;
                 source.Play();
                 animator.SetTrigger("Attack");
             }
@@ -65,11 +78,15 @@ public class SpearMare_Run : StateMachineBehaviour
 
         if (timeBtwAttacks <= 0 && playerDistance > meleeAttackRange && playerDistance <= attackRange)
         {
+            source.clip = randomScript.GetRandomAudioClip();
+            source.loop = false;
+            source.Play();
             animator.SetTrigger("Throw");
             timeBtwAttacks = startTimeBtwAttacks;
         } 
         else if (playerDistance < meleeAttackRange) {
             source.clip = randomScript.GetRandomAudioClip();
+            source.loop = false;
             source.Play();
             animator.SetTrigger("Attack");
         }
@@ -82,6 +99,7 @@ public class SpearMare_Run : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.ResetTrigger("Throw");
         animator.ResetTrigger("Attack");
     }
 

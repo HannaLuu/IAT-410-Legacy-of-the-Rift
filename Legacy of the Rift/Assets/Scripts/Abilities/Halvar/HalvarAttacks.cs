@@ -28,6 +28,8 @@ public class HalvarAttacks : AttackBaseClass
 
     public Animator halvarAbilityBarAnimator;
 
+    public GameObject lokirAbilityAudio, halvarUltAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +79,7 @@ public class HalvarAttacks : AttackBaseClass
                 if (Input.GetButtonDown("Fire2") && dontMove == false)
                 {
                     dontMove = true;
+                    FindObjectOfType<AudioManager>().Play("Halvar Out of My Way");
                     FindObjectOfType<AudioManager>().Play("Halvar Rock Wall Emerge");
                     animator.SetTrigger("Ability");
                 }
@@ -158,6 +161,13 @@ public class HalvarAttacks : AttackBaseClass
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 
+    public void PlayLokirUltSound()
+    {
+        var source = lokirAbilityAudio.GetComponent<AudioSource>();
+        source.clip = lokirAbilityAudio.GetComponent<RandomSound>().GetRandomAudioClip();
+        source.Play();
+    }
+
     // Guardian of the Rock
     public void SpectralBarrage()
     {
@@ -169,6 +179,9 @@ public class HalvarAttacks : AttackBaseClass
 
     public void PlayHalvarUltSound()
     {
+        var source = halvarUltAudio.GetComponent<AudioSource>();
+        source.clip = halvarUltAudio.GetComponent<RandomSound>().GetRandomAudioClip();
+        source.Play();
         FindObjectOfType<AudioManager>().Play("Halvar Rock Wall Emerge");
     }
 
@@ -182,6 +195,7 @@ public class HalvarAttacks : AttackBaseClass
 
     public void PlayUrsaUltSound()
     {
+        FindObjectOfType<AudioManager>().Play("Ursa Invoking Spirit VO");
         FindObjectOfType<AudioManager>().Play("Ursa Spawn Bear");
     }
 

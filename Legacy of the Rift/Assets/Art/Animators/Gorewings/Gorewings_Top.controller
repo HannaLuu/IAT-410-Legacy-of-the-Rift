@@ -97,6 +97,7 @@ MonoBehaviour:
   normalSpeed: 6
   slowedSpeed: 2
   dropRange: 15
+  idleSound: {fileID: 8300000, guid: fb02c49428e8a124da5731825e823d90, type: 3}
 --- !u!1102 &-1622440008315076141
 AnimatorState:
   serializedVersion: 6
@@ -410,6 +411,7 @@ MonoBehaviour:
   slowedSpeed: 1
   chaseRange: 15
   attackRange: 4
+  idleSound: {fileID: 8300000, guid: fb02c49428e8a124da5731825e823d90, type: 3}
 --- !u!1101 &8939154072278002799
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

@@ -17,6 +17,8 @@ public class UrsaAttacks : AttackBaseClass
 
     public Animator ursaAbilityBarAnimator;
 
+    public GameObject lokirAbilityAudio, halvarUltAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +70,7 @@ public class UrsaAttacks : AttackBaseClass
                     abilityActivated = true;
                     dontMove = true;
                     rb.velocity = new Vector2(0, 0);
+                    FindObjectOfType<AudioManager>().Play("Ursa Healing VO");
                     animator.SetTrigger("Ability");
                     //animator.SetTrigger("Attack");
                     //FindObjectOfType<AudioManager>().Play("PlayerAttack");
@@ -126,7 +129,14 @@ public class UrsaAttacks : AttackBaseClass
         Instantiate(abilityPrefab, abilityPoint.position, abilityPoint.rotation);
     }
 
-    // Herald of Ruin
+
+    public void PlayLokirUltSound()
+    {
+        var source = lokirAbilityAudio.GetComponent<AudioSource>();
+        source.clip = lokirAbilityAudio.GetComponent<RandomSound>().GetRandomAudioClip();
+        source.Play();
+    }
+
     public void SpectralBarrage()
     {
         ultActivated = true;
@@ -142,6 +152,9 @@ public class UrsaAttacks : AttackBaseClass
 
     public void PlayHalvarUltSound()
     {
+        var source = halvarUltAudio.GetComponent<AudioSource>();
+        source.clip = halvarUltAudio.GetComponent<RandomSound>().GetRandomAudioClip();
+        source.Play();
         FindObjectOfType<AudioManager>().Play("Halvar Rock Wall Emerge");
     }
 
@@ -160,6 +173,7 @@ public class UrsaAttacks : AttackBaseClass
 
     public void PlayUrsaUltSound()
     {
+        FindObjectOfType<AudioManager>().Play("Ursa Invoking Spirit VO");
         FindObjectOfType<AudioManager>().Play("Ursa Spawn Bear");
     }
 

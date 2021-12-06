@@ -42,6 +42,8 @@ public class LokirAttacks : AttackBaseClass
 
     public Animator lokirAbilityBarAnimator;
 
+    public GameObject lokirAbilityAudio, halvarUltAudio;
+
     //old ult code
     //public int ultClones = 3;
     //private int clonesSpawned = 0;
@@ -108,6 +110,9 @@ public class LokirAttacks : AttackBaseClass
                 lokirAbilityBarAnimator.SetBool("abilityReady", true);
                 if (Input.GetButtonDown("Fire2") && spectralWarlock == null && dontMove == false)
                 {
+                    var source = lokirAbilityAudio.GetComponent<AudioSource>();
+                    source.clip = lokirAbilityAudio.GetComponent<RandomSound>().GetRandomAudioClip();
+                    source.Play();
                     animator.SetTrigger("Summon");
 
                 }
@@ -148,6 +153,9 @@ public class LokirAttacks : AttackBaseClass
                     if (playerZeal.canSpendZeal == true)
                     {
                         dontMove = true;
+                        var source = lokirAbilityAudio.GetComponent<AudioSource>();
+                        source.clip = lokirAbilityAudio.GetComponent<RandomSound>().GetRandomAudioClip();
+                        source.Play();
                         animator.SetTrigger("Ultimate");
                         //animator.SetTrigger("Attack");
                         //FindObjectOfType<AudioManager>().Play("PlayerAttack");
@@ -234,6 +242,9 @@ public class LokirAttacks : AttackBaseClass
 
     public void PlayHalvarUltSound()
     {
+        var source = halvarUltAudio.GetComponent<AudioSource>();
+        source.clip = halvarUltAudio.GetComponent<RandomSound>().GetRandomAudioClip();
+        source.Play();
         FindObjectOfType<AudioManager>().Play("Halvar Rock Wall Emerge");
     }
 
@@ -247,6 +258,7 @@ public class LokirAttacks : AttackBaseClass
 
     public void PlayUrsaUltSound()
     {
+        FindObjectOfType<AudioManager>().Play("Ursa Invoking Spirit VO");
         FindObjectOfType<AudioManager>().Play("Ursa Spawn Bear");
     }
 

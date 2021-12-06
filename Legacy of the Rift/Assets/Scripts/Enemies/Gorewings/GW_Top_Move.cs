@@ -15,18 +15,32 @@ public class GW_Top_Move : StateMachineBehaviour
     Enemy enemyScript;
     //Transform returnToPos;
 
+    RandomSound randomScript;
+    AudioSource source;
+
+    public AudioClip idleSound;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         enemyScript = animator.GetComponent<Enemy>();
+        randomScript = animator.GetComponent<RandomSound>();
+        source = animator.GetComponent<AudioSource>();
         //returnToPos = GameObject.FindGameObjectWithTag("GW_ReturnPoint").transform;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (source.isPlaying == false)
+        {
+            source.clip = idleSound;
+            source.loop = true;
+            source.Play();
+        }
+
         enemyScript.LookAtPlayer();
 
         Vector2 target = new Vector2(player.position.x, player.position.y);
@@ -34,6 +48,10 @@ public class GW_Top_Move : StateMachineBehaviour
         rb.MovePosition(newPos);
         if (Vector2.Distance(player.position, rb.position) <= attackRange)
         {
+            source.clip = randomScript.GetRandomAudioClip();
+            source.loop = false;
+            source.Play();
+
             animator.SetTrigger("Attack");
         }
 
