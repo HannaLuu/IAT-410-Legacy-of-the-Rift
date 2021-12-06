@@ -2922,7 +2922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 454.71817, y: 219.5232}
+  scrollPos: {x: 595.1436, y: 190.79985}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 435
@@ -2934,9 +2934,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 796375117}
-  selectedCommands:
-  - {fileID: 796375127}
+  - {fileID: 796375103}
+  selectedCommands: []
   variables:
   - {fileID: 796375077}
   - {fileID: 796375098}
@@ -3595,8 +3594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 0
-  storyText: Now Lokir, if you click the Left Mouse Button while you're moving, you
-    can dash through enemies!
+  storyText: Now, my barren-headed friend, if you click the Left Mouse Button while
+    you're moving, you can dash through enemies!
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}

@@ -4112,7 +4112,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1489105453}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
+  portrait: {fileID: 21300000, guid: 48751f9a4b8a28549bc04084e24dd720, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1858654610}
@@ -4798,7 +4798,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1489105453}
   replacedCharacter: {fileID: 452884883}
-  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
+  portrait: {fileID: 21300000, guid: 48751f9a4b8a28549bc04084e24dd720, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1858654610}
@@ -4930,7 +4930,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 702582359}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1244459325}
@@ -5199,7 +5199,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1800285779}
   selectedCommands:
-  - {fileID: 1800285751}
+  - {fileID: 1800285741}
   variables:
   - {fileID: 1800285783}
   description: 
@@ -5645,7 +5645,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 702582359}
   replacedCharacter: {fileID: 452884883}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -5873,7 +5873,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 702582359}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1244459325}

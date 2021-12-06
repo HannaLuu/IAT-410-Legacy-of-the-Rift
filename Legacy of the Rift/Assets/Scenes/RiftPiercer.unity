@@ -1651,6 +1651,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1031601172
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1692382883021485451, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_Name
+      value: Eerika Ironhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958771383059157039, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958771383059157039, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958771383059157039, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958771383059157039, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958771383059157039, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958771383059157039, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958771383059157039, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958771383059157039, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958771383059157039, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958771383059157039, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958771383059157039, guid: 04226414334dcc84092f773965d9366d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04226414334dcc84092f773965d9366d, type: 3}
 --- !u!1001 &1040363978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1929,11 +1986,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!224 &1396814732 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2980218656972453965, guid: b5ad65c3ed48fa24685db7800dd5832e, type: 3}
-  m_PrefabInstance: {fileID: 694977652}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1502096378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,10 +2163,12 @@ GameObject:
   - component: {fileID: 1584387948}
   - component: {fileID: 1584387949}
   - component: {fileID: 1584387950}
-  - component: {fileID: 1584387951}
   - component: {fileID: 1584387952}
   - component: {fileID: 1584387953}
   - component: {fileID: 1584387954}
+  - component: {fileID: 1584387951}
+  - component: {fileID: 1584387955}
+  - component: {fileID: 1584387956}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2167,7 +2221,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1040363979}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 694977653}
@@ -2270,7 +2324,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1203217750}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
+  portrait: {fileID: 21300000, guid: 48751f9a4b8a28549bc04084e24dd720, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 152283388}
@@ -2452,14 +2506,16 @@ MonoBehaviour:
   - {fileID: 1584387935}
   - {fileID: 1584387936}
   - {fileID: 1584387938}
-  - {fileID: 1584387951}
   - {fileID: 1584387939}
+  - {fileID: 1584387956}
   - {fileID: 1584387940}
   - {fileID: 1584387941}
+  - {fileID: 1584387951}
   - {fileID: 1584387944}
   - {fileID: 1584387942}
   - {fileID: 1584387937}
   - {fileID: 1584387943}
+  - {fileID: 1584387955}
   - {fileID: 1584387945}
   - {fileID: 1584387952}
   - {fileID: 1584387946}
@@ -2493,7 +2549,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1584387932}
   selectedCommands:
-  - {fileID: 1584387954}
+  - {fileID: 1584387943}
   variables: []
   description: 
   stepPause: 0
@@ -2561,7 +2617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 20
   indentLevel: 0
-  duration: 4
+  duration: 3
   amount: {x: 1, y: 1}
   waitUntilFinished: 1
 --- !u!114 &1584387937
@@ -2662,7 +2718,7 @@ MonoBehaviour:
   storyText: SHADOW'S END...WE'RE ABOUT A WEEK DUE NORTHEAST-
   description: 
   character: {fileID: 1203217750}
-  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
+  portrait: {fileID: 21300000, guid: 48751f9a4b8a28549bc04084e24dd720, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2743,7 +2799,7 @@ MonoBehaviour:
   storyText: As you wish, milady...
   description: 
   character: {fileID: 2100643974}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 51863a9cd2cb2e644baf44ecce81f737, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2767,7 +2823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 28
   indentLevel: 0
-  storyText: SCARY SHAKE!!!!!
+  storyText: WUAEEE!!!! SCARY SHAKE!!!!!
   description: 
   character: {fileID: 745511569}
   portrait: {fileID: 0}
@@ -2797,7 +2853,7 @@ MonoBehaviour:
   storyText: Lokir, will Khajiit be okay?
   description: 
   character: {fileID: 1728590814}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 984b1429dd83ee54fb93501249f3d65a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2825,7 +2881,7 @@ MonoBehaviour:
     soon.
   description: 
   character: {fileID: 1040363979}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2910,7 +2966,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1203217750}
   replacedCharacter: {fileID: 1701574851}
-  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
+  portrait: {fileID: 21300000, guid: 48751f9a4b8a28549bc04084e24dd720, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -2964,16 +3020,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 35
+  itemId: 39
   indentLevel: 0
-  display: 1
+  display: 3
   stage: {fileID: 0}
-  character: {fileID: 1040363979}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  character: {fileID: 745511569}
+  replacedCharacter: {fileID: 1701574851}
+  portrait: {fileID: 0}
   offset: 0
   fromPosition: {fileID: 0}
-  toPosition: {fileID: 1396814732}
+  toPosition: {fileID: 0}
   facing: 2
   useDefaultSettings: 1
   fadeDuration: 0.5
@@ -3000,7 +3056,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1040363979}
   replacedCharacter: {fileID: 2100643974}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -3052,6 +3108,63 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
+--- !u!114 &1584387955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584387920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 0
+  display: 3
+  stage: {fileID: 0}
+  character: {fileID: 1728590814}
+  replacedCharacter: {fileID: 1203217750}
+  portrait: {fileID: 21300000, guid: 984b1429dd83ee54fb93501249f3d65a, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 1
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1584387956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584387920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 41
+  indentLevel: 0
+  storyText: (WAS THAT...PAPA'S MAGIC...? HE'S IN DANGER!!!)
+  description: 
+  character: {fileID: 1203217750}
+  portrait: {fileID: 21300000, guid: 48751f9a4b8a28549bc04084e24dd720, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &1619027694
 GameObject:
   m_ObjectHideFlags: 0

@@ -2610,9 +2610,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 974722070}
+  - {fileID: 974722031}
   selectedCommands:
-  - {fileID: 974722073}
+  - {fileID: 974722049}
   variables:
   - {fileID: 974722033}
   - {fileID: 974722032}
@@ -3576,8 +3576,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 0
-  storyText: Lokir, you have the ability to summon a clone that can attack the Scourged
-    from afar.
+  storyText: Bald friend, you have the ability to summon a clone that can attack
+    the Scourged from afar.
   description: 
   character: {fileID: 2349516324819794294, guid: 8c2f11906b0b83745baa19ac53a03ddd, type: 3}
   portrait: {fileID: 0}

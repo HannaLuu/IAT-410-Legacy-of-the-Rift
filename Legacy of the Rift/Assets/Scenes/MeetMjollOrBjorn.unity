@@ -2570,6 +2570,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2980218657522585734, guid: b5ad65c3ed48fa24685db7800dd5832e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1238
+      objectReference: {fileID: 0}
     - target: {fileID: 2980218657659729425, guid: b5ad65c3ed48fa24685db7800dd5832e, type: 3}
       propertyPath: m_Camera
       value: 
@@ -3144,7 +3148,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 948681141}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1230284091}
@@ -3389,9 +3393,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1259260359}
-  selectedCommands:
-  - {fileID: 1259260348}
+  - {fileID: 1259260365}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -3435,7 +3438,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1961060387}
   replacedCharacter: {fileID: 200240960}
-  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
+  portrait: {fileID: 21300000, guid: 48751f9a4b8a28549bc04084e24dd720, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}

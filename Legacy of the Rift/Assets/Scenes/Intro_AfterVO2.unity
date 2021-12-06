@@ -1898,6 +1898,12 @@ GameObject:
   - component: {fileID: 1092715894}
   - component: {fileID: 1092715895}
   - component: {fileID: 1092715896}
+  - component: {fileID: 1092715897}
+  - component: {fileID: 1092715899}
+  - component: {fileID: 1092715898}
+  - component: {fileID: 1092715901}
+  - component: {fileID: 1092715902}
+  - component: {fileID: 1092715900}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1959,8 +1965,14 @@ MonoBehaviour:
   - {fileID: 1092715893}
   - {fileID: 1092715883}
   - {fileID: 1092715884}
+  - {fileID: 1092715897}
   - {fileID: 1092715892}
   - {fileID: 1092715885}
+  - {fileID: 1092715898}
+  - {fileID: 1092715902}
+  - {fileID: 1092715900}
+  - {fileID: 1092715899}
+  - {fileID: 1092715901}
   - {fileID: 1092715896}
   - {fileID: 1092715887}
   suppressAllAutoSelections: 0
@@ -1991,7 +2003,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1092715876}
   selectedCommands:
-  - {fileID: 1092715896}
+  - {fileID: 1092715898}
   variables: []
   description: 
   stepPause: 0
@@ -2031,8 +2043,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  storyText: Yeah...took a while. They're in so much pain...who knows when they'll
-    morph-
+  storyText: Yeah...took a while. They're in so much pain...there's not much time
+    left until-
   description: 
   character: {fileID: 160474199}
   portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
@@ -2087,7 +2099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  storyText: 'The ship will be ready by tomorrow morning. '
+  storyText: '{vpunch=0.2,1}The ship will be ready by tomorrow morning. '
   description: 
   character: {fileID: 348426355}
   portrait: {fileID: 21300000, guid: 2d4b257546cedd14d8ea1f32c48bbccf, type: 3}
@@ -2114,10 +2126,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: OH SH-
+  storyText: '{vpunch=0.2,1}AHHHHH!!!!'
   description: 
   character: {fileID: 1972623238}
-  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
+  portrait: {fileID: 21300000, guid: 9db002f1cc8dba243b296227c331fac4, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2141,7 +2153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: DAMN IT, RABBIT!!! I told you NEVER to sneak up on us like that!!!
+  storyText: '{vpunch=0.2,1}DAMN IT, RABBIT!!! I told you NEVER to sneak up on us
+    like that!!!'
   description: 
   character: {fileID: 450716663}
   portrait: {fileID: 21300000, guid: 0535c9c3ccfab544ea565b64ec38170e, type: 3}
@@ -2168,8 +2181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: 'Rab--?? Anyways, sorry...hehe. Old habits die hard. Ser Dickon is just
-    adding some finishing touches to the Rift Piercer. '
+  storyText: 'Rab--?? Anyways, sorry...hehe. Old habits die hard. '
   description: 
   character: {fileID: 348426355}
   portrait: {fileID: 21300000, guid: 2d4b257546cedd14d8ea1f32c48bbccf, type: 3}
@@ -2272,7 +2284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: Hey, Lokir. They asleep yet?
+  storyText: They were so restless...
   description: 
   character: {fileID: 450716663}
   portrait: {fileID: 21300000, guid: 0535c9c3ccfab544ea565b64ec38170e, type: 3}
@@ -2333,7 +2345,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1972623238}
   replacedCharacter: {fileID: 450716663}
-  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
+  portrait: {fileID: 21300000, guid: 9db002f1cc8dba243b296227c331fac4, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -2363,7 +2375,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 160474199}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: d8319d48a3c8ab04483fccaa14e71bbc, type: 3}
+  portrait: {fileID: 21300000, guid: 0d024db5a3939834dbc3f48d61be5be2, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1447505063}
@@ -2393,7 +2405,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1972623238}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
+  portrait: {fileID: 21300000, guid: 9db002f1cc8dba243b296227c331fac4, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 406766528}
@@ -2502,6 +2514,178 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
+--- !u!114 &1092715897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092715874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  storyText: Ser Dickon is just adding some finishing touches to the Rift Piercer.
+    It should be ready by dawn.
+  description: 
+  character: {fileID: 348426355}
+  portrait: {fileID: 21300000, guid: 2d4b257546cedd14d8ea1f32c48bbccf, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1092715898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092715874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 23
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 450716663}
+  replacedCharacter: {fileID: 450716663}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1092715899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092715874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  storyText: Hairless friend, do you mind packing up the provisions?
+  description: 
+  character: {fileID: 348426355}
+  portrait: {fileID: 21300000, guid: 34b74c12b0330854196390ae7d3ab163, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1092715900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092715874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 27
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 160474199}
+  replacedCharacter: {fileID: 450716663}
+  portrait: {fileID: 21300000, guid: 0d024db5a3939834dbc3f48d61be5be2, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1795953384}
+  facing: 2
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1092715901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092715874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 24
+  indentLevel: 0
+  storyText: Shut up.
+  description: 
+  character: {fileID: 160474199}
+  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1092715902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092715874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 26
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 1972623238}
+  replacedCharacter: {fileID: 450716663}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!1001 &1263659579
 PrefabInstance:
   m_ObjectHideFlags: 0
