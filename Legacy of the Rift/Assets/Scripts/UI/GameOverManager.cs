@@ -9,6 +9,7 @@ public class GameOverManager : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -21,12 +22,6 @@ public class GameOverManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Time.timeScale = 0f;
     }
 }

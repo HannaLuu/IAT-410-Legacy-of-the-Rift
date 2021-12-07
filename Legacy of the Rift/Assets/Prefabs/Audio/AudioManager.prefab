@@ -47,7 +47,7 @@ MonoBehaviour:
   sounds:
   - name: Lokir Teleport to Clone
     clip: {fileID: 8300000, guid: 8e81dade24489044a8cc033c187d9fb7, type: 3}
-    volume: 0.4
+    volume: 0.3
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -74,7 +74,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Lokir Dash
     clip: {fileID: 8300000, guid: 699e07c1ed8bdee4ea86d60c69984f89, type: 3}
-    volume: 0.4
+    volume: 0.2
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -83,7 +83,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ursa Shoot Arrow
     clip: {fileID: 8300000, guid: 34d06416efae59d438df1071f9beeb51, type: 3}
-    volume: 0.4
+    volume: 0.2
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -92,7 +92,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ursa Spawn Bear
     clip: {fileID: 8300000, guid: 44bb987ce340ddb499e5740e11600c9f, type: 3}
-    volume: 0.4
+    volume: 0.3
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
