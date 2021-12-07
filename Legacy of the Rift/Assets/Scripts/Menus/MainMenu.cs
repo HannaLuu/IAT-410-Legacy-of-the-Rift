@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject instructionsUI;
+    public GameObject settingsUI;
+
     public void PlayGame()
     {
-        SceneManager.LoadScene("Intro_BeforeAttack");
+        SceneManager.LoadScene("Intro");
     }
 
     public void QuitGame()
@@ -20,6 +22,18 @@ public class MainMenu : MonoBehaviour
     public void PlayCredits()
     {
         //SceneManager.LoadScene("MenuCredits");
+    }
+
+    public void ShowSettings()
+    {
+        settingsUI.SetActive(true);
+        instructionsUI.SetActive(false);
+    }
+
+    public void HideSettings()
+    {
+        settingsUI.SetActive(false);
+        instructionsUI.SetActive(false);
     }
 
     public void ShowInstructions()

@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 1121269219}
   - component: {fileID: 1121269218}
   - component: {fileID: 1121269220}
+  - component: {fileID: 1121269221}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -346,6 +347,7 @@ MonoBehaviour:
   - {fileID: 1121269219}
   - {fileID: 1121269212}
   - {fileID: 1121269211}
+  - {fileID: 1121269221}
   - {fileID: 1121269215}
   - {fileID: 1121269216}
   - {fileID: 1121269217}
@@ -376,8 +378,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1121269208}
+  selectedCommands:
+  - {fileID: 1121269216}
   variables: []
   description: 
   stepPause: 0
@@ -666,6 +670,23 @@ MonoBehaviour:
     stringVal: Khajiit_Sacrifice
   loadingImage: {fileID: 0}
   sceneNameOLD: 
+--- !u!114 &1121269221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121269206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 181
+  indentLevel: 0
+  soundClip: {fileID: 8300000, guid: a1c38390de363ad42bef04024ee01a29, type: 3}
+  volume: 0.2
+  waitUntilFinished: 0
 --- !u!1 &1233085032
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,6 +793,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
