@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 3c7c38d9ed3651b45804c7b46e89a6b5
   - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: 64d5079e392321f4bb12915eca7c1623
+  - enabled: 1
     path: Assets/Scenes/Intro_AfterVO.unity
     guid: 3540eff34229b124682c95485ff1c489
   - enabled: 1
@@ -78,6 +81,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 1612924e2887b9b428c0bd75f1e3fe3f
   - enabled: 0
-    path: Assets/Scenes/MeetBjorn.unity
-    guid: 4962e9eaa6afd874e9857e1b280f4941
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
