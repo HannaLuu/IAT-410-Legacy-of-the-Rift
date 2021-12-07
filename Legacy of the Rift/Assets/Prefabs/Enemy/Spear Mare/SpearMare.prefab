@@ -133,7 +133,6 @@ MonoBehaviour:
   attackDamage: 10
   spearPoint: {fileID: 1608341386836936093}
   spearPrefab: {fileID: 971936601179557415, guid: 03e2c22aca1dc83428f14f342ba3abb8, type: 3}
-  spearThrowSound: {fileID: 8300000, guid: 9541b4ec84e2ba849837b79a4f5c45f4, type: 3}
 --- !u!114 &1608341385869205781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +227,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -1044700769877975829, guid: 7bb8652db6a39f3468eb398fc3f3e295, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0

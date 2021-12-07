@@ -135,7 +135,7 @@ MonoBehaviour:
   isSlowed: 0
   isDead: 0
   animator: {fileID: 0}
-  randomScript: {fileID: 0}
+  randomOuchSoundScript: {fileID: 0}
   source: {fileID: 0}
   hitSound: {fileID: 8300000, guid: 43d283af4db66384ba4f870a647f93cc, type: 3}
 --- !u!114 &7747586405611502224

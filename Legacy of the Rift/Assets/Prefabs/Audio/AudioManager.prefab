@@ -47,7 +47,7 @@ MonoBehaviour:
   sounds:
   - name: Lokir Teleport to Clone
     clip: {fileID: 8300000, guid: 8e81dade24489044a8cc033c187d9fb7, type: 3}
-    volume: 0.5
+    volume: 0.4
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -56,7 +56,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Halvar Rock Wall Emerge
     clip: {fileID: 8300000, guid: 4066b4a1476dbd74a96cf812f0656597, type: 3}
-    volume: 0.6
+    volume: 1
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -65,7 +65,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Halvar Hammer Swing
     clip: {fileID: 8300000, guid: e55e90b6f6fbb484c8cf66ec1581d927, type: 3}
-    volume: 0.5
+    volume: 0.4
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -74,7 +74,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Lokir Dash
     clip: {fileID: 8300000, guid: 699e07c1ed8bdee4ea86d60c69984f89, type: 3}
-    volume: 0.5
+    volume: 0.4
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -83,7 +83,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ursa Shoot Arrow
     clip: {fileID: 8300000, guid: 34d06416efae59d438df1071f9beeb51, type: 3}
-    volume: 0.5
+    volume: 0.4
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -92,7 +92,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ursa Spawn Bear
     clip: {fileID: 8300000, guid: 44bb987ce340ddb499e5740e11600c9f, type: 3}
-    volume: 0.5
+    volume: 0.4
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -101,7 +101,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SM Throw
     clip: {fileID: 8300000, guid: 9541b4ec84e2ba849837b79a4f5c45f4, type: 3}
-    volume: 0.5
+    volume: 1
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -110,7 +110,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Halvar Out of My Way
     clip: {fileID: 8300000, guid: 4d5cd0e3b0f48c04f9322f3a8067a8e9, type: 3}
-    volume: 0.5
+    volume: 0.4
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -119,7 +119,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ursa Healing VO
     clip: {fileID: 8300000, guid: 65e1881594ccf5d49897a9f0c6ada423, type: 3}
-    volume: 0.5
+    volume: 0.4
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
@@ -128,7 +128,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ursa Invoking Spirit VO
     clip: {fileID: 8300000, guid: a41c4562975cca94188ed723a36d871c, type: 3}
-    volume: 0.5
+    volume: 0.4
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.1
