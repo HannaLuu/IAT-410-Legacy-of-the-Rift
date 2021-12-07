@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
-using UnityEngine.SceneManagement;
 
-public class DickonDock : MonoBehaviour
+public class SpiritInteract : MonoBehaviour
 {
     public GameObject interactKey;
 
     public Flowchart flowchart;
 
     public WaveSpawner waveManager;
+
+    public GameObject levelObstacle;
 
     private bool canInteract = false;
 
@@ -21,6 +22,7 @@ public class DickonDock : MonoBehaviour
     {
         interactKey.SetActive(false);
         canInteract = false;
+        levelObstacle.SetActive(true);
 
         enemiesLeftText.SetActive(true);
         wavesCompleteText.SetActive(false);
@@ -29,13 +31,18 @@ public class DickonDock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(waveManager.allWavesCompleted == true)
+        {
+            levelObstacle.SetActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.F) && canInteract && waveManager.allWavesCompleted == true)
         {
-            flowchart.ExecuteBlock("Dickon Waves Complete");
+            flowchart.ExecuteBlock("Waves Complete");
         }
         if (Input.GetKeyDown(KeyCode.F) && canInteract && waveManager.allWavesCompleted == false)
         {
-            flowchart.ExecuteBlock("Dickon Waves Not Complete");
+            flowchart.ExecuteBlock("Waves Not Complete");
         }
 
         if (waveManager.allWavesCompleted == true)

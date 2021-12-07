@@ -11,8 +11,6 @@ public class WaveSpawner : MonoBehaviour
     public SuperTextSuperSeks waveText;
     public SuperTextSuperSeks enemiesText;
 
-    public bool tutorial = false;
-
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
     public GameObject spawnParticle;
@@ -103,7 +101,7 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
 
-        if (nextWave + 1 > waves.Length - 1 && tutorial == true)
+        if (nextWave + 1 > waves.Length - 1)
         {
             // nextWave = 0;
             // Debug.Log("ALL WAVES COMPLETE! Looping...");
@@ -112,15 +110,15 @@ public class WaveSpawner : MonoBehaviour
             allWavesCompleted = true;
             gameObject.SetActive(false);
         }
-        else if (nextWave + 1 > waves.Length - 1 && tutorial == false)
-        {
-            // nextWave = 0;
-            // Debug.Log("ALL WAVES COMPLETE! Looping...");
+        //else if (nextWave + 1 > waves.Length - 1 && tutorial == false)
+        //{
+        //    // nextWave = 0;
+        //    // Debug.Log("ALL WAVES COMPLETE! Looping...");
 
-            // Next Scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            Debug.Log("ALL WAVES COMPLETE! Loading Next Scene in Build Index...");
-        }
+        //    // Next Scene
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //    Debug.Log("ALL WAVES COMPLETE! Loading Next Scene in Build Index...");
+        //}
         else
         {
             allWavesCompleted = false;

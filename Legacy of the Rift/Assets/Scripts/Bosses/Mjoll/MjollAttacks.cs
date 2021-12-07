@@ -47,8 +47,10 @@ public class MjollAttacks : MonoBehaviour
     private Enemy enemyScript;
     public float lowHealthPoint;
 
-    public RandomSound randomGasSound, randomLightningSound;
+    public RandomSound randomGasSound, randomLightningSound, randomHighIdleSound, randomLowIdleSound;
     public AudioSource source;
+    public int startIdleSoundTimer;
+    private float idleSoundTimer;
 
     public GameObject spawnParticle;
 
@@ -60,6 +62,7 @@ public class MjollAttacks : MonoBehaviour
         enemyScript = GetComponent<Enemy>();
         animator = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
+        animator.SetBool("isLowHealth", false);
 
         gasTimer = startGasTimer;
         lightningTimer = startLightningTimer;
@@ -70,6 +73,30 @@ public class MjollAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (animator.GetBool("malakai_unleashed") == false && source.isPlaying == false && idleSoundTimer <= 0)
+        {
+            //play normal idle sound
+            source.clip = randomHighIdleSound.GetRandomAudioClip();
+            source.Play();
+            idleSoundTimer = startIdleSoundTimer;
+        }
+        else
+        {
+            idleSoundTimer -= Time.deltaTime;
+        }
+
+        if (animator.GetBool("malakai_unleashed") == true && source.isPlaying == false && idleSoundTimer <= 0)
+        {
+            //play low idle sound
+            source.clip = randomLowIdleSound.GetRandomAudioClip();
+            source.Play();
+            idleSoundTimer = startIdleSoundTimer;
+        }
+        else
+        {
+            idleSoundTimer -= Time.deltaTime;
+        }
+
         if (enemyScript.currentHealth <= 40)
         {
             SceneManager.LoadScene("MjollDefeated");

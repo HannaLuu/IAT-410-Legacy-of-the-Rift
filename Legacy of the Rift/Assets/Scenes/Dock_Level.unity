@@ -848,6 +848,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcddb9238d2d3534192a2c4cbaffbc79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &175669366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8246721153134913807, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 175669360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &175669367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1438157438, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 175669360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &175669369 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5724404878773863229, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
@@ -1871,6 +1881,8 @@ MonoBehaviour:
   interactKey: {fileID: 1583942630}
   flowchart: {fileID: 974722027}
   waveManager: {fileID: 1854149049}
+  enemiesLeftText: {fileID: 175669367}
+  wavesCompleteText: {fileID: 175669366}
 --- !u!61 &613821753
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2877,9 +2889,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 974722031}
-  selectedCommands:
-  - {fileID: 974722049}
+  - {fileID: 974722064}
+  selectedCommands: []
   variables:
   - {fileID: 974722033}
   - {fileID: 974722032}
@@ -4394,7 +4405,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 196.4365
-    y: 38.475185
+    y: 39.6947
     width: 187.80486
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4717,7 +4728,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1438157440, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
   m_PrefabInstance: {fileID: 175669360}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 175669367}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb331e014f4537b408d8af2c81de992d, type: 3}

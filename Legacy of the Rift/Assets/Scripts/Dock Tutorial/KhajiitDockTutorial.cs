@@ -67,7 +67,6 @@ public class KhajiitDockTutorial : MonoBehaviour
             {
                 waveSpawnPoints.SetActive(true);
                 waveManager.SetActive(true);
-                waveManager.GetComponent<WaveSpawner>().tutorial = true;
                 once = true;
             }
         }
@@ -88,7 +87,6 @@ public class KhajiitDockTutorial : MonoBehaviour
             {
                 waveSpawnPoints.SetActive(true);
                 waveManager.SetActive(true);
-                waveManager.GetComponent<WaveSpawner>().tutorial = true;
                 stinkey = true;
             }
         }

@@ -30,6 +30,8 @@ public class KhajiitTutorial : MonoBehaviour
 
     public GameObject kids;
 
+    public GameObject enemiesLeftText, wavesCompleteText;
+
     void Start()
     {
         interactKey.SetActive(false);
@@ -45,10 +47,25 @@ public class KhajiitTutorial : MonoBehaviour
         stinkey = false;
         omg = false;
         zzz = false;
+
+        enemiesLeftText.SetActive(true);
+        wavesCompleteText.SetActive(false);
     }
     // Update is called once per frame
     void Update()
     {
+        if(waveManager.GetComponent<WaveSpawner>().allWavesCompleted == true)
+        {
+            enemiesLeftText.SetActive(false);
+            wavesCompleteText.SetActive(true);
+        }
+
+        if (waveManager.GetComponent<WaveSpawner>().allWavesCompleted == false)
+        {
+            enemiesLeftText.SetActive(true);
+            wavesCompleteText.SetActive(false);
+        }
+
         if (flowchart.GetBooleanVariable("Tutorial") == false && flowchart.GetBooleanVariable("lol") == false)
         {
             LookAtPlayer();
@@ -79,7 +96,6 @@ public class KhajiitTutorial : MonoBehaviour
             {
                 waveSpawnPoints.SetActive(true);
                 waveManager.SetActive(true);
-                waveManager.GetComponent<WaveSpawner>().tutorial = true;
                 kids.SetActive(true);
                 once = true;
             }
@@ -119,7 +135,6 @@ public class KhajiitTutorial : MonoBehaviour
                 {
                     waveSpawnPoints.SetActive(true);
                     waveManager.SetActive(true);
-                    waveManager.GetComponent<WaveSpawner>().tutorial = true;
                     once = true;
                 }
                 if (waveManager.GetComponent<WaveSpawner>().nextWave == 1 && waveManager.GetComponent<WaveSpawner>().EnemyIsAlive() == false)

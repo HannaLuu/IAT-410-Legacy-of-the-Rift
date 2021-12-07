@@ -194,7 +194,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1438157440, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
   m_PrefabInstance: {fileID: 1621193093}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1832476241}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb331e014f4537b408d8af2c81de992d, type: 3}
@@ -6430,6 +6430,8 @@ MonoBehaviour:
   waveSpawnPoints: {fileID: 1586152545}
   player: {fileID: 0}
   kids: {fileID: 242348153}
+  enemiesLeftText: {fileID: 1832476241}
+  wavesCompleteText: {fileID: 1251019251}
 --- !u!95 &1008445026
 Animator:
   serializedVersion: 3
@@ -7349,6 +7351,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1251019251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8246721153134913807, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 1621193093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1311340924
 GameObject:
   m_ObjectHideFlags: 0
@@ -8687,6 +8694,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1832476241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1438157438, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
+  m_PrefabInstance: {fileID: 1621193093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1864474010
 GameObject:
   m_ObjectHideFlags: 0

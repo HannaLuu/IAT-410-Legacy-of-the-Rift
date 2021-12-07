@@ -9982,7 +9982,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2032860121
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9999,7 +9999,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1188670091}
   startVolume: 1
-  endVolume: 0.5
+  endVolume: 0.2
   fadeDuration: 0
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
