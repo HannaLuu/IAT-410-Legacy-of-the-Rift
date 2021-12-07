@@ -5369,7 +5369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.520838
+      value: -0.82118225
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10530,7 +10530,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2121223469}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2121223472}
   variables: []
   description: 
   stepPause: 0
@@ -10606,7 +10607,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 520.5082
-    y: 88.68085
+    y: 87.68085
     width: 145
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -10673,7 +10674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 38
   indentLevel: 0
-  storyText: GET ON DAMN SHIP BEFORE MORE OF THOSE SMELLY HORSES COME AROUND!!!
+  storyText: Come forth.
   description: 
   character: {fileID: 7357101041809100376, guid: 66a720ccf640ead438d3bf099f60b5d4, type: 3}
   portrait: {fileID: 0}
@@ -10730,7 +10731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: '{vpunch=0.5}KILL THOSE 7 FOOT, MUSCULAR, STINKY HORSES!!! PLEASE!!!'
+  storyText: '{vpunch=0.5}DEFEAT THEM ALL.'
   description: 
   character: {fileID: 7357101041809100376, guid: 66a720ccf640ead438d3bf099f60b5d4, type: 3}
   portrait: {fileID: 0}
@@ -10758,7 +10759,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 271.33792
-    y: 85
+    y: 84
     width: 168
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
