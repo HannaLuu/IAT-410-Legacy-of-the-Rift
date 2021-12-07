@@ -1742,6 +1742,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3892739229431146389, guid: 3268f1ea507776f42b212ea8dfe921f8, type: 3}
   m_PrefabInstance: {fileID: 679055848}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &679055850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3892739229431146376, guid: 3268f1ea507776f42b212ea8dfe921f8, type: 3}
+  m_PrefabInstance: {fileID: 679055848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &690965333 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1086672816506494890, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
@@ -4623,7 +4634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.3976822
+      value: 3.9443378
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4938,6 +4949,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff773c6dc3d62441a5214572b6e2a9c, type: 3}
+--- !u!114 &1698756258 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7313151524903640750, guid: 6ff773c6dc3d62441a5214572b6e2a9c, type: 3}
+  m_PrefabInstance: {fileID: 1698756257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532231032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1758718917
 GameObject:
   m_ObjectHideFlags: 0
@@ -6391,11 +6413,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 703.0184, y: 295.55728}
+  scrollPos: {x: 868.9717, y: 382.37686}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 522
-  zoom: 0.9100001
+  zoom: 0.7600002
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -6474,7 +6496,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1698756258}
 --- !u!114 &2138538713
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6501,7 +6523,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1698756258}
 --- !u!114 &2138538714
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6516,9 +6538,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -347.30777
+    x: -346.20886
     y: 48.616585
-    width: 128.02197
+    width: 126.315765
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6574,7 +6596,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1698756258}
 --- !u!114 &2138538717
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6844,7 +6866,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1698756258}
 --- !u!114 &2138538719
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6881,7 +6903,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -521.93
     y: 49.748108
-    width: 109.34065
+    width: 109.21051
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6923,7 +6945,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 6.0164795
     y: 47.241447
-    width: 142.30768
+    width: 142.10522
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7001,7 +7023,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 679055850}
 --- !u!114 &2138538726
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7058,7 +7080,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 679055850}
 --- !u!114 &2138538729
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7075,7 +7097,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -180.15378
     y: 47.56061
-    width: 165.38461
+    width: 164.47365
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
