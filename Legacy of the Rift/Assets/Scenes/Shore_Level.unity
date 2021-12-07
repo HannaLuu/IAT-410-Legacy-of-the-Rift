@@ -4167,7 +4167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.9443378
+      value: -1.3976822
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5929,8 +5929,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2138538714}
-  selectedCommands: []
+  - {fileID: 2138538720}
+  selectedCommands:
+  - {fileID: 2138538719}
   variables:
   - {fileID: 2138538710}
   description: 
@@ -6372,7 +6373,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &2138538719
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6419,7 +6420,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &2138538721
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

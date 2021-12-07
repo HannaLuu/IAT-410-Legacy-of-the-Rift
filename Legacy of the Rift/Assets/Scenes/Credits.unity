@@ -423,88 +423,89 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Full Story + Tutorial Coming Soon...
-
-
-    Original Story & Script By:
-
-    Mark
-    Robles
-
-    Hanna Luu
-
-    Erika Wang
-
-
-    Lead Narrative Designer:
-
-    Mark
-    Robles
-
-
-    Assistant Narrative Designers:
-
-    Hanna Luu
-
-    Erika Wang
-
-
-    Game
-    Designers:
+  m_text: 'Original Game & Story The Seggsmen
 
     Mark Robles
 
     Hanna Luu
 
+    Erika
+    Wang
+
+
+    Lead Narrative Designer:
+
+    Mark Robles
+
+
+    Assistant Narrative
+    Designers:
+
+    Hanna Luu
+
     Erika Wang
 
 
-    Sound Designer
-    & Engineer:
+    Game Designers:
+
+    Mark Robles
+
+    Hanna
+    Luu
+
+    Erika Wang
+
+
+    Sound Designer & Engineer:
 
     Hanna Luu
 
 
-    Art Director:
+    Art
+    Director:
 
     Erika Wang
 
 
-    Game & Concept
-    Artist:
+    Game & Concept Artist:
 
     Erika Wang
 
 
     Animator:
 
-    Erika Wang
+    Erika
+    Wang
 
 
     Level Designers:
 
-    Erika
-    Wang
+    Erika Wang
 
     Hanna Luu
 
     Mark Robles
 
 
-    UI Designer:
+    UI
+    Designer:
 
     Erika Wang
 
 
     Programmers:
 
-    Hanna
-    Luu
+    Hanna Luu
 
     Mark Robles
 
 
-    Voice Talents:
+    Voice
+    Talents:
+
+    Mark Robles
+
+    Mark Robles
 
     Mark Robles
 
@@ -513,15 +514,10 @@ MonoBehaviour:
     Mark
     Robles
 
-    Mark Robles
-
-    Mark Robles
-
 
     Honourary Seggsmen <3
 
-    Karson,
-    Matthew, Catelyn, Fiona'
+    Karson, Matthew, Catelyn, Fiona'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de693264d72381c4f8666fe92fdd3611, type: 2}
   m_sharedMaterial: {fileID: 1854562634439353389, guid: de693264d72381c4f8666fe92fdd3611, type: 2}
@@ -1032,10 +1028,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1807119771}
-  selectedCommands:
-  - {fileID: 1807119774}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -1063,7 +1057,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1807119774
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
