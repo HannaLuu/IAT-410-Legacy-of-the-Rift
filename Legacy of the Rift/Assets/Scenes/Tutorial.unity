@@ -1512,7 +1512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.800001
+      value: 18.8
       objectReference: {fileID: 0}
     - target: {fileID: 6478834759248685604, guid: e1d14e28465b96946bf3e24bd2ab8955, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3032,6 +3032,8 @@ GameObject:
   - component: {fileID: 796375123}
   - component: {fileID: 796375124}
   - component: {fileID: 796375126}
+  - component: {fileID: 796375128}
+  - component: {fileID: 796375127}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -3064,9 +3066,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 796375117}
+  - {fileID: 796375084}
   selectedCommands:
-  - {fileID: 796375124}
+  - {fileID: 796375127}
   variables:
   - {fileID: 796375077}
   - {fileID: 796375098}
@@ -3554,6 +3556,8 @@ MonoBehaviour:
   eventHandler: {fileID: 796375087}
   commandList:
   - {fileID: 796375126}
+  - {fileID: 796375128}
+  - {fileID: 796375127}
   - {fileID: 796375086}
   - {fileID: 796375085}
   - {fileID: 796375083}
@@ -5632,6 +5636,41 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
+--- !u!114 &796375127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 180
+  indentLevel: 0
+  musicClip: {fileID: 8300000, guid: 9a055c9fcd0b7de42b96038f6db27229, type: 3}
+  atTime: 0
+  loop: 1
+  fadeDuration: 1
+--- !u!114 &796375128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796375073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4015e84616cc45cfb498561373899d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 179
+  indentLevel: 0
+  volume: 0.15
+  fadeDuration: 0
+  waitUntilFinished: 1
 --- !u!1 &798359266
 GameObject:
   m_ObjectHideFlags: 0
