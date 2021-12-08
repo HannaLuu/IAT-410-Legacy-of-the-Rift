@@ -2999,7 +2999,6 @@ GameObject:
   - component: {fileID: 796375089}
   - component: {fileID: 796375088}
   - component: {fileID: 796375077}
-  - component: {fileID: 796375097}
   - component: {fileID: 796375082}
   - component: {fileID: 796375098}
   - component: {fileID: 796375099}
@@ -3034,6 +3033,7 @@ GameObject:
   - component: {fileID: 796375126}
   - component: {fileID: 796375128}
   - component: {fileID: 796375127}
+  - component: {fileID: 796375097}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -3066,9 +3066,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 796375084}
-  selectedCommands:
-  - {fileID: 796375127}
+  - {fileID: 796375076}
+  selectedCommands: []
   variables:
   - {fileID: 796375077}
   - {fileID: 796375098}
@@ -3885,7 +3884,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &796375097
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3895,7 +3894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 21
+  itemId: 181
   indentLevel: 0
   anyVar:
     variable: {fileID: 796375077}
@@ -9483,10 +9482,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5807222352677156468, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 272048419132925193, guid: 96bba9f57171b254cb6330cd0424813a, type: 3}
     - target: {fileID: 5807222352677156469, guid: 99ae2a98e9163bb4b947a8f3f99d3d69, type: 3}
       propertyPath: m_RootOrder
       value: 7
