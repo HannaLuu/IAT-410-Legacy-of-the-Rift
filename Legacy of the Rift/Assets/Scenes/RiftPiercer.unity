@@ -2218,7 +2218,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1040363979}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
+  portrait: {fileID: 21300000, guid: 00a92cf9429d2a040aa17237555194f8, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 694977653}
@@ -2321,7 +2321,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1203217750}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 48751f9a4b8a28549bc04084e24dd720, type: 3}
+  portrait: {fileID: 21300000, guid: 0316b30afdc66ea499a17e38f80329fc, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 152283388}
@@ -2351,7 +2351,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1701574851}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 0535c9c3ccfab544ea565b64ec38170e, type: 3}
+  portrait: {fileID: 21300000, guid: 786d418d8a39c2242b4112917a12a482, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 162822425}
@@ -2547,7 +2547,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1584387932}
   selectedCommands:
-  - {fileID: 1584387936}
+  - {fileID: 1584387951}
   variables: []
   description: 
   stepPause: 0
@@ -2659,7 +2659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 21
   indentLevel: 0
-  storyText: AAAAAAAAGHHHHHHH!!!!!!
+  storyText: '{vpunch=0.3,1}AAAAAAAAGHHHHHHH!!!!!!'
   description: 
   character: {fileID: 1203217750}
   portrait: {fileID: 21300000, guid: e74769a69659a304098a6166f05cbd2b, type: 3}
@@ -2964,7 +2964,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1203217750}
   replacedCharacter: {fileID: 1701574851}
-  portrait: {fileID: 21300000, guid: 48751f9a4b8a28549bc04084e24dd720, type: 3}
+  portrait: {fileID: 21300000, guid: 0316b30afdc66ea499a17e38f80329fc, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -2994,7 +2994,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1701574851}
   replacedCharacter: {fileID: 1040363979}
-  portrait: {fileID: 21300000, guid: 0535c9c3ccfab544ea565b64ec38170e, type: 3}
+  portrait: {fileID: 21300000, guid: 786d418d8a39c2242b4112917a12a482, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -3013,7 +3013,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584387920}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
   m_Name: 
@@ -3024,7 +3024,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 745511569}
   replacedCharacter: {fileID: 1701574851}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8e5b70b4d31cbdb49ba1292e262e7c39, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -3054,7 +3054,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1040363979}
   replacedCharacter: {fileID: 2100643974}
-  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
+  portrait: {fileID: 21300000, guid: 00a92cf9429d2a040aa17237555194f8, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -3124,7 +3124,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1728590814}
   replacedCharacter: {fileID: 1203217750}
-  portrait: {fileID: 21300000, guid: 984b1429dd83ee54fb93501249f3d65a, type: 3}
+  portrait: {fileID: 21300000, guid: cc8f316722cd18e46bbd1441101faac6, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}

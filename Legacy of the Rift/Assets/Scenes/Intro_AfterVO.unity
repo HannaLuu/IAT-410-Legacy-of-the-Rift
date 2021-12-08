@@ -387,6 +387,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &273832941 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2980218656855712510, guid: b5ad65c3ed48fa24685db7800dd5832e, type: 3}
+  m_PrefabInstance: {fileID: 632765318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &278511242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1307,7 @@ GameObject:
   - component: {fileID: 856997014}
   - component: {fileID: 856997015}
   - component: {fileID: 856997016}
+  - component: {fileID: 856997017}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1356,6 +1362,7 @@ MonoBehaviour:
   - {fileID: 856997007}
   - {fileID: 856997014}
   - {fileID: 856997008}
+  - {fileID: 856997017}
   - {fileID: 856997009}
   - {fileID: 856997010}
   - {fileID: 856997016}
@@ -1388,7 +1395,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 856997003}
   selectedCommands:
-  - {fileID: 856997015}
+  - {fileID: 856997017}
   variables: []
   description: 
   stepPause: 0
@@ -1431,7 +1438,7 @@ MonoBehaviour:
   storyText: Mama and Papa have been gone for so long...where are they, Lokir?
   description: 
   character: {fileID: 1773879943}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 845ec612b6b9754408d1320256f0993b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1458,7 +1465,7 @@ MonoBehaviour:
   storyText: "I\u2019m sure they\u2019ll be home soon, Eerika."
   description: 
   character: {fileID: 1703406095}
-  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
+  portrait: {fileID: 21300000, guid: 00a92cf9429d2a040aa17237555194f8, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1587,7 +1594,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1773879943}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b3ee36ed4f1b73746948ff8cd334d235, type: 3}
+  portrait: {fileID: 21300000, guid: 845ec612b6b9754408d1320256f0993b, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1269533917}
@@ -1617,7 +1624,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1703406095}
   replacedCharacter: {fileID: 1773879943}
-  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
+  portrait: {fileID: 21300000, guid: 00a92cf9429d2a040aa17237555194f8, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -1647,7 +1654,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 31744489}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 984b1429dd83ee54fb93501249f3d65a, type: 3}
+  portrait: {fileID: 21300000, guid: cc8f316722cd18e46bbd1441101faac6, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 632765319}
@@ -1699,6 +1706,36 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
+--- !u!114 &856997017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856997001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 1367620336}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8e5b70b4d31cbdb49ba1292e262e7c39, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 273832941}
+  facing: 1
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!1 &990522111
 GameObject:
   m_ObjectHideFlags: 0

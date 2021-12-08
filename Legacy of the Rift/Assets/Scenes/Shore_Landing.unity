@@ -2355,7 +2355,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2091109260}
   selectedCommands:
-  - {fileID: 2091109283}
+  - {fileID: 2091109265}
   variables: []
   description: 
   stepPause: 0
@@ -2453,7 +2453,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1883498895}
   replacedCharacter: {fileID: 1399017045}
-  portrait: {fileID: 21300000, guid: d7481069b33dacc43811c4e00224c9a9, type: 3}
+  portrait: {fileID: 21300000, guid: 00a92cf9429d2a040aa17237555194f8, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -2637,7 +2637,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1399017045}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 48751f9a4b8a28549bc04084e24dd720, type: 3}
+  portrait: {fileID: 21300000, guid: 0316b30afdc66ea499a17e38f80329fc, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1410193651}
@@ -2667,7 +2667,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1183052330}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 0535c9c3ccfab544ea565b64ec38170e, type: 3}
+  portrait: {fileID: 21300000, guid: 786d418d8a39c2242b4112917a12a482, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 2078841362}

@@ -531,6 +531,11 @@ PrefabInstance:
       objectReference: {fileID: 1764809243}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5ad65c3ed48fa24685db7800dd5832e, type: 3}
+--- !u!224 &283725805 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2980218657522585734, guid: b5ad65c3ed48fa24685db7800dd5832e, type: 3}
+  m_PrefabInstance: {fileID: 283725804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &287208672
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +802,6 @@ GameObject:
   - component: {fileID: 524534571}
   - component: {fileID: 524534578}
   - component: {fileID: 524534579}
-  - component: {fileID: 524534580}
   - component: {fileID: 524534573}
   - component: {fileID: 524534581}
   - component: {fileID: 524534583}
@@ -851,7 +855,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 524534579}
   - {fileID: 524534577}
-  - {fileID: 524534580}
   - {fileID: 524534583}
   - {fileID: 524534576}
   - {fileID: 524534575}
@@ -890,7 +893,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 524534568}
   selectedCommands:
-  - {fileID: 524534582}
+  - {fileID: 524534583}
   variables: []
   description: 
   stepPause: 0
@@ -1138,38 +1141,8 @@ MonoBehaviour:
   portrait: {fileID: 21300000, guid: 34b74c12b0330854196390ae7d3ab163, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
-  toPosition: {fileID: 1313009175}
+  toPosition: {fileID: 283725805}
   facing: 1
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
---- !u!114 &524534580
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524534566}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 10
-  indentLevel: 0
-  display: 1
-  stage: {fileID: 0}
-  character: {fileID: 1592533705}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 2d4b257546cedd14d8ea1f32c48bbccf, type: 3}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 0}
-  facing: 2
   useDefaultSettings: 1
   fadeDuration: 0.5
   moveDuration: 1
@@ -2964,11 +2937,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!224 &1313009175 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2980218656855712510, guid: b5ad65c3ed48fa24685db7800dd5832e, type: 3}
-  m_PrefabInstance: {fileID: 283725804}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1339615792
 GameObject:
   m_ObjectHideFlags: 0
