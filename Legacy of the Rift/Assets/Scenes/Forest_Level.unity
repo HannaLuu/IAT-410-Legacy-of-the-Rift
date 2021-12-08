@@ -10509,7 +10509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 83, y: 136}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -10522,8 +10522,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2121223476}
-  selectedCommands:
-  - {fileID: 2121223475}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -10598,8 +10597,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 520.5082
-    y: 87.68085
+    x: 433.50818
+    y: 67.68085
     width: 145
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -10629,7 +10628,7 @@ MonoBehaviour:
   indentLevel: 0
   _sceneName:
     stringRef: {fileID: 0}
-    stringVal: ShoreSpiritScene
+    stringVal: ForestSpiritScene
   loadingImage: {fileID: 0}
   sceneNameOLD: 
 --- !u!114 &2121223471
@@ -10668,7 +10667,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Come forth.
   description: 
-  character: {fileID: 7357101041809100376, guid: 66a720ccf640ead438d3bf099f60b5d4, type: 3}
+  character: {fileID: 8076340223657955231, guid: 36a8497133120b945840170e55584618, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -10725,7 +10724,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: '{vpunch=0.5}DEFEAT THEM ALL.'
   description: 
-  character: {fileID: 7357101041809100376, guid: 66a720ccf640ead438d3bf099f60b5d4, type: 3}
+  character: {fileID: 8076340223657955231, guid: 36a8497133120b945840170e55584618, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -10750,8 +10749,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 271.33792
-    y: 84
+    x: 240.33792
+    y: 68
     width: 168
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}

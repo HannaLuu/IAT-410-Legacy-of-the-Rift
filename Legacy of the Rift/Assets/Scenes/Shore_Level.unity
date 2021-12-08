@@ -6417,8 +6417,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2138538720}
-  selectedCommands: []
+  - {fileID: 2138538722}
+  selectedCommands:
+  - {fileID: 2138538725}
   variables:
   - {fileID: 2138538710}
   description: 
@@ -7004,7 +7005,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: It shall be so.
   description: 
-  character: {fileID: 7357101041809100376, guid: 66a720ccf640ead438d3bf099f60b5d4, type: 3}
+  character: {fileID: 5853366698310657619, guid: eac4ccffaa14fd3439b8047304cd919d, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -7061,7 +7062,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: '{vpunch=0.5}DEFEAT THEM ALL.'
   description: 
-  character: {fileID: 7357101041809100376, guid: 66a720ccf640ead438d3bf099f60b5d4, type: 3}
+  character: {fileID: 5853366698310657619, guid: eac4ccffaa14fd3439b8047304cd919d, type: 3}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1

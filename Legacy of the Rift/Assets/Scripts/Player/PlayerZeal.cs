@@ -72,7 +72,10 @@ public class PlayerZeal : MonoBehaviour
         if (currentOverzeal < maxOverzeal)
         {
             currentOverzeal += overzealAmount;
-            overzealBar.SetOverzeal(currentOverzeal);
+            if (overzealBar != null)
+            {
+                overzealBar.SetOverzeal(currentOverzeal);
+            }
         }
         if (currentOverzeal >= maxOverzeal)
         {
