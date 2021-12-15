@@ -73,7 +73,7 @@ public class MjollAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (animator.GetBool("malakai_unleashed") == false && source.isPlaying == false && idleSoundTimer <= 0)
+        if (animator.GetBool("isLowHealth") == false && source.isPlaying == false && idleSoundTimer <= 0)
         {
             //play normal idle sound
             source.clip = randomHighIdleSound.GetRandomAudioClip();
@@ -85,7 +85,7 @@ public class MjollAttacks : MonoBehaviour
             idleSoundTimer -= Time.deltaTime;
         }
 
-        if (animator.GetBool("malakai_unleashed") == true && source.isPlaying == false && idleSoundTimer <= 0)
+        if (animator.GetBool("isLowHealth") == true && source.isPlaying == false && idleSoundTimer <= 0)
         {
             //play low idle sound
             source.clip = randomLowIdleSound.GetRandomAudioClip();
