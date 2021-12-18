@@ -110,6 +110,8 @@ public class LokirAttacks : AttackBaseClass
                 lokirAbilityBarAnimator.SetBool("abilityReady", true);
                 if (Input.GetButtonDown("Fire2") && spectralWarlock == null && dontMove == false)
                 {
+                    abilityActivated = true;
+                    teleported = false;
                     var source = lokirAbilityAudio.GetComponent<AudioSource>();
                     source.clip = lokirAbilityAudio.GetComponent<RandomSound>().GetRandomAudioClip();
                     source.Play();
@@ -118,10 +120,10 @@ public class LokirAttacks : AttackBaseClass
                 }
                 if (Input.GetButtonDown("Fire2") && spectralWarlock != null && !teleported)
                 {
+                    teleported = true;
                     FindObjectOfType<AudioManager>().Play("Lokir Teleport to Clone");
                     teleportPos = spectralWarlock.GetComponent<SpectralWarlock>().transform.position;
                     Teleport();
-                    teleported = true;
                 }
             } else
             {
@@ -224,8 +226,6 @@ public class LokirAttacks : AttackBaseClass
     // Spectral Warlock
     public override void ActivateAbility()
     {
-        abilityActivated = true;
-        teleported = false;
         playerZeal.SpendZeal(abilityZealCost);
         spectralWarlock = Instantiate(abilityPrefab, abilityPoint.position, Quaternion.identity) as GameObject;
     }
