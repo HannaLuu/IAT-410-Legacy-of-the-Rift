@@ -3163,7 +3163,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 2095725487}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 8332b4bfc8cb26644ba262ed5ac96728, type: 3}
+  portrait: {fileID: 21300000, guid: ffff72dfbfa3d484898f750c2ea738a0, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1154991028}
@@ -3314,10 +3314,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 100.00452, y: 124.313065}
+  scrollPos: {x: 276.00452, y: 53.313065}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 292
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -3326,8 +3326,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1259260366}
-  selectedCommands: []
+  - {fileID: 1259260359}
+  selectedCommands:
+  - {fileID: 1259260355}
   variables: []
   description: 
   stepPause: 0
