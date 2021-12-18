@@ -6,8 +6,11 @@ public class Gas : MonoBehaviour
 {
     public float damage;
 
+    public float maxLifeSpan;
+    public float currentLifeSpan;
+
     public float startDamageTimer;
-    public float damageTimer;
+    private float damageTimer;
 
     public GameObject damagePopupPrefab;
 
@@ -18,6 +21,7 @@ public class Gas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentLifeSpan = maxLifeSpan;
         damageTimer = startDamageTimer;
         isColliding = false;
     }
@@ -25,12 +29,16 @@ public class Gas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentLifeSpan -= Time.deltaTime;
+        if (currentLifeSpan <= 0)
+        {
+            Destroy(gameObject);
+        }
 
         if (isColliding && damageTimer <= 0)
         {
-            //damageTimer = startDamageTimer;
-        }
-        else
+            damageTimer = startDamageTimer;
+        } else
         {
             damageTimer -= Time.deltaTime;
         }
@@ -56,11 +64,10 @@ public class Gas : MonoBehaviour
                 DamagePopup damagePopupScript = damagePopup.GetComponent<DamagePopup>();
                 damagePopupScript.Setup(damage);
                 FindObjectOfType<PlayerHealth>().TakeDamage(damage);
-            } 
-            //else
-            //{
-            //    damageTimer -= Time.deltaTime;
-            //}
+            } else
+            {
+                damageTimer -= Time.deltaTime;
+            }
         }
     }
 

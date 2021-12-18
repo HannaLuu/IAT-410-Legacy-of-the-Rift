@@ -978,7 +978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 439823298388262114, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 472631151278364170, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_RootOrder
@@ -1062,7 +1062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5724404877574238912, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5724404877574238912, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1182,7 +1182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836590784142019126, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab29d882973166b45ab0aa1764a02d5c, type: 3}
@@ -6935,8 +6935,8 @@ MonoBehaviour:
   slider: {fileID: 1346062164}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.74509805, g: 0, b: 0, a: 1}
-    key1: {r: 0.74509805, g: 0, b: 0, a: 1}
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
