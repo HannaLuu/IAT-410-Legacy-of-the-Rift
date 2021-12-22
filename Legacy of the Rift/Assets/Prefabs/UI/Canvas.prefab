@@ -2808,6 +2808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4892655120415495321}
   - component: {fileID: 4247869621481743516}
+  - component: {fileID: 5890371373110970237}
   m_Layer: 5
   m_Name: Master Audio Slider
   m_TagString: Untagged
@@ -2900,6 +2901,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5890371373110970237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823941184878457731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1cc3c74b41921499470dfad4aa2ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
 --- !u!1 &1861844141629087601
 GameObject:
   m_ObjectHideFlags: 0
@@ -5480,6 +5494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4160749458129693279}
   - component: {fileID: 5778723856526189055}
+  - component: {fileID: 8906980604589460176}
   m_Layer: 5
   m_Name: SFX Slider
   m_TagString: Untagged
@@ -5572,6 +5587,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8906980604589460176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4246938648271607151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb4876c85cffd44faf10da2ab31c696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4280425748650230253
 GameObject:
   m_ObjectHideFlags: 0
@@ -13151,6 +13178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6604977586951542088}
   - component: {fileID: 1034931126320345300}
+  - component: {fileID: 1788902960522290487}
   m_Layer: 5
   m_Name: Music Slider
   m_TagString: Untagged
@@ -13243,6 +13271,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1788902960522290487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8796340808517088602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89652353c1590f643ac0c299dcfc6385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8874827341214634241
 GameObject:
   m_ObjectHideFlags: 0

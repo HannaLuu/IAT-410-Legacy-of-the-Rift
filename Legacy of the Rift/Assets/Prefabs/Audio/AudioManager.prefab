@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb78ef0a291b0c2448acdff9bea34992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixerGroup: {fileID: 0}
+  mixerGroup: {fileID: -1044700769877975829, guid: 7bb8652db6a39f3468eb398fc3f3e295, type: 2}
   sounds:
   - name: Lokir Teleport to Clone
     clip: {fileID: 8300000, guid: 8e81dade24489044a8cc033c187d9fb7, type: 3}

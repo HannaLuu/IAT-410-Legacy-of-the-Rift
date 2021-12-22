@@ -14,6 +14,15 @@ public class SettingsMenu : MonoBehaviour
 
     private void Start()
     {
+        float masterVol = PlayerPrefs.GetFloat("MasterVolume", 0f);
+        SetMasterVolume(masterVol);
+
+        float musicVol = PlayerPrefs.GetFloat("MusicVolume", 0f);
+        SetMusicVolume(musicVol);
+
+        float sfxVol = PlayerPrefs.GetFloat("SFXVolume", 0f);
+        SetSFXVolume(sfxVol);
+
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -46,16 +55,25 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetMasterVolume(float volume)
     {
+        //float volumeValue = Mathf.Log10(volume) * 20;
         audioMixer.SetFloat("masterVolume", volume);
+        PlayerPrefs.SetFloat("MasterVolume", volume);
+        PlayerPrefs.Save();
     }
 
     public void SetMusicVolume(float volume)
     {
+        //float volumeValue = Mathf.Log10(volume) * 20;
         audioMixer.SetFloat("musicVolume", volume);
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+        PlayerPrefs.Save();
     }
 
     public void SetSFXVolume(float volume)
     {
+        //float volumeValue = Mathf.Log10(volume) * 20;
         audioMixer.SetFloat("sfxVolume", volume);
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+        PlayerPrefs.Save();
     }
 }

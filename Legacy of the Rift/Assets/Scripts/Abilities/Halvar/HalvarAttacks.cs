@@ -89,7 +89,7 @@ public class HalvarAttacks : AttackBaseClass
             }
         } else
         {
-            halvarAbilityBarAnimator.SetBool("abilityReady", true);
+            halvarAbilityBarAnimator.SetBool("abilityReady", false);
         }
 
         if (isUltReady && isUltUnlocked)
